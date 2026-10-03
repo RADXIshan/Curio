@@ -3,7 +3,6 @@ import { Sidebar } from './components/Sidebar';
 import { NotionHeader } from './components/NotionHeader';
 import { NotionCard } from './components/NotionCard';
 import { NotionTable } from './components/NotionTable';
-import { NotionBoard } from './components/NotionBoard';
 import { NotionPageModal } from './components/NotionPageModal';
 import { NotionAIChat } from './components/NotionAIChat';
 import { TopicFilterBar } from './components/TopicFilterBar';
@@ -18,9 +17,9 @@ export const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Layout & View states
+  // Layout & View states (Only Gallery and Table)
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
-  const [viewMode, setViewMode] = useState<'gallery' | 'table' | 'board'>('gallery');
+  const [viewMode, setViewMode] = useState<'gallery' | 'table'>('gallery');
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [activeReel, setActiveReel] = useState<ReelItem | null>(null);
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
@@ -157,8 +156,6 @@ export const App: React.FC = () => {
       <Sidebar
         isOpen={isSidebarOpen}
         onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
-        selectedType={selectedType}
-        onTypeChange={handleTypeChange}
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
         selectedTag={selectedTag}
@@ -166,8 +163,6 @@ export const App: React.FC = () => {
         categories={stats?.categories || []}
         topTags={stats?.top_tags || []}
         totalCount={stats?.total || totalCount}
-        reelsCount={stats?.reels_count || 0}
-        postsCount={stats?.posts_count || 0}
         onSync={handleSync}
         isSyncing={isSyncing}
       />
@@ -205,7 +200,6 @@ export const App: React.FC = () => {
         {/* Canvas Body */}
         <main className="flex-1 px-6 sm:px-10 py-6">
           <TopicFilterBar
-            categories={stats?.categories || []}
             selectedCategory={selectedCategory}
             onCategoryChange={handleCategoryChange}
             selectedType={selectedType}
@@ -277,16 +271,6 @@ export const App: React.FC = () => {
               {viewMode === 'table' && (
                 <NotionTable
                   reels={reels}
-                  onOpen={setActiveReel}
-                  onTagClick={(tag) => setSelectedTag(tag)}
-                />
-              )}
-
-              {/* Board View */}
-              {viewMode === 'board' && (
-                <NotionBoard
-                  reels={reels}
-                  categories={stats?.categories || []}
                   onOpen={setActiveReel}
                   onTagClick={(tag) => setSelectedTag(tag)}
                 />

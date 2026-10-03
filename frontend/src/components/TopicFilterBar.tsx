@@ -1,23 +1,14 @@
 import React from 'react';
 import {
-  Cpu,
-  Server,
-  Code,
-  Cloud,
-  GraduationCap,
-  Globe,
-  Wrench,
-  Folder,
-  ArrowUpDown,
+  Calendar,
+  Clock,
   X,
   Video,
   Image,
   Layers,
 } from 'lucide-react';
-import type { CategoryCount } from '../types';
 
-interface TopicFilterBarProps {
-  categories: CategoryCount[];
+interface PageFilterBarProps {
   selectedCategory: string;
   onCategoryChange: (cat: string) => void;
   selectedType: string;
@@ -35,20 +26,7 @@ interface TopicFilterBarProps {
   onResetFilters: () => void;
 }
 
-const getCategoryIcon = (name: string) => {
-  const lower = name.toLowerCase();
-  if (lower.includes('ai') || lower.includes('agent')) return <Cpu className="w-3.5 h-3.5 text-emerald-400" />;
-  if (lower.includes('system') || lower.includes('backend')) return <Server className="w-3.5 h-3.5 text-blue-400" />;
-  if (lower.includes('python') || lower.includes('data')) return <Code className="w-3.5 h-3.5 text-teal-400" />;
-  if (lower.includes('devops') || lower.includes('cloud')) return <Cloud className="w-3.5 h-3.5 text-amber-400" />;
-  if (lower.includes('career') || lower.includes('intern')) return <GraduationCap className="w-3.5 h-3.5 text-rose-400" />;
-  if (lower.includes('web') || lower.includes('front')) return <Globe className="w-3.5 h-3.5 text-cyan-400" />;
-  if (lower.includes('tool') || lower.includes('open')) return <Wrench className="w-3.5 h-3.5 text-orange-400" />;
-  return <Folder className="w-3.5 h-3.5 text-slate-400" />;
-};
-
-export const TopicFilterBar: React.FC<TopicFilterBarProps> = ({
-  categories,
+export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
   selectedCategory,
   onCategoryChange,
   selectedType,
@@ -72,129 +50,91 @@ export const TopicFilterBar: React.FC<TopicFilterBarProps> = ({
     selectedTag !== '';
 
   return (
-    <div className="space-y-3 mb-6 select-none">
-      {/* Top Filter Controls Row: Topic Tabs + Type Pills + Sort Dropdown */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 bg-[#1d1d1d] border border-[#2b2b2b] rounded-xl p-2.5 shadow-sm">
-        {/* Horizontal Scrollable Topic Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none text-xs">
-          <button
-            onClick={() => onCategoryChange('all')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all shrink-0 cursor-pointer ${
-              selectedCategory === 'all'
-                ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40 shadow-xs'
-                : 'text-[#909090] hover:text-[#e0e0e0] hover:bg-[#252525] border border-transparent'
-            }`}
-          >
-            <Layers className="w-3.5 h-3.5" />
-            <span>All Topics</span>
-            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-[#272727] text-[#a5a5a5] font-mono">
-              {totalCount}
-            </span>
-          </button>
-
-          {categories.map((cat) => {
-            const isSelected = selectedCategory.toLowerCase() === cat.name.toLowerCase();
-            return (
-              <button
-                key={cat.name}
-                onClick={() => onCategoryChange(isSelected ? 'all' : cat.name)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all shrink-0 cursor-pointer ${
-                  isSelected
-                    ? 'bg-sky-500/20 text-sky-200 border border-sky-500/50 shadow-xs'
-                    : 'text-[#909090] hover:text-[#e0e0e0] hover:bg-[#252525] border border-transparent'
-                }`}
-              >
-                {getCategoryIcon(cat.name)}
-                <span>{cat.name}</span>
-                <span
-                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    isSelected ? 'bg-sky-500/30 text-sky-200' : 'bg-[#272727] text-[#808080]'
-                  }`}
-                >
-                  {cat.count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Right Utility Group: Format Switcher & Sort Selector */}
-        <div className="flex items-center gap-2 shrink-0 pt-1 lg:pt-0 border-t lg:border-t-0 border-[#262626]">
-          {/* Format Toggle */}
-          <div className="flex items-center bg-[#151515] p-0.5 rounded-lg border border-[#2b2b2b] text-[11px]">
+    <div className="space-y-2.5 mb-5 select-none">
+      {/* Page Filter Controls: Date-Wise Filter / Sort & Format Switcher */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#1d1d1d] border border-[#2b2b2b] rounded-xl px-3.5 py-2.5 shadow-xs">
+        {/* Left: Format Switcher (Inside Page) */}
+        <div className="flex items-center gap-2">
+          <div className="flex items-center bg-[#151515] p-0.5 rounded-lg border border-[#2b2b2b] text-xs">
             <button
               onClick={() => onTypeChange('all')}
-              className={`px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`px-3 py-1 rounded-md transition-all cursor-pointer font-medium ${
                 selectedType === 'all'
-                  ? 'bg-[#2a2a2a] text-white font-medium shadow-xs'
-                  : 'text-[#777777] hover:text-[#cccccc]'
+                  ? 'bg-[#292929] text-white shadow-xs'
+                  : 'text-[#808080] hover:text-[#cccccc]'
               }`}
             >
-              All
+              All Formats
             </button>
             <button
               onClick={() => onTypeChange('reel')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer font-medium ${
                 selectedType === 'reel'
-                  ? 'bg-rose-950/60 text-rose-300 font-medium border border-rose-800/40'
-                  : 'text-[#777777] hover:text-[#cccccc]'
+                  ? 'bg-rose-950/60 text-rose-300 border border-rose-800/40 shadow-xs'
+                  : 'text-[#808080] hover:text-[#cccccc]'
               }`}
               title={`Filter Reels (${reelsCount})`}
             >
               <Video className="w-3 h-3 text-rose-400" />
               <span>Reels</span>
+              <span className="text-[10px] text-[#707070] font-mono">({reelsCount})</span>
             </button>
             <button
               onClick={() => onTypeChange('post')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer font-medium ${
                 selectedType === 'post'
-                  ? 'bg-cyan-950/60 text-cyan-300 font-medium border border-cyan-800/40'
-                  : 'text-[#777777] hover:text-[#cccccc]'
+                  ? 'bg-cyan-950/60 text-cyan-300 border border-cyan-800/40 shadow-xs'
+                  : 'text-[#808080] hover:text-[#cccccc]'
               }`}
               title={`Filter Posts (${postsCount})`}
             >
               <Image className="w-3 h-3 text-cyan-400" />
               <span>Posts</span>
+              <span className="text-[10px] text-[#707070] font-mono">({postsCount})</span>
             </button>
           </div>
+        </div>
 
-          {/* Sort Selector */}
-          <div className="flex items-center gap-1 bg-[#151515] px-2 py-1 rounded-lg border border-[#2b2b2b] text-[11px] text-[#a0a0a0]">
-            <ArrowUpDown className="w-3 h-3 text-[#707070]" />
+        {/* Right: Date-wise Filter / Sort Selector (Inside Page) */}
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] text-[#707070] font-medium flex items-center gap-1">
+            <Calendar className="w-3 h-3 text-[#666666]" />
+            Sort by date:
+          </span>
+          <div className="flex items-center gap-1.5 bg-[#151515] px-2.5 py-1 rounded-lg border border-[#2b2b2b] text-xs text-[#a0a0a0]">
+            <Clock className="w-3.5 h-3.5 text-sky-400 shrink-0" />
             <select
               value={sortBy}
               onChange={(e) => onSortChange(e.target.value)}
-              className="bg-transparent text-[#cccccc] focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent text-[#e0e0e0] font-medium focus:outline-none cursor-pointer pr-1 text-xs"
             >
               <option value="newest" className="bg-[#1c1c1c] text-[#dedede]">
-                Newest saved
+                Newest saved date
               </option>
               <option value="oldest" className="bg-[#1c1c1c] text-[#dedede]">
-                Oldest saved
+                Oldest saved date
               </option>
               <option value="title" className="bg-[#1c1c1c] text-[#dedede]">
                 Title (A-Z)
-              </option>
-              <option value="author" className="bg-[#1c1c1c] text-[#dedede]">
-                Creator (@)
               </option>
             </select>
           </div>
         </div>
       </div>
 
-      {/* Active Filter Chips Bar (Shown when any filter is active) */}
+      {/* Active Filter Chips Bar */}
       {hasActiveFilters && (
         <div className="flex flex-wrap items-center gap-1.5 text-xs px-1">
-          <span className="text-[11px] text-[#707070] mr-1">Filtered by:</span>
+          <span className="text-[11px] text-[#707070] mr-1">Active filter:</span>
 
           {selectedCategory !== 'all' && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/25 text-[11px]">
-              {getCategoryIcon(selectedCategory)}
-              <span>{selectedCategory}</span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-200 border border-sky-500/30 text-[11px] font-medium shadow-xs">
+              <Layers className="w-3 h-3 text-sky-400" />
+              <span>Topic: {selectedCategory}</span>
               <button
                 onClick={() => onCategoryChange('all')}
-                className="hover:text-white cursor-pointer ml-0.5"
+                className="hover:text-white cursor-pointer ml-1 p-0.5 rounded-full hover:bg-sky-500/20"
+                title="Clear topic filter"
               >
                 <X className="w-3 h-3" />
               </button>
@@ -252,3 +192,5 @@ export const TopicFilterBar: React.FC<TopicFilterBarProps> = ({
     </div>
   );
 };
+
+export default TopicFilterBar;

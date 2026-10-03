@@ -1,7 +1,5 @@
+import React from 'react';
 import {
-  LayoutGrid,
-  Video,
-  Image,
   RefreshCw,
   PanelLeftClose,
   Camera,
@@ -13,14 +11,13 @@ import {
   Globe,
   Wrench,
   Folder,
+  Layers,
 } from 'lucide-react';
 import type { CategoryCount, TagCount } from '../types';
 
 interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;
-  selectedType: string;
-  onTypeChange: (t: string) => void;
   selectedCategory: string;
   onCategoryChange: (c: string) => void;
   selectedTag: string;
@@ -28,8 +25,6 @@ interface SidebarProps {
   categories: CategoryCount[];
   topTags: TagCount[];
   totalCount: number;
-  reelsCount: number;
-  postsCount: number;
   onSync: () => void;
   isSyncing: boolean;
 }
@@ -49,8 +44,6 @@ const getCategoryIcon = (name: string) => {
 export const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   onToggle,
-  selectedType,
-  onTypeChange,
   selectedCategory,
   onCategoryChange,
   selectedTag,
@@ -58,8 +51,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
   categories,
   topTags,
   totalCount,
-  reelsCount,
-  postsCount,
   onSync,
   isSyncing,
 }) => {
@@ -105,71 +96,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </button>
           </div>
 
-          {/* VIEWS SECTION */}
-          <div className="space-y-1">
-            <p className="px-2.5 text-[10px] font-semibold text-[#666666] tracking-wider uppercase">
-              Views
-            </p>
-            <div className="space-y-0.5 text-xs">
-              {/* All Items */}
-              <button
-                onClick={() => {
-                  onTypeChange('all');
-                  onCategoryChange('all');
-                  onTagChange('');
-                }}
-                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md transition-colors cursor-pointer ${
-                  selectedType === 'all' && selectedCategory === 'all' && !selectedTag
-                    ? 'bg-[#262626] text-white font-medium'
-                    : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed]'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <LayoutGrid className="w-4 h-4 text-blue-400" />
-                  <span>All Saved Posts</span>
-                </div>
-                <span className="text-[11px] text-[#6e6e6e]">{totalCount}</span>
-              </button>
-
-              {/* Reels Only */}
-              <button
-                onClick={() => {
-                  onTypeChange('reel');
-                }}
-                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md transition-colors cursor-pointer ${
-                  selectedType === 'reel'
-                    ? 'bg-[#262626] text-white font-medium'
-                    : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed]'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <Video className="w-4 h-4 text-rose-400" />
-                  <span>Video Reels</span>
-                </div>
-                <span className="text-[11px] text-[#6e6e6e]">{reelsCount}</span>
-              </button>
-
-              {/* Posts Only */}
-              <button
-                onClick={() => {
-                  onTypeChange('post');
-                }}
-                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md transition-colors cursor-pointer ${
-                  selectedType === 'post'
-                    ? 'bg-[#262626] text-white font-medium'
-                    : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed]'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <Image className="w-4 h-4 text-cyan-400" />
-                  <span>Posts & Guides</span>
-                </div>
-                <span className="text-[11px] text-[#6e6e6e]">{postsCount}</span>
-              </button>
-            </div>
-          </div>
-
-          {/* CATEGORIES SECTION */}
+          {/* TOPICS & COLLECTIONS (Strictly in Sidebar) */}
           <div className="space-y-1.5">
             <div className="flex items-center justify-between px-2.5">
               <p className="text-[10px] font-semibold text-[#777777] tracking-wider uppercase">
@@ -186,6 +113,34 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
 
             <div className="space-y-0.5 text-xs">
+              {/* All Topics Item */}
+              <button
+                onClick={() => {
+                  onCategoryChange('all');
+                  onTagChange('');
+                }}
+                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all cursor-pointer text-left ${
+                  selectedCategory === 'all' && !selectedTag
+                    ? 'bg-sky-500/15 text-sky-200 font-medium border border-sky-500/30 shadow-xs'
+                    : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed] border border-transparent'
+                }`}
+              >
+                <div className="flex items-center gap-2 truncate pr-1">
+                  <Layers className="w-4 h-4 text-sky-400" />
+                  <span className="truncate">All Topics</span>
+                </div>
+                <span
+                  className={`text-[10px] shrink-0 font-mono px-1.5 py-0.2 rounded-full ${
+                    selectedCategory === 'all' && !selectedTag
+                      ? 'bg-sky-500/25 text-sky-200'
+                      : 'bg-[#1e1e1e] text-[#707070]'
+                  }`}
+                >
+                  {totalCount}
+                </span>
+              </button>
+
+              {/* Specific Topics */}
               {categories.map((cat) => {
                 const isSelected = selectedCategory.toLowerCase() === cat.name.toLowerCase();
                 return (
@@ -266,3 +221,5 @@ export const Sidebar: React.FC<SidebarProps> = ({
     </>
   );
 };
+
+export default Sidebar;

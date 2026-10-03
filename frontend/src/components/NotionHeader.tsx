@@ -3,7 +3,6 @@ import {
   PanelLeft,
   LayoutGrid,
   Table as TableIcon,
-  Columns,
   Search,
   X,
   Sparkles,
@@ -18,8 +17,8 @@ interface NotionHeaderProps {
   activeTag: string;
   totalFiltered: number;
   totalCount?: number;
-  viewMode: 'gallery' | 'table' | 'board';
-  onViewModeChange: (mode: 'gallery' | 'table' | 'board') => void;
+  viewMode: 'gallery' | 'table';
+  onViewModeChange: (mode: 'gallery' | 'table') => void;
   vaultSearch: string;
   onVaultSearchChange: (q: string) => void;
   keywordQuery: string;
@@ -178,18 +177,6 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           >
             <TableIcon className="w-3.5 h-3.5" />
             <span>Table</span>
-          </button>
-
-          <button
-            onClick={() => onViewModeChange('board')}
-            className={`flex items-center gap-1.5 px-3 py-2.5 text-xs font-medium border-b-2 transition-all cursor-pointer ${
-              viewMode === 'board'
-                ? 'border-white text-white font-semibold'
-                : 'border-transparent text-[#7e7e7e] hover:text-[#d0d0d0]'
-            }`}
-          >
-            <Columns className="w-3.5 h-3.5" />
-            <span>Board by Topic</span>
           </button>
         </div>
 
