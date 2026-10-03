@@ -1,6 +1,7 @@
 import type { AISummary, ReelItem, ReelsListResponse, StatsResponse } from '../types';
 
-const API_BASE = '/api';
+const envUrl = import.meta.env.VITE_API_URL;
+const API_BASE = envUrl ? `${envUrl.replace(/\/$/, '')}/api` : '/api';
 
 export async function fetchReels(params: {
   type?: string;
