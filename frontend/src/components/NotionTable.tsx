@@ -18,10 +18,12 @@ const getCategoryBadgeClass = (category?: string) => {
       return 'bg-teal-950/50 text-teal-300 border-teal-800/40';
     case 'DevOps & Cloud':
       return 'bg-amber-950/50 text-amber-300 border-amber-800/40';
+    case 'Career & Coding Prep':
     case 'Career & Internships':
       return 'bg-rose-950/50 text-rose-300 border-rose-800/40';
     case 'Web & Frontend':
       return 'bg-cyan-950/50 text-cyan-300 border-cyan-800/40';
+    case 'Dev Tools & Resources':
     case 'Dev Tools & Open Source':
       return 'bg-orange-950/50 text-orange-300 border-orange-800/40';
     default:
