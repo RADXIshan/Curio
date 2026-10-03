@@ -58,20 +58,20 @@ export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
           <div className="flex items-center bg-[#151515] p-0.5 rounded-lg border border-[#2b2b2b] text-xs">
             <button
               onClick={() => onTypeChange('all')}
-              className={`px-3 py-1 rounded-md transition-all cursor-pointer font-medium ${
+              className={`px-3 py-1 rounded-md transition-all duration-150 cursor-pointer font-medium active:scale-95 ${
                 selectedType === 'all'
                   ? 'bg-[#292929] text-white shadow-xs'
-                  : 'text-[#808080] hover:text-[#cccccc]'
+                  : 'text-[#808080] hover:text-[#cccccc] hover:bg-[#1a1a1a]'
               }`}
             >
               All Formats
             </button>
             <button
               onClick={() => onTypeChange('reel')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer font-medium ${
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all duration-150 cursor-pointer font-medium active:scale-95 ${
                 selectedType === 'reel'
                   ? 'bg-rose-950/60 text-rose-300 border border-rose-800/40 shadow-xs'
-                  : 'text-[#808080] hover:text-[#cccccc]'
+                  : 'text-[#808080] hover:text-[#cccccc] hover:bg-[#1a1a1a]'
               }`}
               title={`Filter Reels (${reelsCount})`}
             >
@@ -81,10 +81,10 @@ export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
             </button>
             <button
               onClick={() => onTypeChange('post')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer font-medium ${
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all duration-150 cursor-pointer font-medium active:scale-95 ${
                 selectedType === 'post'
                   ? 'bg-cyan-950/60 text-cyan-300 border border-cyan-800/40 shadow-xs'
-                  : 'text-[#808080] hover:text-[#cccccc]'
+                  : 'text-[#808080] hover:text-[#cccccc] hover:bg-[#1a1a1a]'
               }`}
               title={`Filter Posts (${postsCount})`}
             >
@@ -124,7 +124,7 @@ export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
 
       {/* Active Filter Chips Bar */}
       {hasActiveFilters && (
-        <div className="flex flex-wrap items-center gap-1.5 text-xs px-1">
+        <div className="flex flex-wrap items-center gap-1.5 text-xs px-1 animate-content-enter">
           <span className="text-[11px] text-[#707070] mr-1">Active filter:</span>
 
           {selectedCategory !== 'all' && (

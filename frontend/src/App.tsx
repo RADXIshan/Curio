@@ -6,9 +6,10 @@ import { NotionTable } from './components/NotionTable';
 import { NotionPageModal } from './components/NotionPageModal';
 import { NotionAIChat } from './components/NotionAIChat';
 import { TopicFilterBar } from './components/TopicFilterBar';
+import { ContentSkeleton } from './components/ContentSkeleton';
 import { fetchReels, fetchStats, triggerExtraction } from './services/api';
 import type { ReelItem, StatsResponse } from './types';
-import { Loader2, Inbox } from 'lucide-react';
+import { Inbox } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [reels, setReels] = useState<ReelItem[]>([]);
@@ -34,6 +35,10 @@ export const App: React.FC = () => {
   const [sortBy, setSortBy] = useState<string>('newest');
   const [limit, setLimit] = useState<number>(60);
 
+  // Debounced search terms for butter-smooth typing without lag on buttons
+  const [debouncedVaultSearch, setDebouncedVaultSearch] = useState<string>(vaultSearch);
+  const [debouncedKeywordQuery, setDebouncedKeywordQuery] = useState<string>(keywordQuery);
+
   const vaultSearchInputRef = useRef<HTMLInputElement>(null);
   const keywordInputRef = useRef<HTMLInputElement>(null);
 
@@ -46,17 +51,33 @@ export const App: React.FC = () => {
     }
   };
 
+  // Debounce typing in global vault search (200ms)
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedVaultSearch(vaultSearch);
+    }, 200);
+    return () => clearTimeout(handler);
+  }, [vaultSearch]);
+
+  // Debounce typing in page keyword query (200ms)
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedKeywordQuery(keywordQuery);
+    }, 200);
+    return () => clearTimeout(handler);
+  }, [keywordQuery]);
+
   const loadReels = async () => {
     setIsLoading(true);
     setError(null);
     try {
       // If global vaultSearch is active, search across everything in the vault
-      const isGlobal = vaultSearch.trim() !== '';
+      const isGlobal = debouncedVaultSearch.trim() !== '';
       const data = await fetchReels({
         type: isGlobal ? 'all' : selectedType,
         category: isGlobal ? 'all' : selectedCategory,
         tag: isGlobal ? '' : selectedTag,
-        search: isGlobal ? vaultSearch.trim() : keywordQuery.trim(),
+        search: isGlobal ? debouncedVaultSearch.trim() : debouncedKeywordQuery.trim(),
         sort: sortBy,
         limit,
         offset: 0,
@@ -74,12 +95,11 @@ export const App: React.FC = () => {
     loadStats();
   }, []);
 
+  // Filter updates (category, format type, sort, limit) trigger IMMEDIATELY;
+  // search inputs trigger once the 200ms debounce settles.
   useEffect(() => {
-    const handler = setTimeout(() => {
-      loadReels();
-    }, 200);
-    return () => clearTimeout(handler);
-  }, [vaultSearch, keywordQuery, selectedType, selectedCategory, selectedTag, sortBy, limit]);
+    loadReels();
+  }, [debouncedVaultSearch, debouncedKeywordQuery, selectedType, selectedCategory, selectedTag, sortBy, limit]);
 
   // Keyboard shortcut listener: "/" to focus search, "Cmd+J" or "Ctrl+J" to toggle Curio AI
   useEffect(() => {
@@ -221,12 +241,11 @@ export const App: React.FC = () => {
           />
 
           {isLoading ? (
-            <div className="flex flex-col items-center justify-center py-24 text-[#808080] gap-3">
-              <Loader2 className="w-6 h-6 animate-spin text-sky-400" />
-              <p className="text-xs text-[#999999]">Loading database view...</p>
+            <div className="animate-content-enter">
+              <ContentSkeleton viewMode={viewMode} count={viewMode === 'gallery' ? 6 : 8} />
             </div>
           ) : error ? (
-            <div className="p-6 rounded-lg bg-[#241717] border border-[#3d2323] text-center space-y-2 max-w-lg mx-auto my-8">
+            <div className="p-6 rounded-lg bg-[#241717] border border-[#3d2323] text-center space-y-2 max-w-lg mx-auto my-8 animate-content-enter">
               <p className="text-xs text-rose-300">{error}</p>
               <button
                 onClick={() => loadReels()}
@@ -236,7 +255,7 @@ export const App: React.FC = () => {
               </button>
             </div>
           ) : reels.length === 0 ? (
-            <div className="p-12 text-center space-y-3 max-w-md mx-auto my-12 border border-[#2b2b2b] rounded-lg bg-[#1c1c1c]">
+            <div className="p-12 text-center space-y-3 max-w-md mx-auto my-12 border border-[#2b2b2b] rounded-lg bg-[#1c1c1c] animate-content-enter">
               <div className="w-10 h-10 rounded-full bg-[#262626] text-[#707070] flex items-center justify-center mx-auto">
                 <Inbox className="w-5 h-5 text-sky-400" />
               </div>
@@ -252,7 +271,10 @@ export const App: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div
+              key={`${selectedCategory}-${selectedType}-${selectedTag}-${sortBy}-${debouncedVaultSearch}-${debouncedKeywordQuery}-${viewMode}`}
+              className="space-y-6 animate-content-enter"
+            >
               {/* Gallery View */}
               {viewMode === 'gallery' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
@@ -281,7 +303,7 @@ export const App: React.FC = () => {
                 <div className="flex justify-center pt-4 pb-12">
                   <button
                     onClick={() => setLimit((prev) => prev + 30)}
-                    className="px-4 py-2 text-xs font-medium bg-[#222222] hover:bg-[#2a2a2a] text-[#cccccc] hover:text-white border border-[#2e2e2e] rounded-md transition-colors cursor-pointer"
+                    className="px-4 py-2 text-xs font-medium bg-[#222222] hover:bg-[#2a2a2a] text-[#cccccc] hover:text-white border border-[#2e2e2e] rounded-md transition-colors cursor-pointer active:scale-95"
                   >
                     Load more ({totalCount - reels.length} remaining)
                   </button>

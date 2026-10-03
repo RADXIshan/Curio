@@ -119,7 +119,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   onCategoryChange('all');
                   onTagChange('');
                 }}
-                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all cursor-pointer text-left ${
+                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all duration-150 cursor-pointer text-left active:scale-[0.98] ${
                   selectedCategory === 'all' && !selectedTag
                     ? 'bg-sky-500/15 text-sky-200 font-medium border border-sky-500/30 shadow-xs'
                     : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed] border border-transparent'
@@ -147,7 +147,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <button
                     key={cat.name}
                     onClick={() => onCategoryChange(isSelected ? 'all' : cat.name)}
-                    className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all cursor-pointer text-left ${
+                    className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all duration-150 cursor-pointer text-left active:scale-[0.98] ${
                       isSelected
                         ? 'bg-sky-500/15 text-sky-200 font-medium border border-sky-500/30 shadow-xs'
                         : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed] border border-transparent'
