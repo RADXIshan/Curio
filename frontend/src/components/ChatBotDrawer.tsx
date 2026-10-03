@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, Sparkles, Bot, User, Loader2, Video, Trash2, ArrowUpRight } from 'lucide-react';
+import { X, Send, Bot, User, Loader2, Video, Trash2, ArrowUpRight } from 'lucide-react';
 import type { ChatMessage, ReelItem } from '../types';
 import { sendChatMessage } from '../services/api';
 
@@ -112,8 +112,8 @@ export const ChatBotDrawer: React.FC<ChatBotDrawerProps> = ({
         {/* Drawer Header */}
         <div className="px-5 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md">
-              <Sparkles className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 p-1 flex items-center justify-center shrink-0 shadow-md">
+              <img src="/logo.png" alt="Curio Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
@@ -155,13 +155,13 @@ export const ChatBotDrawer: React.FC<ChatBotDrawerProps> = ({
               >
                 {/* Avatar */}
                 <div
-                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold ${
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold overflow-hidden ${
                     isUser
                       ? 'bg-indigo-600 text-white'
-                      : 'bg-gradient-to-tr from-purple-600 to-indigo-600 text-white'
+                      : 'bg-white/5 border border-white/10 p-0.5'
                   }`}
                 >
-                  {isUser ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
+                  {isUser ? <User className="w-4 h-4" /> : <img src="/logo.png" alt="Curio AI" className="w-full h-full object-contain" />}
                 </div>
 
                 {/* Message Body */}

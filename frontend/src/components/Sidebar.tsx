@@ -72,10 +72,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
       >
         <div className="flex-1 overflow-y-auto px-3 py-3 space-y-5">
           {/* Workspace Header */}
-          <div className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-[#202020] transition-colors cursor-pointer group">
+          <div
+            onClick={() => {
+              onCategoryChange('all');
+              onTagChange('');
+            }}
+            className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-[#202020] transition-colors cursor-pointer group"
+          >
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-6 h-6 rounded-md bg-gradient-to-tr from-blue-600 via-sky-500 to-cyan-400 flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-sm">
-                C
+              <div className="w-6 h-6 rounded-md bg-white/5 border border-white/10 p-0.5 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <img src="/logo.png" alt="Curio Workspace" className="w-full h-full object-contain" />
               </div>
               <div className="min-w-0">
                 <span className="text-xs font-semibold text-[#f0f0f0] truncate block">

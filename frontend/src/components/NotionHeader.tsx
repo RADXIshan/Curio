@@ -70,9 +70,20 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
             </button>
           )}
 
-          <span className="hover:text-[#dedede] transition-colors cursor-pointer font-medium text-[#cccccc]">
-            Curio
-          </span>
+          <div
+            onClick={onResetFilters}
+            className="flex items-center gap-1.5 hover:opacity-90 transition-opacity cursor-pointer mr-0.5 group"
+            title="Curio Home"
+          >
+            <img
+              src="/logo.png"
+              alt="Curio Logo"
+              className="w-4 h-4 rounded object-contain shrink-0 group-hover:scale-105 transition-transform"
+            />
+            <span className="font-semibold text-[#f0f0f0] tracking-tight text-xs">
+              Curio
+            </span>
+          </div>
           <span className="text-[#555555]">/</span>
           <span className="hover:text-[#dedede] transition-colors cursor-pointer text-[#a0a0a0]">
             {vaultSearch ? 'Global Vault Search' : activeCategory === 'all' ? 'All Saved Vault' : activeCategory}
@@ -130,9 +141,14 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
         </div>
       </div>
 
-      {/* Notion Page Header: Title + Description (No top emoji) */}
+      {/* Notion Page Header: Title + Description */}
       <div className="pt-3 pb-2 space-y-2">
-        <div className="flex flex-wrap items-baseline gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          {(!vaultSearch && activeCategory === 'all') && (
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/5 border border-white/10 p-1 flex items-center justify-center shrink-0 shadow-xs">
+              <img src="/logo.png" alt="Curio" className="w-full h-full object-contain" />
+            </div>
+          )}
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#f0f0f0]">
             {vaultSearch
               ? `Search Results for "${vaultSearch}"`

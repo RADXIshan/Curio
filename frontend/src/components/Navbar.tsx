@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, RefreshCw, Compass, BookmarkCheck } from 'lucide-react';
+import { Sparkles, RefreshCw, BookmarkCheck } from 'lucide-react';
 
 interface NavbarProps {
   totalCount: number;
@@ -22,8 +22,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand Logo */}
         <div className="flex items-center gap-3">
           <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 via-indigo-600 to-cyan-400 p-[1px] shadow-lg shadow-indigo-500/20">
-            <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-              <Compass className="w-5 h-5 text-indigo-400 animate-pulse" />
+            <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center p-1.5 overflow-hidden">
+              <img src="/logo.png" alt="Curio Logo" className="w-full h-full object-contain" />
             </div>
             <span className="absolute -top-1 -right-1 flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>

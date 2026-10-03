@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, Sparkles, Bot, User, Loader2, Trash2, ArrowUpRight, Zap } from 'lucide-react';
+import { X, Send, User, Loader2, Trash2, ArrowUpRight, Zap } from 'lucide-react';
 import type { ChatMessage, ReelItem } from '../types';
 import { sendChatMessage } from '../services/api';
 import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
@@ -149,8 +149,8 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
         {/* Drawer Header */}
         <div className="px-4 py-3.5 border-b border-[#292929] flex items-center justify-between bg-[#141414]/90 backdrop-blur-md relative z-10">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-500 to-blue-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
-              <Sparkles className="w-4 h-4" />
+            <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 p-0.5 flex items-center justify-center shrink-0 shadow-md shadow-sky-500/10">
+              <img src="/logo.png" alt="Curio AI" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -194,13 +194,17 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
                 className={`flex gap-2.5 animate-curio-message ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
               >
                 <div
-                  className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 text-xs font-bold ${
+                  className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 text-xs font-bold overflow-hidden ${
                     isUser
                       ? 'bg-[#333333] text-white shadow-xs'
-                      : 'bg-sky-950/70 text-sky-300 border border-sky-800/60 shadow-xs'
+                      : 'bg-white/5 border border-white/10 p-0.5 shadow-xs'
                   }`}
                 >
-                  {isUser ? <User className="w-3.5 h-3.5 text-[#e0e0e0]" /> : <Bot className="w-3.5 h-3.5 text-sky-300" />}
+                  {isUser ? (
+                    <User className="w-3.5 h-3.5 text-[#e0e0e0]" />
+                  ) : (
+                    <img src="/logo.png" alt="Curio AI" className="w-full h-full object-contain" />
+                  )}
                 </div>
 
                 <div className={`max-w-[86%] space-y-2 ${isUser ? 'items-end' : 'items-start'}`}>
@@ -261,8 +265,8 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
 
           {isLoading && (
             <div className="flex gap-2.5 items-center text-xs text-[#808080] animate-curio-message">
-              <div className="w-6 h-6 rounded bg-sky-950/60 border border-sky-800/50 flex items-center justify-center text-sky-300 shrink-0">
-                <Bot className="w-3.5 h-3.5" />
+              <div className="w-6 h-6 rounded bg-white/5 border border-white/10 p-0.5 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="/logo.png" alt="Curio AI" className="w-full h-full object-contain animate-pulse" />
               </div>
               <div className="px-3 py-2 rounded-xl bg-[#202020] border border-[#2b2b2b] flex items-center gap-2 text-[#cccccc]">
                 <Loader2 className="w-3.5 h-3.5 animate-spin text-sky-400" />
