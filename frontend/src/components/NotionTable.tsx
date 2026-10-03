@@ -7,6 +7,27 @@ interface NotionTableProps {
   onTagClick: (tag: string) => void;
 }
 
+const getCategoryBadgeClass = (category?: string) => {
+  switch (category) {
+    case 'AI & Agents':
+      return 'bg-emerald-950/50 text-emerald-300 border-emerald-800/40';
+    case 'System Design & Backend':
+      return 'bg-blue-950/50 text-blue-300 border-blue-800/40';
+    case 'Python & Data Science':
+      return 'bg-teal-950/50 text-teal-300 border-teal-800/40';
+    case 'DevOps & Cloud':
+      return 'bg-amber-950/50 text-amber-300 border-amber-800/40';
+    case 'Career & Internships':
+      return 'bg-rose-950/50 text-rose-300 border-rose-800/40';
+    case 'Web & Frontend':
+      return 'bg-cyan-950/50 text-cyan-300 border-cyan-800/40';
+    case 'Dev Tools & Open Source':
+      return 'bg-orange-950/50 text-orange-300 border-orange-800/40';
+    default:
+      return 'bg-[#262626] text-[#cccccc] border-[#383838]';
+  }
+};
+
 export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagClick }) => {
   return (
     <div className="w-full overflow-x-auto border border-[#2b2b2b] rounded-lg bg-[#1a1a1a]">
@@ -47,7 +68,7 @@ export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagCl
                 {/* Category */}
                 <td className="py-2.5 px-3">
                   {reel.category ? (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-[#262626] text-[#cccccc] border border-[#333333] whitespace-nowrap">
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-medium border whitespace-nowrap ${getCategoryBadgeClass(reel.category)}`}>
                       {reel.category}
                     </span>
                   ) : (
@@ -56,20 +77,20 @@ export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagCl
                 </td>
 
                 {/* Creator */}
-                <td className="py-2.5 px-3 text-[#999999] truncate">
+                <td className="py-2.5 px-3 text-[#999999] truncate font-mono text-[11px]">
                   {reel.owner?.username ? `@${reel.owner.username}` : '—'}
                 </td>
 
                 {/* Format */}
                 <td className="py-2.5 px-3 whitespace-nowrap">
                   <span
-                    className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] ${
+                    className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium border ${
                       isReel
-                        ? 'text-pink-400 bg-pink-950/30'
-                        : 'text-cyan-400 bg-cyan-950/30'
+                        ? 'text-rose-300 bg-rose-950/40 border-rose-800/40'
+                        : 'text-cyan-300 bg-cyan-950/40 border-cyan-800/40'
                     }`}
                   >
-                    {isReel ? <Video className="w-3 h-3" /> : <Image className="w-3 h-3" />}
+                    {isReel ? <Video className="w-3 h-3 text-rose-400" /> : <Image className="w-3 h-3 text-cyan-400" />}
                     <span>{isReel ? 'Reel' : 'Post'}</span>
                   </span>
                 </td>

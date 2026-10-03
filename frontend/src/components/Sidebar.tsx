@@ -40,9 +40,9 @@ interface SidebarProps {
 
 const getCategoryIcon = (name: string) => {
   const lower = name.toLowerCase();
-  if (lower.includes('ai') || lower.includes('agent')) return <Cpu className="w-4 h-4 text-purple-400" />;
+  if (lower.includes('ai') || lower.includes('agent')) return <Cpu className="w-4 h-4 text-emerald-400" />;
   if (lower.includes('system') || lower.includes('backend')) return <Server className="w-4 h-4 text-blue-400" />;
-  if (lower.includes('python') || lower.includes('data')) return <Code className="w-4 h-4 text-emerald-400" />;
+  if (lower.includes('python') || lower.includes('data')) return <Code className="w-4 h-4 text-teal-400" />;
   if (lower.includes('devops') || lower.includes('cloud')) return <Cloud className="w-4 h-4 text-amber-400" />;
   if (lower.includes('career') || lower.includes('intern')) return <GraduationCap className="w-4 h-4 text-rose-400" />;
   if (lower.includes('web') || lower.includes('front')) return <Globe className="w-4 h-4 text-cyan-400" />;
@@ -89,14 +89,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Workspace Header */}
           <div className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-[#202020] transition-colors cursor-pointer group">
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-6 h-6 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-sm">
+              <div className="w-6 h-6 rounded-md bg-gradient-to-tr from-blue-600 via-sky-500 to-cyan-400 flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-sm">
                 C
               </div>
               <div className="min-w-0">
                 <span className="text-xs font-semibold text-[#f0f0f0] truncate block">
                   Curio Workspace
                 </span>
-                <span className="text-[10px] text-[#8c8c8c] block">
+                <span className="text-[10px] text-[#777777] block">
                   Instagram Saved Vault
                 </span>
               </div>
@@ -133,12 +133,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
               className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] hover:text-[#ededed] transition-colors cursor-pointer group"
             >
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-purple-400 animate-pulse" />
-                <span className="font-medium text-[#e4e4e4] group-hover:text-purple-300">
+                <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
+                <span className="font-medium text-[#e4e4e4] group-hover:text-sky-300">
                   Curio AI Assistant
                 </span>
               </div>
-              <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+              <span className="text-[9px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono font-medium">
                 Gemini
               </span>
             </button>
@@ -164,7 +164,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <LayoutGrid className="w-4 h-4 text-[#8a8a8a]" />
+                  <LayoutGrid className="w-4 h-4 text-blue-400" />
                   <span>All Saved Posts</span>
                 </div>
                 <span className="text-[11px] text-[#6e6e6e]">{totalCount}</span>
@@ -182,7 +182,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <Video className="w-4 h-4 text-pink-400" />
+                  <Video className="w-4 h-4 text-rose-400" />
                   <span>Video Reels</span>
                 </div>
                 <span className="text-[11px] text-[#6e6e6e]">{reelsCount}</span>
@@ -253,8 +253,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     onClick={() => onTagChange(isSelected ? '' : t.name)}
                     className={`px-2 py-0.5 rounded text-[11px] transition-colors cursor-pointer ${
                       isSelected
-                        ? 'bg-indigo-600 text-white font-medium'
-                        : 'bg-[#1e1e1e] hover:bg-[#282828] text-[#8e8e8e] hover:text-[#d0d0d0]'
+                        ? 'bg-blue-600 text-white font-semibold shadow-xs'
+                        : 'bg-[#1e1e1e] hover:bg-[#282828] text-[#8e8e8e] hover:text-cyan-300'
                     }`}
                   >
                     #{t.name}
@@ -274,7 +274,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] text-[#8c8c8c] hover:text-[#e0e0e0] transition-colors cursor-pointer disabled:opacity-50"
           >
             <div className="flex items-center gap-2">
-              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-indigo-400' : ''}`} />
+              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-sky-400' : 'text-[#888888]'}`} />
               <span className="text-[11px]">{isSyncing ? 'Syncing...' : 'Sync saved_posts.html'}</span>
             </div>
             <span className="text-[10px] px-1 rounded bg-[#202020] text-[#707070]">v0.2</span>
@@ -282,7 +282,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
           {/* User profile footer */}
           <div className="flex items-center gap-2 px-2.5 py-1 text-[#7a7a7a]">
-            <Camera className="w-3.5 h-3.5 text-pink-400" />
+            <Camera className="w-3.5 h-3.5 text-rose-400" />
             <span className="text-[11px] truncate">@ishan_roy31</span>
           </div>
         </div>

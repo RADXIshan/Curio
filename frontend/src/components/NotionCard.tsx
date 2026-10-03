@@ -11,21 +11,21 @@ interface NotionCardProps {
 const getCategoryBadgeClass = (category?: string) => {
   switch (category) {
     case 'AI & Agents':
-      return 'bg-purple-950/60 text-purple-300 border-purple-800/40';
+      return 'bg-emerald-950/50 text-emerald-300 border-emerald-800/40';
     case 'System Design & Backend':
-      return 'bg-blue-950/60 text-blue-300 border-blue-800/40';
+      return 'bg-blue-950/50 text-blue-300 border-blue-800/40';
     case 'Python & Data Science':
-      return 'bg-emerald-950/60 text-emerald-300 border-emerald-800/40';
+      return 'bg-teal-950/50 text-teal-300 border-teal-800/40';
     case 'DevOps & Cloud':
-      return 'bg-amber-950/60 text-amber-300 border-amber-800/40';
+      return 'bg-amber-950/50 text-amber-300 border-amber-800/40';
     case 'Career & Internships':
-      return 'bg-rose-950/60 text-rose-300 border-rose-800/40';
+      return 'bg-rose-950/50 text-rose-300 border-rose-800/40';
     case 'Web & Frontend':
-      return 'bg-cyan-950/60 text-cyan-300 border-cyan-800/40';
+      return 'bg-cyan-950/50 text-cyan-300 border-cyan-800/40';
     case 'Dev Tools & Open Source':
-      return 'bg-orange-950/60 text-orange-300 border-orange-800/40';
+      return 'bg-orange-950/50 text-orange-300 border-orange-800/40';
     default:
-      return 'bg-[#2b2b2b] text-[#cccccc] border-[#3a3a3a]';
+      return 'bg-[#282828] text-[#cccccc] border-[#383838]';
   }
 };
 
@@ -60,7 +60,7 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded border ${
                 isReel
-                  ? 'bg-pink-950/40 text-pink-300 border-pink-800/40'
+                  ? 'bg-rose-950/40 text-rose-300 border-rose-800/40'
                   : 'bg-cyan-950/40 text-cyan-300 border-cyan-800/40'
               }`}
             >
@@ -132,8 +132,8 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
       {/* Notion Card Footer */}
       <div className="pt-2.5 border-t border-[#292929] flex items-center justify-between text-xs text-[#8c8c8c]">
         {/* Open Notion Page View */}
-        <span className="text-[11px] text-[#7a7a7a] group-hover:text-purple-400 flex items-center gap-1 transition-colors">
-          <Sparkles className="w-3 h-3 text-purple-400" />
+        <span className="text-[11px] text-[#7a7a7a] group-hover:text-sky-300 flex items-center gap-1 transition-colors">
+          <Sparkles className="w-3 h-3 text-[#7a7a7a] group-hover:text-sky-400 transition-colors" />
           <span>Open page & AI summary</span>
         </span>
 

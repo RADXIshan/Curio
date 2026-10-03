@@ -136,7 +136,7 @@ export const App: React.FC = () => {
       <div className="flex-1 flex flex-col min-w-0 bg-[#191919]">
         {/* Sync Toast */}
         {syncToast && (
-          <div className="bg-[#242424] border-b border-[#333333] text-purple-300 py-1.5 px-4 text-center text-xs font-mono">
+          <div className="bg-[#181d28] border-b border-sky-500/30 text-sky-300 py-2 px-4 text-center text-xs font-mono shadow-xs">
             {syncToast}
           </div>
         )}
@@ -163,7 +163,7 @@ export const App: React.FC = () => {
         <main className="flex-1 px-6 sm:px-10 py-6">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-24 text-[#808080] gap-3">
-              <Loader2 className="w-6 h-6 animate-spin text-purple-400" />
+              <Loader2 className="w-6 h-6 animate-spin text-sky-400" />
               <p className="text-xs text-[#999999]">Loading database view...</p>
             </div>
           ) : error ? (
@@ -179,7 +179,7 @@ export const App: React.FC = () => {
           ) : reels.length === 0 ? (
             <div className="p-12 text-center space-y-3 max-w-md mx-auto my-12 border border-[#2b2b2b] rounded-lg bg-[#1c1c1c]">
               <div className="w-10 h-10 rounded-full bg-[#262626] text-[#707070] flex items-center justify-center mx-auto">
-                <Inbox className="w-5 h-5" />
+                <Inbox className="w-5 h-5 text-sky-400" />
               </div>
               <h3 className="text-sm font-semibold text-[#f0f0f0]">No pages in this view</h3>
               <p className="text-xs text-[#808080]">
@@ -187,7 +187,7 @@ export const App: React.FC = () => {
               </p>
               <button
                 onClick={handleResetFilters}
-                className="px-3 py-1.5 text-xs rounded bg-[#2a2a2a] hover:bg-[#333333] text-white transition-colors cursor-pointer"
+                className="px-3 py-1.5 text-xs rounded bg-[#252525] hover:bg-[#303030] text-rose-300 hover:text-rose-200 border border-rose-900/40 hover:border-rose-700 transition-colors cursor-pointer"
               >
                 Reset filters
               </button>
