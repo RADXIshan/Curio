@@ -52,3 +52,96 @@ button, a, input {
   transition-duration: 120ms;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Curio AI Drawer & Modal Animations */
+@keyframes curioSlideIn {
+  0% {
+    transform: translateX(100%) scale(0.97);
+    opacity: 0;
+  }
+  65% {
+    transform: translateX(-4px) scale(1.002);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes curioSlideOut {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) scale(0.97);
+    opacity: 0;
+  }
+}
+
+@keyframes curioBackdropFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes curioBackdropFadeOut {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+}
+
+@keyframes curioGlowPulse {
+  0%, 100% {
+    box-shadow: -8px 0 35px -5px rgba(56, 189, 248, 0.15), 0 0 50px -10px rgba(59, 130, 246, 0.12);
+  }
+  50% {
+    box-shadow: -12px 0 45px -2px rgba(56, 189, 248, 0.3), 0 0 70px -5px rgba(59, 130, 246, 0.22);
+  }
+}
+
+@keyframes curioMessageFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-curio-drawer {
+  animation: curioSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-curio-drawer-out {
+  animation: curioSlideOut 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-curio-backdrop {
+  animation: curioBackdropFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-curio-backdrop-out {
+  animation: curioBackdropFadeOut 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-curio-message {
+  animation: curioMessageFadeUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.curio-glow-border {
+  animation: curioGlowPulse 4s ease-in-out infinite;
+}

@@ -24,15 +24,17 @@ def list_reels(
     category: Optional[str] = Query(None, description="Filter by category"),
     search: Optional[str] = Query(None, description="Search in caption, owner, hashtags, or category"),
     tag: Optional[str] = Query(None, description="Filter by hashtag"),
+    sort: Optional[str] = Query("newest", description="Sort by: 'newest', 'oldest', 'title', 'author'"),
     limit: int = Query(50, ge=1, le=500, description="Max number of items to return"),
     offset: int = Query(0, ge=0, description="Offset for pagination"),
 ):
-    """Retrieve saved reels and posts with optional filtering and pagination."""
+    """Retrieve saved reels and posts with optional filtering, sorting, and pagination."""
     total, items = get_reels(
         post_type=type,
         category=category,
         tag=tag,
         search=search,
+        sort_by=sort,
         limit=limit,
         offset=offset,
     )

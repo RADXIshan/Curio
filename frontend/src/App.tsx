@@ -6,6 +6,7 @@ import { NotionTable } from './components/NotionTable';
 import { NotionBoard } from './components/NotionBoard';
 import { NotionPageModal } from './components/NotionPageModal';
 import { NotionAIChat } from './components/NotionAIChat';
+import { TopicFilterBar } from './components/TopicFilterBar';
 import { fetchReels, fetchStats, triggerExtraction } from './services/api';
 import type { ReelItem, StatsResponse } from './types';
 import { Loader2, Inbox } from 'lucide-react';
@@ -31,6 +32,7 @@ export const App: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTag, setSelectedTag] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('newest');
   const [limit, setLimit] = useState<number>(60);
 
   const vaultSearchInputRef = useRef<HTMLInputElement>(null);
@@ -56,6 +58,7 @@ export const App: React.FC = () => {
         category: isGlobal ? 'all' : selectedCategory,
         tag: isGlobal ? '' : selectedTag,
         search: isGlobal ? vaultSearch.trim() : keywordQuery.trim(),
+        sort: sortBy,
         limit,
         offset: 0,
       });
@@ -77,11 +80,16 @@ export const App: React.FC = () => {
       loadReels();
     }, 200);
     return () => clearTimeout(handler);
-  }, [vaultSearch, keywordQuery, selectedType, selectedCategory, selectedTag, limit]);
+  }, [vaultSearch, keywordQuery, selectedType, selectedCategory, selectedTag, sortBy, limit]);
 
-  // Keyboard shortcut listener: "/" to focus global vault search
+  // Keyboard shortcut listener: "/" to focus search, "Cmd+J" or "Ctrl+J" to toggle Curio AI
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+        setIsChatOpen((prev) => !prev);
+        return;
+      }
       if (
         e.key === '/' &&
         document.activeElement !== vaultSearchInputRef.current &&
@@ -196,6 +204,28 @@ export const App: React.FC = () => {
 
         {/* Canvas Body */}
         <main className="flex-1 px-6 sm:px-10 py-6">
+          <TopicFilterBar
+            categories={stats?.categories || []}
+            selectedCategory={selectedCategory}
+            onCategoryChange={handleCategoryChange}
+            selectedType={selectedType}
+            onTypeChange={handleTypeChange}
+            selectedTag={selectedTag}
+            onTagChange={handleTagChange}
+            searchQuery={vaultSearch || keywordQuery}
+            onSearchChange={(q) => {
+              if (vaultSearch) setVaultSearch(q);
+              else setKeywordQuery(q);
+            }}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+            totalFiltered={totalCount}
+            totalCount={stats?.total || totalCount}
+            reelsCount={stats?.reels_count || 0}
+            postsCount={stats?.posts_count || 0}
+            onResetFilters={handleResetFilters}
+          />
+
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-24 text-[#808080] gap-3">
               <Loader2 className="w-6 h-6 animate-spin text-sky-400" />

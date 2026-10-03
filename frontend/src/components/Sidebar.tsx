@@ -170,10 +170,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           {/* CATEGORIES SECTION */}
-          <div className="space-y-1">
-            <p className="px-2.5 text-[10px] font-semibold text-[#666666] tracking-wider uppercase">
-              Topics & Collections
-            </p>
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between px-2.5">
+              <p className="text-[10px] font-semibold text-[#777777] tracking-wider uppercase">
+                Topics & Collections
+              </p>
+              {selectedCategory !== 'all' && (
+                <button
+                  onClick={() => onCategoryChange('all')}
+                  className="text-[10px] text-sky-400 hover:text-sky-300 cursor-pointer"
+                >
+                  Show all
+                </button>
+              )}
+            </div>
+
             <div className="space-y-0.5 text-xs">
               {categories.map((cat) => {
                 const isSelected = selectedCategory.toLowerCase() === cat.name.toLowerCase();
@@ -181,17 +192,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <button
                     key={cat.name}
                     onClick={() => onCategoryChange(isSelected ? 'all' : cat.name)}
-                    className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md transition-colors cursor-pointer text-left ${
+                    className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg transition-all cursor-pointer text-left ${
                       isSelected
-                        ? 'bg-[#262626] text-white font-medium'
-                        : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed]'
+                        ? 'bg-sky-500/15 text-sky-200 font-medium border border-sky-500/30 shadow-xs'
+                        : 'text-[#a6a6a6] hover:bg-[#1e1e1e] hover:text-[#ededed] border border-transparent'
                     }`}
                   >
                     <div className="flex items-center gap-2 truncate pr-1">
                       {getCategoryIcon(cat.name)}
                       <span className="truncate">{cat.name}</span>
                     </div>
-                    <span className="text-[10px] text-[#6e6e6e] shrink-0 font-mono">
+                    <span
+                      className={`text-[10px] shrink-0 font-mono px-1.5 py-0.2 rounded-full ${
+                        isSelected ? 'bg-sky-500/25 text-sky-200' : 'bg-[#1e1e1e] text-[#707070]'
+                      }`}
+                    >
                       {cat.count}
                     </span>
                   </button>

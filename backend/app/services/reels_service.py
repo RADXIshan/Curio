@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from .extractor import extract_saved_posts
-from .gemini_service import CATEGORIES, classify_reel
+from .gemini_service import CATEGORIES, classify_reel, derive_content_title
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 HTML_PATH = DATA_DIR / "saved_posts.html"
@@ -21,7 +21,7 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
     """
     Load reels from JSON file.
     If missing or empty and HTML exists, extract automatically.
-    Attaches smart category classification to each reel.
+    Attaches smart category classification and content-based title to each reel.
     """
     global _CACHED_REELS
 
@@ -37,10 +37,14 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
         with open(JSON_PATH, "r", encoding="utf-8") as f:
             raw_items = json.load(f)
 
-    # Attach category if missing
+    # Attach category, title, and flags if missing
     for r in raw_items:
-        if "category" not in r:
+        if not r.get("category"):
             r["category"] = classify_reel(r)
+        if not r.get("title"):
+            r["title"] = derive_content_title(r.get("caption"), r.get("owner"), r.get("category"))
+        if "caption_generated" not in r:
+            r["caption_generated"] = False
 
     _CACHED_REELS = raw_items
     return _CACHED_REELS
@@ -51,16 +55,18 @@ def get_reels(
     category: Optional[str] = None,
     tag: Optional[str] = None,
     search: Optional[str] = None,
+    sort_by: Optional[str] = "newest",
     limit: int = 50,
     offset: int = 0,
 ) -> Tuple[int, List[Dict[str, Any]]]:
-    """Filter and paginate reels list."""
-    items = load_reels()
+    """Filter, sort, and paginate reels list."""
+    items = list(load_reels())
 
     clean_type = post_type if isinstance(post_type, str) else None
     clean_cat = category if isinstance(category, str) else None
     clean_tag = tag if isinstance(tag, str) else None
     clean_search = search if isinstance(search, str) else None
+    clean_sort = (sort_by or "newest").strip().lower()
     clean_limit = int(limit) if isinstance(limit, (int, float)) or (isinstance(limit, str) and limit.isdigit()) else 50
     clean_offset = int(offset) if isinstance(offset, (int, float)) or (isinstance(offset, str) and offset.isdigit()) else 0
 
@@ -83,6 +89,7 @@ def get_reels(
         s = clean_search.strip().lower()
         filtered = []
         for i in items:
+            title = (i.get("title") or "").lower()
             caption = (i.get("caption") or "").lower()
             owner = i.get("owner") or {}
             owner_name = (owner.get("name") or "").lower()
@@ -90,6 +97,7 @@ def get_reels(
             category_str = (i.get("category") or "").lower()
             tags = " ".join(t.lower() for t in i.get("hashtags", []))
             if (
+                s in title or
                 s in caption or
                 s in owner_name or
                 s in owner_user or
@@ -98,6 +106,16 @@ def get_reels(
             ):
                 filtered.append(i)
         items = filtered
+
+    # Sorting
+    if clean_sort == "oldest":
+        items.sort(key=lambda x: x.get("saved_at_iso") or "")
+    elif clean_sort == "title":
+        items.sort(key=lambda x: (x.get("title") or "").lower())
+    elif clean_sort == "author":
+        items.sort(key=lambda x: ((x.get("owner") or {}).get("username") or "").lower())
+    else:  # newest / default
+        items.sort(key=lambda x: x.get("saved_at_iso") or "", reverse=True)
 
     total = len(items)
     paginated = items[clean_offset : clean_offset + clean_limit]

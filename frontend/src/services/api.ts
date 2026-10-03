@@ -8,6 +8,7 @@ export async function fetchReels(params: {
   category?: string;
   tag?: string;
   search?: string;
+  sort?: string;
   limit?: number;
   offset?: number;
 }): Promise<ReelsListResponse> {
@@ -16,6 +17,7 @@ export async function fetchReels(params: {
   if (params.category && params.category !== 'all') query.append('category', params.category);
   if (params.tag) query.append('tag', params.tag);
   if (params.search) query.append('search', params.search);
+  if (params.sort) query.append('sort', params.sort);
   query.append('limit', String(params.limit ?? 50));
   query.append('offset', String(params.offset ?? 0));
 

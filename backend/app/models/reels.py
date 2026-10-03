@@ -22,7 +22,9 @@ class ReelItem(BaseModel):
     id: Optional[str] = None
     type: str = "post"
     url: str
+    title: Optional[str] = None
     caption: Optional[str] = None
+    caption_generated: Optional[bool] = False
     category: Optional[str] = "General Tech"
     hashtags: List[str] = []
     owner: OwnerInfo

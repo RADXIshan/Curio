@@ -14,7 +14,9 @@ export interface ReelItem {
   id: string;
   type: 'reel' | 'post';
   url: string;
+  title?: string | null;
   caption?: string | null;
+  caption_generated?: boolean;
   category?: string;
   hashtags: string[];
   owner: OwnerInfo;

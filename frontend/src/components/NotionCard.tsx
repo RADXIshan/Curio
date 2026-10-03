@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, Sparkles, Copy, Check, Calendar } from 'lucide-react';
 import type { ReelItem } from '../types';
+import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
 
 interface NotionCardProps {
   reel: ReelItem;
@@ -33,11 +34,8 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
   const [copied, setCopied] = useState(false);
   const isReel = reel.type === 'reel';
 
-  const captionText = reel.caption || 'Untitled post';
-  // Use first sentence or up to 65 chars as title
-  const firstLine = captionText.split('\n')[0].trim() || 'Saved Post';
-  const title = firstLine.length > 70 ? firstLine.slice(0, 70) + '...' : firstLine;
-
+  const title = getReelTitle(reel);
+  const snippet = getCleanCaptionSnippet(reel.caption);
   const username = reel.owner?.username ? `@${reel.owner.username}` : '';
 
   const handleCopy = (e: React.MouseEvent) => {
@@ -50,12 +48,12 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
   return (
     <div
       onClick={() => onOpen(reel)}
-      className="group bg-[#202020] hover:bg-[#252525] border border-[#2d2d2d] hover:border-[#404040] rounded-lg p-4 flex flex-col justify-between transition-all duration-150 cursor-pointer shadow-xs select-none"
+      className="group bg-[#202020] hover:bg-[#252525] border border-[#2d2d2d] hover:border-[#404040] rounded-xl p-4 flex flex-col justify-between transition-all duration-150 cursor-pointer shadow-xs select-none hover:shadow-lg hover:shadow-black/30"
     >
       <div>
         {/* Notion Page Icon & Format Badge */}
         <div className="flex items-center justify-between gap-2 mb-2.5">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <span className="text-base select-none">{isReel ? '🎬' : '📸'}</span>
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded border ${
@@ -66,6 +64,13 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
             >
               {isReel ? 'Reel' : 'Post'}
             </span>
+
+            {reel.caption_generated && (
+              <span className="text-[9px] font-medium px-1.5 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 flex items-center gap-1 font-mono">
+                <Sparkles className="w-2.5 h-2.5" />
+                AI Caption
+              </span>
+            )}
           </div>
 
           {reel.saved_at && (
@@ -76,13 +81,13 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
           )}
         </div>
 
-        {/* Page Title */}
+        {/* Page Title: What the content is actually about */}
         <h3 className="text-sm font-semibold text-[#f0f0f0] group-hover:text-white leading-snug mb-2 line-clamp-2">
           {title}
         </h3>
 
         {/* Notion Properties Pills: Category & Author */}
-        <div className="flex flex-wrap items-center gap-1.5 mb-3">
+        <div className="flex flex-wrap items-center gap-1.5 mb-2.5">
           {reel.category && (
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getCategoryBadgeClass(
@@ -94,15 +99,15 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
           )}
 
           {username && (
-            <span className="text-[11px] text-[#8e8e8e] px-1.5 py-0.5 rounded bg-[#181818] border border-[#2c2c2c] truncate max-w-[140px]">
+            <span className="text-[11px] text-[#8e8e8e] px-1.5 py-0.5 rounded bg-[#181818] border border-[#2c2c2c] truncate max-w-[140px] font-mono">
               {username}
             </span>
           )}
         </div>
 
-        {/* Caption Snippet */}
+        {/* Caption Snippet (Cleaned of CTAs) */}
         <p className="text-xs text-[#8c8c8c] line-clamp-3 leading-relaxed mb-3">
-          {captionText}
+          {snippet}
         </p>
 
         {/* Hashtags */}

@@ -1,5 +1,6 @@
-import { Video, Image } from 'lucide-react';
+import { Video, Image, Sparkles } from 'lucide-react';
 import type { ReelItem } from '../types';
+import { getReelTitle } from '../utils/titleUtils';
 
 interface NotionTableProps {
   reels: ReelItem[];
@@ -30,7 +31,7 @@ const getCategoryBadgeClass = (category?: string) => {
 
 export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagClick }) => {
   return (
-    <div className="w-full overflow-x-auto border border-[#2b2b2b] rounded-lg bg-[#1a1a1a]">
+    <div className="w-full overflow-x-auto border border-[#2b2b2b] rounded-xl bg-[#1a1a1a]">
       <table className="w-full text-left text-xs text-[#d4d4d4] border-collapse">
         {/* Table Header */}
         <thead>
@@ -48,8 +49,7 @@ export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagCl
         <tbody className="divide-y divide-[#262626]">
           {reels.map((reel) => {
             const isReel = reel.type === 'reel';
-            const caption = reel.caption || 'Untitled post';
-            const firstLine = caption.split('\n')[0].trim() || 'Untitled post';
+            const title = getReelTitle(reel);
 
             return (
               <tr
@@ -61,7 +61,13 @@ export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagCl
                 <td className="py-2.5 px-4 font-medium text-[#ededed] group-hover:text-white">
                   <div className="flex items-center gap-2 max-w-lg">
                     <span className="text-sm shrink-0">{isReel ? '🎬' : '📸'}</span>
-                    <span className="truncate">{firstLine}</span>
+                    <span className="truncate">{title}</span>
+                    {reel.caption_generated && (
+                      <span className="text-[9px] font-medium px-1.5 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 shrink-0 flex items-center gap-0.5 font-mono">
+                        <Sparkles className="w-2.5 h-2.5" />
+                        AI
+                      </span>
+                    )}
                   </div>
                 </td>
 

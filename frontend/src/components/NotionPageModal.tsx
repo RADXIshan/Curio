@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import type { AISummary, ReelItem } from '../types';
 import { summarizeReel } from '../services/api';
+import { getReelTitle } from '../utils/titleUtils';
 
 interface NotionPageModalProps {
   reel: ReelItem | null;
@@ -68,8 +69,8 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const caption = reel.caption || 'Untitled post';
-  const firstLine = caption.split('\n')[0].trim() || 'Instagram Saved Post';
+  const caption = reel.caption || 'No caption available.';
+  const title = getReelTitle(reel);
   const isReel = reel.type === 'reel';
 
   return (
@@ -85,6 +86,12 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
         <div className="sticky top-0 z-10 px-6 py-2.5 bg-[#1f1f1f]/95 backdrop-blur-md border-b border-[#2b2b2b] flex items-center justify-between text-xs text-[#8c8c8c]">
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono text-[#777777]">ID: {reel.id}</span>
+            {reel.caption_generated && (
+              <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30 flex items-center gap-1 font-mono">
+                <Sparkles className="w-3 h-3 text-sky-400" />
+                AI Generated Caption
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-2">
@@ -121,8 +128,20 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
           <div className="space-y-3">
             <div className="text-4xl select-none">{isReel ? '🎬' : '📸'}</div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#f4f4f4] leading-snug">
-              {firstLine}
+              {title}
             </h1>
+
+            {reel.caption_generated && (
+              <div className="flex items-start gap-2.5 p-3 rounded-lg bg-sky-950/40 border border-sky-500/30 text-xs text-sky-200">
+                <Sparkles className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sky-300">AI Synthesized Technical Caption</p>
+                  <p className="text-[11px] text-sky-200/80 leading-relaxed mt-0.5">
+                    This post originally did not contain a text caption in the Instagram export. Curio AI synthesized this technical breakdown and concepts based on the creator&apos;s verified domain and profile.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Notion Properties Grid */}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, Copy, Check, Sparkles } from 'lucide-react';
 import type { CategoryCount, ReelItem } from '../types';
+import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
 
 interface NotionBoardProps {
   reels: ReelItem[];
@@ -31,9 +32,8 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
   const [copied, setCopied] = useState(false);
   const isReel = reel.type === 'reel';
 
-  const captionText = reel.caption || 'Untitled post';
-  const firstLine = captionText.split('\n')[0].trim() || 'Saved Post';
-  const title = firstLine.length > 65 ? firstLine.slice(0, 65) + '...' : firstLine;
+  const title = getReelTitle(reel);
+  const snippet = getCleanCaptionSnippet(reel.caption);
   const username = reel.owner?.username ? `@${reel.owner.username}` : '';
 
   const handleCopy = (e: React.MouseEvent) => {
@@ -46,7 +46,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
   return (
     <div
       onClick={() => onOpen(reel)}
-      className="group bg-[#202020] hover:bg-[#252525] border border-[#2b2b2b] hover:border-[#3e3e3e] rounded-md p-3.5 flex flex-col justify-between transition-all duration-150 cursor-pointer shadow-xs select-none space-y-2.5"
+      className="group bg-[#202020] hover:bg-[#252525] border border-[#2b2b2b] hover:border-[#3e3e3e] rounded-xl p-3.5 flex flex-col justify-between transition-all duration-150 cursor-pointer shadow-xs select-none space-y-2.5 hover:shadow-md"
     >
       <div className="space-y-2">
         {/* Top: Icon + Format pill + Date */}
@@ -62,6 +62,13 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
             >
               {isReel ? 'Reel' : 'Post'}
             </span>
+
+            {reel.caption_generated && (
+              <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 flex items-center gap-0.5 font-mono">
+                <Sparkles className="w-2.5 h-2.5" />
+                AI
+              </span>
+            )}
           </div>
           {reel.saved_at && (
             <span className="text-[10px] text-[#6b6b6b] font-mono">
@@ -70,7 +77,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
           )}
         </div>
 
-        {/* Card Title */}
+        {/* Card Title: What the content is actually about */}
         <h4 className="text-xs font-semibold text-[#f0f0f0] group-hover:text-white leading-snug line-clamp-2">
           {title}
         </h4>
@@ -84,7 +91,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
 
         {/* Caption Snippet */}
         <p className="text-[11px] text-[#7d7d7d] line-clamp-2 leading-relaxed">
-          {captionText}
+          {snippet}
         </p>
 
         {/* Tags */}

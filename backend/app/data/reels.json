@@ -18,7 +18,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026 8:55 am",
-    "saved_at_iso": "2026-10-03T08:55:00"
+    "saved_at_iso": "2026-10-03T08:55:00",
+    "title": "Go is quietly becoming a BIG deal. This guy explains Go in an hour with...",
+    "caption_generated": false
   },
   {
     "id": "DczxxnxsfHF",
@@ -41,7 +43,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026 1:13 am",
-    "saved_at_iso": "2026-10-03T01:13:00"
+    "saved_at_iso": "2026-10-03T01:13:00",
+    "title": "Most students think drug research requires a pharmacology lab,...",
+    "caption_generated": false
   },
   {
     "id": "DeBVjgiBKpF",
@@ -62,7 +66,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026 1:01 am",
-    "saved_at_iso": "2026-10-03T01:01:00"
+    "saved_at_iso": "2026-10-03T01:01:00",
+    "title": "Meet Leia: a free, open-source classifier model that’s faster and...",
+    "caption_generated": false
   },
   {
     "id": "DdB6tdNDAIs",
@@ -77,7 +83,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026 1:01 am",
-    "saved_at_iso": "2026-10-03T01:01:00"
+    "saved_at_iso": "2026-10-03T01:01:00",
+    "title": "You don't need paid courses to learn AI & ML. 8 free GitHub repos worth...",
+    "caption_generated": false
   },
   {
     "id": "DdWo-jTq5Yv",
@@ -98,7 +106,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026 12:57 am",
-    "saved_at_iso": "2026-10-03T00:57:00"
+    "saved_at_iso": "2026-10-03T00:57:00",
+    "title": "Free ML Research Papers",
+    "caption_generated": false
   },
   {
     "id": "Dd_1YZXjOL2",
@@ -113,7 +123,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026 10:43 am",
-    "saved_at_iso": "2026-10-02T10:43:00"
+    "saved_at_iso": "2026-10-02T10:43:00",
+    "title": "if you want to get better at the hard parts of cs, these are the...",
+    "caption_generated": false
   },
   {
     "id": "Da0LMELjStT",
@@ -134,7 +146,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026 10:07 am",
-    "saved_at_iso": "2026-10-02T10:07:00"
+    "saved_at_iso": "2026-10-02T10:07:00",
+    "title": "5 Practical Python Projects for Real-World Skills (@pirknn)",
+    "caption_generated": false
   },
   {
     "id": "Dd6aiIWo3RC",
@@ -154,7 +168,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026 7:09 am",
-    "saved_at_iso": "2026-10-02T07:09:00"
+    "saved_at_iso": "2026-10-02T07:09:00",
+    "title": "Building Neural Networks & Perceptrons from Scratch (@pirknn)",
+    "caption_generated": false
   },
   {
     "id": "Dc751XTt3kE",
@@ -175,7 +191,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 6:43 am",
-    "saved_at_iso": "2026-10-01T06:43:00"
+    "saved_at_iso": "2026-10-01T06:43:00",
+    "title": "You get bored reading research papers. Every single time.",
+    "caption_generated": false
   },
   {
     "id": "Dd85NOcjWaK",
@@ -196,7 +214,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 6:10 am",
-    "saved_at_iso": "2026-10-01T06:10:00"
+    "saved_at_iso": "2026-10-01T06:10:00",
+    "title": "5 Essential GitHub Repositories for Developers (@sahni.ai)",
+    "caption_generated": false
   },
   {
     "id": "Dd6NTIYD6ej",
@@ -217,14 +237,22 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 5:43 am",
-    "saved_at_iso": "2026-10-01T05:43:00"
+    "saved_at_iso": "2026-10-01T05:43:00",
+    "title": "Interactive Coding Games to Master AI & Reinforcement Learning",
+    "caption_generated": false
   },
   {
     "id": "Dc6Fhx4JPHW",
     "type": "reel",
     "url": "https://www.instagram.com/reel/Dc6Fhx4JPHW/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "In high-throughput distributed systems, effective caching is the single most critical factor in slashing database load and decreasing latency. This guide analyzes the architectural tradeoffs between Cache-Aside, Write-Through, and Write-Back (Write-Behind) patterns implemented with Redis and Memcached.\n\nWith Cache-Aside, the application directly orchestrates querying the cache and fallback to the database, making it resilient but prone to stale data if TTLs are misconfigured. For write-heavy systems requiring strong consistency, Write-Through updates both the cache and database synchronously, which increases write latency but guarantees consistency. Alternatively, Write-Back writes to the cache instantly and flushes to the database asynchronously, offering maximum write performance.\n\nWhen designing your system architecture, evaluate your read-to-write ratio and tolerance for eventual consistency. Use Cache-Aside for standard read-heavy applications like user profiles, and reserved Write-Back patterns for high-throughput logging or real-time analytics.",
+    "hashtags": [
+      "systemdesign",
+      "backenddevelopment",
+      "caching",
+      "redis",
+      "microservices"
+    ],
     "owner": {
       "name": "Divyam Dawar",
       "username": "divyam.explains",
@@ -232,7 +260,10 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 3:05 am",
-    "saved_at_iso": "2026-10-01T03:05:00"
+    "saved_at_iso": "2026-10-01T03:05:00",
+    "title": "Caching Strategies for Scalable Backend Microservices",
+    "category": "System Design & Backend",
+    "caption_generated": true
   },
   {
     "id": "DcZF2XLS6Oo",
@@ -247,7 +278,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 1:55 am",
-    "saved_at_iso": "2026-10-01T01:55:00"
+    "saved_at_iso": "2026-10-01T01:55:00",
+    "title": "Best Cpp Resources to learn from !! ❤️ Tried and tested.",
+    "caption_generated": false
   },
   {
     "id": "Dd6izTYiln1",
@@ -264,7 +297,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026 12:45 am",
-    "saved_at_iso": "2026-10-01T00:45:00"
+    "saved_at_iso": "2026-10-01T00:45:00",
+    "title": "AI Agent Architecture & Setup Guide (@itstundeanthony)",
+    "caption_generated": false
   },
   {
     "id": "DblR6fhuzSe",
@@ -279,7 +314,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 30, 2026 7:59 am",
-    "saved_at_iso": "2026-09-30T07:59:00"
+    "saved_at_iso": "2026-09-30T07:59:00",
+    "title": "These three GitHub repositories are so good for learning how to program.",
+    "caption_generated": false
   },
   {
     "id": "DdJUE1XjYzk",
@@ -305,7 +342,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 29, 2026 11:05 pm",
-    "saved_at_iso": "2026-09-29T23:05:00"
+    "saved_at_iso": "2026-09-29T23:05:00",
+    "title": "Notes of the book System Desgin Interview - An Insider's Guide",
+    "caption_generated": false
   },
   {
     "id": "DdxhFHTR8cm",
@@ -326,7 +365,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026 7:32 pm",
-    "saved_at_iso": "2026-09-28T19:32:00"
+    "saved_at_iso": "2026-09-28T19:32:00",
+    "title": "Learning AI doesn’t have to be hard or boring. These websites gamify...",
+    "caption_generated": false
   },
   {
     "id": "Dd17S68jidq",
@@ -347,7 +388,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026 7:24 pm",
-    "saved_at_iso": "2026-09-28T19:24:00"
+    "saved_at_iso": "2026-09-28T19:24:00",
+    "title": "Architecture Concepts to Know 🏗️ Load Balancing, Caching, CDN, Message...",
+    "caption_generated": false
   },
   {
     "id": "DdtUk4lD0yz",
@@ -368,7 +411,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026 7:23 pm",
-    "saved_at_iso": "2026-09-28T19:23:00"
+    "saved_at_iso": "2026-09-28T19:23:00",
+    "title": "If you’re really into AI, these are some interesting topics you can...",
+    "caption_generated": false
   },
   {
     "id": "Daxd9_RiDBv",
@@ -392,7 +437,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026 5:54 pm",
-    "saved_at_iso": "2026-09-28T17:54:00"
+    "saved_at_iso": "2026-09-28T17:54:00",
+    "title": "Open Source Projects You Should Know #code #programming #coding #tech...",
+    "caption_generated": false
   },
   {
     "id": "DcHCW-qk_OI",
@@ -413,7 +460,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026 6:52 am",
-    "saved_at_iso": "2026-09-28T06:52:00"
+    "saved_at_iso": "2026-09-28T06:52:00",
+    "title": "topics to nerd out on related to computer science!",
+    "caption_generated": false
   },
   {
     "id": "Ddw0-ANOCbp",
@@ -434,7 +483,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026 10:24 pm",
-    "saved_at_iso": "2026-09-26T22:24:00"
+    "saved_at_iso": "2026-09-26T22:24:00",
+    "title": "If you don’t have a bunch of certifications and projects under résumé,...",
+    "caption_generated": false
   },
   {
     "id": "DdxOFyaBDD7",
@@ -455,7 +506,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026 10:22 pm",
-    "saved_at_iso": "2026-09-26T22:22:00"
+    "saved_at_iso": "2026-09-26T22:22:00",
+    "title": "papers that explain why modern LLMs behave the way they do. Not to...",
+    "caption_generated": false
   },
   {
     "id": "DdtskzNNTWr",
@@ -470,7 +523,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026 12:15 am",
-    "saved_at_iso": "2026-09-26T00:15:00"
+    "saved_at_iso": "2026-09-26T00:15:00",
+    "title": "Complete Git & Version Control PDF Guide (@100xengineers)",
+    "caption_generated": false
   },
   {
     "id": "DduOZV-vgzf",
@@ -489,7 +544,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026 11:45 pm",
-    "saved_at_iso": "2026-09-25T23:45:00"
+    "saved_at_iso": "2026-09-25T23:45:00",
+    "title": "drewisliving: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Ddt5HcPoLJs",
@@ -510,7 +567,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026 10:40 pm",
-    "saved_at_iso": "2026-09-25T22:40:00"
+    "saved_at_iso": "2026-09-25T22:40:00",
+    "title": "Writing basic CRUD endpoints is just step one in software engineering....",
+    "caption_generated": false
   },
   {
     "id": "DdrN7RlotzN",
@@ -530,7 +589,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026 7:22 am",
-    "saved_at_iso": "2026-09-25T07:22:00"
+    "saved_at_iso": "2026-09-25T07:22:00",
+    "title": "AI engineering from scratch as a new open source repo that teaches you...",
+    "caption_generated": false
   },
   {
     "id": "Ddtv8-4jDCu",
@@ -545,7 +606,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026 7:20 am",
-    "saved_at_iso": "2026-09-25T07:20:00"
+    "saved_at_iso": "2026-09-25T07:20:00",
+    "title": "if you want projects that actually stand out on your resume, these are...",
+    "caption_generated": false
   },
   {
     "id": "DdVsE-EoPGj",
@@ -560,7 +623,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026 5:41 am",
-    "saved_at_iso": "2026-09-25T05:41:00"
+    "saved_at_iso": "2026-09-25T05:41:00",
+    "title": "Shoutout devinterview.ai",
+    "caption_generated": false
   },
   {
     "id": "DdrHAI1MrFb",
@@ -581,7 +646,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 24, 2026 12:06 pm",
-    "saved_at_iso": "2026-09-24T12:06:00"
+    "saved_at_iso": "2026-09-24T12:06:00",
+    "title": "Load balancer. Cache. Queue. CDN. Replica. Shard. 🧠",
+    "caption_generated": false
   },
   {
     "id": "DbldRHyz6ph",
@@ -602,7 +669,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 24, 2026 9:41 am",
-    "saved_at_iso": "2026-09-24T09:41:00"
+    "saved_at_iso": "2026-09-24T09:41:00",
+    "title": "🥇Gold Backend Playlist by Hussein Nasser. You can’t miss this",
+    "caption_generated": false
   },
   {
     "id": "DdodWLBNsnu",
@@ -623,7 +692,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 24, 2026 6:58 am",
-    "saved_at_iso": "2026-09-24T06:58:00"
+    "saved_at_iso": "2026-09-24T06:58:00",
+    "title": "Learning Docker is much easier when you stop memorizing Docker commands...",
+    "caption_generated": false
   },
   {
     "id": "DdluR9wo2pI",
@@ -644,7 +715,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 23, 2026 12:24 am",
-    "saved_at_iso": "2026-09-23T00:24:00"
+    "saved_at_iso": "2026-09-23T00:24:00",
+    "title": "Still deploying code you never scanned? These 7 tools are free.",
+    "caption_generated": false
   },
   {
     "id": "Ddj4CSshq47",
@@ -665,7 +738,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 23, 2026 12:10 am",
-    "saved_at_iso": "2026-09-23T00:10:00"
+    "saved_at_iso": "2026-09-23T00:10:00",
+    "title": "projects to help you break into AI engineering 👇🏽👇🏽",
+    "caption_generated": false
   },
   {
     "id": "DdkGgM_yVbu",
@@ -680,7 +755,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 22, 2026 9:58 am",
-    "saved_at_iso": "2026-09-22T09:58:00"
+    "saved_at_iso": "2026-09-22T09:58:00",
+    "title": "addictions you must quit in your 20s",
+    "caption_generated": false
   },
   {
     "id": "Ddjozd0yhQN",
@@ -695,7 +772,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 7:46 pm",
-    "saved_at_iso": "2026-09-21T19:46:00"
+    "saved_at_iso": "2026-09-21T19:46:00",
+    "title": "Stanford’s $850,000 Job Skills Course Now Free on YouTube",
+    "caption_generated": false
   },
   {
     "id": "DbuIw0HAFNt",
@@ -716,7 +795,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 8:08 am",
-    "saved_at_iso": "2026-09-21T08:08:00"
+    "saved_at_iso": "2026-09-21T08:08:00",
+    "title": "How to read and retain as much imformation as you desire 😄",
+    "caption_generated": false
   },
   {
     "id": "Dat0q39x0QL",
@@ -731,7 +812,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 5:44 am",
-    "saved_at_iso": "2026-09-21T05:44:00"
+    "saved_at_iso": "2026-09-21T05:44:00",
+    "title": "super combination if you pair this setup with active review 🗣",
+    "caption_generated": false
   },
   {
     "id": "Dcwyi7qj3-f",
@@ -749,7 +832,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 4:35 am",
-    "saved_at_iso": "2026-09-21T04:35:00"
+    "saved_at_iso": "2026-09-21T04:35:00",
+    "title": "You didn't see this coming.",
+    "caption_generated": false
   },
   {
     "id": "DdhxX6vDGsk",
@@ -764,7 +849,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 4:25 am",
-    "saved_at_iso": "2026-09-21T04:25:00"
+    "saved_at_iso": "2026-09-21T04:25:00",
+    "title": "decode.herr: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DdiJRJpv8d-",
@@ -785,7 +872,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 4:21 am",
-    "saved_at_iso": "2026-09-21T04:21:00"
+    "saved_at_iso": "2026-09-21T04:21:00",
+    "title": "Oas are some of the easiest things to crack if you know how to prep for...",
+    "caption_generated": false
   },
   {
     "id": "Dc0_htAMc01",
@@ -800,7 +889,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 3:31 am",
-    "saved_at_iso": "2026-09-21T03:31:00"
+    "saved_at_iso": "2026-09-21T03:31:00",
+    "title": "Watch these 3 videos and you'll understand JavaScript better than most...",
+    "caption_generated": false
   },
   {
     "id": "DdO1UioAHAS",
@@ -815,7 +906,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 3:28 am",
-    "saved_at_iso": "2026-09-21T03:28:00"
+    "saved_at_iso": "2026-09-21T03:28:00",
+    "title": "I've hoarded over a hundred Claude repos this year. These are the 40...",
+    "caption_generated": false
   },
   {
     "id": "Ddgyy_iMSZz",
@@ -830,7 +923,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 3:25 am",
-    "saved_at_iso": "2026-09-21T03:25:00"
+    "saved_at_iso": "2026-09-21T03:25:00",
+    "title": "Databases and APIs are the two things every backend job asks about, and...",
+    "caption_generated": false
   },
   {
     "id": "DdZBoitjmMW",
@@ -845,7 +940,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026 3:07 am",
-    "saved_at_iso": "2026-09-21T03:07:00"
+    "saved_at_iso": "2026-09-21T03:07:00",
+    "title": "Stop paying for Grammarly, Loom, and Typeform before you've seen these...",
+    "caption_generated": false
   },
   {
     "id": "DdgZsZtAAgo",
@@ -866,7 +963,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 20, 2026 10:32 am",
-    "saved_at_iso": "2026-09-20T10:32:00"
+    "saved_at_iso": "2026-09-20T10:32:00",
+    "title": "Here I have",
+    "caption_generated": false
   },
   {
     "id": "DdecbsEnSGo",
@@ -887,7 +986,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 19, 2026 9:10 pm",
-    "saved_at_iso": "2026-09-19T21:10:00"
+    "saved_at_iso": "2026-09-19T21:10:00",
+    "title": "If I had to relearn DSA from zero, this is how I'd do it. (NOT NeetCode...",
+    "caption_generated": false
   },
   {
     "id": "DdaWzcoKgAc",
@@ -908,7 +1009,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 18, 2026 8:53 am",
-    "saved_at_iso": "2026-09-18T08:53:00"
+    "saved_at_iso": "2026-09-18T08:53:00",
+    "title": "Free template code for projects",
+    "caption_generated": false
   },
   {
     "id": "DdXxkN2tWpJ",
@@ -923,7 +1026,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026 7:07 am",
-    "saved_at_iso": "2026-09-17T07:07:00"
+    "saved_at_iso": "2026-09-17T07:07:00",
+    "title": "WE are all becoming cracked in 2026, I wish I had a mentor that would...",
+    "caption_generated": false
   },
   {
     "id": "DdYPOerRWc8",
@@ -942,7 +1047,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026 7:07 am",
-    "saved_at_iso": "2026-09-17T07:07:00"
+    "saved_at_iso": "2026-09-17T07:07:00",
+    "title": "research papers for AI engineers.",
+    "caption_generated": false
   },
   {
     "id": "DdWnJFXjFmM",
@@ -961,7 +1068,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026 2:11 am",
-    "saved_at_iso": "2026-09-17T02:11:00"
+    "saved_at_iso": "2026-09-17T02:11:00",
+    "title": "GitHub URL Tricks Every Developer Should Know",
+    "caption_generated": false
   },
   {
     "id": "Dc9Eu6btor8",
@@ -982,7 +1091,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 16, 2026 8:35 pm",
-    "saved_at_iso": "2026-09-16T20:35:00"
+    "saved_at_iso": "2026-09-16T20:35:00",
+    "title": "chrispathway: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DdTLo45CWLn",
@@ -997,7 +1108,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 16, 2026 5:08 am",
-    "saved_at_iso": "2026-09-16T05:08:00"
+    "saved_at_iso": "2026-09-16T05:08:00",
+    "title": "AI WEBSITES FOR 5 COLLEGE EMERGENCIES:",
+    "caption_generated": false
   },
   {
     "id": "DdUm1kcSSa0",
@@ -1017,7 +1130,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026 9:16 pm",
-    "saved_at_iso": "2026-09-15T21:16:00"
+    "saved_at_iso": "2026-09-15T21:16:00",
+    "title": "krishneurotech: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DdTsgMgTka5",
@@ -1032,7 +1147,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026 5:09 pm",
-    "saved_at_iso": "2026-09-15T17:09:00"
+    "saved_at_iso": "2026-09-15T17:09:00",
+    "title": "These 4 videos improve your backend skills",
+    "caption_generated": false
   },
   {
     "id": "DdTAourxArL",
@@ -1053,14 +1170,22 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026 7:35 am",
-    "saved_at_iso": "2026-09-15T07:35:00"
+    "saved_at_iso": "2026-09-15T07:35:00",
+    "title": "k_se_code: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DdQS2d8KMPh",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DdQS2d8KMPh/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Moving beyond basic LLM prompt-and-response paradigms requires building autonomous agents capable of tool use, external API execution, and iterative reasoning. By giving models structured schemas for calculators, databases, and web searchers, the agent can decide dynamically when and how to call tools, inspect the returned payloads, and loop until the objective is accomplished.\n\nTo build these systems reliably, developers leverage tools like LangGraph, CrewAI, or native function calling APIs from Google Gemini and Anthropic. Defining strict execution boundaries using Pydantic models for argument validation is crucial to prevent runtime crashes caused by malformed LLM outputs. Additionally, maintaining a clear state graph allows you to handle complex multi-step reasoning loops.\n\nKey engineering takeaways for productionizing agentic workflows include implementing robust error-handling loops for hallucinations, enforcing rate-limiting on external APIs, and always establishing a human-in-the-loop guardrail for destructive actions like database writes or financial transactions.",
+    "hashtags": [
+      "AIEngineering",
+      "LLMs",
+      "AIAgents",
+      "SystemDesign",
+      "SoftwareEngineering"
+    ],
     "owner": {
       "name": "AI & Engineering with Benny Bytes",
       "username": "benny.bytes",
@@ -1068,7 +1193,10 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026 5:57 am",
-    "saved_at_iso": "2026-09-15T05:57:00"
+    "saved_at_iso": "2026-09-15T05:57:00",
+    "title": "Building Autonomous AI Agents with Tool Calling",
+    "category": "AI & Agents",
+    "caption_generated": true
   },
   {
     "id": "DdS3CjrKsr3",
@@ -1086,7 +1214,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026 1:49 am",
-    "saved_at_iso": "2026-09-15T01:49:00"
+    "saved_at_iso": "2026-09-15T01:49:00",
+    "title": "Sharing the AI agents I’m building to become more efficient",
+    "caption_generated": false
   },
   {
     "id": "Dc_oHwZIN53",
@@ -1101,7 +1231,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 14, 2026 1:57 pm",
-    "saved_at_iso": "2026-09-14T13:57:00"
+    "saved_at_iso": "2026-09-14T13:57:00",
+    "title": "Some things I’ve watched instead of doomscrolling recently",
+    "caption_generated": false
   },
   {
     "id": "DdPUuzxu862",
@@ -1120,7 +1252,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 14, 2026 7:03 am",
-    "saved_at_iso": "2026-09-14T07:03:00"
+    "saved_at_iso": "2026-09-14T07:03:00",
+    "title": "I think this might be a heartache, but breaking into tech isn’t that...",
+    "caption_generated": false
   },
   {
     "id": "DdNujL6xxKS",
@@ -1141,7 +1275,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 13, 2026 9:05 pm",
-    "saved_at_iso": "2026-09-13T21:05:00"
+    "saved_at_iso": "2026-09-13T21:05:00",
+    "title": "Most developers know Monolith vs Microservices.",
+    "caption_generated": false
   },
   {
     "id": "DaKS9BssG3k",
@@ -1162,7 +1298,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026 9:52 pm",
-    "saved_at_iso": "2026-09-12T21:52:00"
+    "saved_at_iso": "2026-09-12T21:52:00",
+    "title": "staff engineer starter pack: architecture diagrams, distributed...",
+    "caption_generated": false
   },
   {
     "id": "DdKsCvRicq_",
@@ -1182,7 +1320,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026 9:51 pm",
-    "saved_at_iso": "2026-09-12T21:51:00"
+    "saved_at_iso": "2026-09-12T21:51:00",
+    "title": "THE BEST AI Course hands down.  Why do I love this course? Because it...",
+    "caption_generated": false
   },
   {
     "id": "DdMGmo4sIdv",
@@ -1197,7 +1337,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026 8:14 am",
-    "saved_at_iso": "2026-09-12T08:14:00"
+    "saved_at_iso": "2026-09-12T08:14:00",
+    "title": "if you want to actually learn machine learning instead of collecting...",
+    "caption_generated": false
   },
   {
     "id": "Dcd0DDLKwY5",
@@ -1218,7 +1360,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026 9:56 pm",
-    "saved_at_iso": "2026-09-11T21:56:00"
+    "saved_at_iso": "2026-09-11T21:56:00",
+    "title": "skillupchapter: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Dbx1gaITe3_",
@@ -1239,7 +1383,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026 1:23 pm",
-    "saved_at_iso": "2026-09-11T13:23:00"
+    "saved_at_iso": "2026-09-11T13:23:00",
+    "title": "🚨 Starting your LeetCode journey? Start with these 50 questions",
+    "caption_generated": false
   },
   {
     "id": "DdINw3pqbGI",
@@ -1260,7 +1406,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026 4:18 am",
-    "saved_at_iso": "2026-09-11T04:18:00"
+    "saved_at_iso": "2026-09-11T04:18:00",
+    "title": "A machine learning master’s costs $60,000. These five free resources...",
+    "caption_generated": false
   },
   {
     "id": "DcQOuA4zkpz",
@@ -1281,7 +1429,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026 3:26 am",
-    "saved_at_iso": "2026-09-11T03:26:00"
+    "saved_at_iso": "2026-09-11T03:26:00",
+    "title": "Parkinson's kills the substantia nigra. Alzheimer's starts in the...",
+    "caption_generated": false
   },
   {
     "id": "DdHiZzxz5fB",
@@ -1296,7 +1446,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026 1:31 am",
-    "saved_at_iso": "2026-09-11T01:31:00"
+    "saved_at_iso": "2026-09-11T01:31:00",
+    "title": "AI engineering paths. One decision.",
+    "caption_generated": false
   },
   {
     "id": "DcMqDlepXf5",
@@ -1317,7 +1469,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026 10:06 am",
-    "saved_at_iso": "2026-09-10T10:06:00"
+    "saved_at_iso": "2026-09-10T10:06:00",
+    "title": "Build you own Spotify player with blueprint",
+    "caption_generated": false
   },
   {
     "id": "Dcsg_fEsdRR",
@@ -1338,7 +1492,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026 5:51 am",
-    "saved_at_iso": "2026-09-10T05:51:00"
+    "saved_at_iso": "2026-09-10T05:51:00",
+    "title": "Better than ChatGPT #study #students #oreateai #essay #learningskills",
+    "caption_generated": false
   },
   {
     "id": "DdEQqvMFBQ-",
@@ -1359,7 +1515,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026 3:23 am",
-    "saved_at_iso": "2026-09-10T03:23:00"
+    "saved_at_iso": "2026-09-10T03:23:00",
+    "title": "Avoid these sih team red flags and build a project that actually wins....",
+    "caption_generated": false
   },
   {
     "id": "DdEOwy9z2IY",
@@ -1379,7 +1537,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026 9:05 pm",
-    "saved_at_iso": "2026-09-09T21:05:00"
+    "saved_at_iso": "2026-09-09T21:05:00",
+    "title": "I WANT TO MASTER SYSTEM DESIGN.",
+    "caption_generated": false
   },
   {
     "id": "DcjHM3wk7ve",
@@ -1394,7 +1554,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026 7:42 pm",
-    "saved_at_iso": "2026-09-09T19:42:00"
+    "saved_at_iso": "2026-09-09T19:42:00",
+    "title": "Engineering Concepts That Show Up EVERYWHERE!",
+    "caption_generated": false
   },
   {
     "id": "DdC-MSRiEPk",
@@ -1415,7 +1577,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026 6:04 am",
-    "saved_at_iso": "2026-09-09T06:04:00"
+    "saved_at_iso": "2026-09-09T06:04:00",
+    "title": "Free Courses in Machine Learning",
+    "caption_generated": false
   },
   {
     "id": "DdCvFdHsnj1",
@@ -1440,7 +1604,9 @@
       "url": "https://replit.com"
     },
     "saved_at": "Sep 09, 2026 12:22 am",
-    "saved_at_iso": "2026-09-09T00:22:00"
+    "saved_at_iso": "2026-09-09T00:22:00",
+    "title": "Learning AI can feel overwhelming.",
+    "caption_generated": false
   },
   {
     "id": "DcglpE2S2ik",
@@ -1455,7 +1621,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:11 pm",
-    "saved_at_iso": "2026-09-08T12:11:00"
+    "saved_at_iso": "2026-09-08T12:11:00",
+    "title": "saban.talks: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DdBDoTPAQHs",
@@ -1470,7 +1638,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:06 pm",
-    "saved_at_iso": "2026-09-08T12:06:00"
+    "saved_at_iso": "2026-09-08T12:06:00",
+    "title": "{mind games, brain games, doomscrolling, intellectual}",
+    "caption_generated": false
   },
   {
     "id": "DcV9AvoTNdO",
@@ -1495,7 +1665,9 @@
       "url": "https://linktr.ee/kingdomofwhite_"
     },
     "saved_at": "Sep 08, 2026 6:14 am",
-    "saved_at_iso": "2026-09-08T06:14:00"
+    "saved_at_iso": "2026-09-08T06:14:00",
+    "title": "Who doesn’t love white?",
+    "caption_generated": false
   },
   {
     "id": "Dc0ZeHbx6l2",
@@ -1513,7 +1685,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:28 am",
-    "saved_at_iso": "2026-09-08T00:28:00"
+    "saved_at_iso": "2026-09-08T00:28:00",
+    "title": "This one’s for ENTREPRENEURS! 💯",
+    "caption_generated": false
   },
   {
     "id": "DcI-nH8RgDu",
@@ -1528,7 +1702,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:13 am",
-    "saved_at_iso": "2026-09-08T00:13:00"
+    "saved_at_iso": "2026-09-08T00:13:00",
+    "title": "DON’T MISS THIS website ⚠️❌.. it’s crazy useful for students,...",
+    "caption_generated": false
   },
   {
     "id": "DZXxPHHI8QC",
@@ -1543,7 +1719,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:13 am",
-    "saved_at_iso": "2026-09-08T00:13:00"
+    "saved_at_iso": "2026-09-08T00:13:00",
+    "title": "Revise THESE Database Interview Topics!",
+    "caption_generated": false
   },
   {
     "id": "Dc_cSU9TbCD",
@@ -1564,7 +1742,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:11 am",
-    "saved_at_iso": "2026-09-08T00:11:00"
+    "saved_at_iso": "2026-09-08T00:11:00",
+    "title": "This GitHub repo makes any screen recording look like you hired a...",
+    "caption_generated": false
   },
   {
     "id": "Dc_BGj7P-JS",
@@ -1584,7 +1764,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:08 am",
-    "saved_at_iso": "2026-09-08T00:08:00"
+    "saved_at_iso": "2026-09-08T00:08:00",
+    "title": "System Design",
+    "caption_generated": false
   },
   {
     "id": "Dc_bjs4z0Y9",
@@ -1599,7 +1781,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026 12:06 am",
-    "saved_at_iso": "2026-09-08T00:06:00"
+    "saved_at_iso": "2026-09-08T00:06:00",
+    "title": "COMPLETE Job Role-Wise Certification Roa",
+    "caption_generated": false
   },
   {
     "id": "DWUAF-epsQh",
@@ -1614,7 +1798,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026 3:05 am",
-    "saved_at_iso": "2026-09-07T03:05:00"
+    "saved_at_iso": "2026-09-07T03:05:00",
+    "title": "An API is simply how apps talk to each other.",
+    "caption_generated": false
   },
   {
     "id": "Dc1KLYjRYH0",
@@ -1629,7 +1815,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026 3:03 am",
-    "saved_at_iso": "2026-09-07T03:03:00"
+    "saved_at_iso": "2026-09-07T03:03:00",
+    "title": "MUST-KNOW Git Commands For Beginners!",
+    "caption_generated": false
   },
   {
     "id": "DdA4uU8JSKy",
@@ -1650,7 +1838,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026 2:42 am",
-    "saved_at_iso": "2026-09-07T02:42:00"
+    "saved_at_iso": "2026-09-07T02:42:00",
+    "title": "In 2026 if you are still missing out on backend engineering here’s how...",
+    "caption_generated": false
   },
   {
     "id": "Dc7rseVSSI6",
@@ -1671,7 +1861,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026 9:51 am",
-    "saved_at_iso": "2026-09-06T09:51:00"
+    "saved_at_iso": "2026-09-06T09:51:00",
+    "title": "Crack FAANG with these must-do DSA questions 🧠",
+    "caption_generated": false
   },
   {
     "id": "DbdUXCKil8y",
@@ -1686,7 +1878,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026 4:24 am",
-    "saved_at_iso": "2026-09-06T04:24:00"
+    "saved_at_iso": "2026-09-06T04:24:00",
+    "title": "Google Developer Tools & Learning Resources (@ai.veerse)",
+    "caption_generated": false
   },
   {
     "id": "DZpwudMJpTI",
@@ -1701,7 +1895,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026 4:22 am",
-    "saved_at_iso": "2026-09-06T04:22:00"
+    "saved_at_iso": "2026-09-06T04:22:00",
+    "title": "Websites to Train your Brain!",
+    "caption_generated": false
   },
   {
     "id": "Dc0o4T-hnId",
@@ -1716,7 +1912,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026 12:54 am",
-    "saved_at_iso": "2026-09-06T00:54:00"
+    "saved_at_iso": "2026-09-06T00:54:00",
+    "title": "Tech & Coding Exam Preparation Resources (@ai.veerse)",
+    "caption_generated": false
   },
   {
     "id": "DaxaUy-v9L4",
@@ -1737,7 +1935,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 05, 2026 12:03 pm",
-    "saved_at_iso": "2026-09-05T12:03:00"
+    "saved_at_iso": "2026-09-05T12:03:00",
+    "title": "parth_jairam.exe: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Da3R1ZxMH8_",
@@ -1757,7 +1957,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 03, 2026 12:06 pm",
-    "saved_at_iso": "2026-09-03T12:06:00"
+    "saved_at_iso": "2026-09-03T12:06:00",
+    "title": "#ootd #fashionstyle #mensstyle #ol",
+    "caption_generated": false
   },
   {
     "id": "Dc00h4jTHnQ",
@@ -1778,7 +1980,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 03, 2026 11:37 am",
-    "saved_at_iso": "2026-09-03T11:37:00"
+    "saved_at_iso": "2026-09-03T11:37:00",
+    "title": "One video that covers 90% of system design concepts you need.",
+    "caption_generated": false
   },
   {
     "id": "DcsbllCE3JU",
@@ -1793,7 +1997,9 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 02, 2026 11:05 am",
-    "saved_at_iso": "2026-09-02T11:05:00"
+    "saved_at_iso": "2026-09-02T11:05:00",
+    "title": "Final Year Projects to get hired !",
+    "caption_generated": false
   },
   {
     "id": "Dcq75LWSYyo",
@@ -1808,7 +2014,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 31, 2026 1:58 am",
-    "saved_at_iso": "2026-08-31T01:58:00"
+    "saved_at_iso": "2026-08-31T01:58:00",
+    "title": "🧠 EP. 01 - SLAP YOURSELF",
+    "caption_generated": false
   },
   {
     "id": "Dcli6WSTq47",
@@ -1823,7 +2031,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 30, 2026 7:05 am",
-    "saved_at_iso": "2026-08-30T07:05:00"
+    "saved_at_iso": "2026-08-30T07:05:00",
+    "title": "These channels genuinely changed how I approach DSA, problem-solving,...",
+    "caption_generated": false
   },
   {
     "id": "Dcn5od9M-Zp",
@@ -1838,7 +2048,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 30, 2026 2:55 am",
-    "saved_at_iso": "2026-08-30T02:55:00"
+    "saved_at_iso": "2026-08-30T02:55:00",
+    "title": "how to become so charismatic that everyone wants to talk to you",
+    "caption_generated": false
   },
   {
     "id": "DckMIPnOTCM",
@@ -1857,7 +2069,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 28, 2026 11:48 am",
-    "saved_at_iso": "2026-08-28T11:48:00"
+    "saved_at_iso": "2026-08-28T11:48:00",
+    "title": "Start simple and work up from there!!",
+    "caption_generated": false
   },
   {
     "id": "DcjBEJvzZOT",
@@ -1878,7 +2092,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 28, 2026 7:08 am",
-    "saved_at_iso": "2026-08-28T07:08:00"
+    "saved_at_iso": "2026-08-28T07:08:00",
+    "title": "How many of these can you actually explain? 👀",
+    "caption_generated": false
   },
   {
     "id": "DafasipSI_s",
@@ -1899,7 +2115,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 28, 2026 6:57 am",
-    "saved_at_iso": "2026-08-28T06:57:00"
+    "saved_at_iso": "2026-08-28T06:57:00",
+    "title": "If you spend 8+ hours sitting every day, this reel is for you.",
+    "caption_generated": false
   },
   {
     "id": "DcfPZjVOYBW",
@@ -1918,7 +2136,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026 11:12 pm",
-    "saved_at_iso": "2026-08-26T23:12:00"
+    "saved_at_iso": "2026-08-26T23:12:00",
+    "title": "drewisliving: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DcgTT2hyBlv",
@@ -1938,7 +2158,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026 8:48 am",
-    "saved_at_iso": "2026-08-26T08:48:00"
+    "saved_at_iso": "2026-08-26T08:48:00",
+    "title": "Did you ever think you’d be able to make a fully functional,...",
+    "caption_generated": false
   },
   {
     "id": "Db9izPDSF4B",
@@ -1953,7 +2175,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026 10:37 pm",
-    "saved_at_iso": "2026-08-25T22:37:00"
+    "saved_at_iso": "2026-08-25T22:37:00",
+    "title": "TVアニメ 『SPY×FAMILY』の最新情報が公開されました。",
+    "caption_generated": false
   },
   {
     "id": "DcT3gVCu-hN",
@@ -1971,7 +2195,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026 10:31 pm",
-    "saved_at_iso": "2026-08-25T22:31:00"
+    "saved_at_iso": "2026-08-25T22:31:00",
+    "title": "Love Lessons: Part 60 💕 Women and Men… take notes 👀 #romance #dating",
+    "caption_generated": false
   },
   {
     "id": "DcduHnLS3Sm",
@@ -1992,7 +2218,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026 10:06 pm",
-    "saved_at_iso": "2026-08-25T22:06:00"
+    "saved_at_iso": "2026-08-25T22:06:00",
+    "title": "I spent a while cataloguing what actually makes AI writing detectable,...",
+    "caption_generated": false
   },
   {
     "id": "DbSlqljRm7Q",
@@ -2007,7 +2235,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026 4:17 am",
-    "saved_at_iso": "2026-08-25T04:17:00"
+    "saved_at_iso": "2026-08-25T04:17:00",
+    "title": "A healthy relationship will test you more than a toxic one.",
+    "caption_generated": false
   },
   {
     "id": "Daa8fy8PKC1",
@@ -2027,7 +2257,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026 12:15 am",
-    "saved_at_iso": "2026-08-25T00:15:00"
+    "saved_at_iso": "2026-08-25T00:15:00",
+    "title": "Here’s some resources that I wish I knew in college when I started...",
+    "caption_generated": false
   },
   {
     "id": "DaRBm20hcna",
@@ -2048,7 +2280,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 11:00 pm",
-    "saved_at_iso": "2026-08-24T23:00:00"
+    "saved_at_iso": "2026-08-24T23:00:00",
+    "title": "Mastering your mind, controlling your lack of time perception, and...",
+    "caption_generated": false
   },
   {
     "id": "DcbobpYOjcJ",
@@ -2063,7 +2297,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 10:15 pm",
-    "saved_at_iso": "2026-08-24T22:15:00"
+    "saved_at_iso": "2026-08-24T22:15:00",
+    "title": "Guys please",
+    "caption_generated": false
   },
   {
     "id": "DcONL8aNNQ2",
@@ -2078,7 +2314,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 8:22 am",
-    "saved_at_iso": "2026-08-24T08:22:00"
+    "saved_at_iso": "2026-08-24T08:22:00",
+    "title": "Felt like sharing what i just consumed",
+    "caption_generated": false
   },
   {
     "id": "DcaSoFOMf_r",
@@ -2093,7 +2331,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 8:15 am",
-    "saved_at_iso": "2026-08-24T08:15:00"
+    "saved_at_iso": "2026-08-24T08:15:00",
+    "title": "how to become so good at retaining information that you solve problems...",
+    "caption_generated": false
   },
   {
     "id": "DcaLve7gW4A",
@@ -2114,7 +2354,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 8:14 am",
-    "saved_at_iso": "2026-08-24T08:14:00"
+    "saved_at_iso": "2026-08-24T08:14:00",
+    "title": "Your ADHD brain isn’t broken. It just plays by different rules.🧠",
+    "caption_generated": false
   },
   {
     "id": "DcYmjsizYPg",
@@ -2131,7 +2373,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026 2:48 am",
-    "saved_at_iso": "2026-08-24T02:48:00"
+    "saved_at_iso": "2026-08-24T02:48:00",
+    "title": "kya_yaar_yashika: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DcXqJyKOC9k",
@@ -2146,7 +2390,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 23, 2026 10:41 pm",
-    "saved_at_iso": "2026-08-23T22:41:00"
+    "saved_at_iso": "2026-08-23T22:41:00",
+    "title": "These 8 videos cover the gap — chunking that doesn’t fall apart on...",
+    "caption_generated": false
   },
   {
     "id": "DcYqZbBSkN7",
@@ -2167,7 +2413,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 23, 2026 6:28 pm",
-    "saved_at_iso": "2026-08-23T18:28:00"
+    "saved_at_iso": "2026-08-23T18:28:00",
+    "title": "These AI tools can seriously speed up your Smart India Hackathon...",
+    "caption_generated": false
   },
   {
     "id": "DcVw1dnMe3s",
@@ -2182,7 +2430,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 22, 2026 9:42 am",
-    "saved_at_iso": "2026-08-22T09:42:00"
+    "saved_at_iso": "2026-08-22T09:42:00",
+    "title": "Your prompts aren’t the problem. Your AI has no plan.",
+    "caption_generated": false
   },
   {
     "id": "DbLZq8zMSbN",
@@ -2197,7 +2447,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 22, 2026 1:24 am",
-    "saved_at_iso": "2026-08-22T01:24:00"
+    "saved_at_iso": "2026-08-22T01:24:00",
+    "title": "agentic AI concepts you need before 2027",
+    "caption_generated": false
   },
   {
     "id": "DcQgXYAsHZU",
@@ -2218,7 +2470,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 20, 2026 11:39 pm",
-    "saved_at_iso": "2026-08-20T23:39:00"
+    "saved_at_iso": "2026-08-20T23:39:00",
+    "title": "Reverse engineering looks impossible until you take the right courses....",
+    "caption_generated": false
   },
   {
     "id": "DcBwgfsR1lt",
@@ -2233,7 +2487,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 20, 2026 1:30 pm",
-    "saved_at_iso": "2026-08-20T13:30:00"
+    "saved_at_iso": "2026-08-20T13:30:00",
+    "title": "rishandfit: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DcIwLRyuOjs",
@@ -2254,7 +2510,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026 10:56 am",
-    "saved_at_iso": "2026-08-19T10:56:00"
+    "saved_at_iso": "2026-08-19T10:56:00",
+    "title": "Like |",
+    "caption_generated": false
   },
   {
     "id": "Db-HqY2zxMZ",
@@ -2275,7 +2533,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026 8:54 am",
-    "saved_at_iso": "2026-08-19T08:54:00"
+    "saved_at_iso": "2026-08-19T08:54:00",
+    "title": "This Guy Explained AI Engineering like a PRO 🥇Best Video I’ve ever...",
+    "caption_generated": false
   },
   {
     "id": "DcLEFvBzsYe",
@@ -2296,7 +2556,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 12:01 pm",
-    "saved_at_iso": "2026-08-18T12:01:00"
+    "saved_at_iso": "2026-08-18T12:01:00",
+    "title": "This Guy Made 1 Million Request Per Second Possible. Most Practical...",
+    "caption_generated": false
   },
   {
     "id": "DcIvD0JI5o4",
@@ -2317,7 +2579,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 12:00 pm",
-    "saved_at_iso": "2026-08-18T12:00:00"
+    "saved_at_iso": "2026-08-18T12:00:00",
+    "title": "The Project Explanation Formula Every Tech Student Needs",
+    "caption_generated": false
   },
   {
     "id": "DbvmaRGsaTQ",
@@ -2332,7 +2596,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 8:51 am",
-    "saved_at_iso": "2026-08-18T08:51:00"
+    "saved_at_iso": "2026-08-18T08:51:00",
+    "title": "The reason most people get stuck on databases and APIs is that they try...",
+    "caption_generated": false
   },
   {
     "id": "DYqJ27iMZNB",
@@ -2351,7 +2617,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 1:20 am",
-    "saved_at_iso": "2026-08-18T01:20:00"
+    "saved_at_iso": "2026-08-18T01:20:00",
+    "title": "lectures to learn Agentic AI",
+    "caption_generated": false
   },
   {
     "id": "DZJS2ZesaEu",
@@ -2370,7 +2638,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 12:58 am",
-    "saved_at_iso": "2026-08-18T00:58:00"
+    "saved_at_iso": "2026-08-18T00:58:00",
+    "title": "What does it take to become an AI engineer?",
+    "caption_generated": false
   },
   {
     "id": "DcHqtjxgNWn",
@@ -2389,7 +2659,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 12:57 am",
-    "saved_at_iso": "2026-08-18T00:57:00"
+    "saved_at_iso": "2026-08-18T00:57:00",
+    "title": "EASY 30M routine to level up as a SWE.",
+    "caption_generated": false
   },
   {
     "id": "DcJQd0TRewZ",
@@ -2404,7 +2676,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026 12:20 am",
-    "saved_at_iso": "2026-08-18T00:20:00"
+    "saved_at_iso": "2026-08-18T00:20:00",
+    "title": "You can now turn any research paper into a full animated explainer by...",
+    "caption_generated": false
   },
   {
     "id": "DYx7-qqpZ9a",
@@ -2419,7 +2693,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026 12:43 pm",
-    "saved_at_iso": "2026-08-17T12:43:00"
+    "saved_at_iso": "2026-08-17T12:43:00",
+    "title": "Such a powerful concept",
+    "caption_generated": false
   },
   {
     "id": "DZxkys2zoSV",
@@ -2434,7 +2710,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026 2:37 am",
-    "saved_at_iso": "2026-08-17T02:37:00"
+    "saved_at_iso": "2026-08-17T02:37:00",
+    "title": "things every ai Engineer should know",
+    "caption_generated": false
   },
   {
     "id": "DZrXB2Hv8cb",
@@ -2455,7 +2733,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026 2:36 am",
-    "saved_at_iso": "2026-08-17T02:36:00"
+    "saved_at_iso": "2026-08-17T02:36:00",
+    "title": "I really should gatekeep🤭",
+    "caption_generated": false
   },
   {
     "id": "DamtorpBps_",
@@ -2474,7 +2754,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026 2:28 am",
-    "saved_at_iso": "2026-08-17T02:28:00"
+    "saved_at_iso": "2026-08-17T02:28:00",
+    "title": "They all teach better than any professor ever will,you really don’t...",
+    "caption_generated": false
   },
   {
     "id": "DcGBQAvuui3",
@@ -2495,7 +2777,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 12:50 pm",
-    "saved_at_iso": "2026-08-16T12:50:00"
+    "saved_at_iso": "2026-08-16T12:50:00",
+    "title": "The Exact steps",
+    "caption_generated": false
   },
   {
     "id": "DbpI2wyMaim",
@@ -2516,7 +2800,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 12:43 pm",
-    "saved_at_iso": "2026-08-16T12:43:00"
+    "saved_at_iso": "2026-08-16T12:43:00",
+    "title": "If you’re trying to become an AI Engineer, fine-tuning is one of those...",
+    "caption_generated": false
   },
   {
     "id": "DcESVAwxb1p",
@@ -2531,7 +2817,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 10:35 am",
-    "saved_at_iso": "2026-08-16T10:35:00"
+    "saved_at_iso": "2026-08-16T10:35:00",
+    "title": "/10 Neuroscience Habits to Make You Smart Again",
+    "caption_generated": false
   },
   {
     "id": "DaGiActxYK3",
@@ -2546,7 +2834,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 10:33 am",
-    "saved_at_iso": "2026-08-16T10:33:00"
+    "saved_at_iso": "2026-08-16T10:33:00",
+    "title": "How to: achieve unrealistic goals",
+    "caption_generated": false
   },
   {
     "id": "DcG2LT8EXnx",
@@ -2567,7 +2857,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 10:32 am",
-    "saved_at_iso": "2026-08-16T10:32:00"
+    "saved_at_iso": "2026-08-16T10:32:00",
+    "title": "niche method unpatched😤",
+    "caption_generated": false
   },
   {
     "id": "DcE7oLfS5_9",
@@ -2588,7 +2880,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026 7:25 am",
-    "saved_at_iso": "2026-08-16T07:25:00"
+    "saved_at_iso": "2026-08-16T07:25:00",
+    "title": "🚨I got Claude to make my resume almost unrejectable by using just 3...",
+    "caption_generated": false
   },
   {
     "id": "DcEFABnvBuH",
@@ -2609,7 +2903,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 15, 2026 11:07 am",
-    "saved_at_iso": "2026-08-15T11:07:00"
+    "saved_at_iso": "2026-08-15T11:07:00",
+    "title": "If you want better front-end designs with Claude Code, here are five...",
+    "caption_generated": false
   },
   {
     "id": "Db564cDMqH-",
@@ -2624,7 +2920,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 15, 2026 11:06 am",
-    "saved_at_iso": "2026-08-15T11:06:00"
+    "saved_at_iso": "2026-08-15T11:06:00",
+    "title": "Learn how to explain it properly in an interview.",
+    "caption_generated": false
   },
   {
     "id": "DcBDZbYJKwD",
@@ -2639,7 +2937,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 5:08 am",
-    "saved_at_iso": "2026-08-14T05:08:00"
+    "saved_at_iso": "2026-08-14T05:08:00",
+    "title": "Full Video on our YouTube Channel @thecuttingedge.school",
+    "caption_generated": false
   },
   {
     "id": "DZibns1ucXM",
@@ -2658,7 +2958,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 5:06 am",
-    "saved_at_iso": "2026-08-14T05:06:00"
+    "saved_at_iso": "2026-08-14T05:06:00",
+    "title": "If you want a link to all of these projects",
+    "caption_generated": false
   },
   {
     "id": "DZImdBnyaXL",
@@ -2679,7 +2981,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 4:13 am",
-    "saved_at_iso": "2026-08-14T04:13:00"
+    "saved_at_iso": "2026-08-14T04:13:00",
+    "title": "itsellagonzales: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DZndq_ZAX_b",
@@ -2694,7 +2998,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 4:00 am",
-    "saved_at_iso": "2026-08-14T04:00:00"
+    "saved_at_iso": "2026-08-14T04:00:00",
+    "title": "Watch these 3 vids to understand Ai Engineering",
+    "caption_generated": false
   },
   {
     "id": "Db-Y7zXJio9",
@@ -2715,7 +3021,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 3:47 am",
-    "saved_at_iso": "2026-08-14T03:47:00"
+    "saved_at_iso": "2026-08-14T03:47:00",
+    "title": "buildwithshri: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Db4nHFDh_0B",
@@ -2736,7 +3044,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026 3:45 am",
-    "saved_at_iso": "2026-08-14T03:45:00"
+    "saved_at_iso": "2026-08-14T03:45:00",
+    "title": "I was struggling with my websites for months. Everything I built looked...",
+    "caption_generated": false
   },
   {
     "id": "Da2_2_KBgZH",
@@ -2751,7 +3061,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 10, 2026 12:21 pm",
-    "saved_at_iso": "2026-08-10T12:21:00"
+    "saved_at_iso": "2026-08-10T12:21:00",
+    "title": "Which outfit do you like best? 👟 adidas samba outfit ideas",
+    "caption_generated": false
   },
   {
     "id": "Db1F0APyCPg",
@@ -2766,7 +3078,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 09, 2026 9:14 pm",
-    "saved_at_iso": "2026-08-09T21:14:00"
+    "saved_at_iso": "2026-08-09T21:14:00",
+    "title": "Japan 🇯🇵 is now turning windows into power",
+    "caption_generated": false
   },
   {
     "id": "DbylU41I5iF",
@@ -2781,7 +3095,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 09, 2026 12:53 am",
-    "saved_at_iso": "2026-08-09T00:53:00"
+    "saved_at_iso": "2026-08-09T00:53:00",
+    "title": "habits to become a better software engineer that aren’t what you think....",
+    "caption_generated": false
   },
   {
     "id": "Dbwlb2evZJW",
@@ -2802,7 +3118,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026 10:58 am",
-    "saved_at_iso": "2026-08-08T10:58:00"
+    "saved_at_iso": "2026-08-08T10:58:00",
+    "title": "conquering ADHD isn’t about fixing a flaw, it’s about learning how to...",
+    "caption_generated": false
   },
   {
     "id": "DYPpF1VIjZJ",
@@ -2817,7 +3135,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026 10:55 am",
-    "saved_at_iso": "2026-08-08T10:55:00"
+    "saved_at_iso": "2026-08-08T10:55:00",
+    "title": "Want to understand AI and ML Engineering properly?",
+    "caption_generated": false
   },
   {
     "id": "Dbw8-VbTBci",
@@ -2838,7 +3158,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026 10:54 am",
-    "saved_at_iso": "2026-08-08T10:54:00"
+    "saved_at_iso": "2026-08-08T10:54:00",
+    "title": "Once a day, once a week, once a month #coding #programmer #Tech #ai...",
+    "caption_generated": false
   },
   {
     "id": "DbYQUSWxI6I",
@@ -2859,7 +3181,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026 10:20 am",
-    "saved_at_iso": "2026-08-08T10:20:00"
+    "saved_at_iso": "2026-08-08T10:20:00",
+    "title": "How to develop a photographic memory.",
+    "caption_generated": false
   },
   {
     "id": "DbaB6V6MwRl",
@@ -2880,7 +3204,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 04, 2026 10:45 am",
-    "saved_at_iso": "2026-08-04T10:45:00"
+    "saved_at_iso": "2026-08-04T10:45:00",
+    "title": "Top 5 Pants That I Own",
+    "caption_generated": false
   },
   {
     "id": "DbGGbY-M5wm",
@@ -2895,7 +3221,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 02, 2026 12:09 am",
-    "saved_at_iso": "2026-08-02T00:09:00"
+    "saved_at_iso": "2026-08-02T00:09:00",
+    "title": "Ep 21: Saving your cost and Time with AI",
+    "caption_generated": false
   },
   {
     "id": "DYaNsIrxuHG",
@@ -2916,7 +3244,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 01, 2026 10:10 am",
-    "saved_at_iso": "2026-08-01T10:10:00"
+    "saved_at_iso": "2026-08-01T10:10:00",
+    "title": "I’ve helped mentees land MBB Consulting and FAANG Product Management...",
+    "caption_generated": false
   },
   {
     "id": "DaQHDOpKIUm",
@@ -2937,7 +3267,9 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 01, 2026 9:25 am",
-    "saved_at_iso": "2026-08-01T09:25:00"
+    "saved_at_iso": "2026-08-01T09:25:00",
+    "title": "the only 3 resources you need to land your dream offer 🌟",
+    "caption_generated": false
   },
   {
     "id": "DbdZQhivr-t",
@@ -2958,7 +3290,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 31, 2026 10:15 am",
-    "saved_at_iso": "2026-07-31T10:15:00"
+    "saved_at_iso": "2026-07-31T10:15:00",
+    "title": "Patterns to Master Linked Lists",
+    "caption_generated": false
   },
   {
     "id": "DbTcsZfuLAv",
@@ -2979,7 +3313,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 31, 2026 1:09 am",
-    "saved_at_iso": "2026-07-31T01:09:00"
+    "saved_at_iso": "2026-07-31T01:09:00",
+    "title": "The most insane 3D, hover & scroll effects you’ve seen are free on...",
+    "caption_generated": false
   },
   {
     "id": "DbUg-kOFC-C",
@@ -3003,7 +3339,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 29, 2026 7:40 am",
-    "saved_at_iso": "2026-07-29T07:40:00"
+    "saved_at_iso": "2026-07-29T07:40:00",
+    "title": "AI-powered job applications that run entirely on your own machine. Fork...",
+    "caption_generated": false
   },
   {
     "id": "DbOMKx6zx54",
@@ -3022,7 +3360,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 27, 2026 12:16 pm",
-    "saved_at_iso": "2026-07-27T12:16:00"
+    "saved_at_iso": "2026-07-27T12:16:00",
+    "title": "jlee.mov: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbPwjIYxiW9",
@@ -3043,7 +3383,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 26, 2026 8:57 pm",
-    "saved_at_iso": "2026-07-26T20:57:00"
+    "saved_at_iso": "2026-07-26T20:57:00",
+    "title": "kai.codess: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbPB4ESPs1P",
@@ -3064,7 +3406,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 26, 2026 7:55 pm",
-    "saved_at_iso": "2026-07-26T19:55:00"
+    "saved_at_iso": "2026-07-26T19:55:00",
+    "title": "The best free coding projects + tutorials to help you land your dream...",
+    "caption_generated": false
   },
   {
     "id": "DbGmuV5M617",
@@ -3085,7 +3429,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026 12:16 pm",
-    "saved_at_iso": "2026-07-25T12:16:00"
+    "saved_at_iso": "2026-07-25T12:16:00",
+    "title": "What not to say to your gf when she’s angry and what to say instead 🫂",
+    "caption_generated": false
   },
   {
     "id": "DbLuqEFxSi6",
@@ -3100,7 +3446,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026 12:06 pm",
-    "saved_at_iso": "2026-07-25T12:06:00"
+    "saved_at_iso": "2026-07-25T12:06:00",
+    "title": "ryanvijray: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbOUP9OPDAQ",
@@ -3121,7 +3469,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026 12:00 pm",
-    "saved_at_iso": "2026-07-25T12:00:00"
+    "saved_at_iso": "2026-07-25T12:00:00",
+    "title": "Google has silently released 15 AI tools that are completely free.",
+    "caption_generated": false
   },
   {
     "id": "DZQHEvFN6-W",
@@ -3142,7 +3492,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026 4:56 am",
-    "saved_at_iso": "2026-07-25T04:56:00"
+    "saved_at_iso": "2026-07-25T04:56:00",
+    "title": "Where to find REMOTE INTERNSHIPS? Let me show you!",
+    "caption_generated": false
   },
   {
     "id": "DbLvGkRx72t",
@@ -3163,7 +3515,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026 2:39 am",
-    "saved_at_iso": "2026-07-25T02:39:00"
+    "saved_at_iso": "2026-07-25T02:39:00",
+    "title": "thad.codes: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbM0udUub2X",
@@ -3180,7 +3534,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 24, 2026 11:34 pm",
-    "saved_at_iso": "2026-07-24T23:34:00"
+    "saved_at_iso": "2026-07-24T23:34:00",
+    "title": "All these are easy/free to learn and lead to some impressive projects #cs",
+    "caption_generated": false
   },
   {
     "id": "DbJIsWMCCKJ",
@@ -3201,7 +3557,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 24, 2026 5:17 am",
-    "saved_at_iso": "2026-07-24T05:17:00"
+    "saved_at_iso": "2026-07-24T05:17:00",
+    "title": "bro i finally know why everything i build looks the same😱😱😱😱",
+    "caption_generated": false
   },
   {
     "id": "DbH3L50RaBS",
@@ -3222,7 +3580,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 23, 2026 6:27 pm",
-    "saved_at_iso": "2026-07-23T18:27:00"
+    "saved_at_iso": "2026-07-23T18:27:00",
+    "title": "just cheat 🫣",
+    "caption_generated": false
   },
   {
     "id": "DbBn2wtp388",
@@ -3237,7 +3597,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 8:10 am",
-    "saved_at_iso": "2026-07-22T08:10:00"
+    "saved_at_iso": "2026-07-22T08:10:00",
+    "title": "Don’t get ragebaited 😂😂😂",
+    "caption_generated": false
   },
   {
     "id": "Daxm8YPjT1V",
@@ -3257,7 +3619,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 8:04 am",
-    "saved_at_iso": "2026-07-22T08:04:00"
+    "saved_at_iso": "2026-07-22T08:04:00",
+    "title": "itsdesignare: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbYYvekyX_1",
@@ -3278,7 +3642,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 8:02 am",
-    "saved_at_iso": "2026-07-22T08:02:00"
+    "saved_at_iso": "2026-07-22T08:02:00",
+    "title": "Can Claude make your resume nearly impossible to reject?",
+    "caption_generated": false
   },
   {
     "id": "DbEJ17BzK2Z",
@@ -3293,7 +3659,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 8:01 am",
-    "saved_at_iso": "2026-07-22T08:01:00"
+    "saved_at_iso": "2026-07-22T08:01:00",
+    "title": "Top 6 hackathons of all time",
+    "caption_generated": false
   },
   {
     "id": "Da34D0HCEEc",
@@ -3308,7 +3676,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:21 am",
-    "saved_at_iso": "2026-07-22T03:21:00"
+    "saved_at_iso": "2026-07-22T03:21:00",
+    "title": "TensorFlow Cheat Sheet for Everyone",
+    "caption_generated": false
   },
   {
     "id": "DbBLkNfjYaW",
@@ -3323,7 +3693,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:21 am",
-    "saved_at_iso": "2026-07-22T03:21:00"
+    "saved_at_iso": "2026-07-22T03:21:00",
+    "title": "API vs REST API Explained in simple way..",
+    "caption_generated": false
   },
   {
     "id": "Da9ZbtUCK2Q",
@@ -3342,7 +3714,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:21 am",
-    "saved_at_iso": "2026-07-22T03:21:00"
+    "saved_at_iso": "2026-07-22T03:21:00",
+    "title": "PyTorch Cheat Sheet",
+    "caption_generated": false
   },
   {
     "id": "DbCO42VDeD9",
@@ -3357,7 +3731,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:21 am",
-    "saved_at_iso": "2026-07-22T03:21:00"
+    "saved_at_iso": "2026-07-22T03:21:00",
+    "title": "Machine Learning Handwritten Notes",
+    "caption_generated": false
   },
   {
     "id": "DZYjyUFswFs",
@@ -3377,7 +3753,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:17 am",
-    "saved_at_iso": "2026-07-22T03:17:00"
+    "saved_at_iso": "2026-07-22T03:17:00",
+    "title": "fez.infocus: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DbDhl7nKD8W",
@@ -3398,7 +3776,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026 3:14 am",
-    "saved_at_iso": "2026-07-22T03:14:00"
+    "saved_at_iso": "2026-07-22T03:14:00",
+    "title": "skillupchapter: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Da848fitx0W",
@@ -3419,7 +3799,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 8:54 am",
-    "saved_at_iso": "2026-07-20T08:54:00"
+    "saved_at_iso": "2026-07-20T08:54:00",
+    "title": "vibha.in.progress: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DaHR5JWPLvo",
@@ -3434,7 +3816,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 7:30 am",
-    "saved_at_iso": "2026-07-20T07:30:00"
+    "saved_at_iso": "2026-07-20T07:30:00",
+    "title": "rrishijain: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DWp813PjryO",
@@ -3449,7 +3833,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 6:53 am",
-    "saved_at_iso": "2026-07-20T06:53:00"
+    "saved_at_iso": "2026-07-20T06:53:00",
+    "title": "If God could take away someone you thought you’d never lose… imagine...",
+    "caption_generated": false
   },
   {
     "id": "DaxIlzvj3em",
@@ -3470,7 +3856,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 6:52 am",
-    "saved_at_iso": "2026-07-20T06:52:00"
+    "saved_at_iso": "2026-07-20T06:52:00",
+    "title": "You don’t need expensive design software to create great work anymore.",
+    "caption_generated": false
   },
   {
     "id": "DaYQlabx6mQ",
@@ -3485,7 +3873,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 6:44 am",
-    "saved_at_iso": "2026-07-20T06:44:00"
+    "saved_at_iso": "2026-07-20T06:44:00",
+    "title": "ryanvijray: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DacVapVG_oD",
@@ -3503,7 +3893,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 6:37 am",
-    "saved_at_iso": "2026-07-20T06:37:00"
+    "saved_at_iso": "2026-07-20T06:37:00",
+    "title": "these are some cold email templates you can use to land your internship",
+    "caption_generated": false
   },
   {
     "id": "Da0EeF1DTZ-",
@@ -3524,7 +3916,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026 6:13 am",
-    "saved_at_iso": "2026-07-20T06:13:00"
+    "saved_at_iso": "2026-07-20T06:13:00",
+    "title": "These 10 open-source projects have nearly 1 MILLION GitHub stars...",
+    "caption_generated": false
   },
   {
     "id": "DalEPqCD2nC",
@@ -3544,7 +3938,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026 11:42 am",
-    "saved_at_iso": "2026-07-19T11:42:00"
+    "saved_at_iso": "2026-07-19T11:42:00",
+    "title": "The best AI tools aren't always the ones with the biggest subscriptions.",
+    "caption_generated": false
   },
   {
     "id": "Da-2g6jNI4E",
@@ -3565,7 +3961,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026 9:27 am",
-    "saved_at_iso": "2026-07-19T09:27:00"
+    "saved_at_iso": "2026-07-19T09:27:00",
+    "title": "If you want the step-by-step breakdown of each project,",
+    "caption_generated": false
   },
   {
     "id": "DakbvNDJKEA",
@@ -3580,7 +3978,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026 7:17 am",
-    "saved_at_iso": "2026-07-19T07:17:00"
+    "saved_at_iso": "2026-07-19T07:17:00",
+    "title": "vlada.asana: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DZIoNuexSTq",
@@ -3595,7 +3995,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026 6:51 am",
-    "saved_at_iso": "2026-07-19T06:51:00"
+    "saved_at_iso": "2026-07-19T06:51:00",
+    "title": "You’ve probably heard that it takes 10,000 hours to master something,...",
+    "caption_generated": false
   },
   {
     "id": "DatyKgTPwit",
@@ -3616,7 +4018,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026 10:32 am",
-    "saved_at_iso": "2026-07-17T10:32:00"
+    "saved_at_iso": "2026-07-17T10:32:00",
+    "title": "studying these doesn’t always give you the answers, but they most lead...",
+    "caption_generated": false
   },
   {
     "id": "Da3sW2TRBMy",
@@ -3631,7 +4035,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026 10:31 am",
-    "saved_at_iso": "2026-07-17T10:31:00"
+    "saved_at_iso": "2026-07-17T10:31:00",
+    "title": "Lock in and it’s yours 🔒⬅",
+    "caption_generated": false
   },
   {
     "id": "Da0f5y7RynW",
@@ -3646,7 +4052,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026 8:53 am",
-    "saved_at_iso": "2026-07-17T08:53:00"
+    "saved_at_iso": "2026-07-17T08:53:00",
+    "title": "If I were building my skills today, these would be my 7 non-negotiables:",
+    "caption_generated": false
   },
   {
     "id": "Da5dcxhMh27",
@@ -3664,7 +4072,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026 8:51 am",
-    "saved_at_iso": "2026-07-17T08:51:00"
+    "saved_at_iso": "2026-07-17T08:51:00",
+    "title": "u gotta check these out bro #vibecoding #10x",
+    "caption_generated": false
   },
   {
     "id": "Da0D6zjtN0w",
@@ -3679,7 +4089,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026 8:49 am",
-    "saved_at_iso": "2026-07-17T08:49:00"
+    "saved_at_iso": "2026-07-17T08:49:00",
+    "title": "To get link",
+    "caption_generated": false
   },
   {
     "id": "Dau7cGjT7t1",
@@ -3694,7 +4106,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 15, 2026 1:20 pm",
-    "saved_at_iso": "2026-07-15T13:20:00"
+    "saved_at_iso": "2026-07-15T13:20:00",
+    "title": "let me know if you need the list of the 3 videos to get hooked on coding",
+    "caption_generated": false
   },
   {
     "id": "DapX2_JB2Ts",
@@ -3709,7 +4123,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026 12:17 pm",
-    "saved_at_iso": "2026-07-12T12:17:00"
+    "saved_at_iso": "2026-07-12T12:17:00",
+    "title": "meghana.ai: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "Daq6lUZMAjo",
@@ -3724,7 +4140,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026 12:14 pm",
-    "saved_at_iso": "2026-07-12T12:14:00"
+    "saved_at_iso": "2026-07-12T12:14:00",
+    "title": "Your no-fluff guide to landing your first freelance client.",
+    "caption_generated": false
   },
   {
     "id": "DasLm6opzIO",
@@ -3745,7 +4163,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026 11:03 am",
-    "saved_at_iso": "2026-07-12T11:03:00"
+    "saved_at_iso": "2026-07-12T11:03:00",
+    "title": "you can do this for any product btw 👀 What would you build with this...",
+    "caption_generated": false
   },
   {
     "id": "DanRxszuipS",
@@ -3760,7 +4180,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026 9:25 pm",
-    "saved_at_iso": "2026-07-11T21:25:00"
+    "saved_at_iso": "2026-07-11T21:25:00",
+    "title": "The job market isn’t broken. Your strategy is.",
+    "caption_generated": false
   },
   {
     "id": "Dao2Sp4u1rf",
@@ -3779,7 +4201,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026 12:09 pm",
-    "saved_at_iso": "2026-07-11T12:09:00"
+    "saved_at_iso": "2026-07-11T12:09:00",
+    "title": "markpyvovarov: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DaOgv9CMxZT",
@@ -3794,7 +4218,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026 11:33 am",
-    "saved_at_iso": "2026-07-11T11:33:00"
+    "saved_at_iso": "2026-07-11T11:33:00",
+    "title": "Stop applying on Internshala for ₹2,000 stipends.",
+    "caption_generated": false
   },
   {
     "id": "Dap3IoNo4Kt",
@@ -3815,7 +4241,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026 10:28 am",
-    "saved_at_iso": "2026-07-11T10:28:00"
+    "saved_at_iso": "2026-07-11T10:28:00",
+    "title": "Top 10 claude skills for Designers",
+    "caption_generated": false
   },
   {
     "id": "DaF8GO9zT6w",
@@ -3836,7 +4264,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026 10:26 am",
-    "saved_at_iso": "2026-07-11T10:26:00"
+    "saved_at_iso": "2026-07-11T10:26:00",
+    "title": "🎯 Competitive Programming Roa",
+    "caption_generated": false
   },
   {
     "id": "DZp-JT-p94W",
@@ -3857,7 +4287,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 1:11 pm",
-    "saved_at_iso": "2026-07-10T13:11:00"
+    "saved_at_iso": "2026-07-10T13:11:00",
+    "title": "most people grinding leetcode right now would fail the new coding...",
+    "caption_generated": false
   },
   {
     "id": "DZcuHAwgd54",
@@ -3888,7 +4320,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 1:10 pm",
-    "saved_at_iso": "2026-07-10T13:10:00"
+    "saved_at_iso": "2026-07-10T13:10:00",
+    "title": "Most people search Page 1 for SEO clients.",
+    "caption_generated": false
   },
   {
     "id": "DZL7SEANnl_",
@@ -3903,7 +4337,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 12:58 pm",
-    "saved_at_iso": "2026-07-10T12:58:00"
+    "saved_at_iso": "2026-07-10T12:58:00",
+    "title": "And no leetcode is not dead I promise",
+    "caption_generated": false
   },
   {
     "id": "DamT1j-RgDZ",
@@ -3918,7 +4354,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 12:32 pm",
-    "saved_at_iso": "2026-07-10T12:32:00"
+    "saved_at_iso": "2026-07-10T12:32:00",
+    "title": "Join our community @quorazen",
+    "caption_generated": false
   },
   {
     "id": "DaZmF93JZcj",
@@ -3936,7 +4374,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 7:44 am",
-    "saved_at_iso": "2026-07-10T07:44:00"
+    "saved_at_iso": "2026-07-10T07:44:00",
+    "title": "#2 will give you a disgustingly UNFAIR ADVANTAGE with trading (",
+    "caption_generated": false
   },
   {
     "id": "DanV9-gp9lQ",
@@ -3951,7 +4391,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026 7:43 am",
-    "saved_at_iso": "2026-07-10T07:43:00"
+    "saved_at_iso": "2026-07-10T07:43:00",
+    "title": "Upgrade your Job Search, 11 Job Portals That Actually Works...",
+    "caption_generated": false
   },
   {
     "id": "DZ9wXH5CCSJ",
@@ -3972,7 +4414,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026 11:11 am",
-    "saved_at_iso": "2026-07-08T11:11:00"
+    "saved_at_iso": "2026-07-08T11:11:00",
+    "title": "Here are 7+10 free alternatives for AI avatars, images, videos, design,...",
+    "caption_generated": false
   },
   {
     "id": "DZ2077mzFey",
@@ -3993,7 +4437,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026 10:04 am",
-    "saved_at_iso": "2026-07-08T10:04:00"
+    "saved_at_iso": "2026-07-08T10:04:00",
+    "title": "free resources for designers who want to build cool and non ai slop...",
+    "caption_generated": false
   },
   {
     "id": "DaF4A1rsINH",
@@ -4008,7 +4454,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026 10:01 am",
-    "saved_at_iso": "2026-07-08T10:01:00"
+    "saved_at_iso": "2026-07-08T10:01:00",
+    "title": "Before writing a single line of code, spend 30 seconds understanding...",
+    "caption_generated": false
   },
   {
     "id": "DZ9SE8Hpyc4",
@@ -4029,7 +4477,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026 5:21 am",
-    "saved_at_iso": "2026-07-08T05:21:00"
+    "saved_at_iso": "2026-07-08T05:21:00",
+    "title": "Most people jump into DSA randomly and get overwhelmed.",
+    "caption_generated": false
   },
   {
     "id": "Dae7RvURaFG",
@@ -4044,7 +4494,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026 7:57 am",
-    "saved_at_iso": "2026-07-07T07:57:00"
+    "saved_at_iso": "2026-07-07T07:57:00",
+    "title": "{Forward Deployed Engineer, FDE, FDE Jobs, FDE Interview, FDE Roa",
+    "caption_generated": false
   },
   {
     "id": "DXrlN9ygqvu",
@@ -4059,7 +4511,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 7:22 pm",
-    "saved_at_iso": "2026-07-06T19:22:00"
+    "saved_at_iso": "2026-07-06T19:22:00",
+    "title": "MapiLeads, a B2B prospecting tool that scrapes Google Maps in real time...",
+    "caption_generated": false
   },
   {
     "id": "DaSpPVGsu-o",
@@ -4079,7 +4533,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 12:30 pm",
-    "saved_at_iso": "2026-07-06T12:30:00"
+    "saved_at_iso": "2026-07-06T12:30:00",
+    "title": "Basically split your app domain from your main domain. This makes...",
+    "caption_generated": false
   },
   {
     "id": "Dac2OaFpRZg",
@@ -4097,7 +4553,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 12:09 pm",
-    "saved_at_iso": "2026-07-06T12:09:00"
+    "saved_at_iso": "2026-07-06T12:09:00",
+    "title": "#sales #highticketsales",
+    "caption_generated": false
   },
   {
     "id": "DadX2vuviwP",
@@ -4118,7 +4576,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 12:05 pm",
-    "saved_at_iso": "2026-07-06T12:05:00"
+    "saved_at_iso": "2026-07-06T12:05:00",
+    "title": "Forget ElevenLabs.",
+    "caption_generated": false
   },
   {
     "id": "DadR6FDJFIC",
@@ -4133,7 +4593,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 11:38 am",
-    "saved_at_iso": "2026-07-06T11:38:00"
+    "saved_at_iso": "2026-07-06T11:38:00",
+    "title": "Job Roles = 6 Interview Prep",
+    "caption_generated": false
   },
   {
     "id": "DaX6-bBNjPC",
@@ -4154,7 +4616,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026 11:28 am",
-    "saved_at_iso": "2026-07-06T11:28:00"
+    "saved_at_iso": "2026-07-06T11:28:00",
+    "title": "Building a vibecoded web app?",
+    "caption_generated": false
   },
   {
     "id": "DX3K5JqR0OI",
@@ -4169,7 +4633,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026 10:02 am",
-    "saved_at_iso": "2026-07-05T10:02:00"
+    "saved_at_iso": "2026-07-05T10:02:00",
+    "title": "How to make beautiful websites?",
+    "caption_generated": false
   },
   {
     "id": "DaVWwzxp6n8",
@@ -4184,7 +4650,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026 9:59 am",
-    "saved_at_iso": "2026-07-05T09:59:00"
+    "saved_at_iso": "2026-07-05T09:59:00",
+    "title": "meghana.ai: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DaVCsluIkV6",
@@ -4205,7 +4673,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026 6:14 am",
-    "saved_at_iso": "2026-07-05T06:14:00"
+    "saved_at_iso": "2026-07-05T06:14:00",
+    "title": "Documents every freelancer & agency owner needs.",
+    "caption_generated": false
   },
   {
     "id": "DZXzzA9T_1Z",
@@ -4220,7 +4690,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026 11:38 am",
-    "saved_at_iso": "2026-07-04T11:38:00"
+    "saved_at_iso": "2026-07-04T11:38:00",
+    "title": "Build these 15 projects to make the upgrade from Software Engineer to...",
+    "caption_generated": false
   },
   {
     "id": "DXfAIzQl6rQ",
@@ -4235,7 +4707,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026 11:38 am",
-    "saved_at_iso": "2026-07-04T11:38:00"
+    "saved_at_iso": "2026-07-04T11:38:00",
+    "title": "bro..",
+    "caption_generated": false
   },
   {
     "id": "DaPB5k6sEap",
@@ -4256,7 +4730,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026 11:36 am",
-    "saved_at_iso": "2026-07-04T11:36:00"
+    "saved_at_iso": "2026-07-04T11:36:00",
+    "title": "AI larp mode activated #larp #tech #ai #startup #coding",
+    "caption_generated": false
   },
   {
     "id": "DaVl4wVs17U",
@@ -4271,7 +4747,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026 9:09 am",
-    "saved_at_iso": "2026-07-04T09:09:00"
+    "saved_at_iso": "2026-07-04T09:09:00",
+    "title": "maxjohnscn: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DaOotiwTrwu",
@@ -4286,7 +4764,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026 12:16 am",
-    "saved_at_iso": "2026-07-04T00:16:00"
+    "saved_at_iso": "2026-07-04T00:16:00",
+    "title": "Here’s a step-by-step trick to generate portfolio projects that...",
+    "caption_generated": false
   },
   {
     "id": "DWTsLgFAk5l",
@@ -4303,7 +4783,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026 11:25 am",
-    "saved_at_iso": "2026-07-03T11:25:00"
+    "saved_at_iso": "2026-07-03T11:25:00",
+    "title": "Find anyone in 2 clicks.",
+    "caption_generated": false
   },
   {
     "id": "DaMFb05qV8r",
@@ -4321,7 +4803,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026 10:53 am",
-    "saved_at_iso": "2026-07-03T10:53:00"
+    "saved_at_iso": "2026-07-03T10:53:00",
+    "title": "One of my favorite project ideas is reproducing a research paper from...",
+    "caption_generated": false
   },
   {
     "id": "DZox9YAjeSk",
@@ -4342,7 +4826,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026 10:36 am",
-    "saved_at_iso": "2026-07-03T10:36:00"
+    "saved_at_iso": "2026-07-03T10:36:00",
+    "title": "Claude might be the most underrated internship-hunting weapon right now.",
+    "caption_generated": false
   },
   {
     "id": "DX0WMu7FLHA",
@@ -4360,7 +4846,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026 10:32 am",
-    "saved_at_iso": "2026-07-03T10:32:00"
+    "saved_at_iso": "2026-07-03T10:32:00",
+    "title": "itsnextwork: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DYMvCo1DwMT",
@@ -4379,7 +4867,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026 10:28 am",
-    "saved_at_iso": "2026-07-03T10:28:00"
+    "saved_at_iso": "2026-07-03T10:28:00",
+    "title": "These 3 sequential sentences will help you get a client to shut up...",
+    "caption_generated": false
   },
   {
     "id": "DZ8DNSOR16-",
@@ -4400,7 +4890,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026 11:23 am",
-    "saved_at_iso": "2026-07-02T11:23:00"
+    "saved_at_iso": "2026-07-02T11:23:00",
+    "title": "johncorbett777: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DaFE-gZPCsc",
@@ -4415,7 +4907,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026 11:18 am",
-    "saved_at_iso": "2026-07-02T11:18:00"
+    "saved_at_iso": "2026-07-02T11:18:00",
+    "title": "Most people guess at what to fix on their LinkedIn.",
+    "caption_generated": false
   },
   {
     "id": "DaK55f6MXAp",
@@ -4436,7 +4930,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026 11:14 am",
-    "saved_at_iso": "2026-07-02T11:14:00"
+    "saved_at_iso": "2026-07-02T11:14:00",
+    "title": "mahanaicoach: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DXWysJCgu34",
@@ -4451,7 +4947,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026 10:49 am",
-    "saved_at_iso": "2026-07-02T10:49:00"
+    "saved_at_iso": "2026-07-02T10:49:00",
+    "title": "kreettanam: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DZwWp6TN6ms",
@@ -4470,7 +4968,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026 11:01 am",
-    "saved_at_iso": "2026-07-01T11:01:00"
+    "saved_at_iso": "2026-07-01T11:01:00",
+    "title": "simonsells17_: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DXXTE0APk3U",
@@ -4485,7 +4985,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026 10:50 am",
-    "saved_at_iso": "2026-07-01T10:50:00"
+    "saved_at_iso": "2026-07-01T10:50:00",
+    "title": "It’s really that easy",
+    "caption_generated": false
   },
   {
     "id": "DaLUH6xMJJJ",
@@ -4500,7 +5002,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026 7:02 am",
-    "saved_at_iso": "2026-07-01T07:02:00"
+    "saved_at_iso": "2026-07-01T07:02:00",
+    "title": "Let me show you an underrated free website for graphic and motion...",
+    "caption_generated": false
   },
   {
     "id": "DYtKINjtUsl",
@@ -4521,7 +5025,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 30, 2026 11:47 am",
-    "saved_at_iso": "2026-06-30T11:47:00"
+    "saved_at_iso": "2026-06-30T11:47:00",
+    "title": "Someone had to tell ya…",
+    "caption_generated": false
   },
   {
     "id": "DYNW3X7J2TH",
@@ -4542,14 +5048,22 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 30, 2026 11:44 am",
-    "saved_at_iso": "2026-06-30T11:44:00"
+    "saved_at_iso": "2026-06-30T11:44:00",
+    "title": "The most insane 3D, liquid, gradient & more UI effects you’ve seen are...",
+    "caption_generated": false
   },
   {
     "id": "DZyT38iTmXI",
     "type": "post",
     "url": "https://www.instagram.com/p/DZyT38iTmXI/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "A well-engineered developer workstation is an investment in long-term engineering longevity, posture health, and cognitive endurance. Ergonomics begins with mechanical alignment: positioning your primary monitor at eye level to prevent cervical spine compression and choosing an ergonomic mechanical keyboard to protect against repetitive strain injuries (RSI).\n\nLighting plays a critical role in reducing eye fatigue during deep-work sprints. By combining a high-CRI monitor light bar to illuminate the physical workspace with soft bias lighting behind the display, you eliminate glare and minimize contrast-induced eye strain. Integrating tactile elements like a premium desk mat and warm ambient lighting helps lower cognitive load, keeping you in the flow state longer.\n\nTo audit your current setup, prioritize the 90-degree rule: your elbows, hips, and knees should remain at right angles, and the top of your primary IDE monitor should sit at or slightly below eye level. Decluttering your workspace by routing cables beneath the desk and utilizing wireless peripherals reduces visual noise.",
+    "hashtags": [
+      "developersetup",
+      "codingdesk",
+      "workspaceergonomics",
+      "programmerlife",
+      "setupinspiration"
+    ],
     "owner": {
       "name": null,
       "username": "smylie.world",
@@ -4557,7 +5071,10 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 30, 2026 11:41 am",
-    "saved_at_iso": "2026-06-30T11:41:00"
+    "saved_at_iso": "2026-06-30T11:41:00",
+    "title": "Optimizing Developer Workspace Ergonomics & Deep Work Flow",
+    "category": "Dev Tools & Open Source",
+    "caption_generated": true
   },
   {
     "id": "DaK7GXUztMP",
@@ -4572,7 +5089,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 30, 2026 11:36 am",
-    "saved_at_iso": "2026-06-30T11:36:00"
+    "saved_at_iso": "2026-06-30T11:36:00",
+    "title": "Best PIN codes for targeting ₹10–25 Cr+ homeowners",
+    "caption_generated": false
   },
   {
     "id": "DZsTfF0pwYT",
@@ -4587,7 +5106,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 28, 2026 12:50 pm",
-    "saved_at_iso": "2026-06-28T12:50:00"
+    "saved_at_iso": "2026-06-28T12:50:00",
+    "title": "vetcha.roopesh: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DZ-fCDJTZW6",
@@ -4608,7 +5129,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026 10:39 pm",
-    "saved_at_iso": "2026-06-26T22:39:00"
+    "saved_at_iso": "2026-06-26T22:39:00",
+    "title": "🎨 UI Design Styles Every Designer Should Know",
+    "caption_generated": false
   },
   {
     "id": "DaDRFEezrOP",
@@ -4623,7 +5146,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026 10:37 pm",
-    "saved_at_iso": "2026-06-26T22:37:00"
+    "saved_at_iso": "2026-06-26T22:37:00",
+    "title": "Top 3 UI Libraries to create Premium Animated Websites 💻 👨🏻‍💻",
+    "caption_generated": false
   },
   {
     "id": "DZ2rnYetXam",
@@ -4638,7 +5163,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026 3:00 am",
-    "saved_at_iso": "2026-06-26T03:00:00"
+    "saved_at_iso": "2026-06-26T03:00:00",
+    "title": "Amazing Websites for UI/UX Designers",
+    "caption_generated": false
   },
   {
     "id": "DZ-LEpapUdQ",
@@ -4656,7 +5183,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026 2:59 am",
-    "saved_at_iso": "2026-06-26T02:59:00"
+    "saved_at_iso": "2026-06-26T02:59:00",
+    "title": "Most people chase “cool ideas.”",
+    "caption_generated": false
   },
   {
     "id": "DZ4Eh5UPyMb",
@@ -4677,7 +5206,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 25, 2026 12:15 pm",
-    "saved_at_iso": "2026-06-25T12:15:00"
+    "saved_at_iso": "2026-06-25T12:15:00",
+    "title": "Send this to a vibecoder",
+    "caption_generated": false
   },
   {
     "id": "DYFTuNqJSWT",
@@ -4698,7 +5229,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 25, 2026 12:07 pm",
-    "saved_at_iso": "2026-06-25T12:07:00"
+    "saved_at_iso": "2026-06-25T12:07:00",
+    "title": "Good work alone doesn’t guarantee clients. This system does.",
+    "caption_generated": false
   },
   {
     "id": "DXM4jN5EhiL",
@@ -4719,7 +5252,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 24, 2026 11:34 am",
-    "saved_at_iso": "2026-06-24T11:34:00"
+    "saved_at_iso": "2026-06-24T11:34:00",
+    "title": "🎯 Before we touch anything for a client we spend hours studying their...",
+    "caption_generated": false
   },
   {
     "id": "DZ4E1TfuU-b",
@@ -4740,7 +5275,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 24, 2026 11:28 am",
-    "saved_at_iso": "2026-06-24T11:28:00"
+    "saved_at_iso": "2026-06-24T11:28:00",
+    "title": "here’s how you can make your websites look more premium",
+    "caption_generated": false
   },
   {
     "id": "DZwD8VxzHlj",
@@ -4755,7 +5292,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 21, 2026 10:45 am",
-    "saved_at_iso": "2026-06-21T10:45:00"
+    "saved_at_iso": "2026-06-21T10:45:00",
+    "title": "Best YouTube Channels To Crack Tech Interviews (2026)",
+    "caption_generated": false
   },
   {
     "id": "DZRF6UCyKFr",
@@ -4775,7 +5314,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 07, 2026 10:30 am",
-    "saved_at_iso": "2026-06-07T10:30:00"
+    "saved_at_iso": "2026-06-07T10:30:00",
+    "title": "these will actually get you hired",
+    "caption_generated": false
   },
   {
     "id": "DZNaAmojaMC",
@@ -4796,7 +5337,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 05, 2026 6:49 pm",
-    "saved_at_iso": "2026-06-05T18:49:00"
+    "saved_at_iso": "2026-06-05T18:49:00",
+    "title": "No internship this summer? No problem. Here are 5 free courses I’d...",
+    "caption_generated": false
   },
   {
     "id": "DZFs54yynwU",
@@ -4811,7 +5354,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 03, 2026 8:27 am",
-    "saved_at_iso": "2026-06-03T08:27:00"
+    "saved_at_iso": "2026-06-03T08:27:00",
+    "title": "A lot of people ask me what I used for interview preparation, so here...",
+    "caption_generated": false
   },
   {
     "id": "DY_z2x1S9Kr",
@@ -4832,7 +5377,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 31, 2026 1:20 pm",
-    "saved_at_iso": "2026-05-31T13:20:00"
+    "saved_at_iso": "2026-05-31T13:20:00",
+    "title": "shobhit_easy_codes: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DY7p73DTYE5",
@@ -4847,14 +5394,22 @@
     },
     "brand_partner": null,
     "saved_at": "May 30, 2026 11:35 am",
-    "saved_at_iso": "2026-05-30T11:35:00"
+    "saved_at_iso": "2026-05-30T11:35:00",
+    "title": "this one’s for founders & designers 🪄",
+    "caption_generated": false
   },
   {
     "id": "DYOGwYYJzcy",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DYOGwYYJzcy/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Mastering the Java and Spring ecosystem requires understanding modern enterprise architectures, from modular monoliths to cloud-native microservices. In production, knowing how to wire Spring Boot controllers and inject JPA repositories is only the first step. You must also learn how to integrate caching layers like Redis, handle asynchronous communication using message brokers like Apache Kafka or RabbitMQ, and transition into scalable microservices.\n\nImplementing Spring Cloud components (such as API Gateways and Eureka Service Discovery) along with containerization tools like Docker will elevate your architecture skills from junior to senior levels. Implementing resilient circuit breakers with Resilience4j ensures graceful degradation under peak traffic.\n\nTo ace coding interviews, balance your preparation between Data Structures & Algorithms (DSA) and system design. Practice designing highly available, fault-tolerant systems, and be ready to explain Spring Boot-specific interview questions—such as bean lifecycles, custom annotations, transactional propagation levels, and securing endpoints using Spring Security and JWT.",
+    "hashtags": [
+      "springboot",
+      "backenddevelopment",
+      "javadeveloper",
+      "systemdesign",
+      "codinginterview"
+    ],
     "owner": {
       "name": "Abhishek Ranjan",
       "username": "abhishekranjan714",
@@ -4862,7 +5417,10 @@
     },
     "brand_partner": null,
     "saved_at": "May 30, 2026 11:28 am",
-    "saved_at_iso": "2026-05-30T11:28:00"
+    "saved_at_iso": "2026-05-30T11:28:00",
+    "title": "Full-Stack Spring Boot & Microservices Interview Roadmap",
+    "category": "System Design & Backend",
+    "caption_generated": true
   },
   {
     "id": "DY7ohMeOlEL",
@@ -4883,7 +5441,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 30, 2026 11:24 am",
-    "saved_at_iso": "2026-05-30T11:24:00"
+    "saved_at_iso": "2026-05-30T11:24:00",
+    "title": "Resume reject ho raha hai! Apna resume unrejectable banao with Claude AI!",
+    "caption_generated": false
   },
   {
     "id": "DY2S7sxT415",
@@ -4904,7 +5464,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 28, 2026 10:41 pm",
-    "saved_at_iso": "2026-05-28T22:41:00"
+    "saved_at_iso": "2026-05-28T22:41:00",
+    "title": "Full body Fat loss workout | Home workout | No Equipment needed💪",
+    "caption_generated": false
   },
   {
     "id": "DYMeyoZPbgy",
@@ -4925,7 +5487,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026 10:32 am",
-    "saved_at_iso": "2026-05-26T10:32:00"
+    "saved_at_iso": "2026-05-26T10:32:00",
+    "title": "LeetCode Hack with Claude",
+    "caption_generated": false
   },
   {
     "id": "DWS0WrhCKz3",
@@ -4945,7 +5509,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026 10:30 am",
-    "saved_at_iso": "2026-05-26T10:30:00"
+    "saved_at_iso": "2026-05-26T10:30:00",
+    "title": "How i cracked @swiggyindia as an SDE, despite being from a Tier-3 college.",
+    "caption_generated": false
   },
   {
     "id": "DYw3uidvy_4",
@@ -4966,7 +5532,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026 10:12 am",
-    "saved_at_iso": "2026-05-26T10:12:00"
+    "saved_at_iso": "2026-05-26T10:12:00",
+    "title": "Really top class RL course by DeepMind.",
+    "caption_generated": false
   },
   {
     "id": "DYw-kJrTts7",
@@ -4984,7 +5552,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026 6:40 am",
-    "saved_at_iso": "2026-05-26T06:40:00"
+    "saved_at_iso": "2026-05-26T06:40:00",
+    "title": "Ideas of UNIVERSE #TheMayankNegi #SelfImprovement",
+    "caption_generated": false
   },
   {
     "id": "DYr1ANSpZL9",
@@ -5005,7 +5575,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 24, 2026 11:34 pm",
-    "saved_at_iso": "2026-05-24T23:34:00"
+    "saved_at_iso": "2026-05-24T23:34:00",
+    "title": "Stop wasting Claude tokens, Use these Commands Instead...",
+    "caption_generated": false
   },
   {
     "id": "DXqYmrfjKyB",
@@ -5030,7 +5602,9 @@
       "url": "http://Vahro.in"
     },
     "saved_at": "May 24, 2026 11:41 am",
-    "saved_at_iso": "2026-05-24T11:41:00"
+    "saved_at_iso": "2026-05-24T11:41:00",
+    "title": "Finally, a linen shirt that looks fresh from day to night.🫶🏻...",
+    "caption_generated": false
   },
   {
     "id": "DYh_1vtR5Oq",
@@ -5051,7 +5625,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 20, 2026 12:38 am",
-    "saved_at_iso": "2026-05-20T00:38:00"
+    "saved_at_iso": "2026-05-20T00:38:00",
+    "title": "carterperez.dev: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DYhCBc0sZfC",
@@ -5072,7 +5648,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 20, 2026 12:34 am",
-    "saved_at_iso": "2026-05-20T00:34:00"
+    "saved_at_iso": "2026-05-20T00:34:00",
+    "title": "Did you pass this AI interview round?",
+    "caption_generated": false
   },
   {
     "id": "DXrb_NnjKCF",
@@ -5087,7 +5665,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 18, 2026 4:08 am",
-    "saved_at_iso": "2026-05-18T04:08:00"
+    "saved_at_iso": "2026-05-18T04:08:00",
+    "title": "Claude can now rebuild your profile like a high-end recruiter. 4...",
+    "caption_generated": false
   },
   {
     "id": "DYcmYF0je7e",
@@ -5108,7 +5688,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 17, 2026 10:09 pm",
-    "saved_at_iso": "2026-05-17T22:09:00"
+    "saved_at_iso": "2026-05-17T22:09:00",
+    "title": "Here are 4 tips to help you get your next internship.",
+    "caption_generated": false
   },
   {
     "id": "DYWIeprmgZQ",
@@ -5123,7 +5705,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 17, 2026 3:15 am",
-    "saved_at_iso": "2026-05-17T03:15:00"
+    "saved_at_iso": "2026-05-17T03:15:00",
+    "title": "codewithupasana: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DYMSKxtM5oU",
@@ -5144,7 +5728,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 13, 2026 4:16 am",
-    "saved_at_iso": "2026-05-13T04:16:00"
+    "saved_at_iso": "2026-05-13T04:16:00",
+    "title": "#reels #instagood #love #tech #job",
+    "caption_generated": false
   },
   {
     "id": "DYIfcoTSqLN",
@@ -5159,7 +5745,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 10, 2026 9:27 pm",
-    "saved_at_iso": "2026-05-10T21:27:00"
+    "saved_at_iso": "2026-05-10T21:27:00",
+    "title": "These 12 points sum it up!",
+    "caption_generated": false
   },
   {
     "id": "DXW9JLekj5d",
@@ -5184,7 +5772,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 10, 2026 6:25 pm",
-    "saved_at_iso": "2026-05-10T18:25:00"
+    "saved_at_iso": "2026-05-10T18:25:00",
+    "title": "You solved 1000 DSA questions…",
+    "caption_generated": false
   },
   {
     "id": "DX9gQhWRAed",
@@ -5205,7 +5795,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 07, 2026 3:06 am",
-    "saved_at_iso": "2026-05-07T03:06:00"
+    "saved_at_iso": "2026-05-07T03:06:00",
+    "title": "nishayadav.io: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DX7HfPglA3M",
@@ -5226,7 +5818,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 05, 2026 2:51 am",
-    "saved_at_iso": "2026-05-05T02:51:00"
+    "saved_at_iso": "2026-05-05T02:51:00",
+    "title": "A few technical problems I was given in interviews across big tech 🧑🏻‍💻...",
+    "caption_generated": false
   },
   {
     "id": "DXgE1E3itu7",
@@ -5247,7 +5841,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 03, 2026 12:42 am",
-    "saved_at_iso": "2026-05-03T00:42:00"
+    "saved_at_iso": "2026-05-03T00:42:00",
+    "title": "Get your resume talking… use this prompt and tips to enhance and...",
+    "caption_generated": false
   },
   {
     "id": "DXrNwgeDb74",
@@ -5262,7 +5858,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 03, 2026 12:35 am",
-    "saved_at_iso": "2026-05-03T00:35:00"
+    "saved_at_iso": "2026-05-03T00:35:00",
+    "title": "Stop overthinking projects. Start building the right ones",
+    "caption_generated": false
   },
   {
     "id": "DXxPtYtI2r3",
@@ -5283,14 +5881,22 @@
     },
     "brand_partner": null,
     "saved_at": "May 02, 2026 5:00 am",
-    "saved_at_iso": "2026-05-02T05:00:00"
+    "saved_at_iso": "2026-05-02T05:00:00",
+    "title": "✍️ BEST AI TOOLS FOR WRITING THESIS CHAPTERS in 2026!",
+    "caption_generated": false
   },
   {
     "id": "DXikCIggAIT",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DXikCIggAIT/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Generative AI is shifting from conversational novelty into a deterministic productivity multiplier for software engineers. The key to unlocking reliable LLM code generation lies in structured prompting techniques: Few-Shot Prompting, Chain-of-Thought (CoT) reasoning, and System Role conditioning. By providing clear inputs, expected output schemas (like JSON or Pydantic definitions), and edge-case examples, you eliminate ambiguous outputs and generate production-ready code.\n\nModern developer workflows integrate LLMs directly into IDEs and CI/CD pipelines via CLI agents like Claude Code, Cursor, and Gemini interactions. Automating routine engineering tasks—such as generating comprehensive unit test suites with pytest or Jest, drafting OpenAPI specifications from raw code, and summarizing git pull requests—saves hours of manual context-switching each week.\n\nBest practices for AI-augmented development: never commit AI-generated code without manual review and automated test validation, enforce linter and static analysis passes, and treat prompts like code by version-controlling them in your repository.",
+    "hashtags": [
+      "promptengineering",
+      "generativeai",
+      "developerproductivity",
+      "llmops",
+      "codingautomation"
+    ],
     "owner": {
       "name": "Divyam Dawar",
       "username": "aiwithdivyam",
@@ -5298,7 +5904,10 @@
     },
     "brand_partner": null,
     "saved_at": "May 02, 2026 12:48 am",
-    "saved_at_iso": "2026-05-02T00:48:00"
+    "saved_at_iso": "2026-05-02T00:48:00",
+    "title": "Automating Developer Workflows with AI & Structured Prompts",
+    "category": "AI & Agents",
+    "caption_generated": true
   },
   {
     "id": "DVYWQs8kyWw",
@@ -5319,7 +5928,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 01, 2026 2:14 am",
-    "saved_at_iso": "2026-05-01T02:14:00"
+    "saved_at_iso": "2026-05-01T02:14:00",
+    "title": "Simple identification of Dynamic Programming!!",
+    "caption_generated": false
   },
   {
     "id": "DXuDi3jgqsS",
@@ -5334,7 +5945,9 @@
     },
     "brand_partner": null,
     "saved_at": "May 01, 2026 12:19 am",
-    "saved_at_iso": "2026-05-01T00:19:00"
+    "saved_at_iso": "2026-05-01T00:19:00",
+    "title": "Most people try to learn Python and give up because they don't know...",
+    "caption_generated": false
   },
   {
     "id": "DXuQYPCjaF-",
@@ -5359,7 +5972,9 @@
       "url": "https://cursor.com"
     },
     "saved_at": "Apr 29, 2026 10:06 pm",
-    "saved_at_iso": "2026-04-29T22:06:00"
+    "saved_at_iso": "2026-04-29T22:06:00",
+    "title": "The fastest way to actually understand a research paper is to recreate...",
+    "caption_generated": false
   },
   {
     "id": "DXnjIh4kdj8",
@@ -5374,7 +5989,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 27, 2026 1:05 am",
-    "saved_at_iso": "2026-04-27T01:05:00"
+    "saved_at_iso": "2026-04-27T01:05:00",
+    "title": "These 8 ML projects are running in production at top tech companies...",
+    "caption_generated": false
   },
   {
     "id": "DXg7PUuE-8b",
@@ -5395,7 +6012,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 26, 2026 1:09 am",
-    "saved_at_iso": "2026-04-26T01:09:00"
+    "saved_at_iso": "2026-04-26T01:09:00",
+    "title": "Resume got rejected? try this!",
+    "caption_generated": false
   },
   {
     "id": "DXazKo4I374",
@@ -5410,7 +6029,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026 11:59 pm",
-    "saved_at_iso": "2026-04-25T23:59:00"
+    "saved_at_iso": "2026-04-25T23:59:00",
+    "title": "في مدينة ساحلية لا تُذكر على الخرائط، كان هناك مبنى مهجور يُعرف بين...",
+    "caption_generated": false
   },
   {
     "id": "DXjPubak3IE",
@@ -5431,7 +6052,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026 8:10 am",
-    "saved_at_iso": "2026-04-25T08:10:00"
+    "saved_at_iso": "2026-04-25T08:10:00",
+    "title": "At Google, we look for Problem Solvers. 🧠🏢",
+    "caption_generated": false
   },
   {
     "id": "DXevgLFGWH0",
@@ -5446,7 +6069,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026 12:17 am",
-    "saved_at_iso": "2026-04-25T00:17:00"
+    "saved_at_iso": "2026-04-25T00:17:00",
+    "title": "I keep seeing different posts breaking the roles down, but I worked...",
+    "caption_generated": false
   },
   {
     "id": "DXEl4M-EuKv",
@@ -5473,7 +6098,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026 12:16 am",
-    "saved_at_iso": "2026-04-25T00:16:00"
+    "saved_at_iso": "2026-04-25T00:16:00",
+    "title": "You don’t miss internships because of skills.",
+    "caption_generated": false
   },
   {
     "id": "DXeksqdiEXa",
@@ -5488,7 +6115,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 24, 2026 7:39 am",
-    "saved_at_iso": "2026-04-24T07:39:00"
+    "saved_at_iso": "2026-04-24T07:39:00",
+    "title": "Sites for developers",
+    "caption_generated": false
   },
   {
     "id": "DXeOlb8kRqc",
@@ -5507,7 +6136,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 10:12 am",
-    "saved_at_iso": "2026-04-23T10:12:00"
+    "saved_at_iso": "2026-04-23T10:12:00",
+    "title": "Coding projects that'll actually get you hired!!!!",
+    "caption_generated": false
   },
   {
     "id": "DSrn8Nkiby3",
@@ -5522,7 +6153,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 3:24 am",
-    "saved_at_iso": "2026-04-23T03:24:00"
+    "saved_at_iso": "2026-04-23T03:24:00",
+    "title": "Google just released a tool that makes understanding any codebase as...",
+    "caption_generated": false
   },
   {
     "id": "DWxnceLltoF",
@@ -5541,7 +6174,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 3:21 am",
-    "saved_at_iso": "2026-04-23T03:21:00"
+    "saved_at_iso": "2026-04-23T03:21:00",
+    "title": "sujar.tech: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DXVGafeDVKT",
@@ -5561,7 +6196,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 2:55 am",
-    "saved_at_iso": "2026-04-23T02:55:00"
+    "saved_at_iso": "2026-04-23T02:55:00",
+    "title": "these are the 4 machine learning concepts that actually matter in...",
+    "caption_generated": false
   },
   {
     "id": "DXVxq0QGCR-",
@@ -5576,7 +6213,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 2:54 am",
-    "saved_at_iso": "2026-04-23T02:54:00"
+    "saved_at_iso": "2026-04-23T02:54:00",
+    "title": "hellocherrymedia: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DXYakqSDWX7",
@@ -5595,7 +6234,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026 2:45 am",
-    "saved_at_iso": "2026-04-23T02:45:00"
+    "saved_at_iso": "2026-04-23T02:45:00",
+    "title": "ungatekeeping how I got my big tech internship!",
+    "caption_generated": false
   },
   {
     "id": "DXT6xZJkwfD",
@@ -5610,7 +6251,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 20, 2026 2:12 am",
-    "saved_at_iso": "2026-04-20T02:12:00"
+    "saved_at_iso": "2026-04-20T02:12:00",
+    "title": "How many interests are you juggling right now?",
+    "caption_generated": false
   },
   {
     "id": "DXMiEV0CIkn",
@@ -5625,7 +6268,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 18, 2026 9:51 pm",
-    "saved_at_iso": "2026-04-18T21:51:00"
+    "saved_at_iso": "2026-04-18T21:51:00",
+    "title": "Sites for developers",
+    "caption_generated": false
   },
   {
     "id": "DXQ1hB_iK-s",
@@ -5644,7 +6289,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 18, 2026 8:53 pm",
-    "saved_at_iso": "2026-04-18T20:53:00"
+    "saved_at_iso": "2026-04-18T20:53:00",
+    "title": "⃣ Meta Ads",
+    "caption_generated": false
   },
   {
     "id": "DXOQVQjju_L",
@@ -5664,7 +6311,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 17, 2026 12:04 am",
-    "saved_at_iso": "2026-04-17T00:04:00"
+    "saved_at_iso": "2026-04-17T00:04:00",
+    "title": "itsellagonzales: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DXCu_AjjZ1R",
@@ -5679,7 +6328,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 15, 2026 12:21 pm",
-    "saved_at_iso": "2026-04-15T12:21:00"
+    "saved_at_iso": "2026-04-15T12:21:00",
+    "title": "For Skills Section👇:",
+    "caption_generated": false
   },
   {
     "id": "DWtdp9uDCCR",
@@ -5694,7 +6345,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 10, 2026 2:34 am",
-    "saved_at_iso": "2026-04-10T02:34:00"
+    "saved_at_iso": "2026-04-10T02:34:00",
+    "title": "If you want to get hired as a developer, you need projects that...",
+    "caption_generated": false
   },
   {
     "id": "DWjPlMojpuJ",
@@ -5717,7 +6370,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 09, 2026 8:27 am",
-    "saved_at_iso": "2026-04-09T08:27:00"
+    "saved_at_iso": "2026-04-09T08:27:00",
+    "title": "Wealth isn't built in a year…. but the foundations that create it can...",
+    "caption_generated": false
   },
   {
     "id": "DW1OHn6k2Cq",
@@ -5738,7 +6393,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 08, 2026 11:50 am",
-    "saved_at_iso": "2026-04-08T11:50:00"
+    "saved_at_iso": "2026-04-08T11:50:00",
+    "title": "This github repo creates a sequential graph of the project’s codebase...",
+    "caption_generated": false
   },
   {
     "id": "DW29yd3Db25",
@@ -5759,7 +6416,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 08, 2026 6:47 am",
-    "saved_at_iso": "2026-04-08T06:47:00"
+    "saved_at_iso": "2026-04-08T06:47:00",
+    "title": "educationcode.in: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DWy3tpGDEui",
@@ -5780,7 +6439,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 08, 2026 3:35 am",
-    "saved_at_iso": "2026-04-08T03:35:00"
+    "saved_at_iso": "2026-04-08T03:35:00",
+    "title": "Hidden gems  for landing remote jobs you didn’t even know existed✨",
+    "caption_generated": false
   },
   {
     "id": "DWSoHx0CWrg",
@@ -5795,7 +6456,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 05, 2026 11:20 pm",
-    "saved_at_iso": "2026-04-05T23:20:00"
+    "saved_at_iso": "2026-04-05T23:20:00",
+    "title": "AI isn’t boring.",
+    "caption_generated": false
   },
   {
     "id": "DTSqMuRCOp6",
@@ -5810,7 +6473,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 05, 2026 9:02 am",
-    "saved_at_iso": "2026-04-05T09:02:00"
+    "saved_at_iso": "2026-04-05T09:02:00",
+    "title": "🚨FRAMER ASSETS PT.10 is here!",
+    "caption_generated": false
   },
   {
     "id": "DVAl1aaDVTn",
@@ -5831,7 +6496,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026 5:11 am",
-    "saved_at_iso": "2026-04-04T05:11:00"
+    "saved_at_iso": "2026-04-04T05:11:00",
+    "title": "itsellagonzales: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DWrMiKRE9lG",
@@ -5846,7 +6513,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026 5:06 am",
-    "saved_at_iso": "2026-04-04T05:06:00"
+    "saved_at_iso": "2026-04-04T05:06:00",
+    "title": "System design is a critical aspect of software engineering that defines...",
+    "caption_generated": false
   },
   {
     "id": "DWg2Mv0DJGV",
@@ -5867,7 +6536,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026 2:15 am",
-    "saved_at_iso": "2026-04-04T02:15:00"
+    "saved_at_iso": "2026-04-04T02:15:00",
+    "title": "I used to think getting better meant doing more",
+    "caption_generated": false
   },
   {
     "id": "DWgjdZdEzST",
@@ -5887,7 +6558,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 03, 2026 9:53 am",
-    "saved_at_iso": "2026-04-03T09:53:00"
+    "saved_at_iso": "2026-04-03T09:53:00",
+    "title": "Internships in 2026 You Shouldn’t Miss",
+    "caption_generated": false
   },
   {
     "id": "DWjqf5wjc8q",
@@ -5902,7 +6575,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 03, 2026 9:32 am",
-    "saved_at_iso": "2026-04-03T09:32:00"
+    "saved_at_iso": "2026-04-03T09:32:00",
+    "title": "These are not one day projects but you can try them over a few weekends...",
+    "caption_generated": false
   },
   {
     "id": "DT_jDlNEcNA",
@@ -5917,7 +6592,9 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 02, 2026 12:09 pm",
-    "saved_at_iso": "2026-04-02T12:09:00"
+    "saved_at_iso": "2026-04-02T12:09:00",
+    "title": "Your dead LinkedIn is costing you jobs:",
+    "caption_generated": false
   },
   {
     "id": "DWbcmlliM2e",
@@ -5938,7 +6615,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 29, 2026 12:13 pm",
-    "saved_at_iso": "2026-03-29T12:13:00"
+    "saved_at_iso": "2026-03-29T12:13:00",
+    "title": "Reading real code",
+    "caption_generated": false
   },
   {
     "id": "DWaAJaCgb08",
@@ -5959,7 +6638,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 29, 2026 11:54 am",
-    "saved_at_iso": "2026-03-29T11:54:00"
+    "saved_at_iso": "2026-03-29T11:54:00",
+    "title": "Most people build only Machine Learning Projects or Only Quant...",
+    "caption_generated": false
   },
   {
     "id": "DWUCwmtEX5x",
@@ -5980,7 +6661,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 25, 2026 11:26 pm",
-    "saved_at_iso": "2026-03-25T23:26:00"
+    "saved_at_iso": "2026-03-25T23:26:00",
+    "title": "tuba.captures: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DVYacGjk9G3",
@@ -5995,7 +6678,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 25, 2026 2:50 am",
-    "saved_at_iso": "2026-03-25T02:50:00"
+    "saved_at_iso": "2026-03-25T02:50:00",
+    "title": "coding_cosmos: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DWQI40jziU8",
@@ -6016,7 +6701,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 24, 2026 10:55 pm",
-    "saved_at_iso": "2026-03-24T22:55:00"
+    "saved_at_iso": "2026-03-24T22:55:00",
+    "title": "projects won’t make you an expert. But the right progression will.",
+    "caption_generated": false
   },
   {
     "id": "DWQRtxzFv7q",
@@ -6031,7 +6718,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 24, 2026 8:34 am",
-    "saved_at_iso": "2026-03-24T08:34:00"
+    "saved_at_iso": "2026-03-24T08:34:00",
+    "title": "Stop ignoring how real systems work. These concepts are what separates...",
+    "caption_generated": false
   },
   {
     "id": "DWGwA8uAfqZ",
@@ -6052,7 +6741,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 22, 2026 11:24 am",
-    "saved_at_iso": "2026-03-22T11:24:00"
+    "saved_at_iso": "2026-03-22T11:24:00",
+    "title": "Upcoming internships to watch out for in 2026 🧑🏻‍💻",
+    "caption_generated": false
   },
   {
     "id": "DWF_IEIk8i7",
@@ -6067,7 +6758,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 22, 2026 6:02 am",
-    "saved_at_iso": "2026-03-22T06:02:00"
+    "saved_at_iso": "2026-03-22T06:02:00",
+    "title": "DSA Project Ideas 🙌🏻",
+    "caption_generated": false
   },
   {
     "id": "DVoCoeWCOyp",
@@ -6088,7 +6781,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 19, 2026 12:26 pm",
-    "saved_at_iso": "2026-03-19T12:26:00"
+    "saved_at_iso": "2026-03-19T12:26:00",
+    "title": "Your skin is one of the first places your body shows nutritional...",
+    "caption_generated": false
   },
   {
     "id": "DV1TrLrE2uv",
@@ -6103,7 +6798,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 19, 2026 12:24 pm",
-    "saved_at_iso": "2026-03-19T12:24:00"
+    "saved_at_iso": "2026-03-19T12:24:00",
+    "title": "Four years ago, we started Wealthy Tools as a simple Instagram page.",
+    "caption_generated": false
   },
   {
     "id": "DV_Rs-hkgx_",
@@ -6124,7 +6821,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 18, 2026 11:38 pm",
-    "saved_at_iso": "2026-03-18T23:38:00"
+    "saved_at_iso": "2026-03-18T23:38:00",
+    "title": "Frontend Libraries every Frontend Developer Should Know",
+    "caption_generated": false
   },
   {
     "id": "DV4q0-sFdKw",
@@ -6145,7 +6844,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 15, 2026 2:03 am",
-    "saved_at_iso": "2026-03-15T02:03:00"
+    "saved_at_iso": "2026-03-15T02:03:00",
+    "title": "These GitHub repos are a cheat code…",
+    "caption_generated": false
   },
   {
     "id": "DVEH4j0jKqJ",
@@ -6166,7 +6867,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 14, 2026 12:04 pm",
-    "saved_at_iso": "2026-03-14T12:04:00"
+    "saved_at_iso": "2026-03-14T12:04:00",
+    "title": "I recently took a few developer interviews.",
+    "caption_generated": false
   },
   {
     "id": "DV1D5HnEQiG",
@@ -6186,7 +6889,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 14, 2026 2:45 am",
-    "saved_at_iso": "2026-03-14T02:45:00"
+    "saved_at_iso": "2026-03-14T02:45:00",
+    "title": "Become an AI Engineer in 2026",
+    "caption_generated": false
   },
   {
     "id": "DVvsGS7jEvz",
@@ -6201,7 +6906,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 13, 2026 1:00 pm",
-    "saved_at_iso": "2026-03-13T13:00:00"
+    "saved_at_iso": "2026-03-13T13:00:00",
+    "title": "Your LinkedIn profile should be bringing you opportunities while you sleep.",
+    "caption_generated": false
   },
   {
     "id": "DVvoQRJE7DC",
@@ -6222,7 +6929,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 13, 2026 12:03 pm",
-    "saved_at_iso": "2026-03-13T12:03:00"
+    "saved_at_iso": "2026-03-13T12:03:00",
+    "title": "🚨 Still struggling to crack TCS, Accenture, Capgemini, Cognizant...",
+    "caption_generated": false
   },
   {
     "id": "DVqX7CREgdk",
@@ -6246,14 +6955,22 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 11, 2026 11:59 am",
-    "saved_at_iso": "2026-03-11T11:59:00"
+    "saved_at_iso": "2026-03-11T11:59:00",
+    "title": "Your resume won’t stand out with basic projects anymore.",
+    "caption_generated": false
   },
   {
     "id": "DVrKrGdFEGM",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DVrKrGdFEGM/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Elevating user experience often comes down to the fluid responsiveness of micro-interactions. This technique leverages the power of CSS Custom Properties (variables) updated dynamically via JavaScript event listeners. By binding mouse coordinates or scroll states directly to CSS variables, you can create highly interactive, physics-based visual effects without the overhead of heavy animation libraries. The separation of concerns remains clean: JavaScript handles the state calculation, while CSS handles the rendering and transitions.\n\nFrom a performance standpoint, this approach is exceptionally efficient. By animating only composited properties like 'transform' and 'opacity', you avoid costly layout repaints and reflows. Adding 'will-change' hints to animated elements signals the browser to promote them to their own compositor layers, leveraging GPU acceleration to ensure your UI elements glide smoothly at 60fps even on lower-end devices.\n\nWhile robust animation frameworks have their place, mastering this native CSS/JS hybrid approach is a game-changer for landing page hero sections, interactive card designs, and custom cursors. It keeps your bundle size minimal and your pages loading instantly.",
+    "hashtags": [
+      "cssanimations",
+      "frontenddev",
+      "javascript",
+      "webperformance",
+      "uidesign"
+    ],
     "owner": {
       "name": "Patty Strongitharm",
       "username": "pa_ttys436",
@@ -6261,7 +6978,10 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 10, 2026 3:22 am",
-    "saved_at_iso": "2026-03-10T03:22:00"
+    "saved_at_iso": "2026-03-10T03:22:00",
+    "title": "Dynamic UI Interactions with CSS Variables and JavaScript",
+    "category": "Web & Frontend",
+    "caption_generated": true
   },
   {
     "id": "DVLyMU0kl1v",
@@ -6281,7 +7001,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 09, 2026 10:22 pm",
-    "saved_at_iso": "2026-03-09T22:22:00"
+    "saved_at_iso": "2026-03-09T22:22:00",
+    "title": "What have you guys been building lately?",
+    "caption_generated": false
   },
   {
     "id": "DVoHOTQD4-B",
@@ -6302,7 +7024,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 09, 2026 7:25 am",
-    "saved_at_iso": "2026-03-09T07:25:00"
+    "saved_at_iso": "2026-03-09T07:25:00",
+    "title": "Internships in 2026 You Shouldn’t Miss",
+    "caption_generated": false
   },
   {
     "id": "DVlhazgGP5X",
@@ -6317,7 +7041,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 8:31 am",
-    "saved_at_iso": "2026-03-08T08:31:00"
+    "saved_at_iso": "2026-03-08T08:31:00",
+    "title": "small changes do everything",
+    "caption_generated": false
   },
   {
     "id": "DU-f-QyiL4Q",
@@ -6337,7 +7063,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 1:19 am",
-    "saved_at_iso": "2026-03-08T01:19:00"
+    "saved_at_iso": "2026-03-08T01:19:00",
+    "title": "Most people say they “know databases.”",
+    "caption_generated": false
   },
   {
     "id": "DVc0gkzEWXc",
@@ -6358,7 +7086,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 1:17 am",
-    "saved_at_iso": "2026-03-08T01:17:00"
+    "saved_at_iso": "2026-03-08T01:17:00",
+    "title": "Most developers use Git only for:",
+    "caption_generated": false
   },
   {
     "id": "DVldBjsE17R",
@@ -6373,7 +7103,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 1:17 am",
-    "saved_at_iso": "2026-03-08T01:17:00"
+    "saved_at_iso": "2026-03-08T01:17:00",
+    "title": "coding_cosmos: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DVmwI_sEc-z",
@@ -6394,7 +7126,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 1:16 am",
-    "saved_at_iso": "2026-03-08T01:16:00"
+    "saved_at_iso": "2026-03-08T01:16:00",
+    "title": "They really don’t teach you this in school…",
+    "caption_generated": false
   },
   {
     "id": "DVixfzYgdgQ",
@@ -6415,7 +7149,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026 1:13 am",
-    "saved_at_iso": "2026-03-08T01:13:00"
+    "saved_at_iso": "2026-03-08T01:13:00",
+    "title": "Here are concepts senior engineers expect you to know",
+    "caption_generated": false
   },
   {
     "id": "DVc9KU5ANsw",
@@ -6436,7 +7172,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 07, 2026 2:08 am",
-    "saved_at_iso": "2026-03-07T02:08:00"
+    "saved_at_iso": "2026-03-07T02:08:00",
+    "title": "No shortcuts. Just numbers + process.",
+    "caption_generated": false
   },
   {
     "id": "DVgkuY6jpJB",
@@ -6451,7 +7189,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 07, 2026 2:01 am",
-    "saved_at_iso": "2026-03-07T02:01:00"
+    "saved_at_iso": "2026-03-07T02:01:00",
+    "title": "Become an AI Engineer by 2027 👾🤖",
+    "caption_generated": false
   },
   {
     "id": "DVgfQAWE_J1",
@@ -6472,7 +7212,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 06, 2026 8:53 am",
-    "saved_at_iso": "2026-03-06T08:53:00"
+    "saved_at_iso": "2026-03-06T08:53:00",
+    "title": "ML/AI : 10/10",
+    "caption_generated": false
   },
   {
     "id": "DVd3hTNjP4G",
@@ -6493,7 +7235,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 05, 2026 8:46 pm",
-    "saved_at_iso": "2026-03-05T20:46:00"
+    "saved_at_iso": "2026-03-05T20:46:00",
+    "title": "Projects that help you understand backend systems better.",
+    "caption_generated": false
   },
   {
     "id": "DUuzVq6Dlzm",
@@ -6514,7 +7258,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 05, 2026 12:51 pm",
-    "saved_at_iso": "2026-03-05T12:51:00"
+    "saved_at_iso": "2026-03-05T12:51:00",
+    "title": "itsellagonzales: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DVFJ5wojYyn",
@@ -6535,7 +7281,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 05, 2026 12:47 pm",
-    "saved_at_iso": "2026-03-05T12:47:00"
+    "saved_at_iso": "2026-03-05T12:47:00",
+    "title": "itsellagonzales: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DVa6mbzjymg",
@@ -6556,7 +7304,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 05, 2026 4:23 am",
-    "saved_at_iso": "2026-03-05T04:23:00"
+    "saved_at_iso": "2026-03-05T04:23:00",
+    "title": "Interview coding problems blocking you?",
+    "caption_generated": false
   },
   {
     "id": "DUpB3UPDHYd",
@@ -6577,7 +7327,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 03, 2026 1:15 am",
-    "saved_at_iso": "2026-03-03T01:15:00"
+    "saved_at_iso": "2026-03-03T01:15:00",
+    "title": "Want to become good developers?",
+    "caption_generated": false
   },
   {
     "id": "DVYbtP2D-9G",
@@ -6597,7 +7349,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 02, 2026 10:58 am",
-    "saved_at_iso": "2026-03-02T10:58:00"
+    "saved_at_iso": "2026-03-02T10:58:00",
+    "title": "Github useful commands 👇 https://education.github.com/git-cheat-sheet-ed...",
+    "caption_generated": false
   },
   {
     "id": "DVWEw2pAZQR",
@@ -6618,7 +7372,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 02, 2026 1:47 am",
-    "saved_at_iso": "2026-03-02T01:47:00"
+    "saved_at_iso": "2026-03-02T01:47:00",
+    "title": "What if you could learn every DSA algorithm in just 4–5 minutes? ⏱",
+    "caption_generated": false
   },
   {
     "id": "DVP4PKuDGPQ",
@@ -6638,7 +7394,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 01, 2026 11:05 am",
-    "saved_at_iso": "2026-03-01T11:05:00"
+    "saved_at_iso": "2026-03-01T11:05:00",
+    "title": "codersoni: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DVUwGtujPkE",
@@ -6658,7 +7416,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 01, 2026 4:09 am",
-    "saved_at_iso": "2026-03-01T04:09:00"
+    "saved_at_iso": "2026-03-01T04:09:00",
+    "title": "Math math math",
+    "caption_generated": false
   },
   {
     "id": "DVTSyJjic0h",
@@ -6673,7 +7433,9 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 01, 2026 3:48 am",
-    "saved_at_iso": "2026-03-01T03:48:00"
+    "saved_at_iso": "2026-03-01T03:48:00",
+    "title": "Try next story 🤌🏻",
+    "caption_generated": false
   },
   {
     "id": "DVDRkwiEpHb",
@@ -6688,7 +7450,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 28, 2026 9:44 am",
-    "saved_at_iso": "2026-02-28T09:44:00"
+    "saved_at_iso": "2026-02-28T09:44:00",
+    "title": "Didn’t doomscroll this weekend — upgraded my thinking instead",
+    "caption_generated": false
   },
   {
     "id": "DVAcXOpEqnv",
@@ -6703,7 +7467,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 25, 2026 11:04 am",
-    "saved_at_iso": "2026-02-25T11:04:00"
+    "saved_at_iso": "2026-02-25T11:04:00",
+    "title": "Scientific ML is where deep learning stops being just curve fitting and...",
+    "caption_generated": false
   },
   {
     "id": "DVJIe-DDHxi",
@@ -6718,7 +7484,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 25, 2026 12:05 am",
-    "saved_at_iso": "2026-02-25T00:05:00"
+    "saved_at_iso": "2026-02-25T00:05:00",
+    "title": "Platforms Every Developer Should Visit in 2026",
+    "caption_generated": false
   },
   {
     "id": "DVDO6Q_krx7",
@@ -6739,7 +7507,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026 5:57 am",
-    "saved_at_iso": "2026-02-23T05:57:00"
+    "saved_at_iso": "2026-02-23T05:57:00",
+    "title": "🚨 90% of Developers Don’t Know ALL These Storage Types… Do You?",
+    "caption_generated": false
   },
   {
     "id": "DVC5fEyjZx4",
@@ -6754,7 +7524,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026 4:36 am",
-    "saved_at_iso": "2026-02-23T04:36:00"
+    "saved_at_iso": "2026-02-23T04:36:00",
+    "title": "Iif you don’t know me hi I’m Christy! I’ve worked at big tech companies...",
+    "caption_generated": false
   },
   {
     "id": "DVDFI8pDVKg",
@@ -6769,7 +7541,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026 4:29 am",
-    "saved_at_iso": "2026-02-23T04:29:00"
+    "saved_at_iso": "2026-02-23T04:29:00",
+    "title": "Useful Github resources to leverage while learning about AI world",
+    "caption_generated": false
   },
   {
     "id": "DT-x2eeiMJt",
@@ -6784,7 +7558,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026 4:28 am",
-    "saved_at_iso": "2026-02-23T04:28:00"
+    "saved_at_iso": "2026-02-23T04:28:00",
+    "title": "I personally have referred many of them while building production AI...",
+    "caption_generated": false
   },
   {
     "id": "DU-0CCyES5O",
@@ -6805,7 +7581,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 22, 2026 2:43 am",
-    "saved_at_iso": "2026-02-22T02:43:00"
+    "saved_at_iso": "2026-02-22T02:43:00",
+    "title": "Top 10 Technologies Every Programmer Must Know – Part 1 💻",
+    "caption_generated": false
   },
   {
     "id": "DU8c_Ssk489",
@@ -6826,7 +7604,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 21, 2026 7:00 am",
-    "saved_at_iso": "2026-02-21T07:00:00"
+    "saved_at_iso": "2026-02-21T07:00:00",
+    "title": "Python NumPy Essentials for Data Science and ML",
+    "caption_generated": false
   },
   {
     "id": "DU0WuhBkogJ",
@@ -6851,7 +7631,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 19, 2026 6:57 pm",
-    "saved_at_iso": "2026-02-19T18:57:00"
+    "saved_at_iso": "2026-02-19T18:57:00",
+    "title": "Stop solving only textbook problems.",
+    "caption_generated": false
   },
   {
     "id": "DUvGKxOkXFF",
@@ -6872,7 +7654,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 19, 2026 10:22 am",
-    "saved_at_iso": "2026-02-19T10:22:00"
+    "saved_at_iso": "2026-02-19T10:22:00",
+    "title": "Day 33- Ab LinkedIn thik kro and apni dream job lelo😉",
+    "caption_generated": false
   },
   {
     "id": "DU4dwYZjBLk",
@@ -6893,7 +7677,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 19, 2026 10:22 am",
-    "saved_at_iso": "2026-02-19T10:22:00"
+    "saved_at_iso": "2026-02-19T10:22:00",
+    "title": "You’re not using GitHub properly if you don’t know these URL tricks 👀",
+    "caption_generated": false
   },
   {
     "id": "DU11SiYEqms",
@@ -6908,7 +7694,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 18, 2026 4:18 am",
-    "saved_at_iso": "2026-02-18T04:18:00"
+    "saved_at_iso": "2026-02-18T04:18:00",
+    "title": "Understanding ML starts with translating linear algebra, calculus,...",
+    "caption_generated": false
   },
   {
     "id": "DUv09DJEkhh",
@@ -6928,7 +7716,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 16, 2026 4:54 am",
-    "saved_at_iso": "2026-02-16T04:54:00"
+    "saved_at_iso": "2026-02-16T04:54:00",
+    "title": "If you can build these 4 from scratch, you’re not a beginner anymore:",
+    "caption_generated": false
   },
   {
     "id": "DUpr54aD4r1",
@@ -6949,7 +7739,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 15, 2026 8:28 pm",
-    "saved_at_iso": "2026-02-15T20:28:00"
+    "saved_at_iso": "2026-02-15T20:28:00",
+    "title": "These 75 questions cover Arrays, patterns, logic & real interview...",
+    "caption_generated": false
   },
   {
     "id": "DUgGt7TEj4V",
@@ -6970,7 +7762,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 15, 2026 3:28 am",
-    "saved_at_iso": "2026-02-15T03:28:00"
+    "saved_at_iso": "2026-02-15T03:28:00",
+    "title": "I posted this reel casually. I had no idea it would go viral, and it...",
+    "caption_generated": false
   },
   {
     "id": "DUTSJ6UFHEn",
@@ -6990,14 +7784,22 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 13, 2026 8:33 am",
-    "saved_at_iso": "2026-02-13T08:33:00"
+    "saved_at_iso": "2026-02-13T08:33:00",
+    "title": "LinkedIn is NOT just a job portal. It is a Marketplace.",
+    "caption_generated": false
   },
   {
     "id": "DUibnZOCRuS",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DUibnZOCRuS/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Modern software development is often bogged down by over-engineering and tool sprawl. To maintain high developer velocity, successful engineers rely on a streamlined, highly cohesive tech stack that minimizes boilerplate and reduces cognitive load. Choosing a unified language environment—like TypeScript across both your frontend and backend—allows you to share types seamlessly, catch errors during build time, and deploy features significantly faster.\n\nBy combining Next.js for robust routing, Tailwind CSS for utility-first styling, and a managed PostgreSQL instance via Supabase, you establish an instant, type-safe architecture. Integrating a modern ORM like Prisma or Drizzle further simplifies your database operations with automated schema migrations. Organizing your codebase using a feature-based folder structure rather than a layer-based one ensures that your architecture remains maintainable as your application scales.\n\nThe ultimate goal is to eliminate friction between writing code and delivering value to users. Automating repetitive tasks with strict ESLint rules, Prettier formatting, and robust CI/CD pipelines frees up your mental bandwidth to focus on solving core business logic.",
+    "hashtags": [
+      "developerproductivity",
+      "cleancode",
+      "techstack",
+      "webdevelopment",
+      "softwarearchitecture"
+    ],
     "owner": {
       "name": "Camden Graves",
       "username": "camdenegraves",
@@ -7005,7 +7807,10 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 11, 2026 4:35 am",
-    "saved_at_iso": "2026-02-11T04:35:00"
+    "saved_at_iso": "2026-02-11T04:35:00",
+    "title": "Architecting a Lean Tech Stack for Rapid Product Shipping",
+    "category": "Dev Tools & Open Source",
+    "caption_generated": true
   },
   {
     "id": "DUawtE2iLZy",
@@ -7026,7 +7831,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 07, 2026 10:21 pm",
-    "saved_at_iso": "2026-02-07T22:21:00"
+    "saved_at_iso": "2026-02-07T22:21:00",
+    "title": "Debugging used to take me hours.",
+    "caption_generated": false
   },
   {
     "id": "DUVb447Et00",
@@ -7041,7 +7848,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 05, 2026 3:45 am",
-    "saved_at_iso": "2026-02-05T03:45:00"
+    "saved_at_iso": "2026-02-05T03:45:00",
+    "title": "System design used to feel like something you study for interviews....",
+    "caption_generated": false
   },
   {
     "id": "DUQo-wekeyM",
@@ -7056,7 +7865,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 03, 2026 3:39 am",
-    "saved_at_iso": "2026-02-03T03:39:00"
+    "saved_at_iso": "2026-02-03T03:39:00",
+    "title": "These 12 points sum it up!",
+    "caption_generated": false
   },
   {
     "id": "DULnmmeE-xc",
@@ -7077,7 +7888,9 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 01, 2026 10:55 am",
-    "saved_at_iso": "2026-02-01T10:55:00"
+    "saved_at_iso": "2026-02-01T10:55:00",
+    "title": "Github ka Trick💀",
+    "caption_generated": false
   },
   {
     "id": "DUGi3rUjLdA",
@@ -7098,7 +7911,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 31, 2026 10:52 am",
-    "saved_at_iso": "2026-01-31T10:52:00"
+    "saved_at_iso": "2026-01-31T10:52:00",
+    "title": "DSA gets easier when you learn from the right sources.",
+    "caption_generated": false
   },
   {
     "id": "DT23fQoCEO1",
@@ -7116,7 +7931,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 27, 2026 10:34 pm",
-    "saved_at_iso": "2026-01-27T22:34:00"
+    "saved_at_iso": "2026-01-27T22:34:00",
+    "title": "Most people Google.",
+    "caption_generated": false
   },
   {
     "id": "DT3kFswEhj5",
@@ -7131,7 +7948,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 27, 2026 2:45 am",
-    "saved_at_iso": "2026-01-27T02:45:00"
+    "saved_at_iso": "2026-01-27T02:45:00",
+    "title": "If your semester has started already… Goodluck 🫡",
+    "caption_generated": false
   },
   {
     "id": "DT0JlHfjSJs",
@@ -7152,14 +7971,22 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 26, 2026 4:00 am",
-    "saved_at_iso": "2026-01-26T04:00:00"
+    "saved_at_iso": "2026-01-26T04:00:00",
+    "title": "AI/ML roa",
+    "caption_generated": false
   },
   {
     "id": "DT0rYongRWQ",
     "type": "post",
     "url": "https://www.instagram.com/p/DT0rYongRWQ/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Writing idiomatic Python is essential for building scalable data pipelines and performant backend services. This guide covers core Python patterns that every developer should master—from leveraging generator expressions and list comprehensions to reduce memory overhead, to utilizing the itertools and collections standard library modules for optimized data transformations.\n\nWhen handling complex data structures, adopting modern Python features like structural pattern matching (match/case), dataclasses for clean type schemas, and context managers (with statements) for automatic resource cleanup makes your codebase significantly more robust and self-documenting. For data science workloads, pairing pure Python algorithms with vectorized NumPy operations provides orders of magnitude speedups.\n\nKey takeaways include avoiding common anti-patterns like modifying a list while iterating over it, replacing deep nested dictionaries with defaultdict or typed NamedTuple, and always profiling hot execution paths using cProfile and timeit before attempting premature optimization.",
+    "hashtags": [
+      "python",
+      "datascience",
+      "pythonprogramming",
+      "cleancode",
+      "algorithms"
+    ],
     "owner": {
       "name": "Shashank Jain",
       "username": "wecodeinpython",
@@ -7167,7 +7994,10 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 25, 2026 8:21 am",
-    "saved_at_iso": "2026-01-25T08:21:00"
+    "saved_at_iso": "2026-01-25T08:21:00",
+    "title": "Essential Python Tricks & Idiomatic Patterns for Data Science",
+    "category": "Python & Data Science",
+    "caption_generated": true
   },
   {
     "id": "DT5YnCrkk6p",
@@ -7188,7 +8018,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 24, 2026 9:01 am",
-    "saved_at_iso": "2026-01-24T09:01:00"
+    "saved_at_iso": "2026-01-24T09:01:00",
+    "title": "I made these mistakes when I started with machine learning.",
+    "caption_generated": false
   },
   {
     "id": "DTl7ifOiF6M",
@@ -7209,7 +8041,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 24, 2026 2:30 am",
-    "saved_at_iso": "2026-01-24T02:30:00"
+    "saved_at_iso": "2026-01-24T02:30:00",
+    "title": "Still googling research papers and struggling to understand them?",
+    "caption_generated": false
   },
   {
     "id": "DT1YNYyj87-",
@@ -7230,7 +8064,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 23, 2026 7:07 am",
-    "saved_at_iso": "2026-01-23T07:07:00"
+    "saved_at_iso": "2026-01-23T07:07:00",
+    "title": "sharing the secret method to find the algo to any leetcode problem",
+    "caption_generated": false
   },
   {
     "id": "DThsqohkTI7",
@@ -7250,7 +8086,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 21, 2026 11:29 pm",
-    "saved_at_iso": "2026-01-21T23:29:00"
+    "saved_at_iso": "2026-01-21T23:29:00",
+    "title": "Most machine learning beginners don’t struggle with coding.",
+    "caption_generated": false
   },
   {
     "id": "DTh9HfbE86P",
@@ -7265,7 +8103,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 16, 2026 12:13 pm",
-    "saved_at_iso": "2026-01-16T12:13:00"
+    "saved_at_iso": "2026-01-16T12:13:00",
+    "title": "coding_cosmos: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DSH0fizjTkp",
@@ -7284,7 +8124,9 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 01, 2026 1:09 am",
-    "saved_at_iso": "2026-01-01T01:09:00"
+    "saved_at_iso": "2026-01-01T01:09:00",
+    "title": "Top 10 Machine Learning Algorithms You MUST Know in 2025",
+    "caption_generated": false
   },
   {
     "id": "DSpc8aBkgXT",
@@ -7303,7 +8145,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 24, 2025 9:22 pm",
-    "saved_at_iso": "2025-12-24T21:22:00"
+    "saved_at_iso": "2025-12-24T21:22:00",
+    "title": "You cannot miss these YouTube channels.",
+    "caption_generated": false
   },
   {
     "id": "DSciwoyk1AQ",
@@ -7318,14 +8162,22 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 24, 2025 11:22 am",
-    "saved_at_iso": "2025-12-24T11:22:00"
+    "saved_at_iso": "2025-12-24T11:22:00",
+    "title": "Prompt engineering is not the only skill that matters anymore....",
+    "caption_generated": false
   },
   {
     "id": "DSRUdR_Ek79",
     "type": "post",
     "url": "https://www.instagram.com/p/DSRUdR_Ek79/",
-    "caption": null,
-    "hashtags": [],
+    "caption": "Breaking into full-stack software engineering requires more than just memorizing syntax—it demands building production-grade applications that solve real-world problems. In this masterclass session, we break down the end-to-end modern web stack: mastering modern JavaScript/ES6+, building reactive components with React, designing resilient RESTful and GraphQL APIs, and integrating SQL/NoSQL databases with proper authentication and state management.\n\nBeyond technical codebases, a major focus is placed on the engineering hiring process: how to construct an ATS-optimized software developer resume, showcase impact-driven GitHub project portfolios, and communicate system architecture clearly during technical interview rounds. Understanding how to articulate engineering tradeoffs between client-side and server-side rendering is what differentiates junior applicants from top-tier candidates.\n\nActionable steps for engineers: build and deploy at least two full-stack projects with live authentication and CI/CD pipelines, document your architectural decisions in README files, and actively participate in open-source discussions to gain peer review experience.",
+    "hashtags": [
+      "webdevelopment",
+      "fullstack",
+      "reactjs",
+      "careeradvice",
+      "techinterview"
+    ],
     "owner": {
       "name": "Upasana Singh",
       "username": "codewithupasana",
@@ -7333,7 +8185,10 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 24, 2025 4:20 am",
-    "saved_at_iso": "2025-12-24T04:20:00"
+    "saved_at_iso": "2025-12-24T04:20:00",
+    "title": "Full-Stack Web Development & Career Acceleration Masterclass",
+    "category": "Career & Internships",
+    "caption_generated": true
   },
   {
     "id": "DSawaHGDHSE",
@@ -7348,7 +8203,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 19, 2025 12:50 pm",
-    "saved_at_iso": "2025-12-19T12:50:00"
+    "saved_at_iso": "2025-12-19T12:50:00",
+    "title": "A guide to studying software engineering.",
+    "caption_generated": false
   },
   {
     "id": "DR2BO16EuVL",
@@ -7378,7 +8235,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 17, 2025 6:46 am",
-    "saved_at_iso": "2025-12-17T06:46:00"
+    "saved_at_iso": "2025-12-17T06:46:00",
+    "title": "If you’re still only using Kaggle for your projects… you’re leaving...",
+    "caption_generated": false
   },
   {
     "id": "DSMT3qbj5Mv",
@@ -7399,7 +8258,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 13, 2025 8:17 am",
-    "saved_at_iso": "2025-12-13T08:17:00"
+    "saved_at_iso": "2025-12-13T08:17:00",
+    "title": "Want to land that dream job in tech? A strong grasp of algorithms is...",
+    "caption_generated": false
   },
   {
     "id": "DMB0MDuBEVF",
@@ -7445,7 +8306,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 12, 2025 5:18 am",
-    "saved_at_iso": "2025-12-12T05:18:00"
+    "saved_at_iso": "2025-12-12T05:18:00",
+    "title": "⚠ Must Watch for Engineering Students",
+    "caption_generated": false
   },
   {
     "id": "DRYaUZEAb3n",
@@ -7472,7 +8335,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 11, 2025 8:40 am",
-    "saved_at_iso": "2025-12-11T08:40:00"
+    "saved_at_iso": "2025-12-11T08:40:00",
+    "title": "Learning Machine Learning but don’t know where to start?",
+    "caption_generated": false
   },
   {
     "id": "DSCxbJYCEtB",
@@ -7493,7 +8358,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 09, 2025 10:53 pm",
-    "saved_at_iso": "2025-12-09T22:53:00"
+    "saved_at_iso": "2025-12-09T22:53:00",
+    "title": "A simple and quick guide for ML Engineers to understand the Activation...",
+    "caption_generated": false
   },
   {
     "id": "DR4IEXMkfBF",
@@ -7508,7 +8375,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 09, 2025 10:39 pm",
-    "saved_at_iso": "2025-12-09T22:39:00"
+    "saved_at_iso": "2025-12-09T22:39:00",
+    "title": "Free Inspiration - sites for creators",
+    "caption_generated": false
   },
   {
     "id": "DR99HDLjNTR",
@@ -7529,7 +8398,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 08, 2025 11:10 pm",
-    "saved_at_iso": "2025-12-08T23:10:00"
+    "saved_at_iso": "2025-12-08T23:10:00",
+    "title": "Pandas is not slow. Your code is. Here’s what’s secretly killing your...",
+    "caption_generated": false
   },
   {
     "id": "DR6oNqpEtVe",
@@ -7544,7 +8415,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 08, 2025 2:16 am",
-    "saved_at_iso": "2025-12-08T02:16:00"
+    "saved_at_iso": "2025-12-08T02:16:00",
+    "title": "Sites for Developers",
+    "caption_generated": false
   },
   {
     "id": "DR36PJdCYBa",
@@ -7563,7 +8436,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 06, 2025 12:54 am",
-    "saved_at_iso": "2025-12-06T00:54:00"
+    "saved_at_iso": "2025-12-06T00:54:00",
+    "title": "Reading and making sense of code has always been a painful problem for...",
+    "caption_generated": false
   },
   {
     "id": "DRvw_xKjFPI",
@@ -7588,7 +8463,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 05, 2025 6:19 am",
-    "saved_at_iso": "2025-12-05T06:19:00"
+    "saved_at_iso": "2025-12-05T06:19:00",
+    "title": "Chatbot for FAQs",
+    "caption_generated": false
   },
   {
     "id": "DQT-wNUiGbG",
@@ -7609,7 +8486,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 03, 2025 11:58 pm",
-    "saved_at_iso": "2025-12-03T23:58:00"
+    "saved_at_iso": "2025-12-03T23:58:00",
+    "title": "Time complexity of 10 most popular machine learning algorithms.",
+    "caption_generated": false
   },
   {
     "id": "DPgjXbvEyC5",
@@ -7655,7 +8534,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 02, 2025 12:57 pm",
-    "saved_at_iso": "2025-12-02T12:57:00"
+    "saved_at_iso": "2025-12-02T12:57:00",
+    "title": "cloud_x_berry: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DO8zDoJEZTU",
@@ -7680,7 +8561,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 02, 2025 2:03 am",
-    "saved_at_iso": "2025-12-02T02:03:00"
+    "saved_at_iso": "2025-12-02T02:03:00",
+    "title": "You do not need to hunt across blogs or threads anymore. Google just...",
+    "caption_generated": false
   },
   {
     "id": "DROnjBGAO3d",
@@ -7699,7 +8582,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 02, 2025 1:57 am",
-    "saved_at_iso": "2025-12-02T01:57:00"
+    "saved_at_iso": "2025-12-02T01:57:00",
+    "title": "Learn ML from scratch for free on github repos #learntocode #codinglife...",
+    "caption_generated": false
   },
   {
     "id": "DRciTbBCR76",
@@ -7714,7 +8599,9 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 01, 2025 12:34 am",
-    "saved_at_iso": "2025-12-01T00:34:00"
+    "saved_at_iso": "2025-12-01T00:34:00",
+    "title": "Whether you’re a beginner or an experienced data scientist, these 10...",
+    "caption_generated": false
   },
   {
     "id": "DRSQtsXiGOd",
@@ -7739,7 +8626,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 30, 2025 10:41 am",
-    "saved_at_iso": "2025-11-30T10:41:00"
+    "saved_at_iso": "2025-11-30T10:41:00",
+    "title": "Imagine discovering a hidden treasure chest—but instead of gold, it’s...",
+    "caption_generated": false
   },
   {
     "id": "DRqV3WzAsLH",
@@ -7761,7 +8650,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 30, 2025 10:24 am",
-    "saved_at_iso": "2025-11-30T10:24:00"
+    "saved_at_iso": "2025-11-30T10:24:00",
+    "title": "completely free sites to grab data for machine learning",
+    "caption_generated": false
   },
   {
     "id": "DRGo7ZBjBOy",
@@ -7786,7 +8677,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 27, 2025 6:42 am",
-    "saved_at_iso": "2025-11-27T06:42:00"
+    "saved_at_iso": "2025-11-27T06:42:00",
+    "title": "pythonboyz: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DRe7znTk43j",
@@ -7814,7 +8707,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 27, 2025 6:42 am",
-    "saved_at_iso": "2025-11-27T06:42:00"
+    "saved_at_iso": "2025-11-27T06:42:00",
+    "title": "Forward this reel to my",
+    "caption_generated": false
   },
   {
     "id": "DRbZVYHDuF7",
@@ -7835,7 +8730,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025 12:48 pm",
-    "saved_at_iso": "2025-11-25T12:48:00"
+    "saved_at_iso": "2025-11-25T12:48:00",
+    "title": "Here’s my full one year guide and Roa",
+    "caption_generated": false
   },
   {
     "id": "DPmfzXrE6CS",
@@ -7850,7 +8747,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025 12:23 pm",
-    "saved_at_iso": "2025-11-25T12:23:00"
+    "saved_at_iso": "2025-11-25T12:23:00",
+    "title": "Train LLM in Indian languages",
+    "caption_generated": false
   },
   {
     "id": "DRKPQxHjLlr",
@@ -7875,7 +8774,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025 7:07 am",
-    "saved_at_iso": "2025-11-25T07:07:00"
+    "saved_at_iso": "2025-11-25T07:07:00",
+    "title": "If I only had 6 months to become an AI Engineer, this is the exact path I’d",
+    "caption_generated": false
   },
   {
     "id": "DRPbPwpjDUT",
@@ -7901,7 +8802,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025 3:30 am",
-    "saved_at_iso": "2025-11-25T03:30:00"
+    "saved_at_iso": "2025-11-25T03:30:00",
+    "title": "Hugging Face Transformers + PEFT",
+    "caption_generated": false
   },
   {
     "id": "DQq6hkGjFud",
@@ -7938,7 +8841,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 24, 2025 11:14 pm",
-    "saved_at_iso": "2025-11-24T23:14:00"
+    "saved_at_iso": "2025-11-24T23:14:00",
+    "title": "Disappear for 6–12 Months",
+    "caption_generated": false
   },
   {
     "id": "DQ61E04D6e8",
@@ -7957,7 +8862,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 24, 2025 11:12 pm",
-    "saved_at_iso": "2025-11-24T23:12:00"
+    "saved_at_iso": "2025-11-24T23:12:00",
+    "title": "Machine learning complete roa",
+    "caption_generated": false
   },
   {
     "id": "DRY-A86j5Io",
@@ -7978,7 +8885,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 23, 2025 10:40 am",
-    "saved_at_iso": "2025-11-23T10:40:00"
+    "saved_at_iso": "2025-11-23T10:40:00",
+    "title": "drop \"GitHub\" to get these projects links :)",
+    "caption_generated": false
   },
   {
     "id": "DREASbWCKuZ",
@@ -7993,7 +8902,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 20, 2025 8:38 am",
-    "saved_at_iso": "2025-11-20T08:38:00"
+    "saved_at_iso": "2025-11-20T08:38:00",
+    "title": "Ai engineer study plan with detailed important Topics 🧑‍💻",
+    "caption_generated": false
   },
   {
     "id": "DROoeR6DSGQ",
@@ -8012,7 +8923,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 20, 2025 8:36 am",
-    "saved_at_iso": "2025-11-20T08:36:00"
+    "saved_at_iso": "2025-11-20T08:36:00",
+    "title": "Learn ML from scratch for free on github repos #learntocode #codinglife...",
+    "caption_generated": false
   },
   {
     "id": "DQ_cukPCha3",
@@ -8051,7 +8964,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 18, 2025 11:50 am",
-    "saved_at_iso": "2025-11-18T11:50:00"
+    "saved_at_iso": "2025-11-18T11:50:00",
+    "title": "@coding.sight",
+    "caption_generated": false
   },
   {
     "id": "DQpUpGADIwu",
@@ -8072,7 +8987,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 18, 2025 11:43 am",
-    "saved_at_iso": "2025-11-18T11:43:00"
+    "saved_at_iso": "2025-11-18T11:43:00",
+    "title": "Here’s the cheat code #ai #webdesign #aihacks #landingsiteai #fyp",
+    "caption_generated": false
   },
   {
     "id": "DPWyyiSDLir",
@@ -8091,7 +9008,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 17, 2025 11:42 am",
-    "saved_at_iso": "2025-11-17T11:42:00"
+    "saved_at_iso": "2025-11-17T11:42:00",
+    "title": "powerful websites you should know... 😳 #tech #websites #ai",
+    "caption_generated": false
   },
   {
     "id": "DRFOqJADUtV",
@@ -8106,7 +9025,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 16, 2025 9:04 am",
-    "saved_at_iso": "2025-11-16T09:04:00"
+    "saved_at_iso": "2025-11-16T09:04:00",
+    "title": "This GitHub repo lists hundreds of free APIs all neatly organized by...",
+    "caption_generated": false
   },
   {
     "id": "DNucLCnXK9b",
@@ -8121,7 +9042,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 15, 2025 1:47 pm",
-    "saved_at_iso": "2025-11-15T13:47:00"
+    "saved_at_iso": "2025-11-15T13:47:00",
+    "title": "Part 1 – Top 10 Generative AI Terms",
+    "caption_generated": false
   },
   {
     "id": "DQ_1uURjbx5",
@@ -8147,7 +9070,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 15, 2025 12:11 pm",
-    "saved_at_iso": "2025-11-15T12:11:00"
+    "saved_at_iso": "2025-11-15T12:11:00",
+    "title": "Chatbot for FAQs",
+    "caption_generated": false
   },
   {
     "id": "DQ1GvgZEnR-",
@@ -8162,7 +9087,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 14, 2025 11:33 pm",
-    "saved_at_iso": "2025-11-14T23:33:00"
+    "saved_at_iso": "2025-11-14T23:33:00",
+    "title": "Open source projects - for developers",
+    "caption_generated": false
   },
   {
     "id": "DRBtziXjtvR",
@@ -8177,7 +9104,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 14, 2025 11:27 pm",
-    "saved_at_iso": "2025-11-14T23:27:00"
+    "saved_at_iso": "2025-11-14T23:27:00",
+    "title": "The “Cost-Control” Smart Model Router (The Infrastructure Project)",
+    "caption_generated": false
   },
   {
     "id": "DQdYBrlE_1A",
@@ -8203,7 +9132,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 13, 2025 11:47 am",
-    "saved_at_iso": "2025-11-13T11:47:00"
+    "saved_at_iso": "2025-11-13T11:47:00",
+    "title": "Saturday and Sunday are the best days to learn -ask your friend to join...",
+    "caption_generated": false
   },
   {
     "id": "DPXO0JWk78R",
@@ -8218,7 +9149,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 13, 2025 11:39 am",
-    "saved_at_iso": "2025-11-13T11:39:00"
+    "saved_at_iso": "2025-11-13T11:39:00",
+    "title": "Pose tracking",
+    "caption_generated": false
   },
   {
     "id": "DOBo-HzjDaC",
@@ -8233,7 +9166,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 12, 2025 8:18 am",
-    "saved_at_iso": "2025-11-12T08:18:00"
+    "saved_at_iso": "2025-11-12T08:18:00",
+    "title": "albert.olgaard: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DQ4ulX_gZh7",
@@ -8248,7 +9183,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 11, 2025 10:06 am",
-    "saved_at_iso": "2025-11-11T10:06:00"
+    "saved_at_iso": "2025-11-11T10:06:00",
+    "title": "Most people think AI is just prompts and fun tools",
+    "caption_generated": false
   },
   {
     "id": "DP6DQESiPs1",
@@ -8283,7 +9220,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025 11:04 pm",
-    "saved_at_iso": "2025-11-05T23:04:00"
+    "saved_at_iso": "2025-11-05T23:04:00",
+    "title": "Had to do this, imma a huge @marvel fan",
+    "caption_generated": false
   },
   {
     "id": "DNnmT60zhga",
@@ -8306,7 +9245,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025 7:50 am",
-    "saved_at_iso": "2025-11-05T07:50:00"
+    "saved_at_iso": "2025-11-05T07:50:00",
+    "title": "The future of creativity is already here",
+    "caption_generated": false
   },
   {
     "id": "DOdnSfqEli0",
@@ -8331,7 +9272,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025 7:49 am",
-    "saved_at_iso": "2025-11-05T07:49:00"
+    "saved_at_iso": "2025-11-05T07:49:00",
+    "title": "FAANG Agentic AI Roa",
+    "caption_generated": false
   },
   {
     "id": "DQXCCcKDorx",
@@ -8348,7 +9291,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025 7:41 am",
-    "saved_at_iso": "2025-11-05T07:41:00"
+    "saved_at_iso": "2025-11-05T07:41:00",
+    "title": "The “Self-Correcting” RAG Pipeline",
+    "caption_generated": false
   },
   {
     "id": "DQFF_ANiKde",
@@ -8363,7 +9308,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 04, 2025 7:26 pm",
-    "saved_at_iso": "2025-11-04T19:26:00"
+    "saved_at_iso": "2025-11-04T19:26:00",
+    "title": "LLMs don't pay the bills.",
+    "caption_generated": false
   },
   {
     "id": "DPxlVtjjDC-",
@@ -8382,7 +9329,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 04, 2025 6:32 am",
-    "saved_at_iso": "2025-11-04T06:32:00"
+    "saved_at_iso": "2025-11-04T06:32:00",
+    "title": "ai projects every cs student should build",
+    "caption_generated": false
   },
   {
     "id": "DP2xTWuCPDS",
@@ -8421,7 +9370,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 03, 2025 12:22 pm",
-    "saved_at_iso": "2025-11-03T12:22:00"
+    "saved_at_iso": "2025-11-03T12:22:00",
+    "title": "Coding websites are illegal to know 💀 swipe for more 📚",
+    "caption_generated": false
   },
   {
     "id": "DQL7T0Okllp",
@@ -8436,7 +9387,9 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 03, 2025 6:36 am",
-    "saved_at_iso": "2025-11-03T06:36:00"
+    "saved_at_iso": "2025-11-03T06:36:00",
+    "title": "SVG Tools",
+    "caption_generated": false
   },
   {
     "id": "DPyopn1CHUx",
@@ -8474,7 +9427,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 30, 2025 5:48 am",
-    "saved_at_iso": "2025-10-30T05:48:00"
+    "saved_at_iso": "2025-10-30T05:48:00",
+    "title": "tuba.captures: Tech Guide",
+    "caption_generated": false
   },
   {
     "id": "DOgc5qCEyq9",
@@ -8493,7 +9448,9 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 28, 2025 12:52 am",
-    "saved_at_iso": "2025-10-28T00:52:00"
+    "saved_at_iso": "2025-10-28T00:52:00",
+    "title": "This free GitHub repository is the only crash course you need to learn...",
+    "caption_generated": false
   },
   {
     "id": "DPyWHlnj1en",
@@ -8516,6 +9473,8 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 17, 2025 11:31 am",
-    "saved_at_iso": "2025-10-17T11:31:00"
+    "saved_at_iso": "2025-10-17T11:31:00",
+    "title": "AI agents are intelligent systems that can understand instructions,...",
+    "caption_generated": false
   }
 ]
