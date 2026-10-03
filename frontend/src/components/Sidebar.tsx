@@ -1,6 +1,4 @@
 import {
-  Sparkles,
-  Search,
   LayoutGrid,
   Video,
   Image,
@@ -32,10 +30,8 @@ interface SidebarProps {
   totalCount: number;
   reelsCount: number;
   postsCount: number;
-  onOpenChat: () => void;
   onSync: () => void;
   isSyncing: boolean;
-  onFocusSearch: () => void;
 }
 
 const getCategoryIcon = (name: string) => {
@@ -64,10 +60,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   totalCount,
   reelsCount,
   postsCount,
-  onOpenChat,
   onSync,
   isSyncing,
-  onFocusSearch,
 }) => {
   return (
     <>
@@ -108,39 +102,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
               title="Close sidebar"
             >
               <PanelLeftClose className="w-4 h-4" />
-            </button>
-          </div>
-
-          {/* Quick Action Buttons */}
-          <div className="space-y-0.5 text-xs text-[#a0a0a0]">
-            {/* Search Button */}
-            <button
-              onClick={onFocusSearch}
-              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] hover:text-[#ededed] transition-colors cursor-pointer"
-            >
-              <div className="flex items-center gap-2">
-                <Search className="w-4 h-4 text-[#808080]" />
-                <span>Search collection</span>
-              </div>
-              <kbd className="text-[10px] px-1.5 py-0.5 rounded bg-[#222222] border border-[#333333] text-[#777777]">
-                /
-              </kbd>
-            </button>
-
-            {/* Notion-style AI Assistant */}
-            <button
-              onClick={onOpenChat}
-              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] hover:text-[#ededed] transition-colors cursor-pointer group"
-            >
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
-                <span className="font-medium text-[#e4e4e4] group-hover:text-sky-300">
-                  Curio AI Assistant
-                </span>
-              </div>
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono font-medium">
-                Gemini
-              </span>
             </button>
           </div>
 

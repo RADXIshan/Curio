@@ -25,14 +25,16 @@ export const App: React.FC = () => {
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const [syncToast, setSyncToast] = useState<string | null>(null);
 
-  // Filters
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  // Filters: Global Vault Search vs. Local Page Keyword Filter
+  const [vaultSearch, setVaultSearch] = useState<string>('');
+  const [keywordQuery, setKeywordQuery] = useState<string>('');
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [limit, setLimit] = useState<number>(60);
 
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const vaultSearchInputRef = useRef<HTMLInputElement>(null);
+  const keywordInputRef = useRef<HTMLInputElement>(null);
 
   const loadStats = async () => {
     try {
@@ -47,11 +49,13 @@ export const App: React.FC = () => {
     setIsLoading(true);
     setError(null);
     try {
+      // If global vaultSearch is active, search across everything in the vault
+      const isGlobal = vaultSearch.trim() !== '';
       const data = await fetchReels({
-        type: selectedType,
-        category: selectedCategory,
-        tag: selectedTag,
-        search: searchQuery,
+        type: isGlobal ? 'all' : selectedType,
+        category: isGlobal ? 'all' : selectedCategory,
+        tag: isGlobal ? '' : selectedTag,
+        search: isGlobal ? vaultSearch.trim() : keywordQuery.trim(),
         limit,
         offset: 0,
       });
@@ -73,22 +77,52 @@ export const App: React.FC = () => {
       loadReels();
     }, 200);
     return () => clearTimeout(handler);
-  }, [searchQuery, selectedType, selectedCategory, selectedTag, limit]);
+  }, [vaultSearch, keywordQuery, selectedType, selectedCategory, selectedTag, limit]);
 
-  // Keyboard shortcut listener: "/" to focus search
+  // Keyboard shortcut listener: "/" to focus global vault search
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === '/' && document.activeElement !== searchInputRef.current) {
+      if (
+        e.key === '/' &&
+        document.activeElement !== vaultSearchInputRef.current &&
+        document.activeElement !== keywordInputRef.current
+      ) {
         e.preventDefault();
-        searchInputRef.current?.focus();
+        vaultSearchInputRef.current?.focus();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const handleVaultSearchChange = (q: string) => {
+    setVaultSearch(q);
+    if (q && keywordQuery) setKeywordQuery('');
+  };
+
+  const handleKeywordQueryChange = (q: string) => {
+    setKeywordQuery(q);
+    if (q && vaultSearch) setVaultSearch('');
+  };
+
+  const handleCategoryChange = (c: string) => {
+    setSelectedCategory(c);
+    setVaultSearch(''); // Return to category view
+  };
+
+  const handleTypeChange = (t: string) => {
+    setSelectedType(t);
+    setVaultSearch('');
+  };
+
+  const handleTagChange = (t: string) => {
+    setSelectedTag(t);
+    setVaultSearch('');
+  };
+
   const handleResetFilters = () => {
-    setSearchQuery('');
+    setVaultSearch('');
+    setKeywordQuery('');
     setSelectedType('all');
     setSelectedCategory('all');
     setSelectedTag('');
@@ -116,20 +150,18 @@ export const App: React.FC = () => {
         isOpen={isSidebarOpen}
         onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
         selectedType={selectedType}
-        onTypeChange={setSelectedType}
+        onTypeChange={handleTypeChange}
         selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
+        onCategoryChange={handleCategoryChange}
         selectedTag={selectedTag}
-        onTagChange={setSelectedTag}
+        onTagChange={handleTagChange}
         categories={stats?.categories || []}
         topTags={stats?.top_tags || []}
         totalCount={stats?.total || totalCount}
         reelsCount={stats?.reels_count || 0}
         postsCount={stats?.posts_count || 0}
-        onOpenChat={() => setIsChatOpen(true)}
         onSync={handleSync}
         isSyncing={isSyncing}
-        onFocusSearch={() => searchInputRef.current?.focus()}
       />
 
       {/* Main Workspace Canvas */}
@@ -152,11 +184,14 @@ export const App: React.FC = () => {
           totalCount={stats?.total || totalCount}
           viewMode={viewMode}
           onViewModeChange={setViewMode}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
+          vaultSearch={vaultSearch}
+          onVaultSearchChange={handleVaultSearchChange}
+          keywordQuery={keywordQuery}
+          onKeywordQueryChange={handleKeywordQueryChange}
           onResetFilters={handleResetFilters}
           onOpenChat={() => setIsChatOpen(true)}
-          searchRef={searchInputRef}
+          vaultSearchRef={vaultSearchInputRef}
+          keywordRef={keywordInputRef}
         />
 
         {/* Canvas Body */}

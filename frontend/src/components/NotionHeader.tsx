@@ -20,11 +20,14 @@ interface NotionHeaderProps {
   totalCount?: number;
   viewMode: 'gallery' | 'table' | 'board';
   onViewModeChange: (mode: 'gallery' | 'table' | 'board') => void;
-  searchQuery: string;
-  onSearchChange: (q: string) => void;
+  vaultSearch: string;
+  onVaultSearchChange: (q: string) => void;
+  keywordQuery: string;
+  onKeywordQueryChange: (q: string) => void;
   onResetFilters: () => void;
   onOpenChat: () => void;
-  searchRef?: React.RefObject<HTMLInputElement | null>;
+  vaultSearchRef?: React.RefObject<HTMLInputElement | null>;
+  keywordRef?: React.RefObject<HTMLInputElement | null>;
 }
 
 export const NotionHeader: React.FC<NotionHeaderProps> = ({
@@ -36,21 +39,25 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
   totalFiltered,
   viewMode,
   onViewModeChange,
-  searchQuery,
-  onSearchChange,
+  vaultSearch,
+  onVaultSearchChange,
+  keywordQuery,
+  onKeywordQueryChange,
   onResetFilters,
   onOpenChat,
-  searchRef,
+  vaultSearchRef,
+  keywordRef,
 }) => {
   const hasActiveFilters =
-    searchQuery.trim() !== '' ||
+    vaultSearch.trim() !== '' ||
+    keywordQuery.trim() !== '' ||
     activeType !== 'all' ||
     activeCategory !== 'all' ||
     activeTag !== '';
 
   return (
     <div className="border-b border-[#282828] bg-[#191919] px-6 sm:px-10 pt-3 pb-0 select-none">
-      {/* Top Navbar: Breadcrumbs on left, Search in center/right, AI button on right */}
+      {/* Top Navbar: Breadcrumbs on left, Global Vault Search in center/right, Ask AI button on right */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#242424]/80 text-xs text-[#8c8c8c]">
         {/* Left: Sidebar toggle + Breadcrumbs */}
         <div className="flex items-center gap-2 min-w-0">
@@ -69,15 +76,15 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           </span>
           <span className="text-[#555555]">/</span>
           <span className="hover:text-[#dedede] transition-colors cursor-pointer text-[#a0a0a0]">
-            {activeCategory === 'all' ? 'All Saved Vault' : activeCategory}
+            {vaultSearch ? 'Global Vault Search' : activeCategory === 'all' ? 'All Saved Vault' : activeCategory}
           </span>
-          {activeType !== 'all' && (
+          {!vaultSearch && activeType !== 'all' && (
             <>
               <span className="text-[#555555]">/</span>
               <span className="capitalize text-[#cccccc]">{activeType}s</span>
             </>
           )}
-          {activeTag && (
+          {!vaultSearch && activeTag && (
             <>
               <span className="text-[#555555]">/</span>
               <span className="text-cyan-400 font-mono font-medium">#{activeTag}</span>
@@ -85,24 +92,24 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           )}
         </div>
 
-        {/* Right: Top Navbar Search Bar & Ask AI */}
+        {/* Right: Global Search Vault + Ask AI */}
         <div className="flex items-center gap-2.5">
-          {/* Top Navbar Search Input */}
+          {/* Global Vault Search Input */}
           <div className="relative flex items-center">
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#707070]" />
             <input
-              ref={searchRef}
+              ref={vaultSearchRef}
               type="text"
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search in vault..."
-              className="pl-8 pr-12 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-52 sm:w-64 transition-all"
+              value={vaultSearch}
+              onChange={(e) => onVaultSearchChange(e.target.value)}
+              placeholder="Search vault..."
+              className="pl-8 pr-12 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-48 sm:w-56 transition-all shadow-xs"
             />
-            {searchQuery ? (
+            {vaultSearch ? (
               <button
-                onClick={() => onSearchChange('')}
+                onClick={() => onVaultSearchChange('')}
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-[#707070] hover:text-white transition-colors cursor-pointer"
-                title="Clear search"
+                title="Clear vault search"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -124,26 +131,31 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
         </div>
       </div>
 
-      {/* Notion Page Header: Icon + Title + Description */}
-      <div className="pt-4 pb-2 space-y-2">
-        <div className="text-3xl select-none">⚡</div>
+      {/* Notion Page Header: Title + Description (No top emoji) */}
+      <div className="pt-3 pb-2 space-y-2">
         <div className="flex flex-wrap items-baseline gap-3">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#f0f0f0]">
-            {activeCategory === 'all' ? 'Saved Posts & Reels Knowledge Base' : activeCategory}
+            {vaultSearch
+              ? `Search Results for "${vaultSearch}"`
+              : activeCategory === 'all'
+              ? 'Saved Posts & Reels Knowledge Base'
+              : activeCategory}
           </h1>
           <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#242424] text-[#a0a0a0] font-mono border border-[#2e2e2e]">
             {totalFiltered} {totalFiltered === 1 ? 'item' : 'items'}
           </span>
         </div>
         <p className="text-xs sm:text-sm text-[#888888] max-w-2xl leading-relaxed">
-          Structured Instagram archive powered by Google Gemini. Filter by category, view code references, generate instant summaries, or ask questions with Curio AI.
+          {vaultSearch
+            ? 'Searching across all saved Instagram reels, posts, code references, and topics in the vault.'
+            : 'Structured Instagram archive powered by Google Gemini. Filter by category, view code references, generate instant summaries, or ask questions with Curio AI.'}
         </p>
       </div>
 
-      {/* Database Toolbar: Tabs (Gallery / Table / Board) + Filter Status & Reset with ample spacing from the bottom line */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-3 pb-3">
+      {/* Database Toolbar: Tabs (Gallery / Table / Board) + Local Keyword Search & Reset Button with generous gap from the line below */}
+      <div className="flex flex-wrap items-center justify-between gap-4 pt-3 pb-3.5">
         {/* View Switcher Tabs */}
-        <div className="flex items-center gap-1 -mb-[13px]">
+        <div className="flex items-center gap-1 -mb-[15px]">
           <button
             onClick={() => onViewModeChange('gallery')}
             className={`flex items-center gap-1.5 px-3 py-2.5 text-xs font-medium border-b-2 transition-all cursor-pointer ${
@@ -181,20 +193,40 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           </button>
         </div>
 
-        {/* Active Filter Indicators & Reset Button (with generous vertical padding & gap above the line) */}
-        {hasActiveFilters && (
-          <div className="flex items-center gap-2 py-1">
-            <span className="text-[11px] text-[#707070]">Filtered view</span>
+        {/* Local Page Keyword Search Bar & Reset Button (with generous gap above the bottom line) */}
+        <div className="flex items-center gap-2 mb-1">
+          <div className="relative flex items-center">
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#707070]" />
+            <input
+              ref={keywordRef}
+              type="text"
+              value={keywordQuery}
+              onChange={(e) => onKeywordQueryChange(e.target.value)}
+              placeholder="Filter by keyword..."
+              className="pl-8 pr-7 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-48 sm:w-56 transition-all shadow-xs"
+            />
+            {keywordQuery && (
+              <button
+                onClick={() => onKeywordQueryChange('')}
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-[#707070] hover:text-white transition-colors cursor-pointer"
+                title="Clear keyword filter"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+
+          {hasActiveFilters && (
             <button
               onClick={onResetFilters}
-              className="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium rounded-md bg-[#252525] hover:bg-[#303030] text-rose-300 hover:text-rose-200 border border-rose-900/40 hover:border-rose-700 transition-all cursor-pointer shadow-xs"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium rounded-md bg-[#252525] hover:bg-[#303030] text-rose-300 hover:text-rose-200 border border-rose-900/40 hover:border-rose-700 transition-all cursor-pointer shadow-xs"
               title="Reset all filters"
             >
               <RotateCcw className="w-3 h-3 text-rose-400" />
-              <span>Reset filters</span>
+              <span>Reset</span>
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
