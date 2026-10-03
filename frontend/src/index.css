@@ -1,50 +1,50 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --notion-bg: #191919;
+    --notion-sidebar: #131313;
+    --notion-card: #202020;
+    --notion-card-hover: #262626;
+    --notion-border: rgba(255, 255, 255, 0.08);
+    --notion-text: #eaeaea;
+    --notion-muted: #8c8c8c;
+  }
+
   body {
-    background-color: #0b0f19;
-    color: #f3f4f6;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: var(--notion-bg);
+    color: var(--notion-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 
-/* Custom smooth dark scrollbar */
+/* Custom sleek Notion scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: rgba(255, 255, 255, 0.28);
 }
 
-.glass-panel {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Notion-style callout box */
+.notion-callout {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
 }
 
-.glass-card {
-  background: rgba(23, 32, 54, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card:hover {
-  background: rgba(30, 41, 69, 0.75);
-  border-color: rgba(139, 92, 246, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(124, 58, 237, 0.15);
+.notion-item-hover:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
