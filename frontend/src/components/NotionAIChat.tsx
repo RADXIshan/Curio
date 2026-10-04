@@ -3,6 +3,7 @@ import { X, Send, User, Loader2, Trash2, ArrowUpRight, Zap } from 'lucide-react'
 import type { ChatMessage, ReelItem } from '../types';
 import { sendChatMessage } from '../services/api';
 import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
+import { toNormalText } from '../utils/textUtils';
 
 interface NotionAIChatProps {
   isOpen: boolean;
@@ -158,10 +159,6 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
                 <h3 className="text-xs font-semibold text-[#f5f5f5] tracking-tight">
                   Curio AI Assistant
                 </h3>
-                <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30 font-mono font-medium flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping inline-block" />
-                  Gemini
-                </span>
               </div>
               <p className="text-[10px] text-[#787878]">Search & analyze 448 saved posts</p>
             </div>
@@ -216,7 +213,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
                         : 'bg-[#202020] border border-[#2e2e2e] text-[#d6d6d6] rounded-tl-none'
                     }`}
                   >
-                    {msg.content}
+                    {isUser ? msg.content : toNormalText(msg.content)}
                   </div>
 
                   {/* Referenced Reel Cards */}

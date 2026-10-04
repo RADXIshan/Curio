@@ -18,6 +18,7 @@ import {
 import type { AISummary, ReelItem } from '../types';
 import { summarizeReel } from '../services/api';
 import { getReelTitle } from '../utils/titleUtils';
+import { toNormalText } from '../utils/textUtils';
 
 interface NotionPageModalProps {
   reel: ReelItem | null;
@@ -271,7 +272,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
                 {/* One line summary */}
                 {summary?.one_line_summary && (
                   <p className="p-3.5 rounded-md bg-[#13161f] border border-sky-500/20 text-[#e6edf8] leading-relaxed">
-                    {summary.one_line_summary}
+                    {toNormalText(summary.one_line_summary)}
                   </p>
                 )}
 
@@ -286,7 +287,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
                       {summary.key_takeaways.map((point, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-[#cccccc] leading-relaxed">
                           <span className="text-sky-400 font-bold">•</span>
-                          <span>{point}</span>
+                          <span>{toNormalText(point)}</span>
                         </li>
                       ))}
                     </ul>
@@ -306,7 +307,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
                           key={idx}
                           className="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-950/40 text-cyan-300 border border-cyan-800/40"
                         >
-                          {res}
+                          {toNormalText(res)}
                         </span>
                       ))}
                     </div>
@@ -319,7 +320,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
                     <ArrowRight className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                     <div>
                       <span className="font-semibold text-amber-300">Next Action: </span>
-                      {summary.action_item}
+                      {toNormalText(summary.action_item)}
                     </div>
                   </div>
                 )}

@@ -236,6 +236,42 @@ def clean_json_markdown(text: str) -> str:
     return text
 
 
+def clean_to_normal_text(text: str) -> str:
+    """
+    Strips raw markdown symbols (###, ##, ***, **, etc.)
+    and converts the text to clean, natural, human-readable normal text.
+    """
+    if not text:
+        return ""
+
+    # Remove markdown headers like ### Heading or ## Heading -> Heading
+    text = re.sub(r'^(?:#{1,6}\s*)(.*?)$', r'\1', text, flags=re.MULTILINE)
+
+    # Remove horizontal rules or isolated triple asterisks like ***, ---
+    text = re.sub(r'^\s*[\*\-_]{3,}\s*$', '', text, flags=re.MULTILINE)
+
+    # Remove bold-italic ***text*** -> text
+    text = re.sub(r'\*{3}(.*?)\*{3}', r'\1', text)
+
+    # Remove bold **text** -> text
+    text = re.sub(r'\*{2}(.*?)\*{2}', r'\1', text)
+
+    # Remove italic *text* or _text_ -> text
+    text = re.sub(r'(?<!\*)\*([^\*\n]+?)\*(?!\*)', r'\1', text)
+    text = re.sub(r'(?<!_)_([^_\n]+?)_(?!_)', r'\1', text)
+
+    # Normalize bullet points: '* item' or '- item' -> '• item'
+    text = re.sub(r'^\s*[\*\-]\s+', '• ', text, flags=re.MULTILINE)
+
+    # Remove inline code backticks: `code` -> code
+    text = re.sub(r'\`{1,3}(.*?)\`{1,3}', r'\1', text)
+
+    # Normalize excess blank lines
+    text = re.sub(r'\n{3,}', '\n\n', text)
+
+    return text.strip()
+
+
 async def generate_caption_for_reel(reel: Dict[str, Any]) -> Dict[str, Any]:
     """Generate an AI caption and content title using Gemini 3.8 Flash Interactions API."""
     owner = reel.get("owner") or {}
@@ -342,6 +378,12 @@ Respond ONLY with the JSON object.
         )
         cleaned = clean_json_markdown(interaction.output_text)
         data = json.loads(cleaned)
+        if "one_line_summary" in data and isinstance(data["one_line_summary"], str):
+            data["one_line_summary"] = clean_to_normal_text(data["one_line_summary"])
+        if "key_takeaways" in data and isinstance(data["key_takeaways"], list):
+            data["key_takeaways"] = [clean_to_normal_text(str(p)) for p in data["key_takeaways"]]
+        if "action_item" in data and isinstance(data["action_item"], str):
+            data["action_item"] = clean_to_normal_text(data["action_item"])
         return data
     except Exception as e:
         logger.error(f"Summarization with {MODEL_NAME} failed: {e}")
@@ -449,7 +491,7 @@ You have access to the user's saved posts. Here are the most relevant ones retri
 Guidelines:
 1. Answer the user's question directly, clearly, and insightfully based on their saved posts whenever possible.
 2. If citing a post, reference it by title and author (@username), and include its link or ID.
-3. Keep formatting clean with markdown bullet points, bold headers, and concise code or tool names.
+3. Formatting: Write in clean, normal prose. Absolutely DO NOT use markdown headers (no ## or ###). DO NOT use asterisks for bolding or emphasis (no **, no ***). Use clean paragraphs and simple bullet points (•) where appropriate. Make it read like clean, natural, human text.
 4. If the saved posts don't contain specific information, state what is available in their collection and provide helpful general advice.
 5. Tone: Knowledgeable, enthusiastic, concise, and modern.
 
@@ -468,7 +510,7 @@ User Question: {message}
             timeout=30.0
         )
         return {
-            "reply": interaction.output_text,
+            "reply": clean_to_normal_text(interaction.output_text),
             "referenced_reels": relevant_reels,
         }
     except Exception as e:
