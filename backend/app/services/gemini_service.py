@@ -1,9 +1,10 @@
 """
 Gemini AI service for Curio.
 Handles categorization, summarization, and RAG-grounded conversational chat.
-Uses Google GenAI Client with interactions.create (model: gemini-3.8-flash).
+Uses Google GenAI Client with interactions.create (model: gemini-3.5-flash-lite).
 """
 
+import asyncio
 import json
 import logging
 import os
@@ -27,71 +28,91 @@ except Exception as e:
     logger.error(f"Failed to initialize GenAI Client: {e}")
     client = None
 
-MODEL_NAME = "gemini-3.8-flash"
+MODEL_NAME = "gemini-3.5-flash-lite"
 
 CATEGORIES = [
     {
         "id": "ai-agents",
         "name": "AI & Agents",
         "keywords": [
-            "agent", "agents", "llm", "rag", "genai", "prompt", "claude", "gpt",
-            "transformer", "neural", "deep learning", "langchain", "langgraph", "openai"
+            r"\b(ai|llm|llms|agent|agents|rag|genai|prompt|prompts|claude|gpt|chatgpt|openai|transformer|transformers|neural|deep\s+learning|langchain|langgraph|pytorch|machine\s+learning|gemini|mistral|ollama|anthropic|perceptron|model|weights|training)\b"
         ]
     },
     {
         "id": "system-design",
         "name": "System Design & Backend",
         "keywords": [
-            "system design", "backend", "microservices", "distributed", "architecture",
-            "redis", "kafka", "database", "sql", "nosql", "grpc", "cache", "golang", "postgres"
+            r"\b(system\s+design|backend|microservices|distributed|architecture|redis|kafka|database|databases|sql|nosql|grpc|cache|caching|golang|go\s+language|postgres|postgresql|mongodb|load\s+balancer|load\s+balancing|sharding|pubsub|api\s+gateway|message\s+queue|concurrency|rate\s+limiting)\b"
+        ]
+    },
+    {
+        "id": "dsa-problem-solving",
+        "name": "DSA & Problem Solving",
+        "keywords": [
+            r"\b(dsa|leetcode|algorithms|algorithm|data\s+structures|binary\s+tree|graph|dp|dynamic\s+programming|big\s*o|time\s+complexity|sorting|two\s+pointers|sliding\s+window|coding\s+interview|coding\s+prep|neetcode|striver|online\s+assessment|oa)\b"
         ]
     },
     {
         "id": "web-frontend",
         "name": "Web & Frontend",
         "keywords": [
-            "webdevelopment", "javascript", "react", "next.js", "css", "html",
-            "svg", "ui", "ux", "frontend", "tailwind", "typescript", "vue"
+            r"\b(webdevelopment|javascript|typescript|react|next\.?js|css|tailwind|html|frontend|front-end|ui/ux|web\s+app|webdev|dom|svg|flexbox|css\s+grid|canvas|three\.?js|vite|vue|angular)\b"
         ]
     },
     {
         "id": "python-data",
         "name": "Python & Data Science",
         "keywords": [
-            "python", "pandas", "numpy", "datascience", "machine learning",
-            "pytorch", "jupyter", "perceptron", "data science", "bioinformatics"
+            r"\b(python|pandas|numpy|datascience|data\s+science|jupyter|notebook|matplotlib|seaborn|scikit|scipy|data\s+analysis|eda|bioinformatics|pythonic|pip)\b"
         ]
     },
     {
         "id": "devops-cloud",
         "name": "DevOps & Cloud",
         "keywords": [
-            "docker", "kubernetes", "terraform", "cloud", "aws", "gcp", "devops",
-            "ci/cd", "linux", "git", "bash", "networking"
+            r"\b(docker|kubernetes|k8s|terraform|cloud|aws|gcp|azure|devops|ci/?cd|linux|git|github\s+actions|bash|shell|networking|ssh|nginx|containers|ansible)\b"
         ]
     },
     {
-        "id": "tools-resources",
-        "name": "Dev Tools & Resources",
+        "id": "dev-tools-repos",
+        "name": "Dev Tools & Repos",
         "keywords": [
-            "github", "opensource", "repo", "devtools", "extension", "website",
-            "cheat sheet", "tools", "resource", "api"
+            r"\b(github\s+repo|open\s+source|opensource|repo|repos|devtools|dev\s+tools|extension|extensions|vs\s*code|cheat\s+sheet|cheatsheet|terminal|cli|free\s+api|apis|resources|websites)\b"
         ]
     },
     {
-        "id": "career-prep",
-        "name": "Career & Coding Prep",
+        "id": "career-internships",
+        "name": "Career & Internships",
         "keywords": [
-            "interview", "internship", "job", "career", "resume", "student",
-            "college", "portfolio", "csmajor", "leetcode", "dsa", "coding prep"
+            r"\b(interview|internship|internships|job|jobs|career|resume|resumes|student|students|college|portfolio|csmajor|cs\s+major|hired|salary|faang|maang|referral)\b"
+        ]
+    },
+    {
+        "id": "hackathons-projects",
+        "name": "Hackathons & Projects",
+        "keywords": [
+            r"\b(hackathon|hackathons|sih|smart\s+india\s+hackathon|pitch|pitching|final\s+year\s+project|capstone|demo\s+day)\b"
+        ]
+    },
+    {
+        "id": "productivity-learning",
+        "name": "Productivity & Learning",
+        "keywords": [
+            r"\b(productivity|active\s+recall|retention|reading|habits|focus|learning|study|deep\s+work|mindset|psychology)\b"
+        ]
+    },
+    {
+        "id": "health-lifestyle",
+        "name": "Health, Lifestyle & Interests",
+        "keywords": [
+            r"\b(posture|sitting|ergonomics|mobility|fitness|health|fashion|ootd|anime|spy\s*family|dating|lifestyle|relationships)\b"
         ]
     },
 ]
 
 
 def classify_reel(reel: Dict[str, Any]) -> str:
-    """Classify a reel into a category based on its caption, tags, and content."""
-    # Check if category is already accurately set on the item
+    """Classify a reel into a category based on its stored category or caption regex."""
     existing = reel.get("category")
     if existing:
         for cat in CATEGORIES:
@@ -105,11 +126,11 @@ def classify_reel(reel: Dict[str, Any]) -> str:
     ).lower()
 
     for cat in CATEGORIES:
-        for kw in cat["keywords"]:
-            if kw in text:
+        for pattern in cat["keywords"]:
+            if re.search(pattern, text, re.IGNORECASE):
                 return cat["name"]
 
-    return "Dev Tools & Resources"
+    return "Dev Tools & Repos"
 
 
 CLICKBAIT_PATTERNS = [
@@ -251,9 +272,12 @@ Respond ONLY with valid JSON.
 """
 
     try:
-        interaction = client.interactions.create(
-            model=MODEL_NAME,
-            input=prompt
+        interaction = await asyncio.wait_for(
+            client.aio.interactions.create(
+                model=MODEL_NAME,
+                input=prompt
+            ),
+            timeout=25.0
         )
         cleaned = clean_json_markdown(interaction.output_text)
         data = json.loads(cleaned)
@@ -272,7 +296,7 @@ Respond ONLY with valid JSON.
 
 
 async def summarize_reel_content(reel: Dict[str, Any]) -> Dict[str, Any]:
-    """Generate an AI summary, key takeaways, and relevant tools using Gemini 3.8 Flash Interactions API."""
+    """Generate an AI summary, key takeaways, and relevant tools using Gemini 3.5 Flash-Lite Interactions API."""
     if not client:
         return {
             "summary": "Gemini API client is not configured.",
@@ -309,9 +333,12 @@ Respond ONLY with the JSON object.
 """
 
     try:
-        interaction = client.interactions.create(
-            model=MODEL_NAME,
-            input=prompt
+        interaction = await asyncio.wait_for(
+            client.aio.interactions.create(
+                model=MODEL_NAME,
+                input=prompt
+            ),
+            timeout=25.0
         )
         cleaned = clean_json_markdown(interaction.output_text)
         data = json.loads(cleaned)
@@ -376,7 +403,7 @@ async def chat_with_curio(
 ) -> Dict[str, Any]:
     """
     RAG-grounded conversational chatbot that answers questions based on user's saved reels
-    using Gemini 3.8 Flash Interactions API.
+    using Gemini 3.5 Flash-Lite Interactions API.
     """
     if not client:
         return {
@@ -411,7 +438,7 @@ async def chat_with_curio(
     history_str = "\n".join(history_snippets) if history_snippets else "No prior conversation."
 
     prompt = f"""You are Curio AI, an intelligent, sleek, and helpful personal knowledge assistant.
-The user has saved {len(all_reels)} posts and reels from Instagram covering AI, System Design, Software Engineering, Python, Career Tips, and Dev Tools.
+The user has saved {len(all_reels)} posts and reels from Instagram covering AI & Agents, System Design, DSA, Web & Frontend, Python, DevOps, Career, Hackathons, Productivity, and Lifestyle.
 
 You have access to the user's saved posts. Here are the most relevant ones retrieved for the current query:
 
@@ -433,9 +460,12 @@ User Question: {message}
 """
 
     try:
-        interaction = client.interactions.create(
-            model=MODEL_NAME,
-            input=prompt
+        interaction = await asyncio.wait_for(
+            client.aio.interactions.create(
+                model=MODEL_NAME,
+                input=prompt
+            ),
+            timeout=30.0
         )
         return {
             "reply": interaction.output_text,

@@ -24,6 +24,39 @@ interface NotionPageModalProps {
   onClose: () => void;
 }
 
+const getCategoryBadgeClass = (category?: string) => {
+  switch (category) {
+    case 'AI & Agents':
+      return 'bg-emerald-950/50 text-emerald-300 border-emerald-800/40';
+    case 'System Design & Backend':
+      return 'bg-blue-950/50 text-blue-300 border-blue-800/40';
+    case 'DSA & Problem Solving':
+    case 'DSA & Coding Prep':
+      return 'bg-purple-950/50 text-purple-300 border-purple-800/40';
+    case 'Python & Data Science':
+      return 'bg-teal-950/50 text-teal-300 border-teal-800/40';
+    case 'DevOps & Cloud':
+      return 'bg-amber-950/50 text-amber-300 border-amber-800/40';
+    case 'Career & Internships':
+    case 'Career & Coding Prep':
+      return 'bg-rose-950/50 text-rose-300 border-rose-800/40';
+    case 'Web & Frontend':
+      return 'bg-cyan-950/50 text-cyan-300 border-cyan-800/40';
+    case 'Dev Tools & Repos':
+    case 'Dev Tools & Resources':
+    case 'Dev Tools & Open Source':
+      return 'bg-orange-950/50 text-orange-300 border-orange-800/40';
+    case 'Hackathons & Projects':
+      return 'bg-yellow-950/50 text-yellow-300 border-yellow-800/40';
+    case 'Productivity & Learning':
+      return 'bg-indigo-950/50 text-indigo-300 border-indigo-800/40';
+    case 'Health, Lifestyle & Interests':
+      return 'bg-pink-950/50 text-pink-300 border-pink-800/40';
+    default:
+      return 'bg-[#242424] text-[#cccccc] border-[#333333]';
+  }
+};
+
 export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose }) => {
   const [summary, setSummary] = useState<AISummary | null>(null);
   const [loading, setLoading] = useState(false);
@@ -169,7 +202,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
                 <span>Category</span>
               </span>
               <div>
-                <span className="px-2 py-0.5 rounded text-[11px] font-medium bg-[#242424] text-[#cccccc] border border-[#333333]">
+                <span className={`px-2 py-0.5 rounded text-[11px] font-medium border ${getCategoryBadgeClass(reel.category)}`}>
                   {reel.category || 'General Tech'}
                 </span>
               </div>

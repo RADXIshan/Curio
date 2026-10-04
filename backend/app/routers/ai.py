@@ -72,5 +72,5 @@ def ai_status():
     key = os.getenv("GEMINI_API_KEY")
     return {
         "configured": bool(key),
-        "model": "gemini-3.8-flash",
+        "model": "gemini-3.5-flash-lite",
     }

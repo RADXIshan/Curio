@@ -5,13 +5,17 @@ import {
   Camera,
   Cpu,
   Server,
-  Code,
   Cloud,
   GraduationCap,
   Globe,
   Wrench,
   Folder,
   Layers,
+  Terminal,
+  Trophy,
+  BookOpen,
+  Heart,
+  Binary,
 } from 'lucide-react';
 import type { CategoryCount, TagCount } from '../types';
 
@@ -33,11 +37,15 @@ const getCategoryIcon = (name: string) => {
   const lower = name.toLowerCase();
   if (lower.includes('ai') || lower.includes('agent')) return <Cpu className="w-4 h-4 text-emerald-400" />;
   if (lower.includes('system') || lower.includes('backend')) return <Server className="w-4 h-4 text-blue-400" />;
-  if (lower.includes('python') || lower.includes('data')) return <Code className="w-4 h-4 text-teal-400" />;
-  if (lower.includes('devops') || lower.includes('cloud')) return <Cloud className="w-4 h-4 text-amber-400" />;
-  if (lower.includes('career') || lower.includes('intern')) return <GraduationCap className="w-4 h-4 text-rose-400" />;
+  if (lower.includes('dsa') || lower.includes('problem') || lower.includes('algo')) return <Binary className="w-4 h-4 text-purple-400" />;
+  if (lower.includes('python') || lower.includes('data')) return <Terminal className="w-4 h-4 text-teal-400" />;
   if (lower.includes('web') || lower.includes('front')) return <Globe className="w-4 h-4 text-cyan-400" />;
-  if (lower.includes('tool') || lower.includes('open')) return <Wrench className="w-4 h-4 text-orange-400" />;
+  if (lower.includes('devops') || lower.includes('cloud')) return <Cloud className="w-4 h-4 text-amber-400" />;
+  if (lower.includes('tool') || lower.includes('repo')) return <Wrench className="w-4 h-4 text-orange-400" />;
+  if (lower.includes('hackathon') || lower.includes('project')) return <Trophy className="w-4 h-4 text-yellow-400" />;
+  if (lower.includes('productiv') || lower.includes('learn')) return <BookOpen className="w-4 h-4 text-indigo-400" />;
+  if (lower.includes('health') || lower.includes('lifestyle') || lower.includes('interest')) return <Heart className="w-4 h-4 text-pink-400" />;
+  if (lower.includes('career') || lower.includes('intern')) return <GraduationCap className="w-4 h-4 text-rose-400" />;
   return <Folder className="w-4 h-4 text-slate-400" />;
 };
 

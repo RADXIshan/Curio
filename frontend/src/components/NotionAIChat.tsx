@@ -13,8 +13,9 @@ interface NotionAIChatProps {
 const STARTER_PROMPTS = [
   'What AI agent frameworks or repos did I save?',
   'Find roadmaps or tips for System Design interviews',
-  'What Python and Data Science projects are saved?',
-  'Show resources for internships and resume tips',
+  'What DSA and LeetCode preparation resources are saved?',
+  'Show resources for Hackathons like Smart India Hackathon',
+  'What productivity and learning techniques did I bookmark?',
 ];
 
 export const NotionAIChat: React.FC<NotionAIChatProps> = ({
