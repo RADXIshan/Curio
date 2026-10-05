@@ -473,23 +473,9 @@ def get_search_suggestions(
     """
     q = query.strip().lower()
     if not q:
-        # Return popular default suggestions
         return {
-            "suggestions": [
-                {"text": "AI Agents & LangGraph", "type": "topic"},
-                {"text": "System Design & Caching", "type": "topic"},
-                {"text": "DSA & LeetCode Patterns", "type": "topic"},
-                {"text": "Docker & Kubernetes Tools", "type": "topic"},
-                {"text": "GitHub Repos for AI", "type": "topic"},
-                {"text": "Kaizen Habits & Focus", "type": "topic"},
-            ],
-            "related_categories": [
-                "AI & Agents",
-                "System Design & Backend",
-                "DSA & Problem Solving",
-                "Web & Frontend",
-                "DevOps & Cloud",
-            ]
+            "suggestions": [],
+            "related_categories": [],
         }
 
     suggestions = []

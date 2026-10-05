@@ -195,26 +195,23 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
 
         {/* Right: Global Search Vault + Sync Vault + Ask AI */}
         <div className="flex items-center gap-2.5">
-          {/* Global Vault Search Input with AI Suggestions */}
+          {/* Global Vault Search Input */}
           <div className="relative flex items-center">
-            <div className="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
-              {vaultSearch ? (
-                <Sparkles className="w-3.5 h-3.5 text-sky-400 animate-pulse" />
-              ) : (
-                <Search className="w-3.5 h-3.5 text-[#707070]" />
-              )}
-            </div>
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#707070] pointer-events-none" />
             <input
               ref={vaultSearchRef}
               type="text"
               value={vaultSearch}
-              onFocus={() => setShowSuggestions(true)}
+              onFocus={() => {
+                if (vaultSearch.trim()) setShowSuggestions(true);
+              }}
               onKeyDown={handleKeyDown}
               onChange={(e) => {
                 onVaultSearchChange(e.target.value);
-                setShowSuggestions(true);
+                if (e.target.value.trim()) setShowSuggestions(true);
+                else setShowSuggestions(false);
               }}
-              placeholder="AI & keyword search vault..."
+              placeholder="Search vault..."
               className="pl-8 pr-12 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-52 sm:w-64 transition-all shadow-xs"
             />
             {vaultSearch ? (
@@ -234,68 +231,45 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
               </kbd>
             )}
 
-            {/* Smart Suggestions Floating Dropdown */}
-            {showSuggestions && (
+            {/* Suggestions Floating Dropdown (active when user types) */}
+            {showSuggestions && vaultSearch.trim() && suggestions.length > 0 && (
               <div
                 ref={dropdownRef}
-                className="absolute top-full left-0 right-0 mt-1.5 bg-[#1b1b1b] border border-[#333333] rounded-lg shadow-xl shadow-black/60 z-50 overflow-hidden py-1.5 min-w-[280px] animate-content-enter select-none"
+                className="absolute top-full left-0 right-0 mt-1.5 bg-[#1b1b1b] border border-[#333333] rounded-lg shadow-xl shadow-black/60 z-50 overflow-hidden py-1 min-w-[280px] animate-content-enter select-none"
               >
-                <div className="px-3 py-1 text-[10px] uppercase tracking-wider text-[#737373] font-semibold flex items-center justify-between border-b border-[#262626]">
-                  <span className="flex items-center gap-1">
-                    <Sparkles className="w-2.5 h-2.5 text-sky-400" />
-                    AI Concept & Search Suggestions
+                <div className="px-3 py-1.5 text-[10px] uppercase tracking-wider text-[#737373] font-semibold flex items-center justify-between border-b border-[#262626]">
+                  <span className="flex items-center gap-1.5 text-[#888888]">
+                    <Search className="w-3 h-3 text-[#707070]" />
+                    Suggestions
                   </span>
                   <span className="text-[9px] text-[#555555] font-mono">↑↓ Enter</span>
                 </div>
 
-                {suggestions.length > 0 ? (
-                  <div className="max-h-64 overflow-y-auto py-1">
-                    {suggestions.map((item, idx) => {
-                      const isSelected = idx === selectedIndex;
-                      return (
-                        <div
-                          key={`${item.type}-${item.text}-${idx}`}
-                          onClick={() => selectSuggestion(item.text)}
-                          onMouseEnter={() => setSelectedIndex(idx)}
-                          className={`px-3 py-1.5 flex items-center justify-between gap-2 cursor-pointer transition-colors text-xs ${
-                            isSelected
-                              ? 'bg-sky-500/15 text-sky-200'
-                              : 'text-[#d0d0d0] hover:bg-[#252525]'
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 truncate">
-                            {item.type === 'concept' ? (
-                              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
-                            ) : item.type === 'tag' ? (
-                              <Tag className="w-3 h-3 text-cyan-400 shrink-0" />
-                            ) : (
-                              <Search className="w-3 h-3 text-[#707070] shrink-0" />
-                            )}
-                            <span className="truncate">{item.text}</span>
-                          </div>
-
-                          <span
-                            className={`text-[9px] px-1.5 py-0.5 rounded font-mono shrink-0 uppercase ${
-                              item.type === 'concept'
-                                ? 'bg-sky-950/60 text-sky-300 border border-sky-800/40'
-                                : item.type === 'synonym'
-                                ? 'bg-purple-950/60 text-purple-300 border border-purple-800/40'
-                                : item.type === 'tag'
-                                ? 'bg-cyan-950/60 text-cyan-300 border border-cyan-800/40'
-                                : 'bg-[#292929] text-[#888888]'
-                            }`}
-                          >
-                            {item.type}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="px-3 py-2 text-[11px] text-[#707070] text-center">
-                    Type to search by meaning, tools, or topics...
-                  </div>
-                )}
+                <div className="max-h-64 overflow-y-auto py-1">
+                  {suggestions.map((item, idx) => {
+                    const isSelected = idx === selectedIndex;
+                    const isTag = item.type === 'tag' || item.text.startsWith('#');
+                    return (
+                      <div
+                        key={`${item.type}-${item.text}-${idx}`}
+                        onClick={() => selectSuggestion(item.text)}
+                        onMouseEnter={() => setSelectedIndex(idx)}
+                        className={`px-3 py-1.5 flex items-center gap-2.5 cursor-pointer transition-colors text-xs ${
+                          isSelected
+                            ? 'bg-sky-500/15 text-sky-200'
+                            : 'text-[#d0d0d0] hover:bg-[#252525]'
+                        }`}
+                      >
+                        {isTag ? (
+                          <Tag className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        ) : (
+                          <Search className="w-3.5 h-3.5 text-[#707070] shrink-0" />
+                        )}
+                        <span className="truncate">{item.text}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
