@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 # Initialize client as requested:
 # from google import genai
 # client = genai.Client()
-# interaction = client.interactions.create(model="gemini-3.8-flash", input=...)
+# interaction = client.interactions.create(model="gemini-3.5-flash-lite", input=...)
 # print(interaction.output_text)
 
 try:
@@ -273,7 +273,7 @@ def clean_to_normal_text(text: str) -> str:
 
 
 async def generate_caption_for_reel(reel: Dict[str, Any]) -> Dict[str, Any]:
-    """Generate an AI caption and content title using Gemini 3.8 Flash Interactions API."""
+    """Generate an AI caption and content title using Gemini 3.5 Flash Lite Interactions API."""
     owner = reel.get("owner") or {}
     author = owner.get("name") or owner.get("username") or "Tech Creator"
     username = owner.get("username") or "creator"

@@ -1,5 +1,5 @@
 """
-AI Curation Script for Curio using Gemini 3.8 Flash Interactions API.
+AI Curation Script for Curio using Gemini 3.5 Flash Lite Interactions API.
 Processes all saved posts/reels and accurately classifies, titles, and tags them
 based on what the content actually does and says.
 """
@@ -16,7 +16,7 @@ from google import genai
 load_dotenv()
 
 client = genai.Client()
-MODEL_NAME = "gemini-3.8-flash"
+MODEL_NAME = "gemini-3.5-flash-lite"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_PATH = BASE_DIR / "data" / "reels.json"

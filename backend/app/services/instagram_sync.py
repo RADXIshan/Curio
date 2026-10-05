@@ -2,7 +2,7 @@
 Instagram Playwright Sync Service for Curio.
 Automates fetching new saved reels/posts from https://www.instagram.com/<user>/saved/,
 handles credentials and 2FA/OTP interactively, extracts new items saved after existing reels.json,
-and curates them with Gemini 3.8 Flash.
+and curates them with Gemini 3.5 Flash Lite.
 """
 
 from datetime import datetime, timedelta
@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 from google import genai
 from playwright.sync_api import sync_playwright
 
-from app.services.gemini_service import classify_reel, derive_content_title
+from app.services.gemini_service import MODEL_NAME as GEMINI_MODEL_NAME, classify_reel, derive_content_title
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -465,11 +465,11 @@ class InstagramSyncManager:
                 self.log(f"Successfully extracted {len(new_extracted)} new items with accurate IST timestamps!")
 
 
-                # Step 4: AI Curation with Gemini 3.8 Flash
+                # Step 4: AI Curation with Gemini 3.5 Flash Lite
                 with self._lock:
                     self.status = "curating"
-                    self.stage = f"AI categorizing & titling {len(new_extracted)} new items with Gemini 3.8 Flash..."
-                self.log(f"Curating {len(new_extracted)} new items with Gemini 3.8 Flash...")
+                    self.stage = f"AI categorizing & titling {len(new_extracted)} new items with Gemini 3.5 Flash Lite..."
+                self.log(f"Curating {len(new_extracted)} new items with Gemini 3.5 Flash Lite...")
 
                 curated_items = self._curate_with_gemini(new_extracted)
 
@@ -514,7 +514,7 @@ class InstagramSyncManager:
 
 
     def _curate_with_gemini(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Accurately classify, title, and tag new items using Gemini 3.8 Flash."""
+        """Accurately classify, title, and tag new items using Gemini 3.5 Flash Lite."""
         try:
             client = genai.Client()
         except Exception as e:
@@ -562,9 +562,9 @@ Respond ONLY with the JSON array.
 """
             for attempt in range(2):
                 try:
-                    self.log(f"Categorizing with Gemini 3.8 Flash (attempt {attempt + 1})...")
+                    self.log(f"Categorizing with Gemini 3.5 Flash Lite (attempt {attempt + 1})...")
                     interaction = client.interactions.create(
-                        model="gemini-3.8-flash",
+                        model=GEMINI_MODEL_NAME,
                         input=prompt,
                     )
                     raw_text = interaction.output_text.strip()
@@ -573,7 +573,7 @@ Respond ONLY with the JSON array.
                     parsed = json.loads(cleaned)
                     if isinstance(parsed, list):
                         curated_map = {p["id"]: p for p in parsed if "id" in p}
-                        self.log(f"Gemini 3.8 Flash successfully classified and titled {len(curated_map)} items!")
+                        self.log(f"Gemini 3.5 Flash Lite successfully classified and titled {len(curated_map)} items!")
                         break
                 except Exception as gemini_err:
                     self.log(f"Gemini error attempt {attempt + 1}: {gemini_err}")

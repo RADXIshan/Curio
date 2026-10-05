@@ -152,7 +152,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                 </span>
               </h2>
               <p className="text-[11px] text-[#7a7a7a]">
-                Automated Playwright crawl & Gemini 3.8 Flash AI curation
+                Automated Playwright crawl & Gemini 3.5 Flash Lite AI curation
               </p>
             </div>
           </div>
