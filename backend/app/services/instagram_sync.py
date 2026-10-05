@@ -29,7 +29,8 @@ IST_TZ = ZoneInfo("Asia/Kolkata")
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 REELS_JSON_PATH = DATA_DIR / "reels.json"
-PROFILE_DIR = DATA_DIR / "instagram_profile"
+SESSION_FILE = DATA_DIR / "instagram_session.json"
+
 
 CATEGORIES_NAMES = [
     "AI & Agents",
@@ -142,7 +143,7 @@ class InstagramSyncManager:
         if not account_password:
             raise ValueError("ACCOUNT_PASSWORD not configured in .env.")
 
-        PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
         all_posts_url = f"https://www.instagram.com/{account_id}/saved/all-posts/"
         saved_home_url = f"https://www.instagram.com/{account_id}/saved/"
 
@@ -150,15 +151,20 @@ class InstagramSyncManager:
 
         with sync_playwright() as p:
             self.log("Launching Chromium browser...")
-            browser = p.chromium.launch_persistent_context(
-                user_data_dir=str(PROFILE_DIR),
+            browser = p.chromium.launch(
                 headless=False,
-                viewport={"width": 1280, "height": 850},
                 args=["--disable-blink-features=AutomationControlled"],
             )
 
+            context_kwargs: Dict[str, Any] = {"viewport": {"width": 1280, "height": 850}}
+            if SESSION_FILE.exists() and SESSION_FILE.stat().st_size > 10:
+                context_kwargs["storage_state"] = str(SESSION_FILE)
+
+            context = browser.new_context(**context_kwargs)
+
             try:
-                page = browser.pages[0] if browser.pages else browser.new_page()
+                page = context.new_page()
+
 
                 # Step 1: Navigate to saved reels
                 with self._lock:
@@ -466,8 +472,14 @@ class InstagramSyncManager:
                 self.log(f"Sync complete! Added {len(curated_items)} items. Total vault size: {len(full_vault)} items.")
 
             finally:
+                try:
+                    context.storage_state(path=str(SESSION_FILE))
+                except Exception:
+                    pass
+                context.close()
                 browser.close()
                 self.log("Browser session finished.")
+
 
     def _curate_with_gemini(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Accurately classify, title, and tag new items using Gemini 3.8 Flash."""

@@ -13,5 +13,7 @@ wheels/
 .env
 auth_state.json
 app/data/instagram_profile/
+app/data/instagram_session.json
 *.png
+
 
