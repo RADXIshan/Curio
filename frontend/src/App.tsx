@@ -19,7 +19,12 @@ export const App: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Layout & View states (Only Gallery and Table)
-  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 768;
+    }
+    return true;
+  });
   const [viewMode, setViewMode] = useState<'gallery' | 'table'>('gallery');
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [activeReel, setActiveReel] = useState<ReelItem | null>(null);
@@ -101,9 +106,14 @@ export const App: React.FC = () => {
     loadReels();
   }, [debouncedVaultSearch, debouncedKeywordQuery, selectedType, selectedCategory, selectedTag, sortBy, limit]);
 
-  // Keyboard shortcut listener: "/" to focus search, "Cmd+J" or "Ctrl+J" to toggle Curio AI
+  // Keyboard shortcut listener: "/" to focus search, "Cmd+J" or "Ctrl+J" to toggle Curio AI, "Cmd+\" to toggle Navbar
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === '\\') {
+        e.preventDefault();
+        setIsSidebarOpen((prev) => !prev);
+        return;
+      }
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'j') {
         e.preventDefault();
         setIsChatOpen((prev) => !prev);

@@ -60,15 +60,22 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#242424]/80 text-xs text-[#8c8c8c]">
         {/* Left: Sidebar toggle + Breadcrumbs */}
         <div className="flex items-center gap-2 min-w-0">
-          {!isSidebarOpen && (
+          {/* Animated Sidebar Toggle Button */}
+          <div
+            className={`flex items-center overflow-hidden navbar-toggle-transition ${
+              !isSidebarOpen
+                ? 'w-7 opacity-100 scale-100 mr-1'
+                : 'w-0 opacity-0 scale-75 mr-0 pointer-events-none'
+            }`}
+          >
             <button
               onClick={onToggleSidebar}
-              className="p-1.5 rounded hover:bg-[#282828] text-[#999999] hover:text-white transition-colors cursor-pointer mr-1"
-              title="Open sidebar"
+              className="p-1.5 rounded hover:bg-[#282828] text-[#999999] hover:text-white transition-all cursor-pointer active:scale-90"
+              title="Open navbar (⌘\)"
             >
               <PanelLeft className="w-4 h-4" />
             </button>
-          )}
+          </div>
 
           <div
             onClick={onResetFilters}

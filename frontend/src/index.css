@@ -53,6 +53,35 @@ button, a, input {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Navbar & Sidebar Smooth Sliding Transitions */
+.navbar-sidebar-transition {
+  transition: width 320ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 320ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width, transform;
+}
+
+.navbar-content-transition {
+  transition: opacity 260ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.navbar-backdrop-transition {
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1),
+              backdrop-filter 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.navbar-toggle-transition {
+  transition: width 280ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 220ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+              margin 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width, opacity, transform;
+}
+
 /* Curio AI Drawer & Modal Animations */
 @keyframes curioSlideIn {
   0% {

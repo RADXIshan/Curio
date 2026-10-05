@@ -64,51 +64,60 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <>
-      {/* Mobile Backdrop */}
-      {isOpen && (
-        <div
-          onClick={onToggle}
-          className="fixed inset-0 z-40 bg-black/60 md:hidden backdrop-blur-xs"
-        />
-      )}
+      {/* Mobile Backdrop with smooth fade & blur */}
+      <div
+        onClick={onToggle}
+        className={`fixed inset-0 z-40 bg-black/60 md:hidden backdrop-blur-xs navbar-backdrop-transition ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        aria-hidden={!isOpen}
+      />
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed md:sticky top-0 left-0 z-50 h-screen w-64 bg-[#141414] border-r border-[#262626] flex flex-col justify-between select-none transition-transform duration-200 ease-in-out shrink-0 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0 md:w-0 md:border-r-0 md:overflow-hidden'
+        className={`fixed md:sticky top-0 left-0 z-50 h-screen bg-[#141414] select-none shrink-0 overflow-hidden navbar-sidebar-transition ${
+          isOpen
+            ? 'w-64 translate-x-0 border-r border-[#262626] shadow-2xl md:shadow-none'
+            : 'w-64 -translate-x-full md:translate-x-0 md:w-0 border-r-0 border-transparent shadow-none pointer-events-none'
         }`}
       >
-        <div className="flex-1 overflow-y-auto px-3 py-3 space-y-5">
-          {/* Workspace Header */}
-          <div
-            onClick={() => {
-              onCategoryChange('all');
-              onTagChange('');
-            }}
-            className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-[#202020] transition-colors cursor-pointer group"
-          >
-            <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-6 h-6 rounded-md bg-white/5 border border-white/10 p-0.5 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
-                <img src="/logo.png" alt="Curio Workspace" className="w-full h-full object-contain" />
-              </div>
-              <div className="min-w-0">
-                <span className="text-xs font-semibold text-[#f0f0f0] truncate block">
-                  Curio Workspace
-                </span>
-                <span className="text-[10px] text-[#777777] block">
-                  Instagram Saved Vault
-                </span>
-              </div>
-            </div>
-
-            <button
-              onClick={onToggle}
-              className="p-1 rounded text-[#8c8c8c] hover:text-[#e0e0e0] hover:bg-[#282828] transition-colors cursor-pointer"
-              title="Close sidebar"
+        {/* Inner Content Wrapper: maintains strict 16rem/256px width so contents never squish or re-wrap during collapse */}
+        <div
+          className={`w-64 min-w-[16rem] h-full flex flex-col justify-between navbar-content-transition ${
+            isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+          }`}
+        >
+          <div className="flex-1 overflow-y-auto px-3 py-3 space-y-5">
+            {/* Workspace Header */}
+            <div
+              onClick={() => {
+                onCategoryChange('all');
+                onTagChange('');
+              }}
+              className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-[#202020] transition-colors cursor-pointer group"
             >
-              <PanelLeftClose className="w-4 h-4" />
-            </button>
-          </div>
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-6 h-6 rounded-md bg-white/5 border border-white/10 p-0.5 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                  <img src="/logo.png" alt="Curio Workspace" className="w-full h-full object-contain" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-xs font-semibold text-[#f0f0f0] truncate block">
+                    Curio Workspace
+                  </span>
+                  <span className="text-[10px] text-[#777777] block">
+                    Instagram Saved Vault
+                  </span>
+                </div>
+              </div>
+
+              <button
+                onClick={onToggle}
+                className="p-1 rounded text-[#8c8c8c] hover:text-[#e0e0e0] hover:bg-[#282828] active:scale-90 transition-all cursor-pointer group/btn"
+                title="Close navbar (⌘\)"
+              >
+                <PanelLeftClose className="w-4 h-4 transition-transform group-hover/btn:scale-110" />
+              </button>
+            </div>
 
           {/* TOPICS & COLLECTIONS (Strictly in Sidebar) */}
           <div className="space-y-1.5">
@@ -231,9 +240,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <span className="text-[11px] truncate">@ishan_roy31</span>
           </div>
         </div>
-      </aside>
-    </>
-  );
+      </div>
+    </aside>
+  </>
+);
 };
 
 export default Sidebar;
