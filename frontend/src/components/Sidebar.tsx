@@ -225,14 +225,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <button
             onClick={onSync}
             disabled={isSyncing}
-            className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] text-[#8c8c8c] hover:text-[#e0e0e0] transition-colors cursor-pointer disabled:opacity-50"
+            className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-[#202020] text-[#8c8c8c] hover:text-[#e0e0e0] transition-colors cursor-pointer disabled:opacity-50 group"
           >
             <div className="flex items-center gap-2">
-              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-sky-400' : 'text-[#888888]'}`} />
-              <span className="text-[11px]">{isSyncing ? 'Syncing...' : 'Sync saved_posts.html'}</span>
+              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-sky-400' : 'text-rose-400 group-hover:rotate-180 transition-transform'}`} />
+              <span className="text-[11px] font-medium text-[#c0c0c0] group-hover:text-white transition-colors">{isSyncing ? 'Syncing...' : 'Sync Instagram Vault'}</span>
             </div>
-            <span className="text-[10px] px-1 rounded bg-[#202020] text-[#707070]">v0.2</span>
+            <span className="text-[10px] px-1 rounded bg-[#202020] text-[#707070] font-mono">LIVE</span>
           </button>
+
 
           {/* User profile footer */}
           <div className="flex items-center gap-2 px-2.5 py-1 text-[#7a7a7a]">

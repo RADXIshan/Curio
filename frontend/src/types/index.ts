@@ -67,3 +67,19 @@ export interface ChatMessage {
   timestamp: string;
   referenced_reels?: ReelItem[];
 }
+
+export interface SyncLogItem {
+  time: string;
+  message: string;
+}
+
+export interface SyncStatusResponse {
+  status: 'idle' | 'running' | 'awaiting_otp' | 'extracting' | 'curating' | 'saving' | 'completed' | 'error';
+  stage: string;
+  awaiting_otp: boolean;
+  otp_prompt?: string | null;
+  error?: string | null;
+  new_count: number;
+  logs: SyncLogItem[];
+}
+

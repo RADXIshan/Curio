@@ -80,3 +80,46 @@ export async function triggerExtraction(): Promise<{ status: string; count: numb
   }
   return res.json();
 }
+
+export async function startSync(): Promise<{ started: boolean; message: string; state: any }> {
+  const res = await fetch(`${API_BASE}/sync/start`, {
+    method: 'POST',
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to start sync: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function getSyncStatus(): Promise<import('../types').SyncStatusResponse> {
+  const res = await fetch(`${API_BASE}/sync/status`);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch sync status: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function submitSyncOtp(code: string): Promise<{ success: boolean; message: string }> {
+  const res = await fetch(`${API_BASE}/sync/otp`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ code }),
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to submit OTP: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function cancelSync(): Promise<{ success: boolean; message: string }> {
+  const res = await fetch(`${API_BASE}/sync/cancel`, {
+    method: 'POST',
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to cancel sync: ${res.statusText}`);
+  }
+  return res.json();
+}
+

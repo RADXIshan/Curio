@@ -1,5 +1,189 @@
 [
   {
+    "id": "DdLrDpyo0b2",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DdLrDpyo0b2/",
+    "caption": "grep is where log analysis starts. It is not where it should end.\n\nSeven tools that read logs properly, and every one of them is free and open source:\n\nlnav → merges rotated and gzipped logs into one timeline and lets you run SQL over them. Over 70 formats detected automatically.\n\nGoAccess → turns a web access log into a live dashboard in the terminal, or a self contained HTML report. Scanners and repeated failed requests become obvious.\n\nausearch → decodes the Linux audit log into readable events. Ships with every distribution and sits behind most CIS and PCI DSS logging requirements.\n\nChainsaw → runs Sigma rules directly over Windows event logs and prints the hits as a table, CSV or JSON. Written in Rust, no SIEM needed.\n\nHayabusa → collapses thousands of Windows events into a single timeline ranked by alert level and mapped to MITRE ATT&CK.\n\nTimesketch → merges timelines from many machines into one sketch a whole team can tag, comment on and work through together.\n\nSigma → one YAML rule, compiled into the query language of whatever SIEM you happen to run. Splunk, Elastic, Sentinel and dozens more.\n\nThe part most people miss: sometimes the search is not wrong, the format is. Windows event logs are binary XML, so a plain text search returns nothing at all. Linux audit records store filenames in hex, so searching for a name you can read will never match the line that contains it. The evidence is already in the file. The tool just has to be able to parse it.\n\nStart with lnav and GoAccess on your own servers this week. Add Chainsaw and Sigma once Windows logs enter the picture.\n\nSave this for the next investigation, and send it to whoever is still reading raw logs by hand.\n\n#dfir #threathunting #blueteam #soc #cybersecurity",
+    "hashtags": [
+      "logging",
+      "linux",
+      "devops",
+      "sysadmin"
+    ],
+    "owner": {
+      "name": "kerem.tech",
+      "username": "kerem.tech",
+      "url": "https://www.instagram.com/kerem.tech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Sep 12, 2026, 3:13 pm IST",
+    "saved_at_iso": "2026-09-12T15:13:11+05:30",
+    "category": "DevOps & Cloud",
+    "title": "Open-Source Terminal Tools for Advanced Log Analysis",
+    "caption_generated": false
+  },
+  {
+    "id": "DeB_xCxDT_F",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DeB_xCxDT_F/",
+    "caption": "🔑 452 free LLM APIs, one directory, zero credit cards.\n\nawesome-freellm-apis lists 452+ free LLM APIs from 31 providers like NVIDIA NIM, Gemini, Groq, Cloudflare and OpenRouter, with the base URL, model ID and config for each. One-click setup for Claude Code, Cursor, Codex and Aider. Most need only an email. MIT.\n\nSave this ❗ Which one will you try?\n\n#freellm #llm #aitools #devtools #claudecode cursor opensource",
+    "hashtags": [
+      "llm",
+      "apis",
+      "ai-tools",
+      "cursor"
+    ],
+    "owner": {
+      "name": "fullstackparody",
+      "username": "fullstackparody",
+      "url": "https://www.instagram.com/fullstackparody/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 03, 2026, 5:22 pm IST",
+    "saved_at_iso": "2026-10-03T17:22:57+05:30",
+    "category": "AI & Agents",
+    "title": "Directory of 450+ Free LLM APIs for Coding Assistants",
+    "caption_generated": false
+  },
+  {
+    "id": "DdJNBMFzIEm",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DdJNBMFzIEm/",
+    "caption": "This Guy Explains APIs like a PRO. Shortest and High Quality Playlist for APIs, its designing and detailing. Absolute gold 🥇🔥\n\n#ai #backend #systemdesign #software #code\n\n[API, API Design, API Architecture, REST API, GraphQL, gRPC, OpenAPI, Swagger, API Contracts, HTTP, Status Codes, Authentication, Authorization, OAuth, JWT, Pagination, Cursor Pagination, Rate Limiting, Microservices, Backend Engineering ]",
+    "hashtags": [
+      "api-design",
+      "rest-api",
+      "system-design",
+      "backend"
+    ],
+    "owner": {
+      "name": "rishabhsinghtech",
+      "username": "rishabhsinghtech",
+      "url": "https://www.instagram.com/rishabhsinghtech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Sep 11, 2026, 4:12 pm IST",
+    "saved_at_iso": "2026-09-11T16:12:29+05:30",
+    "category": "System Design & Backend",
+    "title": "Comprehensive Guide to API Architecture and Design",
+    "caption_generated": false
+  },
+  {
+    "id": "DeDv369vqDT",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DeDv369vqDT/",
+    "caption": "How to learn electronics in one week!\n\nIt goes without saying that this is NOT an exhaustive list. I’ve obviously left some things out but that’s by design :) I believe the fastest way to truly learn something is when you’re building projects, making mistakes and genuinely enjoying the iterative development process. The best way to diminish someone’s excitement in a field like electronics is by shoving a textbook in their face 🫩\n\n#engineering #robotics #electronics #arduino #raspberrypi",
+    "hashtags": [
+      "electronics",
+      "arduino",
+      "raspberry-pi",
+      "hardware"
+    ],
+    "owner": {
+      "name": "armas.4am",
+      "username": "armas.4am",
+      "url": "https://www.instagram.com/armas.4am/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 04, 2026, 9:43 am IST",
+    "saved_at_iso": "2026-10-04T09:43:32+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Hands-On Roadmap for Learning Electronics and Hardware",
+    "caption_generated": false
+  },
+  {
+    "id": "Dd9R75ej5jv",
+    "type": "post",
+    "url": "https://www.instagram.com/post/Dd9R75ej5jv/",
+    "caption": "Comment \"slop\" and I'll send all the links.\n\n-\n#ai #claude #claudeskills #aiskills #aitools",
+    "hashtags": [
+      "claude",
+      "ai-tools",
+      "prompt-engineering",
+      "llm"
+    ],
+    "owner": {
+      "name": "okaashish",
+      "username": "okaashish",
+      "url": "https://www.instagram.com/okaashish/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 01, 2026, 9:26 pm IST",
+    "saved_at_iso": "2026-10-01T21:26:08+05:30",
+    "category": "AI & Agents",
+    "title": "Essential Claude AI Skills and Workflow Tools",
+    "caption_generated": false
+  },
+  {
+    "id": "DeCgQY2KerU",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DeCgQY2KerU/",
+    "caption": "1️⃣ KAIZEN - The One-Minute Rule\nStart so small your brain can’t resist.\nOne push-up. One sentence. One minute.\n\nHarvard research shows tiny habits bypass mental resistance and compound over time. Progress beats pressure.\n\n2️⃣ IKIGAI - A Reason to Wake Up The question isn’t “What do you do?”\nIt’s “Why do you get up?”\n\nStudies on purpose and longevity show that meaning increases energy and discipline.\nWhen your why is clear, effort feels lighter.\n\n3️⃣ HARA HACHIBU - Stop at 80%\nOvereating kills focus, mood, and drive.\nJapanese elders stay active by stopping before full.\n\nLighter digestion = better energy and mental clarity.\nMost “laziness” is physical overload.\n\n4️⃣ ANCHORED FOCUS - Ritualized\n25 minutes work. 5 minutes rest.\nAdd a ritual: a breath, a gesture, a sound.\n\nYour brain learns: this signal = focus.\nNeuroscience calls this conditioning and it works fast.\n\n5️⃣ SEIRI & SEITON - Clear Space\nA messy room creates mental noise.\nClutter increases stress and reduces focus.\n\n(Princeton research).\n\nClean space leads to clean action.\n\n6️⃣ KINTSUGI - Finish Imperfectly\nLaziness often hides fear of failure.\nKintsugi teaches flaws aren’t mistakes - they’re part of progress.\n\nCompletion builds momentum.\nNot perfection.\n\n7️⃣ WABI-SABI - Act Before Perfect\nThe Japanese don’t wait for ideal conditions.\nThey move with what they have.\n\nPerfection delays action.\nMovement creates clarity.\nMost procrastination is fear dressed as patience.\n\nFollow for more tips on building actual discipline and fitness tips.",
+    "hashtags": [
+      "productivity",
+      "mindset",
+      "habits",
+      "career-growth"
+    ],
+    "owner": {
+      "name": "vasu_jpg",
+      "username": "vasu_jpg",
+      "url": "https://www.instagram.com/vasu_jpg/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 04, 2026, 5:08 am IST",
+    "saved_at_iso": "2026-10-04T05:08:22+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Japanese Productivity Principles for Focus and Habit Building",
+    "caption_generated": false
+  },
+  {
+    "id": "DeCJqltJeFQ",
+    "type": "post",
+    "url": "https://www.instagram.com/post/DeCJqltJeFQ/",
+    "caption": "Comment “robotics” and I’ll send the links👇\n\nGive these three resources a go;\n1. Kevin Wood will solidify your knowledge on robotics and kinematics with practical visualisation in ROS2 and Rviz using UR robot.\n2. Do your robotics and kinematics math here and when you have a slip, it catches your errors and explains why, derive also generates 2D and 3D graphs for visualisation.\n3. Michigan Robotics dropped their entire robotics curriculum in one repo.\n\n#engineering #engineeringstudent #robotics #studytok #studytips",
+    "hashtags": [
+      "robotics",
+      "ros2",
+      "open-source",
+      "engineering"
+    ],
+    "owner": {
+      "name": "andi_studieshard",
+      "username": "andi_studieshard",
+      "url": "https://www.instagram.com/andi_studieshard/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 03, 2026, 6:49 pm IST",
+    "saved_at_iso": "2026-10-03T18:49:59+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Top Open-Source Robotics and Kinematics Learning Resources",
+    "caption_generated": false
+  },
+  {
+    "id": "Dce5z6mvEfX",
+    "type": "post",
+    "url": "https://www.instagram.com/post/Dce5z6mvEfX/",
+    "caption": "especially useful if you’re starting classes soon (but everyone should be a lifelong learner 😉)\n\n#focus #concentrate",
+    "hashtags": [
+      "focus",
+      "productivity",
+      "study-tips",
+      "learning"
+    ],
+    "owner": {
+      "name": "erinmerylstudy",
+      "username": "erinmerylstudy",
+      "url": "https://www.instagram.com/erinmerylstudy/"
+    },
+    "brand_partner": null,
+    "saved_at": "Aug 26, 2026, 5:47 am IST",
+    "saved_at_iso": "2026-08-26T05:47:10+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Techniques to Improve Deep Work Focus and Study Habits",
+    "caption_generated": false
+  },
+  {
     "id": "DeB7PxBz1B_",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DeB7PxBz1B_/",
@@ -18,9 +202,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026, 9:25 pm IST",
-    "saved_at_iso": "2026-10-03T21:25:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comprehensive Golang Backend and Distributed Systems Guide"
+    "saved_at_iso": "2026-10-03T21:25:00+05:30"
   },
   {
     "id": "DczxxnxsfHF",
@@ -43,9 +225,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026, 1:43 pm IST",
-    "saved_at_iso": "2026-10-03T13:43:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Drug Research and Genetics Database Workflow Guide"
+    "saved_at_iso": "2026-10-03T13:43:00+05:30"
   },
   {
     "id": "DeBVjgiBKpF",
@@ -66,9 +246,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026, 1:31 pm IST",
-    "saved_at_iso": "2026-10-03T13:31:00+05:30",
-    "category": "AI & Agents",
-    "title": "Leia: Open-Source Low-Latency Classifier Model Setup"
+    "saved_at_iso": "2026-10-03T13:31:00+05:30"
   },
   {
     "id": "DdB6tdNDAIs",
@@ -83,9 +261,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026, 1:31 pm IST",
-    "saved_at_iso": "2026-10-03T13:31:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Top Free GitHub Repositories for Learning AI and Python"
+    "saved_at_iso": "2026-10-03T13:31:00+05:30"
   },
   {
     "id": "DdWo-jTq5Yv",
@@ -106,9 +282,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 03, 2026, 1:27 pm IST",
-    "saved_at_iso": "2026-10-03T13:27:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Curated Collection of Real-World Machine Learning Papers"
+    "saved_at_iso": "2026-10-03T13:27:00+05:30"
   },
   {
     "id": "Dd_1YZXjOL2",
@@ -123,9 +297,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026, 11:13 pm IST",
-    "saved_at_iso": "2026-10-02T23:13:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Advanced Computer Science and AI Animation Channels"
+    "saved_at_iso": "2026-10-02T23:13:00+05:30"
   },
   {
     "id": "Da0LMELjStT",
@@ -146,9 +318,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026, 10:37 pm IST",
-    "saved_at_iso": "2026-10-02T22:37:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Five Practical Python Projects for Real-World Skills"
+    "saved_at_iso": "2026-10-02T22:37:00+05:30"
   },
   {
     "id": "Dd6aiIWo3RC",
@@ -168,9 +338,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 02, 2026, 7:39 pm IST",
-    "saved_at_iso": "2026-10-02T19:39:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building Neural Networks and Transformers from Scratch"
+    "saved_at_iso": "2026-10-02T19:39:00+05:30"
   },
   {
     "id": "Dc751XTt3kE",
@@ -191,9 +359,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 7:13 pm IST",
-    "saved_at_iso": "2026-10-01T19:13:00+05:30",
-    "category": "AI & Agents",
-    "title": "ArXiv Visual: AI-Powered Research Paper Explainer Tool"
+    "saved_at_iso": "2026-10-01T19:13:00+05:30"
   },
   {
     "id": "Dd85NOcjWaK",
@@ -214,9 +380,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 6:40 pm IST",
-    "saved_at_iso": "2026-10-01T18:40:00+05:30",
-    "category": "AI & Agents",
-    "title": "Five Essential GitHub Repositories for AI Workflows"
+    "saved_at_iso": "2026-10-01T18:40:00+05:30"
   },
   {
     "id": "Dd6NTIYD6ej",
@@ -237,9 +401,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 6:13 pm IST",
-    "saved_at_iso": "2026-10-01T18:13:00+05:30",
-    "category": "AI & Agents",
-    "title": "Interactive Games for Learning AI Concepts and Alignment"
+    "saved_at_iso": "2026-10-01T18:13:00+05:30"
   },
   {
     "id": "Dc6Fhx4JPHW",
@@ -254,9 +416,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 3:35 pm IST",
-    "saved_at_iso": "2026-10-01T15:35:00+05:30",
-    "category": "AI & Agents",
-    "title": "Technical Engineering Insights and Discussions"
+    "saved_at_iso": "2026-10-01T15:35:00+05:30"
   },
   {
     "id": "DcZF2XLS6Oo",
@@ -271,9 +431,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 2:25 pm IST",
-    "saved_at_iso": "2026-10-01T14:25:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Recommended C++ Programming Learning Resources"
+    "saved_at_iso": "2026-10-01T14:25:00+05:30"
   },
   {
     "id": "Dd6izTYiln1",
@@ -290,9 +448,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 01, 2026, 1:15 pm IST",
-    "saved_at_iso": "2026-10-01T13:15:00+05:30",
-    "category": "AI & Agents",
-    "title": "Autonomous AI Agent Configuration and Setup Guide"
+    "saved_at_iso": "2026-10-01T13:15:00+05:30"
   },
   {
     "id": "DblR6fhuzSe",
@@ -307,9 +463,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 30, 2026, 8:29 pm IST",
-    "saved_at_iso": "2026-09-30T20:29:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Essential GitHub Repositories for Learning Programming"
+    "saved_at_iso": "2026-09-30T20:29:00+05:30"
   },
   {
     "id": "DdJUE1XjYzk",
@@ -335,9 +489,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 30, 2026, 11:35 am IST",
-    "saved_at_iso": "2026-09-30T11:35:00+05:30",
-    "category": "System Design & Backend",
-    "title": "System Design Interview Insider Guide Notes Repository"
+    "saved_at_iso": "2026-09-30T11:35:00+05:30"
   },
   {
     "id": "DdxhFHTR8cm",
@@ -358,9 +510,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 29, 2026, 8:02 am IST",
-    "saved_at_iso": "2026-09-29T08:02:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Gamified Websites for Learning Programming and AI"
+    "saved_at_iso": "2026-09-29T08:02:00+05:30"
   },
   {
     "id": "Dd17S68jidq",
@@ -381,9 +531,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 29, 2026, 7:54 am IST",
-    "saved_at_iso": "2026-09-29T07:54:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Twelve Core System Design Architecture Concepts"
+    "saved_at_iso": "2026-09-29T07:54:00+05:30"
   },
   {
     "id": "DdtUk4lD0yz",
@@ -404,9 +552,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 29, 2026, 7:53 am IST",
-    "saved_at_iso": "2026-09-29T07:53:00+05:30",
-    "category": "AI & Agents",
-    "title": "Advanced Artificial Intelligence and Model Mechanics Topics"
+    "saved_at_iso": "2026-09-29T07:53:00+05:30"
   },
   {
     "id": "Daxd9_RiDBv",
@@ -430,9 +576,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 29, 2026, 6:24 am IST",
-    "saved_at_iso": "2026-09-29T06:24:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Recommended Open Source Web Development Projects"
+    "saved_at_iso": "2026-09-29T06:24:00+05:30"
   },
   {
     "id": "DcHCW-qk_OI",
@@ -453,9 +597,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 28, 2026, 7:22 pm IST",
-    "saved_at_iso": "2026-09-28T19:22:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Fascinating Computer Science Topics for Students"
+    "saved_at_iso": "2026-09-28T19:22:00+05:30"
   },
   {
     "id": "Ddw0-ANOCbp",
@@ -476,9 +618,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 27, 2026, 10:54 am IST",
-    "saved_at_iso": "2026-09-27T10:54:00+05:30",
-    "category": "Career & Internships",
-    "title": "Top Free Resources to Build Tech Portfolio and Land Jobs"
+    "saved_at_iso": "2026-09-27T10:54:00+05:30"
   },
   {
     "id": "DdxOFyaBDD7",
@@ -499,9 +639,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 27, 2026, 10:52 am IST",
-    "saved_at_iso": "2026-09-27T10:52:00+05:30",
-    "category": "AI & Agents",
-    "title": "Essential Research Papers for Understanding Modern LLMs"
+    "saved_at_iso": "2026-09-27T10:52:00+05:30"
   },
   {
     "id": "DdtskzNNTWr",
@@ -516,9 +654,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026, 12:45 pm IST",
-    "saved_at_iso": "2026-09-26T12:45:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Comprehensive Git Version Control PDF Reference Guide"
+    "saved_at_iso": "2026-09-26T12:45:00+05:30"
   },
   {
     "id": "DduOZV-vgzf",
@@ -537,9 +673,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026, 12:15 pm IST",
-    "saved_at_iso": "2026-09-26T12:15:00+05:30",
-    "category": "Career & Internships",
-    "title": "Online Assessment Archives for Top Tech Companies"
+    "saved_at_iso": "2026-09-26T12:15:00+05:30"
   },
   {
     "id": "Ddt5HcPoLJs",
@@ -560,9 +694,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 26, 2026, 11:10 am IST",
-    "saved_at_iso": "2026-09-26T11:10:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Backend Architect Skill Hierarchy for 2026 Production Systems"
+    "saved_at_iso": "2026-09-26T11:10:00+05:30"
   },
   {
     "id": "DdrN7RlotzN",
@@ -582,9 +714,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026, 7:52 pm IST",
-    "saved_at_iso": "2026-09-25T19:52:00+05:30",
-    "category": "AI & Agents",
-    "title": "Open Source Repository for Learning AI Engineering From Scratch"
+    "saved_at_iso": "2026-09-25T19:52:00+05:30"
   },
   {
     "id": "Ddtv8-4jDCu",
@@ -599,9 +729,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026, 7:50 pm IST",
-    "saved_at_iso": "2026-09-25T19:50:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Portfolio Projects to Stand Out on Your Resume"
+    "saved_at_iso": "2026-09-25T19:50:00+05:30"
   },
   {
     "id": "DdVsE-EoPGj",
@@ -616,9 +744,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026, 6:11 pm IST",
-    "saved_at_iso": "2026-09-25T18:11:00+05:30",
-    "category": "Career & Internships",
-    "title": "Technical Interview Preparation Platform Overview"
+    "saved_at_iso": "2026-09-25T18:11:00+05:30"
   },
   {
     "id": "DdrHAI1MrFb",
@@ -639,9 +765,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 25, 2026, 12:36 am IST",
-    "saved_at_iso": "2026-09-25T00:36:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Evolution of System Design: From One Server to Scalable Architecture"
+    "saved_at_iso": "2026-09-25T00:36:00+05:30"
   },
   {
     "id": "DbldRHyz6ph",
@@ -662,9 +786,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 24, 2026, 10:11 pm IST",
-    "saved_at_iso": "2026-09-24T22:11:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Hussein Nasser's Backend Engineering Playlist Recommendation"
+    "saved_at_iso": "2026-09-24T22:11:00+05:30"
   },
   {
     "id": "DdodWLBNsnu",
@@ -685,9 +807,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 24, 2026, 7:28 pm IST",
-    "saved_at_iso": "2026-09-24T19:28:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Docker Tutorial for Software Development and Containers"
+    "saved_at_iso": "2026-09-24T19:28:00+05:30"
   },
   {
     "id": "DdluR9wo2pI",
@@ -708,9 +828,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 23, 2026, 12:54 pm IST",
-    "saved_at_iso": "2026-09-23T12:54:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Free Static Application Security Testing Tools for Code"
+    "saved_at_iso": "2026-09-23T12:54:00+05:30"
   },
   {
     "id": "Ddj4CSshq47",
@@ -731,9 +849,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 23, 2026, 12:40 pm IST",
-    "saved_at_iso": "2026-09-23T12:40:00+05:30",
-    "category": "AI & Agents",
-    "title": "Ten Practical Projects to Break into AI Engineering"
+    "saved_at_iso": "2026-09-23T12:40:00+05:30"
   },
   {
     "id": "DdkGgM_yVbu",
@@ -748,9 +864,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 22, 2026, 10:28 pm IST",
-    "saved_at_iso": "2026-09-22T22:28:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Six Habits and Addictions to Quit in Your Twenties"
+    "saved_at_iso": "2026-09-22T22:28:00+05:30"
   },
   {
     "id": "Ddjozd0yhQN",
@@ -765,9 +879,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 22, 2026, 8:16 am IST",
-    "saved_at_iso": "2026-09-22T08:16:00+05:30",
-    "category": "Career & Internships",
-    "title": "Stanford University Job Skills Course Available on YouTube"
+    "saved_at_iso": "2026-09-22T08:16:00+05:30"
   },
   {
     "id": "DbuIw0HAFNt",
@@ -788,9 +900,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 8:38 pm IST",
-    "saved_at_iso": "2026-09-21T20:38:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Effective Reading Strategies and Information Retention"
+    "saved_at_iso": "2026-09-21T20:38:00+05:30"
   },
   {
     "id": "Dat0q39x0QL",
@@ -805,9 +915,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 6:14 pm IST",
-    "saved_at_iso": "2026-09-21T18:14:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Active Review and Spaced Learning Study Techniques"
+    "saved_at_iso": "2026-09-21T18:14:00+05:30"
   },
   {
     "id": "Dcwyi7qj3-f",
@@ -825,9 +933,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 5:05 pm IST",
-    "saved_at_iso": "2026-09-21T17:05:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Surprising Computer Science Insights and Humorous Realities"
+    "saved_at_iso": "2026-09-21T17:05:00+05:30"
   },
   {
     "id": "DdhxX6vDGsk",
@@ -842,9 +948,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 4:55 pm IST",
-    "saved_at_iso": "2026-09-21T16:55:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Smart India Hackathon Insider Guide and Pitch Framework"
+    "saved_at_iso": "2026-09-21T16:55:00+05:30"
   },
   {
     "id": "DdiJRJpv8d-",
@@ -865,9 +969,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 4:51 pm IST",
-    "saved_at_iso": "2026-09-21T16:51:00+05:30",
-    "category": "Career & Internships",
-    "title": "Cracking Online Assessments for Software Engineering Internships"
+    "saved_at_iso": "2026-09-21T16:51:00+05:30"
   },
   {
     "id": "Dc0_htAMc01",
@@ -882,9 +984,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 4:01 pm IST",
-    "saved_at_iso": "2026-09-21T16:01:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Essential JavaScript Core Concepts and Speed Course"
+    "saved_at_iso": "2026-09-21T16:01:00+05:30"
   },
   {
     "id": "DdO1UioAHAS",
@@ -899,9 +999,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 3:58 pm IST",
-    "saved_at_iso": "2026-09-21T15:58:00+05:30",
-    "category": "AI & Agents",
-    "title": "Curated Open Source Claude Repositories for AI Engineers"
+    "saved_at_iso": "2026-09-21T15:58:00+05:30"
   },
   {
     "id": "Ddgyy_iMSZz",
@@ -916,9 +1014,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 3:55 pm IST",
-    "saved_at_iso": "2026-09-21T15:55:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Relational Database Design and Backend API Integration Resources"
+    "saved_at_iso": "2026-09-21T15:55:00+05:30"
   },
   {
     "id": "DdZBoitjmMW",
@@ -933,9 +1029,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 21, 2026, 3:37 pm IST",
-    "saved_at_iso": "2026-09-21T15:37:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Open Source Alternatives to Popular Developer Tools"
+    "saved_at_iso": "2026-09-21T15:37:00+05:30"
   },
   {
     "id": "DdgZsZtAAgo",
@@ -956,9 +1050,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 20, 2026, 11:02 pm IST",
-    "saved_at_iso": "2026-09-20T23:02:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "DSA Problem Solving Mindmap and Flowchart Strategy"
+    "saved_at_iso": "2026-09-20T23:02:00+05:30"
   },
   {
     "id": "DdecbsEnSGo",
@@ -979,9 +1071,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 20, 2026, 9:40 am IST",
-    "saved_at_iso": "2026-09-20T09:40:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Optimal Platform Selection for Learning Data Structures"
+    "saved_at_iso": "2026-09-20T09:40:00+05:30"
   },
   {
     "id": "DdaWzcoKgAc",
@@ -1002,9 +1092,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 18, 2026, 9:23 pm IST",
-    "saved_at_iso": "2026-09-18T21:23:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Free GitHub Repository Templates for Programming Projects"
+    "saved_at_iso": "2026-09-18T21:23:00+05:30"
   },
   {
     "id": "DdXxkN2tWpJ",
@@ -1019,9 +1107,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026, 7:37 pm IST",
-    "saved_at_iso": "2026-09-17T19:37:00+05:30",
-    "category": "Career & Internships",
-    "title": "Cold Networking Strategy for Software Engineering Mentorship"
+    "saved_at_iso": "2026-09-17T19:37:00+05:30"
   },
   {
     "id": "DdYPOerRWc8",
@@ -1040,9 +1126,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026, 7:37 pm IST",
-    "saved_at_iso": "2026-09-17T19:37:00+05:30",
-    "category": "AI & Agents",
-    "title": "Essential Research Papers for Artificial Intelligence Engineers"
+    "saved_at_iso": "2026-09-17T19:37:00+05:30"
   },
   {
     "id": "DdWnJFXjFmM",
@@ -1061,9 +1145,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026, 2:41 pm IST",
-    "saved_at_iso": "2026-09-17T14:41:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Useful GitHub URL Tricks for Developers"
+    "saved_at_iso": "2026-09-17T14:41:00+05:30"
   },
   {
     "id": "Dc9Eu6btor8",
@@ -1084,9 +1166,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 17, 2026, 9:05 am IST",
-    "saved_at_iso": "2026-09-17T09:05:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building Custom Learning Roadmaps with AI Agents"
+    "saved_at_iso": "2026-09-17T09:05:00+05:30"
   },
   {
     "id": "DdTLo45CWLn",
@@ -1101,9 +1181,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 16, 2026, 5:38 pm IST",
-    "saved_at_iso": "2026-09-16T17:38:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Essential AI Websites for College and Research"
+    "saved_at_iso": "2026-09-16T17:38:00+05:30"
   },
   {
     "id": "DdUm1kcSSa0",
@@ -1123,9 +1201,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 16, 2026, 9:46 am IST",
-    "saved_at_iso": "2026-09-16T09:46:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Wearable Device Dataset for Engineering Projects"
+    "saved_at_iso": "2026-09-16T09:46:00+05:30"
   },
   {
     "id": "DdTsgMgTka5",
@@ -1140,9 +1216,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 16, 2026, 5:39 am IST",
-    "saved_at_iso": "2026-09-16T05:39:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Curated Videos to Improve Backend Skills"
+    "saved_at_iso": "2026-09-16T05:39:00+05:30"
   },
   {
     "id": "DdTAourxArL",
@@ -1163,9 +1237,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026, 8:05 pm IST",
-    "saved_at_iso": "2026-09-15T20:05:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Weekend Coding Practice Problems for FAANG"
+    "saved_at_iso": "2026-09-15T20:05:00+05:30"
   },
   {
     "id": "DdQS2d8KMPh",
@@ -1180,9 +1252,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026, 6:27 pm IST",
-    "saved_at_iso": "2026-09-15T18:27:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Personal Inspiration and Aesthetics"
+    "saved_at_iso": "2026-09-15T18:27:00+05:30"
   },
   {
     "id": "DdS3CjrKsr3",
@@ -1200,9 +1270,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026, 2:19 pm IST",
-    "saved_at_iso": "2026-09-15T14:19:00+05:30",
-    "category": "AI & Agents",
-    "title": "Custom AI Agents for Workflow Efficiency"
+    "saved_at_iso": "2026-09-15T14:19:00+05:30"
   },
   {
     "id": "Dc_oHwZIN53",
@@ -1217,9 +1285,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 15, 2026, 2:27 am IST",
-    "saved_at_iso": "2026-09-15T02:27:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Mindset Shifts and Focus Strategies"
+    "saved_at_iso": "2026-09-15T02:27:00+05:30"
   },
   {
     "id": "DdPUuzxu862",
@@ -1238,9 +1304,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 14, 2026, 7:33 pm IST",
-    "saved_at_iso": "2026-09-14T19:33:00+05:30",
-    "category": "Career & Internships",
-    "title": "Essential Free Resources to Break Into Tech"
+    "saved_at_iso": "2026-09-14T19:33:00+05:30"
   },
   {
     "id": "DdNujL6xxKS",
@@ -1261,9 +1325,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 14, 2026, 9:35 am IST",
-    "saved_at_iso": "2026-09-14T09:35:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Understanding Software Architectural Styles"
+    "saved_at_iso": "2026-09-14T09:35:00+05:30"
   },
   {
     "id": "DaKS9BssG3k",
@@ -1284,9 +1346,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 13, 2026, 10:22 am IST",
-    "saved_at_iso": "2026-09-13T10:22:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Staff Engineer Starter Pack and Architecture"
+    "saved_at_iso": "2026-09-13T10:22:00+05:30"
   },
   {
     "id": "DdKsCvRicq_",
@@ -1306,9 +1366,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 13, 2026, 10:21 am IST",
-    "saved_at_iso": "2026-09-13T10:21:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comprehensive AI and Prompt Engineering Course"
+    "saved_at_iso": "2026-09-13T10:21:00+05:30"
   },
   {
     "id": "DdMGmo4sIdv",
@@ -1323,9 +1381,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026, 8:44 pm IST",
-    "saved_at_iso": "2026-09-12T20:44:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Curated Roadmap to Learn Machine Learning"
+    "saved_at_iso": "2026-09-12T20:44:00+05:30"
   },
   {
     "id": "Dcd0DDLKwY5",
@@ -1346,9 +1402,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026, 10:26 am IST",
-    "saved_at_iso": "2026-09-12T10:26:00+05:30",
-    "category": "AI & Agents",
-    "title": "Artificial Intelligence Roadmap and Career Guide"
+    "saved_at_iso": "2026-09-12T10:26:00+05:30"
   },
   {
     "id": "Dbx1gaITe3_",
@@ -1369,9 +1423,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 12, 2026, 1:53 am IST",
-    "saved_at_iso": "2026-09-12T01:53:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Top 50 LeetCode Questions for Beginners"
+    "saved_at_iso": "2026-09-12T01:53:00+05:30"
   },
   {
     "id": "DdINw3pqbGI",
@@ -1392,9 +1444,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026, 4:48 pm IST",
-    "saved_at_iso": "2026-09-11T16:48:00+05:30",
-    "category": "AI & Agents",
-    "title": "Free Resources for Machine Learning Mastery"
+    "saved_at_iso": "2026-09-11T16:48:00+05:30"
   },
   {
     "id": "DcQOuA4zkpz",
@@ -1415,9 +1465,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026, 3:56 pm IST",
-    "saved_at_iso": "2026-09-11T15:56:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Analyzing Selective Vulnerability in Neuroscience"
+    "saved_at_iso": "2026-09-11T15:56:00+05:30"
   },
   {
     "id": "DdHiZzxz5fB",
@@ -1432,9 +1480,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 11, 2026, 2:01 pm IST",
-    "saved_at_iso": "2026-09-11T14:01:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comparing Six Different AI Engineering Roles"
+    "saved_at_iso": "2026-09-11T14:01:00+05:30"
   },
   {
     "id": "DcMqDlepXf5",
@@ -1455,9 +1501,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026, 10:36 pm IST",
-    "saved_at_iso": "2026-09-10T22:36:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Building a Custom Hardware Spotify Player"
+    "saved_at_iso": "2026-09-10T22:36:00+05:30"
   },
   {
     "id": "Dcsg_fEsdRR",
@@ -1478,9 +1522,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026, 6:21 pm IST",
-    "saved_at_iso": "2026-09-10T18:21:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "AI Study Tools for Students and Essays"
+    "saved_at_iso": "2026-09-10T18:21:00+05:30"
   },
   {
     "id": "DdEQqvMFBQ-",
@@ -1501,9 +1543,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026, 3:53 pm IST",
-    "saved_at_iso": "2026-09-10T15:53:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Smart India Hackathon Winning Strategies"
+    "saved_at_iso": "2026-09-10T15:53:00+05:30"
   },
   {
     "id": "DdEOwy9z2IY",
@@ -1523,9 +1563,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026, 9:35 am IST",
-    "saved_at_iso": "2026-09-10T09:35:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comprehensive System Design Skill Roadmap"
+    "saved_at_iso": "2026-09-10T09:35:00+05:30"
   },
   {
     "id": "DcjHM3wk7ve",
@@ -1540,9 +1578,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 10, 2026, 8:12 am IST",
-    "saved_at_iso": "2026-09-10T08:12:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Core Engineering Concepts in Modern Systems"
+    "saved_at_iso": "2026-09-10T08:12:00+05:30"
   },
   {
     "id": "DdC-MSRiEPk",
@@ -1563,9 +1599,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026, 6:34 pm IST",
-    "saved_at_iso": "2026-09-09T18:34:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Free Machine Learning Online Courses"
+    "saved_at_iso": "2026-09-09T18:34:00+05:30"
   },
   {
     "id": "DdCvFdHsnj1",
@@ -1590,9 +1624,7 @@
       "url": "https://replit.com"
     },
     "saved_at": "Sep 09, 2026, 12:52 pm IST",
-    "saved_at_iso": "2026-09-09T12:52:00+05:30",
-    "category": "AI & Agents",
-    "title": "Fundamental AI concepts advent calendar and Replit tutorial"
+    "saved_at_iso": "2026-09-09T12:52:00+05:30"
   },
   {
     "id": "DcglpE2S2ik",
@@ -1607,9 +1639,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026, 12:41 am IST",
-    "saved_at_iso": "2026-09-09T00:41:00+05:30",
-    "category": "Career & Internships",
-    "title": "Interactive professional skills and career assessment list"
+    "saved_at_iso": "2026-09-09T00:41:00+05:30"
   },
   {
     "id": "DdBDoTPAQHs",
@@ -1624,9 +1654,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 09, 2026, 12:36 am IST",
-    "saved_at_iso": "2026-09-09T00:36:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Cognitive brain games to combat digital doomscrolling"
+    "saved_at_iso": "2026-09-09T00:36:00+05:30"
   },
   {
     "id": "DcV9AvoTNdO",
@@ -1651,9 +1679,7 @@
       "url": "https://linktr.ee/kingdomofwhite_"
     },
     "saved_at": "Sep 08, 2026, 6:44 pm IST",
-    "saved_at_iso": "2026-09-08T18:44:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Minimalist monochrome fashion styling and aesthetic look"
+    "saved_at_iso": "2026-09-08T18:44:00+05:30"
   },
   {
     "id": "Dc0ZeHbx6l2",
@@ -1671,9 +1697,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:58 pm IST",
-    "saved_at_iso": "2026-09-08T12:58:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Polsia AI platform for website creation and business automation"
+    "saved_at_iso": "2026-09-08T12:58:00+05:30"
   },
   {
     "id": "DcI-nH8RgDu",
@@ -1688,9 +1712,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:43 pm IST",
-    "saved_at_iso": "2026-09-08T12:43:00+05:30",
-    "category": "Career & Internships",
-    "title": "Curated database of tech events, hackathons, and networking"
+    "saved_at_iso": "2026-09-08T12:43:00+05:30"
   },
   {
     "id": "DZXxPHHI8QC",
@@ -1705,9 +1727,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:43 pm IST",
-    "saved_at_iso": "2026-09-08T12:43:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comprehensive database selection guide for software engineers"
+    "saved_at_iso": "2026-09-08T12:43:00+05:30"
   },
   {
     "id": "Dc_cSU9TbCD",
@@ -1728,9 +1748,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:41 pm IST",
-    "saved_at_iso": "2026-09-08T12:41:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Open source repository for professional motion screen recordings"
+    "saved_at_iso": "2026-09-08T12:41:00+05:30"
   },
   {
     "id": "Dc_BGj7P-JS",
@@ -1750,9 +1768,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:38 pm IST",
-    "saved_at_iso": "2026-09-08T12:38:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Extensive system design learning archive and video guides"
+    "saved_at_iso": "2026-09-08T12:38:00+05:30"
   },
   {
     "id": "Dc_bjs4z0Y9",
@@ -1767,9 +1783,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 08, 2026, 12:36 pm IST",
-    "saved_at_iso": "2026-09-08T12:36:00+05:30",
-    "category": "Career & Internships",
-    "title": "Role-wise technical certification roadmap for 2026 and beyond"
+    "saved_at_iso": "2026-09-08T12:36:00+05:30"
   },
   {
     "id": "DWUAF-epsQh",
@@ -1784,9 +1798,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026, 3:35 pm IST",
-    "saved_at_iso": "2026-09-07T15:35:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comparison of REST and GraphQL API architectures for backend"
+    "saved_at_iso": "2026-09-07T15:35:00+05:30"
   },
   {
     "id": "Dc1KLYjRYH0",
@@ -1801,9 +1813,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026, 3:33 pm IST",
-    "saved_at_iso": "2026-09-07T15:33:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Essential Git commands and difference between merge and rebase"
+    "saved_at_iso": "2026-09-07T15:33:00+05:30"
   },
   {
     "id": "DdA4uU8JSKy",
@@ -1824,9 +1834,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 07, 2026, 3:12 pm IST",
-    "saved_at_iso": "2026-09-07T15:12:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Backend engineering learning pathway and resource roadmap"
+    "saved_at_iso": "2026-09-07T15:12:00+05:30"
   },
   {
     "id": "Dc7rseVSSI6",
@@ -1847,9 +1855,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026, 10:21 pm IST",
-    "saved_at_iso": "2026-09-06T22:21:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Must-do data structures and algorithms questions for FAANG"
+    "saved_at_iso": "2026-09-06T22:21:00+05:30"
   },
   {
     "id": "DbdUXCKil8y",
@@ -1864,9 +1870,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026, 4:54 pm IST",
-    "saved_at_iso": "2026-09-06T16:54:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated developer resources and technical learning links"
+    "saved_at_iso": "2026-09-06T16:54:00+05:30"
   },
   {
     "id": "DZpwudMJpTI",
@@ -1881,9 +1885,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026, 4:52 pm IST",
-    "saved_at_iso": "2026-09-06T16:52:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Curated interactive websites to train cognitive brain functions"
+    "saved_at_iso": "2026-09-06T16:52:00+05:30"
   },
   {
     "id": "Dc0o4T-hnId",
@@ -1898,9 +1900,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026, 1:24 pm IST",
-    "saved_at_iso": "2026-09-06T13:24:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Essential study resources and examination preparation links"
+    "saved_at_iso": "2026-09-06T13:24:00+05:30"
   },
   {
     "id": "DaxaUy-v9L4",
@@ -1921,9 +1921,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 06, 2026, 12:33 am IST",
-    "saved_at_iso": "2026-09-06T00:33:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Strategic frameworks and breakdowns for winning hackathons"
+    "saved_at_iso": "2026-09-06T00:33:00+05:30"
   },
   {
     "id": "Da3R1ZxMH8_",
@@ -1943,9 +1941,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 04, 2026, 12:36 am IST",
-    "saved_at_iso": "2026-09-04T00:36:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Classic old money menswear inspiration and outfit of the day"
+    "saved_at_iso": "2026-09-04T00:36:00+05:30"
   },
   {
     "id": "Dc00h4jTHnQ",
@@ -1966,9 +1962,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 04, 2026, 12:07 am IST",
-    "saved_at_iso": "2026-09-04T00:07:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comprehensive system design guide for million-scale APIs"
+    "saved_at_iso": "2026-09-04T00:07:00+05:30"
   },
   {
     "id": "DcsbllCE3JU",
@@ -1983,9 +1977,7 @@
     },
     "brand_partner": null,
     "saved_at": "Sep 02, 2026, 11:35 pm IST",
-    "saved_at_iso": "2026-09-02T23:35:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Impactful final year project ideas to secure software roles"
+    "saved_at_iso": "2026-09-02T23:35:00+05:30"
   },
   {
     "id": "Dcq75LWSYyo",
@@ -2000,9 +1992,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 31, 2026, 2:28 pm IST",
-    "saved_at_iso": "2026-08-31T14:28:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Advanced core computer science concepts self-assessment"
+    "saved_at_iso": "2026-08-31T14:28:00+05:30"
   },
   {
     "id": "Dcli6WSTq47",
@@ -2017,9 +2007,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 30, 2026, 7:35 pm IST",
-    "saved_at_iso": "2026-08-30T19:35:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Top YouTube channels for mastering DSA and interview prep"
+    "saved_at_iso": "2026-08-30T19:35:00+05:30"
   },
   {
     "id": "Dcn5od9M-Zp",
@@ -2034,9 +2022,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 30, 2026, 3:25 pm IST",
-    "saved_at_iso": "2026-08-30T15:25:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Practical guide to building personal charisma and social skills"
+    "saved_at_iso": "2026-08-30T15:25:00+05:30"
   },
   {
     "id": "DckMIPnOTCM",
@@ -2055,9 +2041,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 29, 2026, 12:18 am IST",
-    "saved_at_iso": "2026-08-29T00:18:00+05:30",
-    "category": "Career & Internships",
-    "title": "Step-by-step software engineering internship application guide"
+    "saved_at_iso": "2026-08-29T00:18:00+05:30"
   },
   {
     "id": "DcjBEJvzZOT",
@@ -2078,9 +2062,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 28, 2026, 7:38 pm IST",
-    "saved_at_iso": "2026-08-28T19:38:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Backend Engineering Interview Guide"
+    "saved_at_iso": "2026-08-28T19:38:00+05:30"
   },
   {
     "id": "DafasipSI_s",
@@ -2101,9 +2083,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 28, 2026, 7:27 pm IST",
-    "saved_at_iso": "2026-08-28T19:27:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Desk Job Posture and Mobility Exercises"
+    "saved_at_iso": "2026-08-28T19:27:00+05:30"
   },
   {
     "id": "DcfPZjVOYBW",
@@ -2122,9 +2102,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 27, 2026, 11:42 am IST",
-    "saved_at_iso": "2026-08-27T11:42:00+05:30",
-    "category": "Career & Internships",
-    "title": "Software Engineering Internship Resources"
+    "saved_at_iso": "2026-08-27T11:42:00+05:30"
   },
   {
     "id": "DcgTT2hyBlv",
@@ -2144,9 +2122,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026, 9:18 pm IST",
-    "saved_at_iso": "2026-08-26T21:18:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building Web Apps Using AI Vibe Coding Tools"
+    "saved_at_iso": "2026-08-26T21:18:00+05:30"
   },
   {
     "id": "Db9izPDSF4B",
@@ -2161,9 +2137,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026, 11:07 am IST",
-    "saved_at_iso": "2026-08-26T11:07:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "SPY x FAMILY Anime New Season Updates"
+    "saved_at_iso": "2026-08-26T11:07:00+05:30"
   },
   {
     "id": "DcT3gVCu-hN",
@@ -2181,9 +2155,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026, 11:01 am IST",
-    "saved_at_iso": "2026-08-26T11:01:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Romance and Dating Relationship Insights"
+    "saved_at_iso": "2026-08-26T11:01:00+05:30"
   },
   {
     "id": "DcduHnLS3Sm",
@@ -2204,9 +2176,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 26, 2026, 10:36 am IST",
-    "saved_at_iso": "2026-08-26T10:36:00+05:30",
-    "category": "AI & Agents",
-    "title": "Structural Tells of AI Generated Writing"
+    "saved_at_iso": "2026-08-26T10:36:00+05:30"
   },
   {
     "id": "DbSlqljRm7Q",
@@ -2221,9 +2191,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026, 4:47 pm IST",
-    "saved_at_iso": "2026-08-25T16:47:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Healthy Versus Toxic Relationship Dynamics"
+    "saved_at_iso": "2026-08-25T16:47:00+05:30"
   },
   {
     "id": "Daa8fy8PKC1",
@@ -2243,9 +2211,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026, 12:45 pm IST",
-    "saved_at_iso": "2026-08-25T12:45:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Essential Computer Science Programming Resources"
+    "saved_at_iso": "2026-08-25T12:45:00+05:30"
   },
   {
     "id": "DaRBm20hcna",
@@ -2266,9 +2232,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026, 11:30 am IST",
-    "saved_at_iso": "2026-08-25T11:30:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Time Perception and Discipline Systems"
+    "saved_at_iso": "2026-08-25T11:30:00+05:30"
   },
   {
     "id": "DcbobpYOjcJ",
@@ -2283,9 +2247,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 25, 2026, 10:45 am IST",
-    "saved_at_iso": "2026-08-25T10:45:00+05:30",
-    "category": "AI & Agents",
-    "title": "Instagram Comment Automation Workflows"
+    "saved_at_iso": "2026-08-25T10:45:00+05:30"
   },
   {
     "id": "DcONL8aNNQ2",
@@ -2300,9 +2262,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 8:52 pm IST",
-    "saved_at_iso": "2026-08-24T20:52:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Reflections on Content Consumption and Articulation"
+    "saved_at_iso": "2026-08-24T20:52:00+05:30"
   },
   {
     "id": "DcaSoFOMf_r",
@@ -2317,9 +2277,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 8:45 pm IST",
-    "saved_at_iso": "2026-08-24T20:45:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Information Retention and Problem Solving Techniques"
+    "saved_at_iso": "2026-08-24T20:45:00+05:30"
   },
   {
     "id": "DcaLve7gW4A",
@@ -2340,9 +2298,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 8:44 pm IST",
-    "saved_at_iso": "2026-08-24T20:44:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "ADHD Brain Function and Productivity Rules"
+    "saved_at_iso": "2026-08-24T20:44:00+05:30"
   },
   {
     "id": "DcYmjsizYPg",
@@ -2359,9 +2315,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 3:18 pm IST",
-    "saved_at_iso": "2026-08-24T15:18:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Research Literature Review Organization Guide"
+    "saved_at_iso": "2026-08-24T15:18:00+05:30"
   },
   {
     "id": "DcXqJyKOC9k",
@@ -2376,9 +2330,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 11:11 am IST",
-    "saved_at_iso": "2026-08-24T11:11:00+05:30",
-    "category": "AI & Agents",
-    "title": "Advanced RAG Pipeline and Production Techniques"
+    "saved_at_iso": "2026-08-24T11:11:00+05:30"
   },
   {
     "id": "DcYqZbBSkN7",
@@ -2399,9 +2351,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 24, 2026, 6:58 am IST",
-    "saved_at_iso": "2026-08-24T06:58:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "AI Tools Workflow for Smart India Hackathon"
+    "saved_at_iso": "2026-08-24T06:58:00+05:30"
   },
   {
     "id": "DcVw1dnMe3s",
@@ -2416,9 +2366,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 22, 2026, 10:12 pm IST",
-    "saved_at_iso": "2026-08-22T22:12:00+05:30",
-    "category": "AI & Agents",
-    "title": "Architecture Planning for AI Coding Assistants"
+    "saved_at_iso": "2026-08-22T22:12:00+05:30"
   },
   {
     "id": "DbLZq8zMSbN",
@@ -2433,9 +2381,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 22, 2026, 1:54 pm IST",
-    "saved_at_iso": "2026-08-22T13:54:00+05:30",
-    "category": "AI & Agents",
-    "title": "Agentic AI Production Concepts for Engineers"
+    "saved_at_iso": "2026-08-22T13:54:00+05:30"
   },
   {
     "id": "DcQgXYAsHZU",
@@ -2456,9 +2402,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 21, 2026, 12:09 pm IST",
-    "saved_at_iso": "2026-08-21T12:09:00+05:30",
-    "title": "Free Resources for Reverse Engineering and Malware Analysis",
-    "category": "DevOps & Cloud"
+    "saved_at_iso": "2026-08-21T12:09:00+05:30"
   },
   {
     "id": "DcBwgfsR1lt",
@@ -2473,9 +2417,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 21, 2026, 2:00 am IST",
-    "saved_at_iso": "2026-08-21T02:00:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "High Performance Productivity Systems for Professionals"
+    "saved_at_iso": "2026-08-21T02:00:00+05:30"
   },
   {
     "id": "DcIwLRyuOjs",
@@ -2496,9 +2438,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026, 11:26 pm IST",
-    "saved_at_iso": "2026-08-19T23:26:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Frontend CSS and JavaScript UI Animation Libraries"
+    "saved_at_iso": "2026-08-19T23:26:00+05:30"
   },
   {
     "id": "Db-HqY2zxMZ",
@@ -2519,9 +2459,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026, 9:24 pm IST",
-    "saved_at_iso": "2026-08-19T21:24:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comprehensive Explanation of AI Engineering"
+    "saved_at_iso": "2026-08-19T21:24:00+05:30"
   },
   {
     "id": "DcLEFvBzsYe",
@@ -2542,9 +2480,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026, 12:31 am IST",
-    "saved_at_iso": "2026-08-19T00:31:00+05:30",
-    "category": "System Design & Backend",
-    "title": "High Scale System Design for One Million RPS"
+    "saved_at_iso": "2026-08-19T00:31:00+05:30"
   },
   {
     "id": "DcIvD0JI5o4",
@@ -2565,9 +2501,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 19, 2026, 12:30 am IST",
-    "saved_at_iso": "2026-08-19T00:30:00+05:30",
-    "category": "Career & Internships",
-    "title": "STAR Method Project Explanation Formula for Interviews"
+    "saved_at_iso": "2026-08-19T00:30:00+05:30"
   },
   {
     "id": "DbvmaRGsaTQ",
@@ -2582,9 +2516,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 9:21 pm IST",
-    "saved_at_iso": "2026-08-18T21:21:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Step-by-Step Roadmap to Master Databases and APIs"
+    "saved_at_iso": "2026-08-18T21:21:00+05:30"
   },
   {
     "id": "DYqJ27iMZNB",
@@ -2603,9 +2535,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 1:50 pm IST",
-    "saved_at_iso": "2026-08-18T13:50:00+05:30",
-    "category": "AI & Agents",
-    "title": "Three Essential Lectures to Learn Agentic AI"
+    "saved_at_iso": "2026-08-18T13:50:00+05:30"
   },
   {
     "id": "DZJS2ZesaEu",
@@ -2624,9 +2554,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 1:28 pm IST",
-    "saved_at_iso": "2026-08-18T13:28:00+05:30",
-    "category": "AI & Agents",
-    "title": "Essential Skills and Requirements to Become an AI Engineer"
+    "saved_at_iso": "2026-08-18T13:28:00+05:30"
   },
   {
     "id": "DcHqtjxgNWn",
@@ -2645,9 +2573,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 1:27 pm IST",
-    "saved_at_iso": "2026-08-18T13:27:00+05:30",
-    "category": "Career & Internships",
-    "title": "Thirty Minute Daily Routine to Level Up as a Developer"
+    "saved_at_iso": "2026-08-18T13:27:00+05:30"
   },
   {
     "id": "DcJQd0TRewZ",
@@ -2662,9 +2588,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 12:50 pm IST",
-    "saved_at_iso": "2026-08-18T12:50:00+05:30",
-    "category": "AI & Agents",
-    "title": "Turn Academic Research Papers Into Animated Video Explainers"
+    "saved_at_iso": "2026-08-18T12:50:00+05:30"
   },
   {
     "id": "DYx7-qqpZ9a",
@@ -2679,9 +2603,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 18, 2026, 1:13 am IST",
-    "saved_at_iso": "2026-08-18T01:13:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Mental Models and Powerful Conceptual Frameworks"
+    "saved_at_iso": "2026-08-18T01:13:00+05:30"
   },
   {
     "id": "DZxkys2zoSV",
@@ -2696,9 +2618,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026, 3:07 pm IST",
-    "saved_at_iso": "2026-08-17T15:07:00+05:30",
-    "category": "AI & Agents",
-    "title": "Six Core Knowledge Areas Every AI Engineer Needs"
+    "saved_at_iso": "2026-08-17T15:07:00+05:30"
   },
   {
     "id": "DZrXB2Hv8cb",
@@ -2719,9 +2639,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026, 3:06 pm IST",
-    "saved_at_iso": "2026-08-17T15:06:00+05:30",
-    "category": "Career & Internships",
-    "title": "Strategic Interview Preparation and Job Hunting Tips"
+    "saved_at_iso": "2026-08-17T15:06:00+05:30"
   },
   {
     "id": "DamtorpBps_",
@@ -2740,9 +2658,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026, 2:58 pm IST",
-    "saved_at_iso": "2026-08-17T14:58:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Top Free Online Channels for Computer Science Learning"
+    "saved_at_iso": "2026-08-17T14:58:00+05:30"
   },
   {
     "id": "DcGBQAvuui3",
@@ -2763,9 +2679,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026, 1:20 am IST",
-    "saved_at_iso": "2026-08-17T01:20:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Optimized Morning Routine for Energy and Deep Work"
+    "saved_at_iso": "2026-08-17T01:20:00+05:30"
   },
   {
     "id": "DbpI2wyMaim",
@@ -2786,9 +2700,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 17, 2026, 1:13 am IST",
-    "saved_at_iso": "2026-08-17T01:13:00+05:30",
-    "category": "AI & Agents",
-    "title": "Guide to LLM Fine-Tuning for Applied Machine Learning Roles"
+    "saved_at_iso": "2026-08-17T01:13:00+05:30"
   },
   {
     "id": "DcESVAwxb1p",
@@ -2803,9 +2715,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026, 11:05 pm IST",
-    "saved_at_iso": "2026-08-16T23:05:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Ten Neuroscience Habits to Improve Cognitive Function"
+    "saved_at_iso": "2026-08-16T23:05:00+05:30"
   },
   {
     "id": "DaGiActxYK3",
@@ -2820,9 +2730,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026, 11:03 pm IST",
-    "saved_at_iso": "2026-08-16T23:03:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Framework for Achieving Unrealistic Career and Life Goals"
+    "saved_at_iso": "2026-08-16T23:03:00+05:30"
   },
   {
     "id": "DcG2LT8EXnx",
@@ -2843,9 +2751,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026, 11:02 pm IST",
-    "saved_at_iso": "2026-08-16T23:02:00+05:30",
-    "category": "Career & Internships",
-    "title": "Unconventional Strategies for Tech Job Applications"
+    "saved_at_iso": "2026-08-16T23:02:00+05:30"
   },
   {
     "id": "DcE7oLfS5_9",
@@ -2866,9 +2772,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 16, 2026, 7:55 pm IST",
-    "saved_at_iso": "2026-08-16T19:55:00+05:30",
-    "category": "Career & Internships",
-    "title": "Using Claude Prompts to Optimize Your Resume for ATS"
+    "saved_at_iso": "2026-08-16T19:55:00+05:30"
   },
   {
     "id": "DcEFABnvBuH",
@@ -2889,9 +2793,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 15, 2026, 11:37 pm IST",
-    "saved_at_iso": "2026-08-15T23:37:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Claude Code Plugins to Improve Frontend UI Design"
+    "saved_at_iso": "2026-08-15T23:37:00+05:30"
   },
   {
     "id": "Db564cDMqH-",
@@ -2906,9 +2808,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 15, 2026, 11:36 pm IST",
-    "saved_at_iso": "2026-08-15T23:36:00+05:30",
-    "category": "Career & Internships",
-    "title": "Structuring Technical Project Answers Using the STAR Method"
+    "saved_at_iso": "2026-08-15T23:36:00+05:30"
   },
   {
     "id": "DcBDZbYJKwD",
@@ -2923,9 +2823,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 5:38 pm IST",
-    "saved_at_iso": "2026-08-14T17:38:00+05:30",
-    "category": "Career & Internships",
-    "title": "Advanced Engineering Career Strategies and Insights"
+    "saved_at_iso": "2026-08-14T17:38:00+05:30"
   },
   {
     "id": "DZibns1ucXM",
@@ -2944,9 +2842,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 5:36 pm IST",
-    "saved_at_iso": "2026-08-14T17:36:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Curated Portfolio Project Ideas for Computer Science Students"
+    "saved_at_iso": "2026-08-14T17:36:00+05:30"
   },
   {
     "id": "DZImdBnyaXL",
@@ -2967,9 +2863,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 4:43 pm IST",
-    "saved_at_iso": "2026-08-14T16:43:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Coding Interview Preparation and LeetCode Strategies"
+    "saved_at_iso": "2026-08-14T16:43:00+05:30"
   },
   {
     "id": "DZndq_ZAX_b",
@@ -2984,9 +2878,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 4:30 pm IST",
-    "saved_at_iso": "2026-08-14T16:30:00+05:30",
-    "category": "AI & Agents",
-    "title": "Top Video Resources for Mastering AI Engineering and LLMOps"
+    "saved_at_iso": "2026-08-14T16:30:00+05:30"
   },
   {
     "id": "Db-Y7zXJio9",
@@ -3007,9 +2899,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 4:17 pm IST",
-    "saved_at_iso": "2026-08-14T16:17:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Free Curated Educational Resources for Computer Science"
+    "saved_at_iso": "2026-08-14T16:17:00+05:30"
   },
   {
     "id": "Db4nHFDh_0B",
@@ -3030,9 +2920,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 14, 2026, 4:15 pm IST",
-    "saved_at_iso": "2026-08-14T16:15:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Top Design Inspiration and Web Development Resources"
+    "saved_at_iso": "2026-08-14T16:15:00+05:30"
   },
   {
     "id": "Da2_2_KBgZH",
@@ -3047,9 +2935,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 11, 2026, 12:51 am IST",
-    "saved_at_iso": "2026-08-11T00:51:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Casual Footwear Outfit Ideas and Styling Inspiration"
+    "saved_at_iso": "2026-08-11T00:51:00+05:30"
   },
   {
     "id": "Db1F0APyCPg",
@@ -3064,9 +2950,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 10, 2026, 9:44 am IST",
-    "saved_at_iso": "2026-08-10T09:44:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Transparent Solar Glass Technology for Smart Skyscrapers"
+    "saved_at_iso": "2026-08-10T09:44:00+05:30"
   },
   {
     "id": "DbylU41I5iF",
@@ -3081,9 +2965,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 09, 2026, 1:23 pm IST",
-    "saved_at_iso": "2026-08-09T13:23:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "10 Hidden Habits of Better Software Engineers"
+    "saved_at_iso": "2026-08-09T13:23:00+05:30"
   },
   {
     "id": "Dbwlb2evZJW",
@@ -3104,9 +2986,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026, 11:28 pm IST",
-    "saved_at_iso": "2026-08-08T23:28:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Understanding and Managing ADHD for Success"
+    "saved_at_iso": "2026-08-08T23:28:00+05:30"
   },
   {
     "id": "DYPpF1VIjZJ",
@@ -3121,9 +3001,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026, 11:25 pm IST",
-    "saved_at_iso": "2026-08-08T23:25:00+05:30",
-    "category": "Python & Data Science",
-    "title": "A Structured Learning Path for AI and ML Engineering"
+    "saved_at_iso": "2026-08-08T23:25:00+05:30"
   },
   {
     "id": "Dbw8-VbTBci",
@@ -3144,9 +3022,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026, 11:24 pm IST",
-    "saved_at_iso": "2026-08-08T23:24:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Frequency Guide for Code Reviews and Maintenance"
+    "saved_at_iso": "2026-08-08T23:24:00+05:30"
   },
   {
     "id": "DbYQUSWxI6I",
@@ -3167,9 +3043,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 08, 2026, 10:50 pm IST",
-    "saved_at_iso": "2026-08-08T22:50:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Techniques to Develop a Photographic Memory"
+    "saved_at_iso": "2026-08-08T22:50:00+05:30"
   },
   {
     "id": "DbaB6V6MwRl",
@@ -3190,9 +3064,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 04, 2026, 11:15 pm IST",
-    "saved_at_iso": "2026-08-04T23:15:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Essential Mens Pants and Bottoms Wardrobe"
+    "saved_at_iso": "2026-08-04T23:15:00+05:30"
   },
   {
     "id": "DbGGbY-M5wm",
@@ -3207,9 +3079,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 02, 2026, 12:39 pm IST",
-    "saved_at_iso": "2026-08-02T12:39:00+05:30",
-    "category": "AI & Agents",
-    "title": "Open Source Alternative to Claude Design Tools"
+    "saved_at_iso": "2026-08-02T12:39:00+05:30"
   },
   {
     "id": "DYaNsIrxuHG",
@@ -3230,9 +3100,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 01, 2026, 10:40 pm IST",
-    "saved_at_iso": "2026-08-01T22:40:00+05:30",
-    "category": "Career & Internships",
-    "title": "Interview Strategies for Consulting and Product Roles"
+    "saved_at_iso": "2026-08-01T22:40:00+05:30"
   },
   {
     "id": "DaQHDOpKIUm",
@@ -3253,9 +3121,7 @@
     },
     "brand_partner": null,
     "saved_at": "Aug 01, 2026, 9:55 pm IST",
-    "saved_at_iso": "2026-08-01T21:55:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Top Resources to Land Software Engineering Offers"
+    "saved_at_iso": "2026-08-01T21:55:00+05:30"
   },
   {
     "id": "DbdZQhivr-t",
@@ -3276,9 +3142,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 31, 2026, 10:45 pm IST",
-    "saved_at_iso": "2026-07-31T22:45:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "10 Essential Patterns to Master Linked Lists"
+    "saved_at_iso": "2026-07-31T22:45:00+05:30"
   },
   {
     "id": "DbTcsZfuLAv",
@@ -3299,9 +3163,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 31, 2026, 1:39 pm IST",
-    "saved_at_iso": "2026-07-31T13:39:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Free 3D Hover and Scroll Animation Library"
+    "saved_at_iso": "2026-07-31T13:39:00+05:30"
   },
   {
     "id": "DbUg-kOFC-C",
@@ -3325,9 +3187,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 29, 2026, 8:10 pm IST",
-    "saved_at_iso": "2026-07-29T20:10:00+05:30",
-    "category": "AI & Agents",
-    "title": "AI-Powered Automated Job Applications on Local Machine"
+    "saved_at_iso": "2026-07-29T20:10:00+05:30"
   },
   {
     "id": "DbOMKx6zx54",
@@ -3346,9 +3206,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 28, 2026, 12:46 am IST",
-    "saved_at_iso": "2026-07-28T00:46:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repository and AI Tool Setup"
+    "saved_at_iso": "2026-07-28T00:46:00+05:30"
   },
   {
     "id": "DbPwjIYxiW9",
@@ -3369,9 +3227,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 27, 2026, 9:27 am IST",
-    "saved_at_iso": "2026-07-27T09:27:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Vibe Coding and AI Web Development Tools"
+    "saved_at_iso": "2026-07-27T09:27:00+05:30"
   },
   {
     "id": "DbPB4ESPs1P",
@@ -3392,9 +3248,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 27, 2026, 8:25 am IST",
-    "saved_at_iso": "2026-07-27T08:25:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Best Free Coding Projects and Tutorials for Tech Jobs"
+    "saved_at_iso": "2026-07-27T08:25:00+05:30"
   },
   {
     "id": "DbGmuV5M617",
@@ -3415,9 +3269,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 26, 2026, 12:46 am IST",
-    "saved_at_iso": "2026-07-26T00:46:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Effective Communication Strategies in Relationships"
+    "saved_at_iso": "2026-07-26T00:46:00+05:30"
   },
   {
     "id": "DbLuqEFxSi6",
@@ -3432,9 +3284,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 26, 2026, 12:36 am IST",
-    "saved_at_iso": "2026-07-26T00:36:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Synergy Program Personal Transformation"
+    "saved_at_iso": "2026-07-26T00:36:00+05:30"
   },
   {
     "id": "DbOUP9OPDAQ",
@@ -3455,9 +3305,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 26, 2026, 12:30 am IST",
-    "saved_at_iso": "2026-07-26T00:30:00+05:30",
-    "category": "AI & Agents",
-    "title": "Overview of Free AI Tools Released by Google"
+    "saved_at_iso": "2026-07-26T00:30:00+05:30"
   },
   {
     "id": "DZQHEvFN6-W",
@@ -3478,9 +3326,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026, 5:26 pm IST",
-    "saved_at_iso": "2026-07-25T17:26:00+05:30",
-    "category": "Career & Internships",
-    "title": "Top Platforms to Find Flexible Remote Internships"
+    "saved_at_iso": "2026-07-25T17:26:00+05:30"
   },
   {
     "id": "DbLvGkRx72t",
@@ -3501,9 +3347,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026, 3:09 pm IST",
-    "saved_at_iso": "2026-07-25T15:09:00+05:30",
-    "category": "Career & Internships",
-    "title": "Technical Interview Preparation Resources"
+    "saved_at_iso": "2026-07-25T15:09:00+05:30"
   },
   {
     "id": "DbM0udUub2X",
@@ -3520,9 +3364,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 25, 2026, 12:04 pm IST",
-    "saved_at_iso": "2026-07-25T12:04:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Free Computer Science Skills for Impressive Projects"
+    "saved_at_iso": "2026-07-25T12:04:00+05:30"
   },
   {
     "id": "DbJIsWMCCKJ",
@@ -3543,9 +3385,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 24, 2026, 5:47 pm IST",
-    "saved_at_iso": "2026-07-24T17:47:00+05:30",
-    "category": "AI & Agents",
-    "title": "Claude Code Skill for UI Quality Audits"
+    "saved_at_iso": "2026-07-24T17:47:00+05:30"
   },
   {
     "id": "DbH3L50RaBS",
@@ -3566,9 +3406,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 24, 2026, 6:57 am IST",
-    "saved_at_iso": "2026-07-24T06:57:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Using Constraints to Narrow Down Algorithm Choices"
+    "saved_at_iso": "2026-07-24T06:57:00+05:30"
   },
   {
     "id": "DbBn2wtp388",
@@ -3583,9 +3421,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 8:40 pm IST",
-    "saved_at_iso": "2026-07-22T20:40:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Step-by-Step Website Development Guide"
+    "saved_at_iso": "2026-07-22T20:40:00+05:30"
   },
   {
     "id": "Daxm8YPjT1V",
@@ -3605,9 +3441,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 8:34 pm IST",
-    "saved_at_iso": "2026-07-22T20:34:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Design Vault and Developer Resources"
+    "saved_at_iso": "2026-07-22T20:34:00+05:30"
   },
   {
     "id": "DbYYvekyX_1",
@@ -3628,9 +3462,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 8:32 pm IST",
-    "saved_at_iso": "2026-07-22T20:32:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing Your Resume with Claude for Job Applications"
+    "saved_at_iso": "2026-07-22T20:32:00+05:30"
   },
   {
     "id": "DbEJ17BzK2Z",
@@ -3645,9 +3477,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 8:31 pm IST",
-    "saved_at_iso": "2026-07-22T20:31:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Top Six Notable Hackathons of All Time"
+    "saved_at_iso": "2026-07-22T20:31:00+05:30"
   },
   {
     "id": "Da34D0HCEEc",
@@ -3662,9 +3492,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:51 pm IST",
-    "saved_at_iso": "2026-07-22T15:51:00+05:30",
-    "category": "Python & Data Science",
-    "title": "TensorFlow Quick Reference Cheat Sheet"
+    "saved_at_iso": "2026-07-22T15:51:00+05:30"
   },
   {
     "id": "DbBLkNfjYaW",
@@ -3679,9 +3507,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:51 pm IST",
-    "saved_at_iso": "2026-07-22T15:51:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Understanding APIs and RESTful Architecture"
+    "saved_at_iso": "2026-07-22T15:51:00+05:30"
   },
   {
     "id": "Da9ZbtUCK2Q",
@@ -3700,9 +3526,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:51 pm IST",
-    "saved_at_iso": "2026-07-22T15:51:00+05:30",
-    "category": "Python & Data Science",
-    "title": "PyTorch Cheat Sheet for Deep Learning"
+    "saved_at_iso": "2026-07-22T15:51:00+05:30"
   },
   {
     "id": "DbCO42VDeD9",
@@ -3717,9 +3541,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:51 pm IST",
-    "saved_at_iso": "2026-07-22T15:51:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Handwritten Machine Learning Study Notes"
+    "saved_at_iso": "2026-07-22T15:51:00+05:30"
   },
   {
     "id": "DZYjyUFswFs",
@@ -3739,9 +3561,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:47 pm IST",
-    "saved_at_iso": "2026-07-22T15:47:00+05:30",
-    "category": "Career & Internships",
-    "title": "Essential Student Tools and Computer Science Resources"
+    "saved_at_iso": "2026-07-22T15:47:00+05:30"
   },
   {
     "id": "DbDhl7nKD8W",
@@ -3762,9 +3582,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 22, 2026, 3:44 pm IST",
-    "saved_at_iso": "2026-07-22T15:44:00+05:30",
-    "category": "AI & Agents",
-    "title": "AI Career Roadmap and Claude Workflow Guide"
+    "saved_at_iso": "2026-07-22T15:44:00+05:30"
   },
   {
     "id": "Da848fitx0W",
@@ -3785,9 +3603,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 9:24 pm IST",
-    "saved_at_iso": "2026-07-20T21:24:00+05:30",
-    "category": "Career & Internships",
-    "title": "Claude Prompts for Job Search and Resume Building"
+    "saved_at_iso": "2026-07-20T21:24:00+05:30"
   },
   {
     "id": "DaHR5JWPLvo",
@@ -3802,9 +3618,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 8:00 pm IST",
-    "saved_at_iso": "2026-07-20T20:00:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Developer Resources and Links"
+    "saved_at_iso": "2026-07-20T20:00:00+05:30"
   },
   {
     "id": "DWp813PjryO",
@@ -3819,9 +3633,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 7:23 pm IST",
-    "saved_at_iso": "2026-07-20T19:23:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Personal Reflection and Life Perspective"
+    "saved_at_iso": "2026-07-20T19:23:00+05:30"
   },
   {
     "id": "DaxIlzvj3em",
@@ -3842,9 +3654,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 7:22 pm IST",
-    "saved_at_iso": "2026-07-20T19:22:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Open Source AI Design and Development Tools"
+    "saved_at_iso": "2026-07-20T19:22:00+05:30"
   },
   {
     "id": "DaYQlabx6mQ",
@@ -3859,9 +3669,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 7:14 pm IST",
-    "saved_at_iso": "2026-07-20T19:14:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Synergy Program Professional Development"
+    "saved_at_iso": "2026-07-20T19:14:00+05:30"
   },
   {
     "id": "DacVapVG_oD",
@@ -3879,9 +3687,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 7:07 pm IST",
-    "saved_at_iso": "2026-07-20T19:07:00+05:30",
-    "category": "Career & Internships",
-    "title": "Cold Email Templates for Tech Internships"
+    "saved_at_iso": "2026-07-20T19:07:00+05:30"
   },
   {
     "id": "Da0EeF1DTZ-",
@@ -3902,9 +3708,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 6:43 pm IST",
-    "saved_at_iso": "2026-07-20T18:43:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Top Open Source Alternatives to Paid Software"
+    "saved_at_iso": "2026-07-20T18:43:00+05:30"
   },
   {
     "id": "DalEPqCD2nC",
@@ -3924,9 +3728,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 20, 2026, 12:12 am IST",
-    "saved_at_iso": "2026-07-20T00:12:00+05:30",
-    "category": "AI & Agents",
-    "title": "Open Source AI Agents and Development Tools"
+    "saved_at_iso": "2026-07-20T00:12:00+05:30"
   },
   {
     "id": "Da-2g6jNI4E",
@@ -3947,9 +3749,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026, 9:57 pm IST",
-    "saved_at_iso": "2026-07-19T21:57:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Portfolio Project Ideas and Tech Stack Breakdown"
+    "saved_at_iso": "2026-07-19T21:57:00+05:30"
   },
   {
     "id": "DakbvNDJKEA",
@@ -3964,9 +3764,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026, 7:47 pm IST",
-    "saved_at_iso": "2026-07-19T19:47:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Developer Tool Links and References"
+    "saved_at_iso": "2026-07-19T19:47:00+05:30"
   },
   {
     "id": "DZIoNuexSTq",
@@ -3981,9 +3779,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 19, 2026, 7:21 pm IST",
-    "saved_at_iso": "2026-07-19T19:21:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Efficient Study Strategies for Faster Learning"
+    "saved_at_iso": "2026-07-19T19:21:00+05:30"
   },
   {
     "id": "DatyKgTPwit",
@@ -4004,9 +3800,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026, 11:02 pm IST",
-    "saved_at_iso": "2026-07-17T23:02:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Stoicism and Critical Thinking Foundations"
+    "saved_at_iso": "2026-07-17T23:02:00+05:30"
   },
   {
     "id": "Da3sW2TRBMy",
@@ -4021,9 +3815,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026, 11:01 pm IST",
-    "saved_at_iso": "2026-07-17T23:01:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Goal Setting and Focused Execution Guide"
+    "saved_at_iso": "2026-07-17T23:01:00+05:30"
   },
   {
     "id": "Da0f5y7RynW",
@@ -4038,9 +3830,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026, 9:23 pm IST",
-    "saved_at_iso": "2026-07-17T21:23:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Seven Non-Negotiable Core Software Skills"
+    "saved_at_iso": "2026-07-17T21:23:00+05:30"
   },
   {
     "id": "Da5dcxhMh27",
@@ -4058,9 +3848,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026, 9:21 pm IST",
-    "saved_at_iso": "2026-07-17T21:21:00+05:30",
-    "category": "AI & Agents",
-    "title": "Vibe Coding and Modern AI Development"
+    "saved_at_iso": "2026-07-17T21:21:00+05:30"
   },
   {
     "id": "Da0D6zjtN0w",
@@ -4075,9 +3863,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 17, 2026, 9:19 pm IST",
-    "saved_at_iso": "2026-07-17T21:19:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Useful Development Resources Collection"
+    "saved_at_iso": "2026-07-17T21:19:00+05:30"
   },
   {
     "id": "Dau7cGjT7t1",
@@ -4092,9 +3878,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 16, 2026, 1:50 am IST",
-    "saved_at_iso": "2026-07-16T01:50:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Introductory Coding Videos and Learning Path"
+    "saved_at_iso": "2026-07-16T01:50:00+05:30"
   },
   {
     "id": "DapX2_JB2Ts",
@@ -4109,9 +3893,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 13, 2026, 12:47 am IST",
-    "saved_at_iso": "2026-07-13T00:47:00+05:30",
-    "category": "AI & Agents",
-    "title": "Curated AI Tool Links and Resources"
+    "saved_at_iso": "2026-07-13T00:47:00+05:30"
   },
   {
     "id": "Daq6lUZMAjo",
@@ -4126,9 +3908,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 13, 2026, 12:44 am IST",
-    "saved_at_iso": "2026-07-13T00:44:00+05:30",
-    "category": "Career & Internships",
-    "title": "No-Fluff Guide to Landing Freelance Clients"
+    "saved_at_iso": "2026-07-13T00:44:00+05:30"
   },
   {
     "id": "DasLm6opzIO",
@@ -4149,9 +3929,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026, 11:33 pm IST",
-    "saved_at_iso": "2026-07-12T23:33:00+05:30",
-    "category": "AI & Agents",
-    "title": "Claude Prompts and Walkthrough Animation Guide"
+    "saved_at_iso": "2026-07-12T23:33:00+05:30"
   },
   {
     "id": "DanRxszuipS",
@@ -4166,9 +3944,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026, 9:55 am IST",
-    "saved_at_iso": "2026-07-12T09:55:00+05:30",
-    "category": "Career & Internships",
-    "title": "Strategy for Landing Six-Figure Tech Offers"
+    "saved_at_iso": "2026-07-12T09:55:00+05:30"
   },
   {
     "id": "Dao2Sp4u1rf",
@@ -4187,9 +3963,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026, 12:39 am IST",
-    "saved_at_iso": "2026-07-12T00:39:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repository Links for Students"
+    "saved_at_iso": "2026-07-12T00:39:00+05:30"
   },
   {
     "id": "DaOgv9CMxZT",
@@ -4204,9 +3978,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 12, 2026, 12:03 am IST",
-    "saved_at_iso": "2026-07-12T00:03:00+05:30",
-    "category": "Career & Internships",
-    "title": "Websites for Finding High-Paying Tech Internships"
+    "saved_at_iso": "2026-07-12T00:03:00+05:30"
   },
   {
     "id": "Dap3IoNo4Kt",
@@ -4227,9 +3999,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 10:58 pm IST",
-    "saved_at_iso": "2026-07-11T22:58:00+05:30",
-    "category": "AI & Agents",
-    "title": "Top Claude Skills for UI and Web Designers"
+    "saved_at_iso": "2026-07-11T22:58:00+05:30"
   },
   {
     "id": "DaF8GO9zT6w",
@@ -4250,9 +4020,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 10:56 pm IST",
-    "saved_at_iso": "2026-07-11T22:56:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Structured Competitive Programming Roadmap"
+    "saved_at_iso": "2026-07-11T22:56:00+05:30"
   },
   {
     "id": "DZp-JT-p94W",
@@ -4273,9 +4041,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 1:41 am IST",
-    "saved_at_iso": "2026-07-11T01:41:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Modern Coding Interview Prep and Debugging Resources"
+    "saved_at_iso": "2026-07-11T01:41:00+05:30"
   },
   {
     "id": "DZcuHAwgd54",
@@ -4306,9 +4072,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 1:40 am IST",
-    "saved_at_iso": "2026-07-11T01:40:00+05:30",
-    "category": "Career & Internships",
-    "title": "Finding Local SEO Clients on Page Three"
+    "saved_at_iso": "2026-07-11T01:40:00+05:30"
   },
   {
     "id": "DZL7SEANnl_",
@@ -4323,9 +4087,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 1:28 am IST",
-    "saved_at_iso": "2026-07-11T01:28:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "The Relevance of LeetCode in Modern Interviews"
+    "saved_at_iso": "2026-07-11T01:28:00+05:30"
   },
   {
     "id": "DamT1j-RgDZ",
@@ -4340,9 +4102,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 11, 2026, 1:02 am IST",
-    "saved_at_iso": "2026-07-11T01:02:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Celebrity Sightings at Hollywood Fashion Event"
+    "saved_at_iso": "2026-07-11T01:02:00+05:30"
   },
   {
     "id": "DaZmF93JZcj",
@@ -4360,9 +4120,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026, 8:14 pm IST",
-    "saved_at_iso": "2026-07-10T20:14:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Trading Platform Advantages and Insights"
+    "saved_at_iso": "2026-07-10T20:14:00+05:30"
   },
   {
     "id": "DanV9-gp9lQ",
@@ -4377,9 +4135,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 10, 2026, 8:13 pm IST",
-    "saved_at_iso": "2026-07-10T20:13:00+05:30",
-    "category": "Career & Internships",
-    "title": "Eleven High-Performing Job Portals for Developers"
+    "saved_at_iso": "2026-07-10T20:13:00+05:30"
   },
   {
     "id": "DZ9wXH5CCSJ",
@@ -4400,9 +4156,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026, 11:41 pm IST",
-    "saved_at_iso": "2026-07-08T23:41:00+05:30",
-    "category": "AI & Agents",
-    "title": "Free AI Alternatives for Content and Generation"
+    "saved_at_iso": "2026-07-08T23:41:00+05:30"
   },
   {
     "id": "DZ2077mzFey",
@@ -4423,9 +4177,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026, 10:34 pm IST",
-    "saved_at_iso": "2026-07-08T22:34:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Free Design Resources to Avoid AI Slop"
+    "saved_at_iso": "2026-07-08T22:34:00+05:30"
   },
   {
     "id": "DaF4A1rsINH",
@@ -4440,9 +4192,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026, 10:31 pm IST",
-    "saved_at_iso": "2026-07-08T22:31:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Problem Understanding Framework Before Coding"
+    "saved_at_iso": "2026-07-08T22:31:00+05:30"
   },
   {
     "id": "DZ9SE8Hpyc4",
@@ -4463,9 +4213,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 08, 2026, 5:51 pm IST",
-    "saved_at_iso": "2026-07-08T17:51:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Mastering Core DSA Patterns and Mind Map"
+    "saved_at_iso": "2026-07-08T17:51:00+05:30"
   },
   {
     "id": "Dae7RvURaFG",
@@ -4480,9 +4228,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 8:27 pm IST",
-    "saved_at_iso": "2026-07-07T20:27:00+05:30",
-    "category": "Career & Internships",
-    "title": "Six-Month Forward Deployed Engineer Roadmap"
+    "saved_at_iso": "2026-07-07T20:27:00+05:30"
   },
   {
     "id": "DXrlN9ygqvu",
@@ -4497,9 +4243,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 7:52 am IST",
-    "saved_at_iso": "2026-07-07T07:52:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Real-Time Google Maps B2B Prospecting Tool"
+    "saved_at_iso": "2026-07-07T07:52:00+05:30"
   },
   {
     "id": "DaSpPVGsu-o",
@@ -4519,9 +4263,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 1:00 am IST",
-    "saved_at_iso": "2026-07-07T01:00:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Best Practices for App Domain Architecture"
+    "saved_at_iso": "2026-07-07T01:00:00+05:30"
   },
   {
     "id": "Dac2OaFpRZg",
@@ -4539,9 +4281,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 12:39 am IST",
-    "saved_at_iso": "2026-07-07T00:39:00+05:30",
-    "category": "Career & Internships",
-    "title": "High-Ticket Sales Strategies and Principles"
+    "saved_at_iso": "2026-07-07T00:39:00+05:30"
   },
   {
     "id": "DadX2vuviwP",
@@ -4562,9 +4302,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 12:35 am IST",
-    "saved_at_iso": "2026-07-07T00:35:00+05:30",
-    "category": "AI & Agents",
-    "title": "Open-Source AI Voice Generation and Cloning"
+    "saved_at_iso": "2026-07-07T00:35:00+05:30"
   },
   {
     "id": "DadR6FDJFIC",
@@ -4579,9 +4317,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 07, 2026, 12:08 am IST",
-    "saved_at_iso": "2026-07-07T00:08:00+05:30",
-    "category": "Career & Internships",
-    "title": "Interview Preparation Breakdown for Six Tech Roles"
+    "saved_at_iso": "2026-07-07T00:08:00+05:30"
   },
   {
     "id": "DaX6-bBNjPC",
@@ -4602,9 +4338,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 06, 2026, 11:58 pm IST",
-    "saved_at_iso": "2026-07-06T23:58:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Essential UI Libraries for AI-Assisted App Building"
+    "saved_at_iso": "2026-07-06T23:58:00+05:30"
   },
   {
     "id": "DX3K5JqR0OI",
@@ -4619,9 +4353,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 10:32 pm IST",
-    "saved_at_iso": "2026-07-05T22:32:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Powerful UI Tech Stack for Modern Web Designers"
+    "saved_at_iso": "2026-07-05T22:32:00+05:30"
   },
   {
     "id": "DaVWwzxp6n8",
@@ -4636,9 +4368,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 10:29 pm IST",
-    "saved_at_iso": "2026-07-05T22:29:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repository Resources and Links"
+    "saved_at_iso": "2026-07-05T22:29:00+05:30"
   },
   {
     "id": "DaVCsluIkV6",
@@ -4659,9 +4389,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 6:44 pm IST",
-    "saved_at_iso": "2026-07-05T18:44:00+05:30",
-    "category": "Career & Internships",
-    "title": "Essential Legal and Onboarding Documents for Freelancers"
+    "saved_at_iso": "2026-07-05T18:44:00+05:30"
   },
   {
     "id": "DZXzzA9T_1Z",
@@ -4676,9 +4404,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 12:08 am IST",
-    "saved_at_iso": "2026-07-05T00:08:00+05:30",
-    "category": "AI & Agents",
-    "title": "15 Projects to Transition from Engineer to AI Engineer"
+    "saved_at_iso": "2026-07-05T00:08:00+05:30"
   },
   {
     "id": "DXfAIzQl6rQ",
@@ -4693,9 +4419,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 12:08 am IST",
-    "saved_at_iso": "2026-07-05T00:08:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Relatable Software Developer Humorous Moment"
+    "saved_at_iso": "2026-07-05T00:08:00+05:30"
   },
   {
     "id": "DaPB5k6sEap",
@@ -4716,9 +4440,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 05, 2026, 12:06 am IST",
-    "saved_at_iso": "2026-07-05T00:06:00+05:30",
-    "category": "AI & Agents",
-    "title": "Satirical Take on Modern Artificial Intelligence Startups"
+    "saved_at_iso": "2026-07-05T00:06:00+05:30"
   },
   {
     "id": "DaVl4wVs17U",
@@ -4733,9 +4455,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026, 9:39 pm IST",
-    "saved_at_iso": "2026-07-04T21:39:00+05:30",
-    "category": "AI & Agents",
-    "title": "Guide to Building and Selling Practical AI Automations"
+    "saved_at_iso": "2026-07-04T21:39:00+05:30"
   },
   {
     "id": "DaOotiwTrwu",
@@ -4750,9 +4470,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 04, 2026, 12:46 pm IST",
-    "saved_at_iso": "2026-07-04T12:46:00+05:30",
-    "category": "AI & Agents",
-    "title": "Generating AI Portfolio Projects Using Claude and HuggingFace"
+    "saved_at_iso": "2026-07-04T12:46:00+05:30"
   },
   {
     "id": "DWTsLgFAk5l",
@@ -4769,9 +4487,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026, 11:55 pm IST",
-    "saved_at_iso": "2026-07-03T23:55:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Developer Tool for Automated Contact Discovery"
+    "saved_at_iso": "2026-07-03T23:55:00+05:30"
   },
   {
     "id": "DaMFb05qV8r",
@@ -4789,9 +4505,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026, 11:23 pm IST",
-    "saved_at_iso": "2026-07-03T23:23:00+05:30",
-    "category": "AI & Agents",
-    "title": "Workflow for Replicating Research Papers from Scratch"
+    "saved_at_iso": "2026-07-03T23:23:00+05:30"
   },
   {
     "id": "DZox9YAjeSk",
@@ -4812,9 +4526,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026, 11:06 pm IST",
-    "saved_at_iso": "2026-07-03T23:06:00+05:30",
-    "category": "Career & Internships",
-    "title": "Using Claude Prompts to Optimize Resume for Internships"
+    "saved_at_iso": "2026-07-03T23:06:00+05:30"
   },
   {
     "id": "DX0WMu7FLHA",
@@ -4832,9 +4544,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026, 11:02 pm IST",
-    "saved_at_iso": "2026-07-03T23:02:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Generating Free Standout Programming Projects"
+    "saved_at_iso": "2026-07-03T23:02:00+05:30"
   },
   {
     "id": "DYMvCo1DwMT",
@@ -4853,9 +4563,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 03, 2026, 10:58 pm IST",
-    "saved_at_iso": "2026-07-03T22:58:00+05:30",
-    "category": "Career & Internships",
-    "title": "Handling Price Objections in Client Sales Negotiations"
+    "saved_at_iso": "2026-07-03T22:58:00+05:30"
   },
   {
     "id": "DZ8DNSOR16-",
@@ -4876,9 +4584,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026, 11:53 pm IST",
-    "saved_at_iso": "2026-07-02T23:53:00+05:30",
-    "category": "Career & Internships",
-    "title": "Resume Optimization Strategies for Student Internships"
+    "saved_at_iso": "2026-07-02T23:53:00+05:30"
   },
   {
     "id": "DaFE-gZPCsc",
@@ -4893,9 +4599,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026, 11:48 pm IST",
-    "saved_at_iso": "2026-07-02T23:48:00+05:30",
-    "category": "Career & Internships",
-    "title": "Using Claude to Audit and Improve Your LinkedIn Profile"
+    "saved_at_iso": "2026-07-02T23:48:00+05:30"
   },
   {
     "id": "DaK55f6MXAp",
@@ -4916,9 +4620,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026, 11:44 pm IST",
-    "saved_at_iso": "2026-07-02T23:44:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building a Google Maps Lead Generation Scraper with Code"
+    "saved_at_iso": "2026-07-02T23:44:00+05:30"
   },
   {
     "id": "DXWysJCgu34",
@@ -4933,9 +4635,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 02, 2026, 11:19 pm IST",
-    "saved_at_iso": "2026-07-02T23:19:00+05:30",
-    "category": "AI & Agents",
-    "title": "Configuring Claude Assistant for Development Workflows"
+    "saved_at_iso": "2026-07-02T23:19:00+05:30"
   },
   {
     "id": "DZwWp6TN6ms",
@@ -4954,9 +4654,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 11:31 pm IST",
-    "saved_at_iso": "2026-07-01T23:31:00+05:30",
-    "category": "Career & Internships",
-    "title": "Cold Outreach Campaigns and Lead Generation Tool Stack"
+    "saved_at_iso": "2026-07-01T23:31:00+05:30"
   },
   {
     "id": "DXXTE0APk3U",
@@ -4971,9 +4669,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 11:20 pm IST",
-    "saved_at_iso": "2026-07-01T23:20:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Simple Technical Workflow Simplification Demonstration"
+    "saved_at_iso": "2026-07-01T23:20:00+05:30"
   },
   {
     "id": "DaLUH6xMJJJ",
@@ -4988,9 +4684,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 7:32 pm IST",
-    "saved_at_iso": "2026-07-01T19:32:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Free Animation and Motion Design Tool for Developers"
+    "saved_at_iso": "2026-07-01T19:32:00+05:30"
   },
   {
     "id": "DYtKINjtUsl",
@@ -5011,9 +4705,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 12:17 am IST",
-    "saved_at_iso": "2026-07-01T00:17:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building AI Agents and Web Applications for Side Projects"
+    "saved_at_iso": "2026-07-01T00:17:00+05:30"
   },
   {
     "id": "DYNW3X7J2TH",
@@ -5034,9 +4726,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 12:14 am IST",
-    "saved_at_iso": "2026-07-01T00:14:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Open Source 3D Liquid and Gradient UI Effect Libraries"
+    "saved_at_iso": "2026-07-01T00:14:00+05:30"
   },
   {
     "id": "DZyT38iTmXI",
@@ -5051,9 +4741,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 12:11 am IST",
-    "saved_at_iso": "2026-07-01T00:11:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Personal Lifestyle Snapshot and Visual Aesthetic Save"
+    "saved_at_iso": "2026-07-01T00:11:00+05:30"
   },
   {
     "id": "DaK7GXUztMP",
@@ -5068,9 +4756,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jul 01, 2026, 12:06 am IST",
-    "saved_at_iso": "2026-07-01T00:06:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Demographic Pin Code Targeting Analysis for Real Estate"
+    "saved_at_iso": "2026-07-01T00:06:00+05:30"
   },
   {
     "id": "DZsTfF0pwYT",
@@ -5085,9 +4771,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 29, 2026, 1:20 am IST",
-    "saved_at_iso": "2026-06-29T01:20:00+05:30",
-    "category": "Career & Internships",
-    "title": "Scaling a Freelance Web Development Business to Profit"
+    "saved_at_iso": "2026-06-29T01:20:00+05:30"
   },
   {
     "id": "DZ-fCDJTZW6",
@@ -5108,9 +4792,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 27, 2026, 11:09 am IST",
-    "saved_at_iso": "2026-06-27T11:09:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Essential UI Design Styles Every Designer Should Know"
+    "saved_at_iso": "2026-06-27T11:09:00+05:30"
   },
   {
     "id": "DaDRFEezrOP",
@@ -5125,9 +4807,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 27, 2026, 11:07 am IST",
-    "saved_at_iso": "2026-06-27T11:07:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Top UI Libraries for Building Animated Websites"
+    "saved_at_iso": "2026-06-27T11:07:00+05:30"
   },
   {
     "id": "DZ2rnYetXam",
@@ -5142,9 +4822,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026, 3:30 pm IST",
-    "saved_at_iso": "2026-06-26T15:30:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Amazing Website Resources for UI and UX Designers"
+    "saved_at_iso": "2026-06-26T15:30:00+05:30"
   },
   {
     "id": "DZ-LEpapUdQ",
@@ -5162,9 +4840,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026, 3:29 pm IST",
-    "saved_at_iso": "2026-06-26T15:29:00+05:30",
-    "category": "AI & Agents",
-    "title": "Startup and Industry Trends for AI Operations in 2026"
+    "saved_at_iso": "2026-06-26T15:29:00+05:30"
   },
   {
     "id": "DZ4Eh5UPyMb",
@@ -5185,9 +4861,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026, 12:45 am IST",
-    "saved_at_iso": "2026-06-26T00:45:00+05:30",
-    "category": "AI & Agents",
-    "title": "Vibecoding and Modern Website Building Tools"
+    "saved_at_iso": "2026-06-26T00:45:00+05:30"
   },
   {
     "id": "DYFTuNqJSWT",
@@ -5208,9 +4882,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 26, 2026, 12:37 am IST",
-    "saved_at_iso": "2026-06-26T00:37:00+05:30",
-    "category": "Career & Internships",
-    "title": "Systematic Cold Outreach Framework for Agency Growth"
+    "saved_at_iso": "2026-06-26T00:37:00+05:30"
   },
   {
     "id": "DXM4jN5EhiL",
@@ -5231,9 +4903,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 25, 2026, 12:04 am IST",
-    "saved_at_iso": "2026-06-25T00:04:00+05:30",
-    "category": "Career & Internships",
-    "title": "Competitive Analysis Framework for Brand Opportunity"
+    "saved_at_iso": "2026-06-25T00:04:00+05:30"
   },
   {
     "id": "DZ4E1TfuU-b",
@@ -5254,9 +4924,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 24, 2026, 11:58 pm IST",
-    "saved_at_iso": "2026-06-24T23:58:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Techniques to Make Modern Websites Look Premium"
+    "saved_at_iso": "2026-06-24T23:58:00+05:30"
   },
   {
     "id": "DZwD8VxzHlj",
@@ -5271,9 +4939,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 21, 2026, 11:15 pm IST",
-    "saved_at_iso": "2026-06-21T23:15:00+05:30",
-    "category": "Career & Internships",
-    "title": "Best YouTube Channels to Crack Tech Interviews in 2026"
+    "saved_at_iso": "2026-06-21T23:15:00+05:30"
   },
   {
     "id": "DZRF6UCyKFr",
@@ -5293,9 +4959,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 07, 2026, 11:00 pm IST",
-    "saved_at_iso": "2026-06-07T23:00:00+05:30",
-    "category": "Career & Internships",
-    "title": "Full-Stack Project Ideas That Actually Get You Hired"
+    "saved_at_iso": "2026-06-07T23:00:00+05:30"
   },
   {
     "id": "DZNaAmojaMC",
@@ -5316,9 +4980,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 06, 2026, 7:19 am IST",
-    "saved_at_iso": "2026-06-06T07:19:00+05:30",
-    "category": "AI & Agents",
-    "title": "Free Artificial Intelligence Courses to Get Ahead"
+    "saved_at_iso": "2026-06-06T07:19:00+05:30"
   },
   {
     "id": "DZFs54yynwU",
@@ -5333,9 +4995,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 03, 2026, 8:57 pm IST",
-    "saved_at_iso": "2026-06-03T20:57:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Recommended Coding Patterns GitHub Repository for DSA"
+    "saved_at_iso": "2026-06-03T20:57:00+05:30"
   },
   {
     "id": "DY_z2x1S9Kr",
@@ -5356,9 +5016,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jun 01, 2026, 1:50 am IST",
-    "saved_at_iso": "2026-06-01T01:50:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Essential Coding Patterns for LeetCode and Interviews"
+    "saved_at_iso": "2026-06-01T01:50:00+05:30"
   },
   {
     "id": "DY7p73DTYE5",
@@ -5373,9 +5031,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 31, 2026, 12:05 am IST",
-    "saved_at_iso": "2026-05-31T00:05:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Useful Website and Tool for 3D Logo Animation"
+    "saved_at_iso": "2026-05-31T00:05:00+05:30"
   },
   {
     "id": "DYOGwYYJzcy",
@@ -5390,9 +5046,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 30, 2026, 11:58 pm IST",
-    "saved_at_iso": "2026-05-30T23:58:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Frontend Development and Web Design Showcase"
+    "saved_at_iso": "2026-05-30T23:58:00+05:30"
   },
   {
     "id": "DY7ohMeOlEL",
@@ -5413,9 +5067,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 30, 2026, 11:54 pm IST",
-    "saved_at_iso": "2026-05-30T23:54:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing Your Resume with Claude AI for ATS"
+    "saved_at_iso": "2026-05-30T23:54:00+05:30"
   },
   {
     "id": "DY2S7sxT415",
@@ -5436,9 +5088,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 29, 2026, 11:11 am IST",
-    "saved_at_iso": "2026-05-29T11:11:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Full Body Fat Loss Home Workout Routine Without Equipment"
+    "saved_at_iso": "2026-05-29T11:11:00+05:30"
   },
   {
     "id": "DYMeyoZPbgy",
@@ -5459,9 +5109,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026, 11:02 pm IST",
-    "saved_at_iso": "2026-05-26T23:02:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Using Claude AI to Solve LeetCode Problems Efficiently"
+    "saved_at_iso": "2026-05-26T23:02:00+05:30"
   },
   {
     "id": "DWS0WrhCKz3",
@@ -5481,9 +5129,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026, 11:00 pm IST",
-    "saved_at_iso": "2026-05-26T23:00:00+05:30",
-    "category": "Career & Internships",
-    "title": "Cracking Software Engineering Roles from Tier-3 Colleges"
+    "saved_at_iso": "2026-05-26T23:00:00+05:30"
   },
   {
     "id": "DYw3uidvy_4",
@@ -5504,9 +5150,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026, 10:42 pm IST",
-    "saved_at_iso": "2026-05-26T22:42:00+05:30",
-    "category": "AI & Agents",
-    "title": "DeepMind Reinforcement Learning Course Overview"
+    "saved_at_iso": "2026-05-26T22:42:00+05:30"
   },
   {
     "id": "DYw-kJrTts7",
@@ -5524,9 +5168,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 26, 2026, 7:10 pm IST",
-    "saved_at_iso": "2026-05-26T19:10:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Five Perspective Ideas on the Universe and Mindset"
+    "saved_at_iso": "2026-05-26T19:10:00+05:30"
   },
   {
     "id": "DYr1ANSpZL9",
@@ -5547,9 +5189,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 25, 2026, 12:04 pm IST",
-    "saved_at_iso": "2026-05-25T12:04:00+05:30",
-    "category": "AI & Agents",
-    "title": "Effective Slash Commands to Save Claude AI Tokens"
+    "saved_at_iso": "2026-05-25T12:04:00+05:30"
   },
   {
     "id": "DXqYmrfjKyB",
@@ -5574,9 +5214,7 @@
       "url": "http://Vahro.in"
     },
     "saved_at": "May 25, 2026, 12:11 am IST",
-    "saved_at_iso": "2026-05-25T00:11:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Men Summer Fashion Linen Shirt Styling Guide"
+    "saved_at_iso": "2026-05-25T00:11:00+05:30"
   },
   {
     "id": "DYh_1vtR5Oq",
@@ -5597,9 +5235,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 20, 2026, 1:08 pm IST",
-    "saved_at_iso": "2026-05-20T13:08:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repositories for Programming and Security"
+    "saved_at_iso": "2026-05-20T13:08:00+05:30"
   },
   {
     "id": "DYhCBc0sZfC",
@@ -5620,9 +5256,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 20, 2026, 1:04 pm IST",
-    "saved_at_iso": "2026-05-20T13:04:00+05:30",
-    "category": "AI & Agents",
-    "title": "Common Artificial Intelligence Technical Interview Questions"
+    "saved_at_iso": "2026-05-20T13:04:00+05:30"
   },
   {
     "id": "DXrb_NnjKCF",
@@ -5637,9 +5271,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 18, 2026, 4:38 pm IST",
-    "saved_at_iso": "2026-05-18T16:38:00+05:30",
-    "category": "AI & Agents",
-    "title": "Using Claude Prompts to Optimize Professional Profiles"
+    "saved_at_iso": "2026-05-18T16:38:00+05:30"
   },
   {
     "id": "DYcmYF0je7e",
@@ -5660,9 +5292,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 18, 2026, 10:39 am IST",
-    "saved_at_iso": "2026-05-18T10:39:00+05:30",
-    "category": "Career & Internships",
-    "title": "Four Essential Action Steps to Secure Tech Internships"
+    "saved_at_iso": "2026-05-18T10:39:00+05:30"
   },
   {
     "id": "DYWIeprmgZQ",
@@ -5677,9 +5307,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 17, 2026, 3:45 pm IST",
-    "saved_at_iso": "2026-05-17T15:45:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Software Development and Learning Platforms"
+    "saved_at_iso": "2026-05-17T15:45:00+05:30"
   },
   {
     "id": "DYMSKxtM5oU",
@@ -5700,9 +5328,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 13, 2026, 4:46 pm IST",
-    "saved_at_iso": "2026-05-13T16:46:00+05:30",
-    "category": "Career & Internships",
-    "title": "Software Engineering Job Market and Tech Career Insights"
+    "saved_at_iso": "2026-05-13T16:46:00+05:30"
   },
   {
     "id": "DYIfcoTSqLN",
@@ -5717,9 +5343,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 11, 2026, 9:57 am IST",
-    "saved_at_iso": "2026-05-11T09:57:00+05:30",
-    "category": "AI & Agents",
-    "title": "Core Machine Learning Stack and Systems Thinking Principles"
+    "saved_at_iso": "2026-05-11T09:57:00+05:30"
   },
   {
     "id": "DXW9JLekj5d",
@@ -5744,9 +5368,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 11, 2026, 6:55 am IST",
-    "saved_at_iso": "2026-05-11T06:55:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Transitioning from DSA Practice to Scalable System Design"
+    "saved_at_iso": "2026-05-11T06:55:00+05:30"
   },
   {
     "id": "DX9gQhWRAed",
@@ -5767,9 +5389,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 07, 2026, 3:36 pm IST",
-    "saved_at_iso": "2026-05-07T15:36:00+05:30",
-    "category": "AI & Agents",
-    "title": "AI Engineering Roadmap and Curated Learning Resources"
+    "saved_at_iso": "2026-05-07T15:36:00+05:30"
   },
   {
     "id": "DX7HfPglA3M",
@@ -5790,9 +5410,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 05, 2026, 3:21 pm IST",
-    "saved_at_iso": "2026-05-05T15:21:00+05:30",
-    "category": "Career & Internships",
-    "title": "Challenging Technical Interview Questions from Big Tech"
+    "saved_at_iso": "2026-05-05T15:21:00+05:30"
   },
   {
     "id": "DXgE1E3itu7",
@@ -5813,9 +5431,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 03, 2026, 1:12 pm IST",
-    "saved_at_iso": "2026-05-03T13:12:00+05:30",
-    "category": "Career & Internships",
-    "title": "Prompt Engineering Strategies to Improve Your Resume"
+    "saved_at_iso": "2026-05-03T13:12:00+05:30"
   },
   {
     "id": "DXrNwgeDb74",
@@ -5830,9 +5446,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 03, 2026, 1:05 pm IST",
-    "saved_at_iso": "2026-05-03T13:05:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "High-Impact AI Projects for Your Software Resume"
+    "saved_at_iso": "2026-05-03T13:05:00+05:30"
   },
   {
     "id": "DXxPtYtI2r3",
@@ -5853,9 +5467,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 02, 2026, 5:30 pm IST",
-    "saved_at_iso": "2026-05-02T17:30:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Best Artificial Intelligence Tools for Academic Writing"
+    "saved_at_iso": "2026-05-02T17:30:00+05:30"
   },
   {
     "id": "DXikCIggAIT",
@@ -5870,9 +5482,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 02, 2026, 1:18 pm IST",
-    "saved_at_iso": "2026-05-02T13:18:00+05:30",
-    "category": "AI & Agents",
-    "title": "Advanced Artificial Intelligence Development Workflow"
+    "saved_at_iso": "2026-05-02T13:18:00+05:30"
   },
   {
     "id": "DVYWQs8kyWw",
@@ -5893,9 +5503,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 01, 2026, 2:44 pm IST",
-    "saved_at_iso": "2026-05-01T14:44:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Identifying Dynamic Programming Problems in Coding Interviews"
+    "saved_at_iso": "2026-05-01T14:44:00+05:30"
   },
   {
     "id": "DXuDi3jgqsS",
@@ -5910,9 +5518,7 @@
     },
     "brand_partner": null,
     "saved_at": "May 01, 2026, 12:49 pm IST",
-    "saved_at_iso": "2026-05-01T12:49:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Recommended Python Programming Tutorials for Beginners"
+    "saved_at_iso": "2026-05-01T12:49:00+05:30"
   },
   {
     "id": "DXuQYPCjaF-",
@@ -5937,9 +5543,7 @@
       "url": "https://cursor.com"
     },
     "saved_at": "Apr 30, 2026, 10:36 am IST",
-    "saved_at_iso": "2026-04-30T10:36:00+05:30",
-    "category": "AI & Agents",
-    "title": "Recreating Research Papers Using Cursor AI and Composer"
+    "saved_at_iso": "2026-04-30T10:36:00+05:30"
   },
   {
     "id": "DXnjIh4kdj8",
@@ -5954,9 +5558,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 27, 2026, 1:35 pm IST",
-    "saved_at_iso": "2026-04-27T13:35:00+05:30",
-    "category": "AI & Agents",
-    "title": "Production-Grade Machine Learning Projects for Resumes"
+    "saved_at_iso": "2026-04-27T13:35:00+05:30"
   },
   {
     "id": "DXg7PUuE-8b",
@@ -5977,9 +5579,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 26, 2026, 1:39 pm IST",
-    "saved_at_iso": "2026-04-26T13:39:00+05:30",
-    "category": "AI & Agents",
-    "title": "Optimizing Your Resume for ATS Using Claude AI Prompts"
+    "saved_at_iso": "2026-04-26T13:39:00+05:30"
   },
   {
     "id": "DXazKo4I374",
@@ -5994,9 +5594,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 26, 2026, 12:29 pm IST",
-    "saved_at_iso": "2026-04-26T12:29:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Atmospheric Narrative and Creative Writing Short Story"
+    "saved_at_iso": "2026-04-26T12:29:00+05:30"
   },
   {
     "id": "DXjPubak3IE",
@@ -6017,9 +5615,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026, 8:40 pm IST",
-    "saved_at_iso": "2026-04-25T20:40:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Top Twenty Essential LeetCode Problems for Google Interviews"
+    "saved_at_iso": "2026-04-25T20:40:00+05:30"
   },
   {
     "id": "DXevgLFGWH0",
@@ -6034,9 +5630,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026, 12:47 pm IST",
-    "saved_at_iso": "2026-04-25T12:47:00+05:30",
-    "category": "AI & Agents",
-    "title": "Differences Between Machine Learning and AI Engineering Roles"
+    "saved_at_iso": "2026-04-25T12:47:00+05:30"
   },
   {
     "id": "DXEl4M-EuKv",
@@ -6063,9 +5657,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 25, 2026, 12:46 pm IST",
-    "saved_at_iso": "2026-04-25T12:46:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Building Standout AI Projects to Impress Recruiters"
+    "saved_at_iso": "2026-04-25T12:46:00+05:30"
   },
   {
     "id": "DXeksqdiEXa",
@@ -6080,9 +5672,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 24, 2026, 8:09 pm IST",
-    "saved_at_iso": "2026-04-24T20:09:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Useful Web Development and Programming Resource Sites"
+    "saved_at_iso": "2026-04-24T20:09:00+05:30"
   },
   {
     "id": "DXeOlb8kRqc",
@@ -6101,9 +5691,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 10:42 pm IST",
-    "saved_at_iso": "2026-04-23T22:42:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Software Engineering Portfolio Projects That Get Hired"
+    "saved_at_iso": "2026-04-23T22:42:00+05:30"
   },
   {
     "id": "DSrn8Nkiby3",
@@ -6118,9 +5706,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 3:54 pm IST",
-    "saved_at_iso": "2026-04-23T15:54:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Google Code Wiki for Automated Repository Documentation"
+    "saved_at_iso": "2026-04-23T15:54:00+05:30"
   },
   {
     "id": "DWxnceLltoF",
@@ -6139,9 +5725,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 3:51 pm IST",
-    "saved_at_iso": "2026-04-23T15:51:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Long-Term Machine Learning Learning Guide and Roadmap"
+    "saved_at_iso": "2026-04-23T15:51:00+05:30"
   },
   {
     "id": "DXVGafeDVKT",
@@ -6161,9 +5745,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 3:25 pm IST",
-    "saved_at_iso": "2026-04-23T15:25:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Critical Machine Learning Concepts for Production Systems"
+    "saved_at_iso": "2026-04-23T15:25:00+05:30"
   },
   {
     "id": "DXVxq0QGCR-",
@@ -6178,9 +5760,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 3:24 pm IST",
-    "saved_at_iso": "2026-04-23T15:24:00+05:30",
-    "category": "AI & Agents",
-    "title": "Using Claude AI to Build a LinkedIn Growth Strategy"
+    "saved_at_iso": "2026-04-23T15:24:00+05:30"
   },
   {
     "id": "DXYakqSDWX7",
@@ -6199,9 +5779,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 23, 2026, 3:15 pm IST",
-    "saved_at_iso": "2026-04-23T15:15:00+05:30",
-    "category": "Career & Internships",
-    "title": "Insider Strategy for Landing a Big Tech Internship"
+    "saved_at_iso": "2026-04-23T15:15:00+05:30"
   },
   {
     "id": "DXT6xZJkwfD",
@@ -6216,9 +5794,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 20, 2026, 2:42 pm IST",
-    "saved_at_iso": "2026-04-20T14:42:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Balancing Multiple Personal Interests and Hobbies"
+    "saved_at_iso": "2026-04-20T14:42:00+05:30"
   },
   {
     "id": "DXMiEV0CIkn",
@@ -6233,9 +5809,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 19, 2026, 10:21 am IST",
-    "saved_at_iso": "2026-04-19T10:21:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Web Resources and Sites for Developers"
+    "saved_at_iso": "2026-04-19T10:21:00+05:30"
   },
   {
     "id": "DXQ1hB_iK-s",
@@ -6254,9 +5828,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 19, 2026, 9:23 am IST",
-    "saved_at_iso": "2026-04-19T09:23:00+05:30",
-    "category": "AI & Agents",
-    "title": "Claude AI Prompts for Business and Conversion Optimization"
+    "saved_at_iso": "2026-04-19T09:23:00+05:30"
   },
   {
     "id": "DXOQVQjju_L",
@@ -6276,9 +5848,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 17, 2026, 12:34 pm IST",
-    "saved_at_iso": "2026-04-17T12:34:00+05:30",
-    "category": "Career & Internships",
-    "title": "Template for Securing Computer Science Internships"
+    "saved_at_iso": "2026-04-17T12:34:00+05:30"
   },
   {
     "id": "DXCu_AjjZ1R",
@@ -6293,9 +5863,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 16, 2026, 12:51 am IST",
-    "saved_at_iso": "2026-04-16T00:51:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing CV Skills Section for ATS Keyword Scanning"
+    "saved_at_iso": "2026-04-16T00:51:00+05:30"
   },
   {
     "id": "DWtdp9uDCCR",
@@ -6310,9 +5878,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 10, 2026, 3:04 pm IST",
-    "saved_at_iso": "2026-04-10T15:04:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Resume-Level Portfolio Projects to Prove Developer Skills"
+    "saved_at_iso": "2026-04-10T15:04:00+05:30"
   },
   {
     "id": "DWjPlMojpuJ",
@@ -6335,9 +5901,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 09, 2026, 8:57 pm IST",
-    "saved_at_iso": "2026-04-09T20:57:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Laying the Financial Foundations for Wealth in 90 Days"
+    "saved_at_iso": "2026-04-09T20:57:00+05:30"
   },
   {
     "id": "DW1OHn6k2Cq",
@@ -6358,9 +5922,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 09, 2026, 12:20 am IST",
-    "saved_at_iso": "2026-04-09T00:20:00+05:30",
-    "category": "AI & Agents",
-    "title": "GitHub Repo for Codebase Sequential Graph AI Agents"
+    "saved_at_iso": "2026-04-09T00:20:00+05:30"
   },
   {
     "id": "DW29yd3Db25",
@@ -6381,9 +5943,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 08, 2026, 7:17 pm IST",
-    "saved_at_iso": "2026-04-08T19:17:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Daily Learning and Coding Practice for Data Structures"
+    "saved_at_iso": "2026-04-08T19:17:00+05:30"
   },
   {
     "id": "DWy3tpGDEui",
@@ -6404,9 +5964,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 08, 2026, 4:05 pm IST",
-    "saved_at_iso": "2026-04-08T16:05:00+05:30",
-    "category": "Career & Internships",
-    "title": "Hidden Job Platforms for Finding Remote Developer Roles"
+    "saved_at_iso": "2026-04-08T16:05:00+05:30"
   },
   {
     "id": "DWSoHx0CWrg",
@@ -6421,9 +5979,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 06, 2026, 11:50 am IST",
-    "saved_at_iso": "2026-04-06T11:50:00+05:30",
-    "category": "AI & Agents",
-    "title": "Creative and Experimental Interactive AI Web Tools"
+    "saved_at_iso": "2026-04-06T11:50:00+05:30"
   },
   {
     "id": "DTSqMuRCOp6",
@@ -6438,9 +5994,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 05, 2026, 9:32 pm IST",
-    "saved_at_iso": "2026-04-05T21:32:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Framer UI Assets and Component Library for Layouts"
+    "saved_at_iso": "2026-04-05T21:32:00+05:30"
   },
   {
     "id": "DVAl1aaDVTn",
@@ -6461,9 +6015,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026, 5:41 pm IST",
-    "saved_at_iso": "2026-04-04T17:41:00+05:30",
-    "category": "Career & Internships",
-    "title": "Resources and Links for Big Tech Interview Preparation"
+    "saved_at_iso": "2026-04-04T17:41:00+05:30"
   },
   {
     "id": "DWrMiKRE9lG",
@@ -6478,9 +6030,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026, 5:36 pm IST",
-    "saved_at_iso": "2026-04-04T17:36:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Fundamental Concepts of Software Architecture and Design"
+    "saved_at_iso": "2026-04-04T17:36:00+05:30"
   },
   {
     "id": "DWg2Mv0DJGV",
@@ -6501,9 +6051,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 04, 2026, 2:45 pm IST",
-    "saved_at_iso": "2026-04-04T14:45:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Essential Technical Books for Deep Software Engineering"
+    "saved_at_iso": "2026-04-04T14:45:00+05:30"
   },
   {
     "id": "DWgjdZdEzST",
@@ -6523,9 +6071,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 03, 2026, 10:23 pm IST",
-    "saved_at_iso": "2026-04-03T22:23:00+05:30",
-    "category": "Career & Internships",
-    "title": "Top Company Internships and Opportunities for Students"
+    "saved_at_iso": "2026-04-03T22:23:00+05:30"
   },
   {
     "id": "DWjqf5wjc8q",
@@ -6540,9 +6086,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 03, 2026, 10:02 pm IST",
-    "saved_at_iso": "2026-04-03T22:02:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Weekend Software Engineering Projects to Build Portfolio"
+    "saved_at_iso": "2026-04-03T22:02:00+05:30"
   },
   {
     "id": "DT_jDlNEcNA",
@@ -6557,9 +6101,7 @@
     },
     "brand_partner": null,
     "saved_at": "Apr 03, 2026, 12:39 am IST",
-    "saved_at_iso": "2026-04-03T00:39:00+05:30",
-    "category": "Career & Internships",
-    "title": "LinkedIn Profile Optimization and Job Search Strategy"
+    "saved_at_iso": "2026-04-03T00:39:00+05:30"
   },
   {
     "id": "DWbcmlliM2e",
@@ -6580,9 +6122,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 30, 2026, 12:43 am IST",
-    "saved_at_iso": "2026-03-30T00:43:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Effective Learning Habits: Reading Code and Debugging"
+    "saved_at_iso": "2026-03-30T00:43:00+05:30"
   },
   {
     "id": "DWaAJaCgb08",
@@ -6603,9 +6143,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 30, 2026, 12:24 am IST",
-    "saved_at_iso": "2026-03-30T00:24:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Combining Machine Learning and Quantitative Finance Projects"
+    "saved_at_iso": "2026-03-30T00:24:00+05:30"
   },
   {
     "id": "DWUCwmtEX5x",
@@ -6626,9 +6164,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 26, 2026, 11:56 am IST",
-    "saved_at_iso": "2026-03-26T11:56:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Resources for Quantitative Development and Python"
+    "saved_at_iso": "2026-03-26T11:56:00+05:30"
   },
   {
     "id": "DVYacGjk9G3",
@@ -6643,9 +6179,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 25, 2026, 3:20 pm IST",
-    "saved_at_iso": "2026-03-25T15:20:00+05:30",
-    "category": "Career & Internships",
-    "title": "Finding Mentorship and Career Guidance Resources"
+    "saved_at_iso": "2026-03-25T15:20:00+05:30"
   },
   {
     "id": "DWQI40jziU8",
@@ -6666,9 +6200,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 25, 2026, 11:25 am IST",
-    "saved_at_iso": "2026-03-25T11:25:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Machine Learning Project Progression and Practical Roadmap"
+    "saved_at_iso": "2026-03-25T11:25:00+05:30"
   },
   {
     "id": "DWQRtxzFv7q",
@@ -6683,9 +6215,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 24, 2026, 9:04 pm IST",
-    "saved_at_iso": "2026-03-24T21:04:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Core Computer Science and System Design Fundamentals"
+    "saved_at_iso": "2026-03-24T21:04:00+05:30"
   },
   {
     "id": "DWGwA8uAfqZ",
@@ -6706,9 +6236,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 22, 2026, 11:54 pm IST",
-    "saved_at_iso": "2026-03-22T23:54:00+05:30",
-    "category": "Career & Internships",
-    "title": "Upcoming Tech Internships at Major Companies in 2026"
+    "saved_at_iso": "2026-03-22T23:54:00+05:30"
   },
   {
     "id": "DWF_IEIk8i7",
@@ -6723,9 +6251,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 22, 2026, 6:32 pm IST",
-    "saved_at_iso": "2026-03-22T18:32:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Sixty Curated Data Structures and Algorithms Project Ideas"
+    "saved_at_iso": "2026-03-22T18:32:00+05:30"
   },
   {
     "id": "DVoCoeWCOyp",
@@ -6746,9 +6272,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 20, 2026, 12:56 am IST",
-    "saved_at_iso": "2026-03-20T00:56:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Nutritional Imbalances and Their Visual Effects on Skin"
+    "saved_at_iso": "2026-03-20T00:56:00+05:30"
   },
   {
     "id": "DV1TrLrE2uv",
@@ -6763,9 +6287,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 20, 2026, 12:54 am IST",
-    "saved_at_iso": "2026-03-20T00:54:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Building and Scaling a Global Digital Resource Community"
+    "saved_at_iso": "2026-03-20T00:54:00+05:30"
   },
   {
     "id": "DV_Rs-hkgx_",
@@ -6786,9 +6308,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 19, 2026, 12:08 pm IST",
-    "saved_at_iso": "2026-03-19T12:08:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Essential Frontend Libraries for Modern Web Development"
+    "saved_at_iso": "2026-03-19T12:08:00+05:30"
   },
   {
     "id": "DV4q0-sFdKw",
@@ -6809,9 +6329,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 15, 2026, 2:33 pm IST",
-    "saved_at_iso": "2026-03-15T14:33:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repositories for Software Engineers"
+    "saved_at_iso": "2026-03-15T14:33:00+05:30"
   },
   {
     "id": "DVEH4j0jKqJ",
@@ -6832,9 +6350,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 15, 2026, 12:34 am IST",
-    "saved_at_iso": "2026-03-15T00:34:00+05:30",
-    "category": "Career & Internships",
-    "title": "Common Patterns and Strategies in Developer Technical Interviews"
+    "saved_at_iso": "2026-03-15T00:34:00+05:30"
   },
   {
     "id": "DV1D5HnEQiG",
@@ -6854,9 +6370,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 14, 2026, 3:15 pm IST",
-    "saved_at_iso": "2026-03-14T15:15:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comprehensive Guide to Becoming an AI Engineer"
+    "saved_at_iso": "2026-03-14T15:15:00+05:30"
   },
   {
     "id": "DVvsGS7jEvz",
@@ -6871,9 +6385,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 14, 2026, 1:30 am IST",
-    "saved_at_iso": "2026-03-14T01:30:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing LinkedIn Profiles for the New AI Algorithm"
+    "saved_at_iso": "2026-03-14T01:30:00+05:30"
   },
   {
     "id": "DVvoQRJE7DC",
@@ -6894,9 +6406,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 14, 2026, 12:33 am IST",
-    "saved_at_iso": "2026-03-14T00:33:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "One Hundred Essential LeetCode Questions for Placement Prep"
+    "saved_at_iso": "2026-03-14T00:33:00+05:30"
   },
   {
     "id": "DVqX7CREgdk",
@@ -6920,9 +6430,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 12, 2026, 12:29 am IST",
-    "saved_at_iso": "2026-03-12T00:29:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Impactful Full-Stack Project Ideas to Stand Out to Recruiters"
+    "saved_at_iso": "2026-03-12T00:29:00+05:30"
   },
   {
     "id": "DVrKrGdFEGM",
@@ -6937,9 +6445,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 10, 2026, 3:52 pm IST",
-    "saved_at_iso": "2026-03-10T15:52:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Personal Photography and Lifestyle Moments"
+    "saved_at_iso": "2026-03-10T15:52:00+05:30"
   },
   {
     "id": "DVLyMU0kl1v",
@@ -6959,9 +6465,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 10, 2026, 10:52 am IST",
-    "saved_at_iso": "2026-03-10T10:52:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Exploring Applied Machine Learning and AI Projects"
+    "saved_at_iso": "2026-03-10T10:52:00+05:30"
   },
   {
     "id": "DVoHOTQD4-B",
@@ -6982,9 +6486,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 09, 2026, 7:55 pm IST",
-    "saved_at_iso": "2026-03-09T19:55:00+05:30",
-    "category": "Career & Internships",
-    "title": "Top Industry Internships and Opportunities Available in 2026"
+    "saved_at_iso": "2026-03-09T19:55:00+05:30"
   },
   {
     "id": "DVlhazgGP5X",
@@ -6999,9 +6501,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 9:01 pm IST",
-    "saved_at_iso": "2026-03-08T21:01:00+05:30",
-    "category": "Career & Internships",
-    "title": "Actionable Resume Adjustments to Secure Interview Calls"
+    "saved_at_iso": "2026-03-08T21:01:00+05:30"
   },
   {
     "id": "DU-f-QyiL4Q",
@@ -7021,9 +6521,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 2:49 pm IST",
-    "saved_at_iso": "2026-03-08T14:49:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Understanding Relational Databases Beyond Basic Queries"
+    "saved_at_iso": "2026-03-08T14:49:00+05:30"
   },
   {
     "id": "DVc0gkzEWXc",
@@ -7044,9 +6542,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 2:47 pm IST",
-    "saved_at_iso": "2026-03-08T14:47:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Advanced Git Commands for Efficient Code Debugging"
+    "saved_at_iso": "2026-03-08T14:47:00+05:30"
   },
   {
     "id": "DVldBjsE17R",
@@ -7061,9 +6557,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 2:47 pm IST",
-    "saved_at_iso": "2026-03-08T14:47:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Repository Resources for Advanced Developers"
+    "saved_at_iso": "2026-03-08T14:47:00+05:30"
   },
   {
     "id": "DVmwI_sEc-z",
@@ -7084,9 +6578,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 2:46 pm IST",
-    "saved_at_iso": "2026-03-08T14:46:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Essential Version Control Workflows and Git Repositories"
+    "saved_at_iso": "2026-03-08T14:46:00+05:30"
   },
   {
     "id": "DVixfzYgdgQ",
@@ -7107,9 +6599,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 08, 2026, 2:43 pm IST",
-    "saved_at_iso": "2026-03-08T14:43:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Core System Design Concepts Expected of Senior Engineers"
+    "saved_at_iso": "2026-03-08T14:43:00+05:30"
   },
   {
     "id": "DVc9KU5ANsw",
@@ -7130,9 +6620,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 07, 2026, 3:38 pm IST",
-    "saved_at_iso": "2026-03-07T15:38:00+05:30",
-    "category": "Career & Internships",
-    "title": "Systematic Approach to Landing International Tech Roles"
+    "saved_at_iso": "2026-03-07T15:38:00+05:30"
   },
   {
     "id": "DVgkuY6jpJB",
@@ -7147,9 +6635,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 07, 2026, 3:31 pm IST",
-    "saved_at_iso": "2026-03-07T15:31:00+05:30",
-    "category": "AI & Agents",
-    "title": "Roadmap and Resources for Becoming an AI Engineer"
+    "saved_at_iso": "2026-03-07T15:31:00+05:30"
   },
   {
     "id": "DVgfQAWE_J1",
@@ -7170,9 +6656,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 06, 2026, 10:23 pm IST",
-    "saved_at_iso": "2026-03-06T22:23:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Evaluation of Modern Machine Learning and AI Frameworks"
+    "saved_at_iso": "2026-03-06T22:23:00+05:30"
   },
   {
     "id": "DVd3hTNjP4G",
@@ -7193,9 +6677,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 06, 2026, 10:16 am IST",
-    "saved_at_iso": "2026-03-06T10:16:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Backend Projects to Master Distributed Systems"
+    "saved_at_iso": "2026-03-06T10:16:00+05:30"
   },
   {
     "id": "DUuzVq6Dlzm",
@@ -7216,9 +6698,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 06, 2026, 2:21 am IST",
-    "saved_at_iso": "2026-03-06T02:21:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Computer Science and LeetCode Problem Resources"
+    "saved_at_iso": "2026-03-06T02:21:00+05:30"
   },
   {
     "id": "DVFJ5wojYyn",
@@ -7239,9 +6719,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 06, 2026, 2:17 am IST",
-    "saved_at_iso": "2026-03-06T02:17:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "System Design and Coding Interview Resources"
+    "saved_at_iso": "2026-03-06T02:17:00+05:30"
   },
   {
     "id": "DVa6mbzjymg",
@@ -7262,9 +6740,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 05, 2026, 5:53 pm IST",
-    "saved_at_iso": "2026-03-05T17:53:00+05:30",
-    "category": "Career & Internships",
-    "title": "Coding Interview Patterns and Placement Prep"
+    "saved_at_iso": "2026-03-05T17:53:00+05:30"
   },
   {
     "id": "DUpB3UPDHYd",
@@ -7285,9 +6761,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 03, 2026, 2:45 pm IST",
-    "saved_at_iso": "2026-03-03T14:45:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Essential Backend and System Design Interview Concepts"
+    "saved_at_iso": "2026-03-03T14:45:00+05:30"
   },
   {
     "id": "DVYbtP2D-9G",
@@ -7307,9 +6781,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 03, 2026, 12:28 am IST",
-    "saved_at_iso": "2026-03-03T00:28:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Essential Git and GitHub Command Reference Cheat Sheet"
+    "saved_at_iso": "2026-03-03T00:28:00+05:30"
   },
   {
     "id": "DVWEw2pAZQR",
@@ -7330,9 +6802,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 02, 2026, 3:17 pm IST",
-    "saved_at_iso": "2026-03-02T15:17:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Quick 5-Minute DSA and Algorithm Explanations"
+    "saved_at_iso": "2026-03-02T15:17:00+05:30"
   },
   {
     "id": "DVP4PKuDGPQ",
@@ -7352,9 +6822,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 02, 2026, 12:35 am IST",
-    "saved_at_iso": "2026-03-02T00:35:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Data Structures and Algorithms Interview Practice PDF"
+    "saved_at_iso": "2026-03-02T00:35:00+05:30"
   },
   {
     "id": "DVUwGtujPkE",
@@ -7374,9 +6842,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 01, 2026, 5:39 pm IST",
-    "saved_at_iso": "2026-03-01T17:39:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Mathematics and Machine Learning Study Resources"
+    "saved_at_iso": "2026-03-01T17:39:00+05:30"
   },
   {
     "id": "DVTSyJjic0h",
@@ -7391,9 +6857,7 @@
     },
     "brand_partner": null,
     "saved_at": "Mar 01, 2026, 5:18 pm IST",
-    "saved_at_iso": "2026-03-01T17:18:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Personal Instagram Story Update"
+    "saved_at_iso": "2026-03-01T17:18:00+05:30"
   },
   {
     "id": "DVDRkwiEpHb",
@@ -7408,9 +6872,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 28, 2026, 11:14 pm IST",
-    "saved_at_iso": "2026-02-28T23:14:00+05:30",
-    "category": "AI & Agents",
-    "title": "Shifting from Syntax to AI-Assisted System Design"
+    "saved_at_iso": "2026-02-28T23:14:00+05:30"
   },
   {
     "id": "DVAcXOpEqnv",
@@ -7425,9 +6887,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 26, 2026, 12:34 am IST",
-    "saved_at_iso": "2026-02-26T00:34:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Scientific Machine Learning and Physics-Informed Neural Networks"
+    "saved_at_iso": "2026-02-26T00:34:00+05:30"
   },
   {
     "id": "DVJIe-DDHxi",
@@ -7442,9 +6902,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 25, 2026, 1:35 pm IST",
-    "saved_at_iso": "2026-02-25T13:35:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Top Platforms for Developers to Visit"
+    "saved_at_iso": "2026-02-25T13:35:00+05:30"
   },
   {
     "id": "DVDO6Q_krx7",
@@ -7465,9 +6923,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026, 7:27 pm IST",
-    "saved_at_iso": "2026-02-23T19:27:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Comprehensive Guide to Modern Data Storage Types"
+    "saved_at_iso": "2026-02-23T19:27:00+05:30"
   },
   {
     "id": "DVC5fEyjZx4",
@@ -7482,9 +6938,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026, 6:06 pm IST",
-    "saved_at_iso": "2026-02-23T18:06:00+05:30",
-    "category": "Career & Internships",
-    "title": "Software Engineering Interview and DSA Study Guide"
+    "saved_at_iso": "2026-02-23T18:06:00+05:30"
   },
   {
     "id": "DVDFI8pDVKg",
@@ -7499,9 +6953,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026, 5:59 pm IST",
-    "saved_at_iso": "2026-02-23T17:59:00+05:30",
-    "category": "AI & Agents",
-    "title": "Useful GitHub Repositories for Learning Artificial Intelligence"
+    "saved_at_iso": "2026-02-23T17:59:00+05:30"
   },
   {
     "id": "DT-x2eeiMJt",
@@ -7516,9 +6968,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 23, 2026, 5:58 pm IST",
-    "saved_at_iso": "2026-02-23T17:58:00+05:30",
-    "category": "AI & Agents",
-    "title": "Production-Ready AI System Open-Source Repositories"
+    "saved_at_iso": "2026-02-23T17:58:00+05:30"
   },
   {
     "id": "DU-0CCyES5O",
@@ -7539,9 +6989,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 22, 2026, 4:13 pm IST",
-    "saved_at_iso": "2026-02-22T16:13:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Top Technologies Every Programmer Must Know for Scalable Apps"
+    "saved_at_iso": "2026-02-22T16:13:00+05:30"
   },
   {
     "id": "DU8c_Ssk489",
@@ -7562,9 +7010,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 21, 2026, 8:30 pm IST",
-    "saved_at_iso": "2026-02-21T20:30:00+05:30",
-    "category": "Python & Data Science",
-    "title": "NumPy Essentials for Data Science and Machine Learning"
+    "saved_at_iso": "2026-02-21T20:30:00+05:30"
   },
   {
     "id": "DU0WuhBkogJ",
@@ -7589,9 +7035,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 20, 2026, 8:27 am IST",
-    "saved_at_iso": "2026-02-20T08:27:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Building Real Infrastructure Projects Using DSA Concepts"
+    "saved_at_iso": "2026-02-20T08:27:00+05:30"
   },
   {
     "id": "DUvGKxOkXFF",
@@ -7612,9 +7056,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 19, 2026, 11:52 pm IST",
-    "saved_at_iso": "2026-02-19T23:52:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing Your LinkedIn Profile for Job Hunting"
+    "saved_at_iso": "2026-02-19T23:52:00+05:30"
   },
   {
     "id": "DU4dwYZjBLk",
@@ -7635,9 +7077,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 19, 2026, 11:52 pm IST",
-    "saved_at_iso": "2026-02-19T23:52:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Advanced GitHub URL Tricks and Browser Shortcuts"
+    "saved_at_iso": "2026-02-19T23:52:00+05:30"
   },
   {
     "id": "DU11SiYEqms",
@@ -7652,9 +7092,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 18, 2026, 5:48 pm IST",
-    "saved_at_iso": "2026-02-18T17:48:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Translating Mathematical Foundations into Machine Learning Code"
+    "saved_at_iso": "2026-02-18T17:48:00+05:30"
   },
   {
     "id": "DUv09DJEkhh",
@@ -7674,9 +7112,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 16, 2026, 6:24 pm IST",
-    "saved_at_iso": "2026-02-16T18:24:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Advanced Machine Learning Models to Build from Scratch"
+    "saved_at_iso": "2026-02-16T18:24:00+05:30"
   },
   {
     "id": "DUpr54aD4r1",
@@ -7697,9 +7133,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 16, 2026, 9:58 am IST",
-    "saved_at_iso": "2026-02-16T09:58:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Essential Coding Interview Questions and Algorithm Patterns"
+    "saved_at_iso": "2026-02-16T09:58:00+05:30"
   },
   {
     "id": "DUgGt7TEj4V",
@@ -7720,9 +7154,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 15, 2026, 4:58 pm IST",
-    "saved_at_iso": "2026-02-15T16:58:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Casual viral reel with personal lifestyle content"
+    "saved_at_iso": "2026-02-15T16:58:00+05:30"
   },
   {
     "id": "DUTSJ6UFHEn",
@@ -7742,9 +7174,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 13, 2026, 10:03 pm IST",
-    "saved_at_iso": "2026-02-13T22:03:00+05:30",
-    "category": "Career & Internships",
-    "title": "Optimizing Your LinkedIn Profile for Tech Recruiters"
+    "saved_at_iso": "2026-02-13T22:03:00+05:30"
   },
   {
     "id": "DUibnZOCRuS",
@@ -7759,9 +7189,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 11, 2026, 6:05 pm IST",
-    "saved_at_iso": "2026-02-11T18:05:00+05:30",
-    "category": "Health, Lifestyle & Interests",
-    "title": "Visual aesthetic reel and personal content"
+    "saved_at_iso": "2026-02-11T18:05:00+05:30"
   },
   {
     "id": "DUawtE2iLZy",
@@ -7782,9 +7210,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 08, 2026, 11:51 am IST",
-    "saved_at_iso": "2026-02-08T11:51:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Essential Chrome Extensions for Faster Web Debugging"
+    "saved_at_iso": "2026-02-08T11:51:00+05:30"
   },
   {
     "id": "DUVb447Et00",
@@ -7799,9 +7225,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 05, 2026, 5:15 pm IST",
-    "saved_at_iso": "2026-02-05T17:15:00+05:30",
-    "category": "AI & Agents",
-    "title": "Why System Design is Crucial for Building Real AI"
+    "saved_at_iso": "2026-02-05T17:15:00+05:30"
   },
   {
     "id": "DUQo-wekeyM",
@@ -7816,9 +7240,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 03, 2026, 5:09 pm IST",
-    "saved_at_iso": "2026-02-03T17:09:00+05:30",
-    "category": "AI & Agents",
-    "title": "Core Machine Learning Stack and Systems Thinking"
+    "saved_at_iso": "2026-02-03T17:09:00+05:30"
   },
   {
     "id": "DULnmmeE-xc",
@@ -7839,9 +7261,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 02, 2026, 12:25 am IST",
-    "saved_at_iso": "2026-02-02T00:25:00+05:30",
-    "category": "DevOps & Cloud",
-    "title": "Useful GitHub Tips and Developer Tricks"
+    "saved_at_iso": "2026-02-02T00:25:00+05:30"
   },
   {
     "id": "DUGi3rUjLdA",
@@ -7862,9 +7282,7 @@
     },
     "brand_partner": null,
     "saved_at": "Feb 01, 2026, 12:22 am IST",
-    "saved_at_iso": "2026-02-01T00:22:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Underrated GitHub Repositories for Mastering DSA"
+    "saved_at_iso": "2026-02-01T00:22:00+05:30"
   },
   {
     "id": "DT23fQoCEO1",
@@ -7882,9 +7300,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 28, 2026, 12:04 pm IST",
-    "saved_at_iso": "2026-01-28T12:04:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Developer Websites to Learn and Build Better"
+    "saved_at_iso": "2026-01-28T12:04:00+05:30"
   },
   {
     "id": "DT3kFswEhj5",
@@ -7899,9 +7315,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 27, 2026, 4:15 pm IST",
-    "saved_at_iso": "2026-01-27T16:15:00+05:30",
-    "category": "Career & Internships",
-    "title": "Software Engineering Academic and Career Resources"
+    "saved_at_iso": "2026-01-27T16:15:00+05:30"
   },
   {
     "id": "DT0JlHfjSJs",
@@ -7922,9 +7336,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 26, 2026, 5:30 pm IST",
-    "saved_at_iso": "2026-01-26T17:30:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Structured 18-Month AI and Machine Learning Roadmap"
+    "saved_at_iso": "2026-01-26T17:30:00+05:30"
   },
   {
     "id": "DT0rYongRWQ",
@@ -7939,9 +7351,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 25, 2026, 9:51 pm IST",
-    "saved_at_iso": "2026-01-25T21:51:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Python Programming Snippet and Code Guide"
+    "saved_at_iso": "2026-01-25T21:51:00+05:30"
   },
   {
     "id": "DT5YnCrkk6p",
@@ -7962,9 +7372,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 24, 2026, 10:31 pm IST",
-    "saved_at_iso": "2026-01-24T22:31:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Common Machine Learning Mistakes to Avoid"
+    "saved_at_iso": "2026-01-24T22:31:00+05:30"
   },
   {
     "id": "DTl7ifOiF6M",
@@ -7985,9 +7393,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 24, 2026, 4:00 pm IST",
-    "saved_at_iso": "2026-01-24T16:00:00+05:30",
-    "category": "Productivity & Learning",
-    "title": "Ultimate Research Toolkit for Academic Papers"
+    "saved_at_iso": "2026-01-24T16:00:00+05:30"
   },
   {
     "id": "DT1YNYyj87-",
@@ -8008,9 +7414,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 23, 2026, 8:37 pm IST",
-    "saved_at_iso": "2026-01-23T20:37:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Secret Method to Identify LeetCode Algorithms"
+    "saved_at_iso": "2026-01-23T20:37:00+05:30"
   },
   {
     "id": "DThsqohkTI7",
@@ -8030,9 +7434,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 22, 2026, 12:59 pm IST",
-    "saved_at_iso": "2026-01-22T12:59:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Demystifying Essential Machine Learning Concepts"
+    "saved_at_iso": "2026-01-22T12:59:00+05:30"
   },
   {
     "id": "DTh9HfbE86P",
@@ -8047,9 +7449,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 17, 2026, 1:43 am IST",
-    "saved_at_iso": "2026-01-17T01:43:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Backend Development Learning Resources"
+    "saved_at_iso": "2026-01-17T01:43:00+05:30"
   },
   {
     "id": "DSH0fizjTkp",
@@ -8068,9 +7468,7 @@
     },
     "brand_partner": null,
     "saved_at": "Jan 01, 2026, 2:39 pm IST",
-    "saved_at_iso": "2026-01-01T14:39:00+05:30",
-    "category": "AI & Agents",
-    "title": "Top 10 Machine Learning Algorithms for 2025"
+    "saved_at_iso": "2026-01-01T14:39:00+05:30"
   },
   {
     "id": "DSpc8aBkgXT",
@@ -8089,9 +7487,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 25, 2025, 10:52 am IST",
-    "saved_at_iso": "2025-12-25T10:52:00+05:30",
-    "category": "AI & Agents",
-    "title": "Recommended YouTube Channels for AI Engineers"
+    "saved_at_iso": "2025-12-25T10:52:00+05:30"
   },
   {
     "id": "DSciwoyk1AQ",
@@ -8106,9 +7502,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 25, 2025, 12:52 am IST",
-    "saved_at_iso": "2025-12-25T00:52:00+05:30",
-    "category": "AI & Agents",
-    "title": "High-Income AI Skills Beyond Prompt Engineering"
+    "saved_at_iso": "2025-12-25T00:52:00+05:30"
   },
   {
     "id": "DSRUdR_Ek79",
@@ -8123,9 +7517,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 24, 2025, 5:50 pm IST",
-    "saved_at_iso": "2025-12-24T17:50:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Python and Data Science Learning Notes"
+    "saved_at_iso": "2025-12-24T17:50:00+05:30"
   },
   {
     "id": "DSawaHGDHSE",
@@ -8140,9 +7532,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 20, 2025, 2:20 am IST",
-    "saved_at_iso": "2025-12-20T02:20:00+05:30",
-    "category": "Career & Internships",
-    "title": "Comprehensive Guide to Studying Software Engineering"
+    "saved_at_iso": "2025-12-20T02:20:00+05:30"
   },
   {
     "id": "DR2BO16EuVL",
@@ -8172,9 +7562,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 17, 2025, 8:16 pm IST",
-    "saved_at_iso": "2025-12-17T20:16:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Alternative Datasets for Data Science Portfolios"
+    "saved_at_iso": "2025-12-17T20:16:00+05:30"
   },
   {
     "id": "DSMT3qbj5Mv",
@@ -8195,9 +7583,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 13, 2025, 9:47 pm IST",
-    "saved_at_iso": "2025-12-13T21:47:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Essential Algorithms for Coding Interviews"
+    "saved_at_iso": "2025-12-13T21:47:00+05:30"
   },
   {
     "id": "DMB0MDuBEVF",
@@ -8243,9 +7629,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 12, 2025, 6:48 pm IST",
-    "saved_at_iso": "2025-12-12T18:48:00+05:30",
-    "category": "Career & Internships",
-    "title": "Important Engineering Student Placements Advice"
+    "saved_at_iso": "2025-12-12T18:48:00+05:30"
   },
   {
     "id": "DRYaUZEAb3n",
@@ -8272,9 +7656,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 11, 2025, 10:10 pm IST",
-    "saved_at_iso": "2025-12-11T22:10:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Curated Free Machine Learning Projects with GitHub Repos"
+    "saved_at_iso": "2025-12-11T22:10:00+05:30"
   },
   {
     "id": "DSCxbJYCEtB",
@@ -8295,9 +7677,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 10, 2025, 12:23 pm IST",
-    "saved_at_iso": "2025-12-10T12:23:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Quick Guide to Activation Functions for ML Engineers"
+    "saved_at_iso": "2025-12-10T12:23:00+05:30"
   },
   {
     "id": "DR4IEXMkfBF",
@@ -8312,9 +7692,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 10, 2025, 12:09 pm IST",
-    "saved_at_iso": "2025-12-10T12:09:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Free Inspiration and Design Sites for Creators"
+    "saved_at_iso": "2025-12-10T12:09:00+05:30"
   },
   {
     "id": "DR99HDLjNTR",
@@ -8335,9 +7713,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 09, 2025, 12:40 pm IST",
-    "saved_at_iso": "2025-12-09T12:40:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Optimizing Pandas Performance and Avoiding Slow Code"
+    "saved_at_iso": "2025-12-09T12:40:00+05:30"
   },
   {
     "id": "DR6oNqpEtVe",
@@ -8352,9 +7728,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 08, 2025, 3:46 pm IST",
-    "saved_at_iso": "2025-12-08T15:46:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Useful Websites and Resources for Developers"
+    "saved_at_iso": "2025-12-08T15:46:00+05:30"
   },
   {
     "id": "DR36PJdCYBa",
@@ -8373,9 +7747,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 06, 2025, 2:24 pm IST",
-    "saved_at_iso": "2025-12-06T14:24:00+05:30",
-    "category": "AI & Agents",
-    "title": "Google Code Wiki for Interactive Code Understanding"
+    "saved_at_iso": "2025-12-06T14:24:00+05:30"
   },
   {
     "id": "DRvw_xKjFPI",
@@ -8400,9 +7772,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 05, 2025, 7:49 pm IST",
-    "saved_at_iso": "2025-12-05T19:49:00+05:30",
-    "category": "AI & Agents",
-    "title": "Fine-Tuning LLMs for Domain-Specific Chatbots and Assistants"
+    "saved_at_iso": "2025-12-05T19:49:00+05:30"
   },
   {
     "id": "DQT-wNUiGbG",
@@ -8423,9 +7793,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 04, 2025, 1:28 pm IST",
-    "saved_at_iso": "2025-12-04T13:28:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Time Complexity Analysis of Popular Machine Learning Algorithms"
+    "saved_at_iso": "2025-12-04T13:28:00+05:30"
   },
   {
     "id": "DPgjXbvEyC5",
@@ -8471,9 +7839,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 03, 2025, 2:27 am IST",
-    "saved_at_iso": "2025-12-03T02:27:00+05:30",
-    "category": "DSA & Problem Solving",
-    "title": "Comprehensive Data Structures and Algorithms Topic Roadmap"
+    "saved_at_iso": "2025-12-03T02:27:00+05:30"
   },
   {
     "id": "DO8zDoJEZTU",
@@ -8498,9 +7864,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 02, 2025, 3:33 pm IST",
-    "saved_at_iso": "2025-12-02T15:33:00+05:30",
-    "category": "AI & Agents",
-    "title": "Google Cloud Real-World Generative AI Use Cases Compendium"
+    "saved_at_iso": "2025-12-02T15:33:00+05:30"
   },
   {
     "id": "DROnjBGAO3d",
@@ -8519,9 +7883,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 02, 2025, 3:27 pm IST",
-    "saved_at_iso": "2025-12-02T15:27:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Learning Machine Learning From Scratch Using GitHub Repos"
+    "saved_at_iso": "2025-12-02T15:27:00+05:30"
   },
   {
     "id": "DRciTbBCR76",
@@ -8536,9 +7898,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 01, 2025, 2:04 pm IST",
-    "saved_at_iso": "2025-12-01T14:04:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Essential Machine Learning Algorithms to Level Up Your Skills"
+    "saved_at_iso": "2025-12-01T14:04:00+05:30"
   },
   {
     "id": "DRSQtsXiGOd",
@@ -8563,9 +7923,7 @@
     },
     "brand_partner": null,
     "saved_at": "Dec 01, 2025, 12:11 am IST",
-    "saved_at_iso": "2025-12-01T00:11:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repository of Free Public APIs"
+    "saved_at_iso": "2025-12-01T00:11:00+05:30"
   },
   {
     "id": "DRqV3WzAsLH",
@@ -8587,9 +7945,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 30, 2025, 11:54 pm IST",
-    "saved_at_iso": "2025-11-30T23:54:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Free Websites to Obtain Quality Data for Machine Learning"
+    "saved_at_iso": "2025-11-30T23:54:00+05:30"
   },
   {
     "id": "DRGo7ZBjBOy",
@@ -8614,9 +7970,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 27, 2025, 8:12 pm IST",
-    "saved_at_iso": "2025-11-27T20:12:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Government and Global Hackathon Preparation Resources"
+    "saved_at_iso": "2025-11-27T20:12:00+05:30"
   },
   {
     "id": "DRe7znTk43j",
@@ -8644,9 +7998,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 27, 2025, 8:12 pm IST",
-    "saved_at_iso": "2025-11-27T20:12:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Introduction to Machine Learning Fundamentals and PyTorch"
+    "saved_at_iso": "2025-11-27T20:12:00+05:30"
   },
   {
     "id": "DRbZVYHDuF7",
@@ -8667,9 +8019,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 26, 2025, 2:18 am IST",
-    "saved_at_iso": "2025-11-26T02:18:00+05:30",
-    "category": "Career & Internships",
-    "title": "One-Year Roadmap for Machine Learning Jobs and Internships"
+    "saved_at_iso": "2025-11-26T02:18:00+05:30"
   },
   {
     "id": "DPmfzXrE6CS",
@@ -8684,9 +8034,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 26, 2025, 1:53 am IST",
-    "saved_at_iso": "2025-11-26T01:53:00+05:30",
-    "category": "AI & Agents",
-    "title": "Training Large Language Models in Indian Languages"
+    "saved_at_iso": "2025-11-26T01:53:00+05:30"
   },
   {
     "id": "DRKPQxHjLlr",
@@ -8711,9 +8059,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025, 8:37 pm IST",
-    "saved_at_iso": "2025-11-25T20:37:00+05:30",
-    "category": "AI & Agents",
-    "title": "Six-Month Practical Roadmap to Becoming an AI Engineer"
+    "saved_at_iso": "2025-11-25T20:37:00+05:30"
   },
   {
     "id": "DRPbPwpjDUT",
@@ -8739,9 +8085,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025, 5:00 pm IST",
-    "saved_at_iso": "2025-11-25T17:00:00+05:30",
-    "category": "AI & Agents",
-    "title": "Top Frameworks and Tools for Fine-Tuning LLMs"
+    "saved_at_iso": "2025-11-25T17:00:00+05:30"
   },
   {
     "id": "DQq6hkGjFud",
@@ -8778,9 +8122,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025, 12:44 pm IST",
-    "saved_at_iso": "2025-11-25T12:44:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comprehensive AI Mastery Plan and Agentic Architecture"
+    "saved_at_iso": "2025-11-25T12:44:00+05:30"
   },
   {
     "id": "DQ61E04D6e8",
@@ -8799,9 +8141,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 25, 2025, 12:42 pm IST",
-    "saved_at_iso": "2025-11-25T12:42:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Complete Roadmap for Machine Learning and Python"
+    "saved_at_iso": "2025-11-25T12:42:00+05:30"
   },
   {
     "id": "DRY-A86j5Io",
@@ -8822,9 +8162,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 24, 2025, 12:10 am IST",
-    "saved_at_iso": "2025-11-24T00:10:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "GitHub Project Repositories for Software Developers"
+    "saved_at_iso": "2025-11-24T00:10:00+05:30"
   },
   {
     "id": "DREASbWCKuZ",
@@ -8839,9 +8177,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 20, 2025, 10:08 pm IST",
-    "saved_at_iso": "2025-11-20T22:08:00+05:30",
-    "category": "AI & Agents",
-    "title": "Step-by-Step Study Plan and Resources for AI Engineers"
+    "saved_at_iso": "2025-11-20T22:08:00+05:30"
   },
   {
     "id": "DROoeR6DSGQ",
@@ -8860,9 +8196,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 20, 2025, 10:06 pm IST",
-    "saved_at_iso": "2025-11-20T22:06:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Learning Machine Learning From Scratch Using GitHub Repos"
+    "saved_at_iso": "2025-11-20T22:06:00+05:30"
   },
   {
     "id": "DQ_cukPCha3",
@@ -8901,9 +8235,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 19, 2025, 1:20 am IST",
-    "saved_at_iso": "2025-11-19T01:20:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Python Programming Snippets and Developer Tips"
+    "saved_at_iso": "2025-11-19T01:20:00+05:30"
   },
   {
     "id": "DQpUpGADIwu",
@@ -8924,9 +8256,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 19, 2025, 1:13 am IST",
-    "saved_at_iso": "2025-11-19T01:13:00+05:30",
-    "category": "AI & Agents",
-    "title": "AI Landing Page Design Hacks and Tools"
+    "saved_at_iso": "2025-11-19T01:13:00+05:30"
   },
   {
     "id": "DPWyyiSDLir",
@@ -8945,9 +8275,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 18, 2025, 1:12 am IST",
-    "saved_at_iso": "2025-11-18T01:12:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Five Powerful and Useful Tech Websites"
+    "saved_at_iso": "2025-11-18T01:12:00+05:30"
   },
   {
     "id": "DRFOqJADUtV",
@@ -8962,9 +8290,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 16, 2025, 10:34 pm IST",
-    "saved_at_iso": "2025-11-16T22:34:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated GitHub Repository of Free APIs"
+    "saved_at_iso": "2025-11-16T22:34:00+05:30"
   },
   {
     "id": "DNucLCnXK9b",
@@ -8979,9 +8305,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 16, 2025, 3:17 am IST",
-    "saved_at_iso": "2025-11-16T03:17:00+05:30",
-    "category": "AI & Agents",
-    "title": "Top Ten Generative AI Terms Explained"
+    "saved_at_iso": "2025-11-16T03:17:00+05:30"
   },
   {
     "id": "DQ_1uURjbx5",
@@ -9007,9 +8331,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 16, 2025, 1:41 am IST",
-    "saved_at_iso": "2025-11-16T01:41:00+05:30",
-    "category": "AI & Agents",
-    "title": "Fine-Tuning LLMs for Domain-Specific Tasks"
+    "saved_at_iso": "2025-11-16T01:41:00+05:30"
   },
   {
     "id": "DQ1GvgZEnR-",
@@ -9024,9 +8346,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 15, 2025, 1:03 pm IST",
-    "saved_at_iso": "2025-11-15T13:03:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Curated Open Source Projects for Developers"
+    "saved_at_iso": "2025-11-15T13:03:00+05:30"
   },
   {
     "id": "DRBtziXjtvR",
@@ -9041,9 +8361,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 15, 2025, 12:57 pm IST",
-    "saved_at_iso": "2025-11-15T12:57:00+05:30",
-    "category": "System Design & Backend",
-    "title": "Building a Cost-Control Smart LLM Router"
+    "saved_at_iso": "2025-11-15T12:57:00+05:30"
   },
   {
     "id": "DQdYBrlE_1A",
@@ -9069,9 +8387,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 14, 2025, 1:17 am IST",
-    "saved_at_iso": "2025-11-14T01:17:00+05:30",
-    "category": "AI & Agents",
-    "title": "Local LLM Agents and Image Processing"
+    "saved_at_iso": "2025-11-14T01:17:00+05:30"
   },
   {
     "id": "DPXO0JWk78R",
@@ -9086,9 +8402,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 14, 2025, 1:09 am IST",
-    "saved_at_iso": "2025-11-14T01:09:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Computer Vision Pose Tracking Implementation"
+    "saved_at_iso": "2025-11-14T01:09:00+05:30"
   },
   {
     "id": "DOBo-HzjDaC",
@@ -9103,9 +8417,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 12, 2025, 9:48 pm IST",
-    "saved_at_iso": "2025-11-12T21:48:00+05:30",
-    "category": "AI & Agents",
-    "title": "Guide on Selling and Monetizing AI Agents"
+    "saved_at_iso": "2025-11-12T21:48:00+05:30"
   },
   {
     "id": "DQ4ulX_gZh7",
@@ -9120,9 +8432,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 11, 2025, 11:36 pm IST",
-    "saved_at_iso": "2025-11-11T23:36:00+05:30",
-    "category": "AI & Agents",
-    "title": "Context Engineering vs Prompt Engineering"
+    "saved_at_iso": "2025-11-11T23:36:00+05:30"
   },
   {
     "id": "DP6DQESiPs1",
@@ -9157,9 +8467,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 06, 2025, 12:34 pm IST",
-    "saved_at_iso": "2025-11-06T12:34:00+05:30",
-    "category": "Python & Data Science",
-    "title": "Marvel-Themed Python and AI Automation Projects"
+    "saved_at_iso": "2025-11-06T12:34:00+05:30"
   },
   {
     "id": "DNnmT60zhga",
@@ -9182,9 +8490,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025, 9:20 pm IST",
-    "saved_at_iso": "2025-11-05T21:20:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Next-Gen Digital Objects and 3D Web Tools"
+    "saved_at_iso": "2025-11-05T21:20:00+05:30"
   },
   {
     "id": "DOdnSfqEli0",
@@ -9209,9 +8515,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025, 9:19 pm IST",
-    "saved_at_iso": "2025-11-05T21:19:00+05:30",
-    "category": "AI & Agents",
-    "title": "Beginner Roadmap for Agentic AI with GitHub"
+    "saved_at_iso": "2025-11-05T21:19:00+05:30"
   },
   {
     "id": "DQXCCcKDorx",
@@ -9228,9 +8532,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025, 9:11 pm IST",
-    "saved_at_iso": "2025-11-05T21:11:00+05:30",
-    "category": "AI & Agents",
-    "title": "Building a Self-Correcting RAG Pipeline"
+    "saved_at_iso": "2025-11-05T21:11:00+05:30"
   },
   {
     "id": "DQFF_ANiKde",
@@ -9245,9 +8547,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 05, 2025, 8:56 am IST",
-    "saved_at_iso": "2025-11-05T08:56:00+05:30",
-    "category": "Python & Data Science",
-    "title": "When to Use Classical ML Over Neural Networks"
+    "saved_at_iso": "2025-11-05T08:56:00+05:30"
   },
   {
     "id": "DPxlVtjjDC-",
@@ -9266,9 +8566,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 04, 2025, 8:02 pm IST",
-    "saved_at_iso": "2025-11-04T20:02:00+05:30",
-    "category": "AI & Agents",
-    "title": "Three AI Projects Every CS Student Should Build"
+    "saved_at_iso": "2025-11-04T20:02:00+05:30"
   },
   {
     "id": "DP2xTWuCPDS",
@@ -9307,9 +8605,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 04, 2025, 1:52 am IST",
-    "saved_at_iso": "2025-11-04T01:52:00+05:30",
-    "category": "Dev Tools & Repos",
-    "title": "Seven Useful Coding and Development Websites"
+    "saved_at_iso": "2025-11-04T01:52:00+05:30"
   },
   {
     "id": "DQL7T0Okllp",
@@ -9324,9 +8620,7 @@
     },
     "brand_partner": null,
     "saved_at": "Nov 03, 2025, 8:06 pm IST",
-    "saved_at_iso": "2025-11-03T20:06:00+05:30",
-    "category": "Web & Frontend",
-    "title": "Useful SVG Manipulation and Design Tools"
+    "saved_at_iso": "2025-11-03T20:06:00+05:30"
   },
   {
     "id": "DPyopn1CHUx",
@@ -9364,9 +8658,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 30, 2025, 6:18 pm IST",
-    "saved_at_iso": "2025-10-30T18:18:00+05:30",
-    "category": "Hackathons & Projects",
-    "title": "Full-Stack and AI Portfolio Project Ideas"
+    "saved_at_iso": "2025-10-30T18:18:00+05:30"
   },
   {
     "id": "DOgc5qCEyq9",
@@ -9385,9 +8677,7 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 28, 2025, 1:22 pm IST",
-    "saved_at_iso": "2025-10-28T13:22:00+05:30",
-    "category": "AI & Agents",
-    "title": "Comprehensive GitHub Crash Course on AI Agents"
+    "saved_at_iso": "2025-10-28T13:22:00+05:30"
   },
   {
     "id": "DPyWHlnj1en",
@@ -9410,8 +8700,6 @@
     },
     "brand_partner": null,
     "saved_at": "Oct 18, 2025, 12:01 am IST",
-    "saved_at_iso": "2025-10-18T00:01:00+05:30",
-    "category": "AI & Agents",
-    "title": "Introduction to AI Agents and Workflows"
+    "saved_at_iso": "2025-10-18T00:01:00+05:30"
   }
 ]

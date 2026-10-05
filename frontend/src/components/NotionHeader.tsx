@@ -7,7 +7,9 @@ import {
   X,
   Sparkles,
   RotateCcw,
+  RefreshCw,
 } from 'lucide-react';
+
 
 interface NotionHeaderProps {
   isSidebarOpen: boolean;
@@ -25,9 +27,12 @@ interface NotionHeaderProps {
   onKeywordQueryChange: (q: string) => void;
   onResetFilters: () => void;
   onOpenChat: () => void;
+  onOpenSync?: () => void;
+  isSyncing?: boolean;
   vaultSearchRef?: React.RefObject<HTMLInputElement | null>;
   keywordRef?: React.RefObject<HTMLInputElement | null>;
 }
+
 
 export const NotionHeader: React.FC<NotionHeaderProps> = ({
   isSidebarOpen,
@@ -44,6 +49,8 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
   onKeywordQueryChange,
   onResetFilters,
   onOpenChat,
+  onOpenSync,
+  isSyncing,
   vaultSearchRef,
   keywordRef,
 }) => {
@@ -109,7 +116,7 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           )}
         </div>
 
-        {/* Right: Global Search Vault + Ask AI */}
+        {/* Right: Global Search Vault + Sync Vault + Ask AI */}
         <div className="flex items-center gap-2.5">
           {/* Global Vault Search Input */}
           <div className="relative flex items-center">
@@ -137,6 +144,18 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
             )}
           </div>
 
+          {/* Sync Vault Button */}
+          {onOpenSync && (
+            <button
+              onClick={onOpenSync}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#222222] hover:bg-[#2b2b2b] text-[#d6d6d6] hover:text-white border border-[#383838] hover:border-sky-500/50 transition-all cursor-pointer text-xs font-medium shadow-xs group"
+              title="Sync new saved reels from Instagram"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 text-rose-400 group-hover:text-rose-300 transition-colors ${isSyncing ? 'animate-spin text-sky-400' : ''}`} />
+              <span className="hidden sm:inline">Sync</span>
+            </button>
+          )}
+
           {/* Ask AI Button (Vibrant Sky/Cyan Accent) */}
           <button
             onClick={onOpenChat}
@@ -147,6 +166,7 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
           </button>
         </div>
       </div>
+
 
       {/* Notion Page Header: Title + Description */}
       <div className="pt-3 pb-2 space-y-2">

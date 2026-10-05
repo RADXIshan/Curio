@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import ai_router, reels_router
+from app.routers import ai_router, reels_router, sync_router
 from app.services import load_reels
 
 
@@ -35,6 +35,8 @@ app.add_middleware(
 # Include modular routers
 app.include_router(reels_router)
 app.include_router(ai_router)
+app.include_router(sync_router)
+
 
 
 @app.get("/")

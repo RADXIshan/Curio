@@ -32,7 +32,7 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
     if _CACHED_REELS is not None and not force_reload and curr_mtime == _CACHED_MTIME:
         return _CACHED_REELS
 
-    if force_reload or not JSON_PATH.exists() or JSON_PATH.stat().st_size <= 2:
+    if not JSON_PATH.exists() or JSON_PATH.stat().st_size <= 2:
         if HTML_PATH.exists():
             raw_items = extract_saved_posts(HTML_PATH, JSON_PATH)
         else:
@@ -40,6 +40,7 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
     else:
         with open(JSON_PATH, "r", encoding="utf-8") as f:
             raw_items = json.load(f)
+
 
     # Attach category, title, and flags if missing
     for r in raw_items:

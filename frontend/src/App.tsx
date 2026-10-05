@@ -7,7 +7,8 @@ import { NotionPageModal } from './components/NotionPageModal';
 import { NotionAIChat } from './components/NotionAIChat';
 import { TopicFilterBar } from './components/TopicFilterBar';
 import { ContentSkeleton } from './components/ContentSkeleton';
-import { fetchReels, fetchStats, triggerExtraction } from './services/api';
+import { SyncModal } from './components/SyncModal';
+import { fetchReels, fetchStats } from './services/api';
 import type { ReelItem, StatsResponse } from './types';
 import { Inbox } from 'lucide-react';
 
@@ -27,9 +28,12 @@ export const App: React.FC = () => {
   });
   const [viewMode, setViewMode] = useState<'gallery' | 'table'>('gallery');
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
+  const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
   const [activeReel, setActiveReel] = useState<ReelItem | null>(null);
-  const [isSyncing, setIsSyncing] = useState<boolean>(false);
+  const [isSyncing] = useState<boolean>(false);
   const [syncToast, setSyncToast] = useState<string | null>(null);
+
+
 
   // Filters: Global Vault Search vs. Local Page Keyword Filter
   const [vaultSearch, setVaultSearch] = useState<string>('');
@@ -165,19 +169,15 @@ export const App: React.FC = () => {
     setSelectedTag('');
   };
 
-  const handleSync = async () => {
-    setIsSyncing(true);
-    try {
-      const res = await triggerExtraction();
-      setSyncToast(`Synced ${res.count} posts from saved_posts.html!`);
-      setTimeout(() => setSyncToast(null), 3500);
-      await loadStats();
-      await loadReels();
-    } catch (err: any) {
-      alert(`Sync error: ${err.message}`);
-    } finally {
-      setIsSyncing(false);
-    }
+  const handleSync = () => {
+    setIsSyncModalOpen(true);
+  };
+
+  const handleSyncComplete = async () => {
+    setSyncToast('Knowledge vault successfully updated from Instagram!');
+    setTimeout(() => setSyncToast(null), 4000);
+    await loadStats();
+    await loadReels();
   };
 
   return (
@@ -223,9 +223,12 @@ export const App: React.FC = () => {
           onKeywordQueryChange={handleKeywordQueryChange}
           onResetFilters={handleResetFilters}
           onOpenChat={() => setIsChatOpen(true)}
+          onOpenSync={handleSync}
+          isSyncing={isSyncing}
           vaultSearchRef={vaultSearchInputRef}
           keywordRef={keywordInputRef}
         />
+
 
         {/* Canvas Body */}
         <main className="flex-1 px-6 sm:px-10 py-6">
@@ -338,8 +341,16 @@ export const App: React.FC = () => {
           setActiveReel(reel);
         }}
       />
+
+      {/* Instagram Vault Sync Modal */}
+      <SyncModal
+        isOpen={isSyncModalOpen}
+        onClose={() => setIsSyncModalOpen(false)}
+        onSyncComplete={handleSyncComplete}
+      />
     </div>
   );
 };
+
 
 export default App;
