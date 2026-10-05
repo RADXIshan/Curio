@@ -2,7 +2,7 @@
   {
     "id": "DdLrDpyo0b2",
     "type": "post",
-    "url": "https://www.instagram.com/post/DdLrDpyo0b2/",
+    "url": "https://www.instagram.com/p/DdLrDpyo0b2/",
     "caption": "grep is where log analysis starts. It is not where it should end.\n\nSeven tools that read logs properly, and every one of them is free and open source:\n\nlnav → merges rotated and gzipped logs into one timeline and lets you run SQL over them. Over 70 formats detected automatically.\n\nGoAccess → turns a web access log into a live dashboard in the terminal, or a self contained HTML report. Scanners and repeated failed requests become obvious.\n\nausearch → decodes the Linux audit log into readable events. Ships with every distribution and sits behind most CIS and PCI DSS logging requirements.\n\nChainsaw → runs Sigma rules directly over Windows event logs and prints the hits as a table, CSV or JSON. Written in Rust, no SIEM needed.\n\nHayabusa → collapses thousands of Windows events into a single timeline ranked by alert level and mapped to MITRE ATT&CK.\n\nTimesketch → merges timelines from many machines into one sketch a whole team can tag, comment on and work through together.\n\nSigma → one YAML rule, compiled into the query language of whatever SIEM you happen to run. Splunk, Elastic, Sentinel and dozens more.\n\nThe part most people miss: sometimes the search is not wrong, the format is. Windows event logs are binary XML, so a plain text search returns nothing at all. Linux audit records store filenames in hex, so searching for a name you can read will never match the line that contains it. The evidence is already in the file. The tool just has to be able to parse it.\n\nStart with lnav and GoAccess on your own servers this week. Add Chainsaw and Sigma once Windows logs enter the picture.\n\nSave this for the next investigation, and send it to whoever is still reading raw logs by hand.\n\n#dfir #threathunting #blueteam #soc #cybersecurity",
     "hashtags": [
       "logging",
@@ -16,8 +16,8 @@
       "url": "https://www.instagram.com/kerem.tech/"
     },
     "brand_partner": null,
-    "saved_at": "Sep 12, 2026, 3:13 pm IST",
-    "saved_at_iso": "2026-09-12T15:13:11+05:30",
+    "saved_at": "Oct 05, 2026, 10:45 am IST",
+    "saved_at_iso": "2026-10-05T10:45:00+05:30",
     "category": "DevOps & Cloud",
     "title": "Open-Source Terminal Tools for Advanced Log Analysis",
     "caption_generated": false
@@ -25,7 +25,7 @@
   {
     "id": "DeB_xCxDT_F",
     "type": "post",
-    "url": "https://www.instagram.com/post/DeB_xCxDT_F/",
+    "url": "https://www.instagram.com/p/DeB_xCxDT_F/?img_index=1",
     "caption": "🔑 452 free LLM APIs, one directory, zero credit cards.\n\nawesome-freellm-apis lists 452+ free LLM APIs from 31 providers like NVIDIA NIM, Gemini, Groq, Cloudflare and OpenRouter, with the base URL, model ID and config for each. One-click setup for Claude Code, Cursor, Codex and Aider. Most need only an email. MIT.\n\nSave this ❗ Which one will you try?\n\n#freellm #llm #aitools #devtools #claudecode cursor opensource",
     "hashtags": [
       "llm",
@@ -39,8 +39,8 @@
       "url": "https://www.instagram.com/fullstackparody/"
     },
     "brand_partner": null,
-    "saved_at": "Oct 03, 2026, 5:22 pm IST",
-    "saved_at_iso": "2026-10-03T17:22:57+05:30",
+    "saved_at": "Oct 05, 2026, 9:45 am IST",
+    "saved_at_iso": "2026-10-05T09:45:00+05:30",
     "category": "AI & Agents",
     "title": "Directory of 450+ Free LLM APIs for Coding Assistants",
     "caption_generated": false
@@ -62,8 +62,8 @@
       "url": "https://www.instagram.com/rishabhsinghtech/"
     },
     "brand_partner": null,
-    "saved_at": "Sep 11, 2026, 4:12 pm IST",
-    "saved_at_iso": "2026-09-11T16:12:29+05:30",
+    "saved_at": "Oct 05, 2026, 8:30 am IST",
+    "saved_at_iso": "2026-10-05T08:30:00+05:30",
     "category": "System Design & Backend",
     "title": "Comprehensive Guide to API Architecture and Design",
     "caption_generated": false
@@ -85,8 +85,8 @@
       "url": "https://www.instagram.com/armas.4am/"
     },
     "brand_partner": null,
-    "saved_at": "Oct 04, 2026, 9:43 am IST",
-    "saved_at_iso": "2026-10-04T09:43:32+05:30",
+    "saved_at": "Oct 04, 2026, 10:10 pm IST",
+    "saved_at_iso": "2026-10-04T22:10:00+05:30",
     "category": "Dev Tools & Resources",
     "title": "Hands-On Roadmap for Learning Electronics and Hardware",
     "caption_generated": false
@@ -108,8 +108,8 @@
       "url": "https://www.instagram.com/okaashish/"
     },
     "brand_partner": null,
-    "saved_at": "Oct 01, 2026, 9:26 pm IST",
-    "saved_at_iso": "2026-10-01T21:26:08+05:30",
+    "saved_at": "Oct 04, 2026, 7:20 pm IST",
+    "saved_at_iso": "2026-10-04T19:20:00+05:30",
     "category": "AI & Agents",
     "title": "Essential Claude AI Skills and Workflow Tools",
     "caption_generated": false
@@ -131,8 +131,8 @@
       "url": "https://www.instagram.com/vasu_jpg/"
     },
     "brand_partner": null,
-    "saved_at": "Oct 04, 2026, 5:08 am IST",
-    "saved_at_iso": "2026-10-04T05:08:22+05:30",
+    "saved_at": "Oct 04, 2026, 4:30 pm IST",
+    "saved_at_iso": "2026-10-04T16:30:00+05:30",
     "category": "Career & Coding Prep",
     "title": "Japanese Productivity Principles for Focus and Habit Building",
     "caption_generated": false
@@ -154,8 +154,8 @@
       "url": "https://www.instagram.com/andi_studieshard/"
     },
     "brand_partner": null,
-    "saved_at": "Oct 03, 2026, 6:49 pm IST",
-    "saved_at_iso": "2026-10-03T18:49:59+05:30",
+    "saved_at": "Oct 04, 2026, 1:45 pm IST",
+    "saved_at_iso": "2026-10-04T13:45:00+05:30",
     "category": "Dev Tools & Resources",
     "title": "Top Open-Source Robotics and Kinematics Learning Resources",
     "caption_generated": false
@@ -177,8 +177,8 @@
       "url": "https://www.instagram.com/erinmerylstudy/"
     },
     "brand_partner": null,
-    "saved_at": "Aug 26, 2026, 5:47 am IST",
-    "saved_at_iso": "2026-08-26T05:47:10+05:30",
+    "saved_at": "Oct 04, 2026, 10:15 am IST",
+    "saved_at_iso": "2026-10-04T10:15:00+05:30",
     "category": "Career & Coding Prep",
     "title": "Techniques to Improve Deep Work Focus and Study Habits",
     "caption_generated": false

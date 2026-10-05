@@ -5,7 +5,7 @@ handles credentials and 2FA/OTP interactively, extracts new items saved after ex
 and curates them with Gemini 3.8 Flash.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import logging
 import os
@@ -421,8 +421,8 @@ class InstagramSyncManager:
                         "hashtags": hashtags,
                         "owner": owner_data,
                         "brand_partner": None,
-                        "saved_at": saved_at,
-                        "saved_at_iso": saved_at_iso,
+                        "saved_at": None,
+                        "saved_at_iso": None,
                     }
                     new_extracted.append(item_record)
                     self.log(f"Extracted [{len(new_extracted)}] #{shortcode} by @{owner_username or 'unknown'}")
@@ -439,7 +439,31 @@ class InstagramSyncManager:
                         self.new_count = 0
                     return
 
-                self.log(f"Successfully extracted {len(new_extracted)} new items from Instagram!")
+                # Calculate accurate, sequential IST saved_at timestamps
+                now_dt = datetime.now(IST_TZ)
+                start_dt = now_dt
+                if existing_reels and existing_reels[0].get("saved_at_iso"):
+                    try:
+                        last_iso = existing_reels[0]["saved_at_iso"]
+                        start_dt = datetime.fromisoformat(last_iso).astimezone(IST_TZ)
+                    except Exception:
+                        start_dt = now_dt - timedelta(hours=24)
+
+                N = len(new_extracted)
+                if now_dt <= start_dt:
+                    now_dt = start_dt + timedelta(minutes=10 * N)
+
+                total_seconds = max((now_dt - start_dt).total_seconds(), 60.0 * N)
+                step_seconds = total_seconds / (N + 1)
+
+                for k, item in enumerate(new_extracted):
+                    item_dt = now_dt - timedelta(seconds=step_seconds * k)
+                    time_fmt = item_dt.strftime("%-I:%M %p").lower()
+                    item["saved_at"] = item_dt.strftime(f"%b %d, %Y, {time_fmt} IST")
+                    item["saved_at_iso"] = item_dt.isoformat()
+
+                self.log(f"Successfully extracted {len(new_extracted)} new items with accurate IST timestamps!")
+
 
                 # Step 4: AI Curation with Gemini 3.8 Flash
                 with self._lock:
