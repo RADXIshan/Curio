@@ -138,12 +138,22 @@ export const App: React.FC = () => {
 
   const handleVaultSearchChange = (q: string) => {
     setVaultSearch(q);
-    if (q && keywordQuery) setKeywordQuery('');
+    if (q) {
+      if (keywordQuery) setKeywordQuery('');
+      if (sortBy === 'newest') setSortBy('relevance');
+    } else if (sortBy === 'relevance') {
+      setSortBy('newest');
+    }
   };
 
   const handleKeywordQueryChange = (q: string) => {
     setKeywordQuery(q);
-    if (q && vaultSearch) setVaultSearch('');
+    if (q) {
+      if (vaultSearch) setVaultSearch('');
+      if (sortBy === 'newest') setSortBy('relevance');
+    } else if (sortBy === 'relevance') {
+      setSortBy('newest');
+    }
   };
 
   const handleCategoryChange = (c: string) => {
@@ -167,6 +177,7 @@ export const App: React.FC = () => {
     setSelectedType('all');
     setSelectedCategory('all');
     setSelectedTag('');
+    setSortBy('newest');
   };
 
   const handleSync = () => {

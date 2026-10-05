@@ -90,6 +90,23 @@ export const ReelCard: React.FC<ReelCardProps> = ({
           </span>
         </div>
 
+        {/* AI Search Match Banner */}
+        {reel.search_meta && (
+          <div className="mb-3 px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/25 flex items-center justify-between text-xs text-sky-300">
+            <div className="flex items-center gap-1.5 truncate">
+              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+              <span className="truncate text-[11px] font-medium">
+                {reel.search_meta.match_reasons?.[0] || 'Smart Match'}
+              </span>
+            </div>
+            {reel.search_meta.score !== undefined && (
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-200 shrink-0 ml-1.5 font-semibold">
+                {Math.round(reel.search_meta.score)} pts
+              </span>
+            )}
+          </div>
+        )}
+
         {/* Category & Date Row */}
         <div className="flex flex-wrap items-center gap-2 mb-3">
           {reel.category && (

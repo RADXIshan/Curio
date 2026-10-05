@@ -9,6 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from .extractor import extract_saved_posts
 from .gemini_service import CATEGORIES, classify_reel, derive_content_title
+from .search_engine import smart_search_reels
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 HTML_PATH = DATA_DIR / "saved_posts.html"
@@ -92,36 +93,27 @@ def get_reels(
         ]
 
     if clean_search:
-        s = clean_search.strip().lower()
-        filtered = []
+        items = smart_search_reels(clean_search, items)
         for i in items:
-            title = (i.get("title") or "").lower()
-            caption = (i.get("caption") or "").lower()
-            owner = i.get("owner") or {}
-            owner_name = (owner.get("name") or "").lower()
-            owner_user = (owner.get("username") or "").lower()
-            category_str = (i.get("category") or "").lower()
-            tags = " ".join(t.lower() for t in i.get("hashtags", []))
-            if (
-                s in title or
-                s in caption or
-                s in owner_name or
-                s in owner_user or
-                s in tags or
-                s in category_str
-            ):
-                filtered.append(i)
-        items = filtered
+            if "_search_meta" in i and "search_meta" not in i:
+                i["search_meta"] = i["_search_meta"]
 
     # Sorting
-    if clean_sort == "oldest":
+    if clean_sort in ("relevance", "best", "match") and clean_search:
+        # Keep smart search relevance ranking
+        pass
+    elif clean_sort == "oldest":
         items.sort(key=lambda x: x.get("saved_at_iso") or "")
     elif clean_sort == "title":
         items.sort(key=lambda x: (x.get("title") or "").lower())
     elif clean_sort == "author":
         items.sort(key=lambda x: ((x.get("owner") or {}).get("username") or "").lower())
-    else:  # newest / default
+    elif clean_sort == "newest":
+        # If user explicitly filtered by newest without relevance
         items.sort(key=lambda x: x.get("saved_at_iso") or "", reverse=True)
+    else:  # default
+        if not clean_search:
+            items.sort(key=lambda x: x.get("saved_at_iso") or "", reverse=True)
 
     total = len(items)
     paginated = items[clean_offset : clean_offset + clean_limit]

@@ -6,6 +6,7 @@ import {
   Video,
   Image,
   Layers,
+  Sparkles,
 } from 'lucide-react';
 
 interface PageFilterBarProps {
@@ -102,12 +103,21 @@ export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
             Sort by date:
           </span>
           <div className="flex items-center gap-1.5 bg-[#151515] px-2.5 py-1 rounded-lg border border-[#2b2b2b] text-xs text-[#a0a0a0]">
-            <Clock className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+            {searchQuery ? (
+              <Sparkles className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+            ) : (
+              <Clock className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+            )}
             <select
               value={sortBy}
               onChange={(e) => onSortChange(e.target.value)}
               className="bg-transparent text-[#e0e0e0] font-medium focus:outline-none cursor-pointer pr-1 text-xs"
             >
+              {searchQuery && (
+                <option value="relevance" className="bg-[#1c1c1c] text-sky-300 font-medium">
+                  Best Match (AI Relevance)
+                </option>
+              )}
               <option value="newest" className="bg-[#1c1c1c] text-[#dedede]">
                 Newest saved date
               </option>
@@ -166,11 +176,16 @@ export const TopicFilterBar: React.FC<PageFilterBarProps> = ({
           )}
 
           {searchQuery && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#262626] text-[#dedede] border border-[#383838] text-[11px]">
-              <span>Search: &ldquo;{searchQuery}&rdquo;</span>
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-950/50 text-sky-200 border border-sky-700/50 text-[11px] font-medium shadow-xs">
+              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+              <span>AI Search: &ldquo;{searchQuery}&rdquo;</span>
+              <span className="px-1.5 py-0.2 rounded-full bg-sky-900/60 text-sky-300 text-[10px] font-mono">
+                {totalFiltered} {totalFiltered === 1 ? 'result' : 'results'}
+              </span>
               <button
                 onClick={() => onSearchChange('')}
-                className="hover:text-white cursor-pointer ml-0.5"
+                className="hover:text-white cursor-pointer ml-0.5 p-0.5 hover:bg-sky-800/40 rounded-full"
+                title="Clear search"
               >
                 <X className="w-3 h-3" />
               </button>

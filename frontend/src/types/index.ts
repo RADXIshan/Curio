@@ -10,6 +10,13 @@ export interface BrandPartnerInfo {
   url?: string | null;
 }
 
+export interface SearchMeta {
+  score?: number;
+  semantic_score?: number | null;
+  match_reasons?: string[];
+  matched_terms?: string[];
+}
+
 export interface ReelItem {
   id: string;
   type: 'reel' | 'post';
@@ -23,6 +30,18 @@ export interface ReelItem {
   brand_partner?: BrandPartnerInfo | null;
   saved_at?: string | null;
   saved_at_iso?: string | null;
+  search_meta?: SearchMeta;
+}
+
+export interface SearchSuggestionItem {
+  text: string;
+  type: 'concept' | 'synonym' | 'title' | 'tag' | 'topic';
+  category?: string;
+}
+
+export interface SearchSuggestionsResponse {
+  suggestions: SearchSuggestionItem[];
+  related_categories: string[];
 }
 
 export interface ReelsListResponse {

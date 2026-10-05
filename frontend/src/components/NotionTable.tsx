@@ -74,6 +74,12 @@ export const NotionTable: React.FC<NotionTableProps> = ({ reels, onOpen, onTagCl
                   <div className="flex items-center gap-2 max-w-lg">
                     <span className="text-sm shrink-0">{isReel ? '🎬' : '📸'}</span>
                     <span className="truncate">{title}</span>
+                    {reel.search_meta && (
+                      <span className="text-[9px] font-medium px-1.5 py-0.2 rounded bg-sky-950/60 text-sky-300 border border-sky-800/40 shrink-0 flex items-center gap-1 font-mono">
+                        <Sparkles className="w-2.5 h-2.5 text-sky-400" />
+                        {Math.round(reel.search_meta.score || 0)}pts
+                      </span>
+                    )}
                     {reel.caption_generated && (
                       <span className="text-[9px] font-medium px-1.5 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 shrink-0 flex items-center gap-0.5 font-mono">
                         <Sparkles className="w-2.5 h-2.5" />

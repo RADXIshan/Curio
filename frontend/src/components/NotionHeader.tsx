@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   PanelLeft,
   LayoutGrid,
@@ -8,7 +8,10 @@ import {
   Sparkles,
   RotateCcw,
   RefreshCw,
+  Tag,
 } from 'lucide-react';
+import { fetchSearchSuggestions } from '../services/api';
+import type { SearchSuggestionItem } from '../types';
 
 
 interface NotionHeaderProps {
@@ -54,6 +57,80 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
   vaultSearchRef,
   keywordRef,
 }) => {
+  const [suggestions, setSuggestions] = useState<SearchSuggestionItem[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Fetch smart suggestions when typing or focusing
+  useEffect(() => {
+    let active = true;
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetchSearchSuggestions(vaultSearch);
+        if (active) {
+          setSuggestions(res.suggestions || []);
+        }
+      } catch {
+        if (active) setSuggestions([]);
+      }
+    }, 150);
+
+    return () => {
+      active = false;
+      clearTimeout(timer);
+    };
+  }, [vaultSearch]);
+
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node) &&
+        vaultSearchRef?.current &&
+        !vaultSearchRef.current.contains(e.target as Node)
+      ) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [vaultSearchRef]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showSuggestions || suggestions.length === 0) {
+      if (e.key === 'ArrowDown') {
+        setShowSuggestions(true);
+      }
+      return;
+    }
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedIndex((prev) => (prev < suggestions.length - 1 ? prev + 1 : 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : suggestions.length - 1));
+    } else if (e.key === 'Enter') {
+      if (selectedIndex >= 0 && selectedIndex < suggestions.length) {
+        e.preventDefault();
+        onVaultSearchChange(suggestions[selectedIndex].text);
+        setShowSuggestions(false);
+        setSelectedIndex(-1);
+      }
+    } else if (e.key === 'Escape') {
+      setShowSuggestions(false);
+      setSelectedIndex(-1);
+    }
+  };
+
+  const selectSuggestion = (text: string) => {
+    onVaultSearchChange(text);
+    setShowSuggestions(false);
+    setSelectedIndex(-1);
+  };
+
   const hasActiveFilters =
     vaultSearch.trim() !== '' ||
     keywordQuery.trim() !== '' ||
@@ -118,20 +195,34 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
 
         {/* Right: Global Search Vault + Sync Vault + Ask AI */}
         <div className="flex items-center gap-2.5">
-          {/* Global Vault Search Input */}
+          {/* Global Vault Search Input with AI Suggestions */}
           <div className="relative flex items-center">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#707070]" />
+            <div className="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
+              {vaultSearch ? (
+                <Sparkles className="w-3.5 h-3.5 text-sky-400 animate-pulse" />
+              ) : (
+                <Search className="w-3.5 h-3.5 text-[#707070]" />
+              )}
+            </div>
             <input
               ref={vaultSearchRef}
               type="text"
               value={vaultSearch}
-              onChange={(e) => onVaultSearchChange(e.target.value)}
-              placeholder="Search vault..."
-              className="pl-8 pr-12 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-48 sm:w-56 transition-all shadow-xs"
+              onFocus={() => setShowSuggestions(true)}
+              onKeyDown={handleKeyDown}
+              onChange={(e) => {
+                onVaultSearchChange(e.target.value);
+                setShowSuggestions(true);
+              }}
+              placeholder="AI & keyword search vault..."
+              className="pl-8 pr-12 py-1.5 text-xs bg-[#222222] hover:bg-[#252525] focus:bg-[#222222] text-[#ededed] placeholder-[#666666] rounded-md border border-[#303030] focus:border-sky-500 focus:outline-none w-52 sm:w-64 transition-all shadow-xs"
             />
             {vaultSearch ? (
               <button
-                onClick={() => onVaultSearchChange('')}
+                onClick={() => {
+                  onVaultSearchChange('');
+                  setShowSuggestions(false);
+                }}
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-[#707070] hover:text-white transition-colors cursor-pointer"
                 title="Clear vault search"
               >
@@ -141,6 +232,71 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
               <kbd className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] px-1.5 py-0.5 rounded bg-[#1c1c1c] border border-[#333333] text-[#707070] pointer-events-none">
                 /
               </kbd>
+            )}
+
+            {/* Smart Suggestions Floating Dropdown */}
+            {showSuggestions && (
+              <div
+                ref={dropdownRef}
+                className="absolute top-full left-0 right-0 mt-1.5 bg-[#1b1b1b] border border-[#333333] rounded-lg shadow-xl shadow-black/60 z-50 overflow-hidden py-1.5 min-w-[280px] animate-content-enter select-none"
+              >
+                <div className="px-3 py-1 text-[10px] uppercase tracking-wider text-[#737373] font-semibold flex items-center justify-between border-b border-[#262626]">
+                  <span className="flex items-center gap-1">
+                    <Sparkles className="w-2.5 h-2.5 text-sky-400" />
+                    AI Concept & Search Suggestions
+                  </span>
+                  <span className="text-[9px] text-[#555555] font-mono">↑↓ Enter</span>
+                </div>
+
+                {suggestions.length > 0 ? (
+                  <div className="max-h-64 overflow-y-auto py-1">
+                    {suggestions.map((item, idx) => {
+                      const isSelected = idx === selectedIndex;
+                      return (
+                        <div
+                          key={`${item.type}-${item.text}-${idx}`}
+                          onClick={() => selectSuggestion(item.text)}
+                          onMouseEnter={() => setSelectedIndex(idx)}
+                          className={`px-3 py-1.5 flex items-center justify-between gap-2 cursor-pointer transition-colors text-xs ${
+                            isSelected
+                              ? 'bg-sky-500/15 text-sky-200'
+                              : 'text-[#d0d0d0] hover:bg-[#252525]'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2 truncate">
+                            {item.type === 'concept' ? (
+                              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+                            ) : item.type === 'tag' ? (
+                              <Tag className="w-3 h-3 text-cyan-400 shrink-0" />
+                            ) : (
+                              <Search className="w-3 h-3 text-[#707070] shrink-0" />
+                            )}
+                            <span className="truncate">{item.text}</span>
+                          </div>
+
+                          <span
+                            className={`text-[9px] px-1.5 py-0.5 rounded font-mono shrink-0 uppercase ${
+                              item.type === 'concept'
+                                ? 'bg-sky-950/60 text-sky-300 border border-sky-800/40'
+                                : item.type === 'synonym'
+                                ? 'bg-purple-950/60 text-purple-300 border border-purple-800/40'
+                                : item.type === 'tag'
+                                ? 'bg-cyan-950/60 text-cyan-300 border border-cyan-800/40'
+                                : 'bg-[#292929] text-[#888888]'
+                            }`}
+                          >
+                            {item.type}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="px-3 py-2 text-[11px] text-[#707070] text-center">
+                    Type to search by meaning, tools, or topics...
+                  </div>
+                )}
+              </div>
             )}
           </div>
 

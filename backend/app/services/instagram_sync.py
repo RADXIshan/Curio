@@ -489,6 +489,14 @@ class InstagramSyncManager:
                 except Exception as cache_err:
                     self.log(f"Cache reload warning: {cache_err}")
 
+                # Incrementally index new embeddings in background
+                try:
+                    import threading
+                    from app.services.embeddings_manager import index_reels
+                    threading.Thread(target=index_reels, args=(full_vault,), daemon=True).start()
+                except Exception as emb_err:
+                    self.log(f"Embeddings indexing warning: {emb_err}")
+
                 with self._lock:
                     self.status = "completed"
                     self.stage = f"Successfully synced {len(curated_items)} new reels into Curio!"

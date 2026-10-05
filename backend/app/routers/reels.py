@@ -24,17 +24,21 @@ def list_reels(
     category: Optional[str] = Query(None, description="Filter by category"),
     search: Optional[str] = Query(None, description="Search in caption, owner, hashtags, or category"),
     tag: Optional[str] = Query(None, description="Filter by hashtag"),
-    sort: Optional[str] = Query("newest", description="Sort by: 'newest', 'oldest', 'title', 'author'"),
+    sort: Optional[str] = Query("newest", description="Sort by: 'relevance', 'newest', 'oldest', 'title', 'author'"),
     limit: int = Query(50, ge=1, le=500, description="Max number of items to return"),
     offset: int = Query(0, ge=0, description="Offset for pagination"),
 ):
-    """Retrieve saved reels and posts with optional filtering, sorting, and pagination."""
+    """Retrieve saved reels and posts with optional filtering, smart hybrid search, sorting, and pagination."""
+    effective_sort = sort
+    if search and search.strip() and (sort is None or sort == "newest"):
+        effective_sort = "relevance"
+
     total, items = get_reels(
         post_type=type,
         category=category,
         tag=tag,
         search=search,
-        sort_by=sort,
+        sort_by=effective_sort,
         limit=limit,
         offset=offset,
     )
@@ -45,6 +49,18 @@ def list_reels(
         "count": len(items),
         "items": items,
     }
+
+
+@router.get("/search/suggestions")
+def search_suggestions(
+    q: Optional[str] = Query("", description="Query prefix to suggest completions for"),
+    limit: int = Query(6, ge=1, le=20),
+):
+    """Real-time semantic and keyword search suggestions, concept matches, and related domains."""
+    from app.services.reels_service import load_reels
+    from app.services.search_engine import get_search_suggestions
+    all_reels = load_reels()
+    return get_search_suggestions(q or "", all_reels, limit=limit)
 
 
 @router.get("/stats", response_model=StatsResponse)

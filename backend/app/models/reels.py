@@ -31,6 +31,7 @@ class ReelItem(BaseModel):
     brand_partner: Optional[BrandPartnerInfo] = None
     saved_at: Optional[str] = None
     saved_at_iso: Optional[str] = None
+    search_meta: Optional[Dict[str, Any]] = None
 
 
 class ReelsListResponse(BaseModel):

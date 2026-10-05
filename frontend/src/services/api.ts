@@ -1,4 +1,4 @@
-import type { AISummary, ReelItem, ReelsListResponse, StatsResponse } from '../types';
+import type { AISummary, ReelItem, ReelsListResponse, SearchSuggestionsResponse, StatsResponse } from '../types';
 
 const envUrl = import.meta.env.VITE_API_URL;
 const API_BASE = envUrl ? `${envUrl.replace(/\/$/, '')}/api` : '/api';
@@ -26,6 +26,19 @@ export async function fetchReels(params: {
     throw new Error(`Failed to fetch reels: ${res.statusText}`);
   }
   return res.json();
+}
+
+export async function fetchSearchSuggestions(query: string): Promise<SearchSuggestionsResponse> {
+  try {
+    const q = encodeURIComponent(query);
+    const res = await fetch(`${API_BASE}/reels/search/suggestions?q=${q}`);
+    if (!res.ok) {
+      return { suggestions: [], related_categories: [] };
+    }
+    return res.json();
+  } catch {
+    return { suggestions: [], related_categories: [] };
+  }
 }
 
 export async function fetchStats(): Promise<StatsResponse> {

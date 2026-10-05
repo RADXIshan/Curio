@@ -401,41 +401,17 @@ Respond ONLY with the JSON object.
 
 
 def search_relevant_reels(query: str, all_reels: List[Dict[str, Any]], top_k: int = 8) -> List[Dict[str, Any]]:
-    """Retrieve top_k most relevant reels for a user query using keyword and semantic match."""
-    q_words = [w.lower() for w in query.split() if len(w) > 2]
-    if not q_words:
-        return all_reels[:top_k]
+    """Retrieve top_k most relevant reels for a user query using hybrid semantic and concept search."""
+    try:
+        from app.services.search_engine import smart_search_reels
+        matches = smart_search_reels(query, all_reels, min_score_threshold=1.5)
+        if matches:
+            return matches[:top_k]
+    except Exception as e:
+        logger.warning(f"Error in smart_search_reels for chat grounding: {e}")
 
-    scored = []
-    for r in all_reels:
-        score = 0
-        caption = (r.get("caption") or "").lower()
-        title = (r.get("title") or "").lower()
-        tags = " ".join(r.get("hashtags") or []).lower()
-        cat = (r.get("category") or "").lower()
-        owner = ((r.get("owner") or {}).get("username") or "").lower()
-        author_name = ((r.get("owner") or {}).get("name") or "").lower()
-
-        for w in q_words:
-            if w in title:
-                score += 5
-            if w in caption:
-                score += 3
-            if w in tags:
-                score += 4
-            if w in cat:
-                score += 3
-            if w in owner or w in author_name:
-                score += 2
-
-        if score > 0:
-            scored.append((score, r))
-
-    scored.sort(key=lambda x: x[0], reverse=True)
-    results = [item[1] for item in scored[:top_k]]
-    if not results:
-        results = all_reels[:top_k]
-    return results
+    # Fallback to first top_k
+    return all_reels[:top_k]
 
 
 async def chat_with_curio(

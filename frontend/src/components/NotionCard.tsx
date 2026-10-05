@@ -93,6 +93,23 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
           )}
         </div>
 
+        {/* AI Search Match Banner */}
+        {reel.search_meta && (
+          <div className="mb-2 px-2 py-1 rounded-md bg-sky-950/30 border border-sky-800/35 flex items-center justify-between text-[11px] text-sky-200">
+            <div className="flex items-center gap-1.5 truncate">
+              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+              <span className="truncate">
+                {reel.search_meta.match_reasons?.[0] || 'Smart Search Match'}
+              </span>
+            </div>
+            {reel.search_meta.score !== undefined && (
+              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-900/40 text-sky-300 shrink-0 ml-1.5">
+                {Math.round(reel.search_meta.score)} pts
+              </span>
+            )}
+          </div>
+        )}
+
         {/* Page Title: What the content is actually about */}
         <h3 className="text-sm font-semibold text-[#f0f0f0] group-hover:text-white leading-snug mb-2 line-clamp-2">
           {title}
