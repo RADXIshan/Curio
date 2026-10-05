@@ -15,6 +15,7 @@ HTML_PATH = DATA_DIR / "saved_posts.html"
 JSON_PATH = DATA_DIR / "reels.json"
 
 _CACHED_REELS: Optional[List[Dict[str, Any]]] = None
+_CACHED_MTIME: Optional[float] = None
 
 
 def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
@@ -22,10 +23,13 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
     Load reels from JSON file.
     If missing or empty and HTML exists, extract automatically.
     Attaches smart category classification and content-based title to each reel.
+    Auto-invalidates when reels.json file is modified.
     """
-    global _CACHED_REELS
+    global _CACHED_REELS, _CACHED_MTIME
 
-    if _CACHED_REELS is not None and not force_reload:
+    curr_mtime = JSON_PATH.stat().st_mtime if JSON_PATH.exists() else 0.0
+
+    if _CACHED_REELS is not None and not force_reload and curr_mtime == _CACHED_MTIME:
         return _CACHED_REELS
 
     if force_reload or not JSON_PATH.exists() or JSON_PATH.stat().st_size <= 2:
@@ -47,6 +51,7 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
             r["caption_generated"] = False
 
     _CACHED_REELS = raw_items
+    _CACHED_MTIME = curr_mtime
     return _CACHED_REELS
 
 

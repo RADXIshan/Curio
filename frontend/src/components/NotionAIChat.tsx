@@ -19,6 +19,14 @@ const STARTER_PROMPTS = [
   'What productivity and learning techniques did I bookmark?',
 ];
 
+const getISTTime = () =>
+  new Intl.DateTimeFormat('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  }).format(new Date()) + ' IST';
+
 export const NotionAIChat: React.FC<NotionAIChatProps> = ({
   isOpen,
   onClose,
@@ -30,7 +38,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
       role: 'model',
       content:
         "Hello! I am your Curio AI assistant, powered by Google Gemini. Ask me anything about the 448 posts and reels you've saved — whether you need to locate a specific tool, review a system design concept, or find project ideas.",
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: getISTTime(),
     },
   ]);
   const [input, setInput] = useState('');
@@ -83,7 +91,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
       id: String(Date.now()),
       role: 'user',
       content: text,
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: getISTTime(),
     };
 
     setMessages((prev) => [...prev, userMsg]);
@@ -101,7 +109,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
         id: String(Date.now() + 1),
         role: 'model',
         content: res.reply,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        timestamp: getISTTime(),
         referenced_reels: res.referenced_reels,
       };
 
@@ -113,7 +121,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
           id: String(Date.now() + 1),
           role: 'model',
           content: 'Sorry, I ran into an issue connecting to Gemini. Please try again in a moment.',
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          timestamp: getISTTime(),
         },
       ]);
     } finally {
@@ -127,7 +135,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
         id: 'welcome-reset',
         role: 'model',
         content: 'Chat history cleared. What would you like to explore next in your saved collection?',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        timestamp: getISTTime(),
       },
     ]);
   };

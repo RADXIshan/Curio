@@ -8,11 +8,15 @@ import html
 import json
 import logging
 import re
-from datetime import datetime
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 logger = logging.getLogger(__name__)
+
+IST_TZ = ZoneInfo("Asia/Kolkata")
+META_TZ = ZoneInfo("America/Los_Angeles")
 
 
 def clean_text(raw_text: Optional[str]) -> Optional[str]:
@@ -24,10 +28,15 @@ def clean_text(raw_text: Optional[str]) -> Optional[str]:
     return cleaned if cleaned else None
 
 
-def parse_timestamp(date_str: Optional[str]) -> Optional[str]:
-    """Parse Instagram export date string into ISO 8601 format."""
+def parse_timestamp_ist(date_str: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Parse Instagram export date string (which is exported in Meta's America/Los_Angeles timezone)
+    and convert to India Standard Time (IST, Asia/Kolkata, UTC+5:30).
+    Returns (formatted_ist_str, iso_ist_str).
+    Example: 'Oct 03, 2026 8:55 am' -> ('Oct 03, 2026, 9:25 pm IST', '2026-10-03T21:25:00+05:30')
+    """
     if not date_str:
-        return None
+        return None, None
     formats = [
         "%b %d, %Y %I:%M %p",   # e.g. Oct 03, 2026 8:55 am
         "%B %d, %Y %I:%M %p",
@@ -38,10 +47,15 @@ def parse_timestamp(date_str: Optional[str]) -> Optional[str]:
     for fmt in formats:
         try:
             dt = datetime.strptime(cleaned, fmt)
-            return dt.isoformat()
+            # Meta exports timestamps in America/Los_Angeles
+            dt_meta = dt.replace(tzinfo=META_TZ)
+            dt_ist = dt_meta.astimezone(IST_TZ)
+            time_str = dt_ist.strftime("%-I:%M %p").lower()
+            formatted_ist = dt_ist.strftime(f"%b %d, %Y, {time_str} IST")
+            return formatted_ist, dt_ist.isoformat()
         except ValueError:
             continue
-    return None
+    return date_str, None
 
 
 def parse_single_post(block_html: str, saved_at_raw: Optional[str] = None) -> Optional[Dict[str, Any]]:
@@ -169,8 +183,8 @@ def parse_single_post(block_html: str, saved_at_raw: Optional[str] = None) -> Op
         if date_match:
             saved_at_raw = date_match.group(1).strip()
 
-    saved_at = clean_text(saved_at_raw)
-    saved_at_iso = parse_timestamp(saved_at)
+    raw_cleaned = clean_text(saved_at_raw)
+    saved_at, saved_at_iso = parse_timestamp_ist(raw_cleaned)
 
     return {
         "id": shortcode,
