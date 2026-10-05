@@ -335,7 +335,6 @@ class InstagramSyncManager:
                         self.log(f"Could not parse post ID from URL: {curr_url}")
                         break
 
-                    post_type = "reel" if m_curr.group(1) == "reel" else "post"
                     shortcode = m_curr.group(2)
 
                     # Boundary check: reached previously saved post!
@@ -354,6 +353,29 @@ class InstagramSyncManager:
                         self.stage = f"Extracting [{len(new_extracted) + 1}]: #{shortcode}..."
 
                     dialog = page.locator('div[role="dialog"]').first
+
+                    # Accurately detect if this item is a Reel vs Post
+                    # Check URL, video elements, audio links, and aria indicators
+                    has_video = False
+                    has_reel_link = False
+                    has_audio = False
+                    try:
+                        has_video = dialog.locator("video").count() > 0
+                        has_reel_link = dialog.locator('a[href*="/reel/"], a[href*="/reels/"]').count() > 0
+                        has_audio = (
+                            dialog.locator('a[href*="/audio/"]').count() > 0 or
+                            dialog.locator('svg[aria-label*="Audio"], svg[aria-label*="Reel"], svg[aria-label*="Clip"]').count() > 0
+                        )
+                    except Exception:
+                        pass
+
+                    is_reel = ("/reel/" in curr_url) or has_video or has_reel_link or has_audio
+                    post_type = "reel" if is_reel else "post"
+                    exact_browser_url = (
+                        f"https://www.instagram.com/reel/{shortcode}/"
+                        if is_reel
+                        else f"https://www.instagram.com/p/{shortcode}/"
+                    )
 
                     # 1. Author/Owner
                     owner_username = None
@@ -416,7 +438,7 @@ class InstagramSyncManager:
                     item_record = {
                         "id": shortcode,
                         "type": post_type,
-                        "url": f"https://www.instagram.com/{post_type}/{shortcode}/",
+                        "url": exact_browser_url,
                         "caption": caption,
                         "hashtags": hashtags,
                         "owner": owner_data,
@@ -425,7 +447,7 @@ class InstagramSyncManager:
                         "saved_at_iso": None,
                     }
                     new_extracted.append(item_record)
-                    self.log(f"Extracted [{len(new_extracted)}] #{shortcode} by @{owner_username or 'unknown'}")
+                    self.log(f"Extracted [{len(new_extracted)}] #{shortcode} ({post_type}) -> {exact_browser_url} by @{owner_username or 'unknown'}")
 
                     # Transition to next post via ArrowRight
                     page.keyboard.press("ArrowRight")

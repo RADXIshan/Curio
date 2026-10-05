@@ -1,8 +1,8 @@
 [
   {
     "id": "DeHkGEYJ9RZ",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DeHkGEYJ9RZ/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeHkGEYJ9RZ/",
     "caption": "Comment “MAP” For All Links!\n\nHere’s your week-wise job-ready roadmap:\n• Week 1: Python, Git & The Command Line\n• Week 2: Data Structures, Algorithms & Big-O\n• Week 3: Backend APIs & Databases\n• Week 4: Docker & CI/CD\n• Week 5: Cloud, Deployment & Kubernetes\n• Week 6: AI Fundamentals & AI Engineering\n• Week 7: System Design, Interview Prep & Polish\n\nEvery week comes with learning resources, hands-on practice, and a project to build.\n\nFollow this roadmap week by week and build your way toward becoming job-ready.\n\n.\n.\n\n[tech job roadmap, python roadmap, python tutorial, git, github, data structures algorithms, dsa, backend development, docker tutorial, ci cd pipeline, github actions, aws, kubernetes tutorial, cloud engineer, ai engineering, llm, large language model, rag, system design, system design interview, interview preparation, interview questions and answers, devops roadmap, cloud roadmap, ai engineer roadmap, software engineer, devops engineer, cloud engineer, ai engineer, tech career, coding, learn to code, programming, women in tech]",
     "hashtags": [
       "roadmap",
@@ -25,8 +25,8 @@
   },
   {
     "id": "DcyvBiSgJjk",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DcyvBiSgJjk/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DcyvBiSgJjk/",
     "caption": "This guy makes SQL look easy. Absolute Gold 🫡🥇\n\nSQL is a foundational skill across tech - especially Backend, Data Engineering, ETL/ELT, Analytics & Data Science.\n\n#sql #database #dataengineering #backend #ai\n\n[SQL, Databases, Backend Engineering, Data Engineering, ETL, ELT, Data Analytics, Data Science, Data Warehousing, Business Intelligence, AI, Machine Learning, Software Engineering]",
     "hashtags": [
       "sql",
@@ -48,8 +48,8 @@
   },
   {
     "id": "DeHF3GPTD_s",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DeHF3GPTD_s/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeHF3GPTD_s/",
     "caption": "Comment “GitHub” I’ll send you the full list and I PROMISE I will not ask you to follow me.\n\nAs always don’t use these repos to substitute a part of the SDLC (software dev lifecycle) use them to assist you. Things like UI/UX pro max are best used in conjunction with other tools.\n\n#ai #viral #build #founder #tech",
     "hashtags": [
       "github",
@@ -71,8 +71,8 @@
   },
   {
     "id": "DdLrDpyo0b2",
-    "type": "post",
-    "url": "https://www.instagram.com/p/DdLrDpyo0b2/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DdLrDpyo0b2/",
     "caption": "grep is where log analysis starts. It is not where it should end.\n\nSeven tools that read logs properly, and every one of them is free and open source:\n\nlnav → merges rotated and gzipped logs into one timeline and lets you run SQL over them. Over 70 formats detected automatically.\n\nGoAccess → turns a web access log into a live dashboard in the terminal, or a self contained HTML report. Scanners and repeated failed requests become obvious.\n\nausearch → decodes the Linux audit log into readable events. Ships with every distribution and sits behind most CIS and PCI DSS logging requirements.\n\nChainsaw → runs Sigma rules directly over Windows event logs and prints the hits as a table, CSV or JSON. Written in Rust, no SIEM needed.\n\nHayabusa → collapses thousands of Windows events into a single timeline ranked by alert level and mapped to MITRE ATT&CK.\n\nTimesketch → merges timelines from many machines into one sketch a whole team can tag, comment on and work through together.\n\nSigma → one YAML rule, compiled into the query language of whatever SIEM you happen to run. Splunk, Elastic, Sentinel and dozens more.\n\nThe part most people miss: sometimes the search is not wrong, the format is. Windows event logs are binary XML, so a plain text search returns nothing at all. Linux audit records store filenames in hex, so searching for a name you can read will never match the line that contains it. The evidence is already in the file. The tool just has to be able to parse it.\n\nStart with lnav and GoAccess on your own servers this week. Add Chainsaw and Sigma once Windows logs enter the picture.\n\nSave this for the next investigation, and send it to whoever is still reading raw logs by hand.\n\n#dfir #threathunting #blueteam #soc #cybersecurity",
     "hashtags": [
       "logging",
@@ -117,8 +117,8 @@
   },
   {
     "id": "DdJNBMFzIEm",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DdJNBMFzIEm/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DdJNBMFzIEm/",
     "caption": "This Guy Explains APIs like a PRO. Shortest and High Quality Playlist for APIs, its designing and detailing. Absolute gold 🥇🔥\n\n#ai #backend #systemdesign #software #code\n\n[API, API Design, API Architecture, REST API, GraphQL, gRPC, OpenAPI, Swagger, API Contracts, HTTP, Status Codes, Authentication, Authorization, OAuth, JWT, Pagination, Cursor Pagination, Rate Limiting, Microservices, Backend Engineering ]",
     "hashtags": [
       "api-design",
@@ -140,8 +140,8 @@
   },
   {
     "id": "DeDv369vqDT",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DeDv369vqDT/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeDv369vqDT/",
     "caption": "How to learn electronics in one week!\n\nIt goes without saying that this is NOT an exhaustive list. I’ve obviously left some things out but that’s by design :) I believe the fastest way to truly learn something is when you’re building projects, making mistakes and genuinely enjoying the iterative development process. The best way to diminish someone’s excitement in a field like electronics is by shoving a textbook in their face 🫩\n\n#engineering #robotics #electronics #arduino #raspberrypi",
     "hashtags": [
       "electronics",
@@ -164,7 +164,7 @@
   {
     "id": "Dd9R75ej5jv",
     "type": "post",
-    "url": "https://www.instagram.com/post/Dd9R75ej5jv/",
+    "url": "https://www.instagram.com/p/Dd9R75ej5jv/",
     "caption": "Comment \"slop\" and I'll send all the links.\n\n-\n#ai #claude #claudeskills #aiskills #aitools",
     "hashtags": [
       "claude",
@@ -186,8 +186,8 @@
   },
   {
     "id": "DeCgQY2KerU",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DeCgQY2KerU/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeCgQY2KerU/",
     "caption": "1️⃣ KAIZEN - The One-Minute Rule\nStart so small your brain can’t resist.\nOne push-up. One sentence. One minute.\n\nHarvard research shows tiny habits bypass mental resistance and compound over time. Progress beats pressure.\n\n2️⃣ IKIGAI - A Reason to Wake Up The question isn’t “What do you do?”\nIt’s “Why do you get up?”\n\nStudies on purpose and longevity show that meaning increases energy and discipline.\nWhen your why is clear, effort feels lighter.\n\n3️⃣ HARA HACHIBU - Stop at 80%\nOvereating kills focus, mood, and drive.\nJapanese elders stay active by stopping before full.\n\nLighter digestion = better energy and mental clarity.\nMost “laziness” is physical overload.\n\n4️⃣ ANCHORED FOCUS - Ritualized\n25 minutes work. 5 minutes rest.\nAdd a ritual: a breath, a gesture, a sound.\n\nYour brain learns: this signal = focus.\nNeuroscience calls this conditioning and it works fast.\n\n5️⃣ SEIRI & SEITON - Clear Space\nA messy room creates mental noise.\nClutter increases stress and reduces focus.\n\n(Princeton research).\n\nClean space leads to clean action.\n\n6️⃣ KINTSUGI - Finish Imperfectly\nLaziness often hides fear of failure.\nKintsugi teaches flaws aren’t mistakes - they’re part of progress.\n\nCompletion builds momentum.\nNot perfection.\n\n7️⃣ WABI-SABI - Act Before Perfect\nThe Japanese don’t wait for ideal conditions.\nThey move with what they have.\n\nPerfection delays action.\nMovement creates clarity.\nMost procrastination is fear dressed as patience.\n\nFollow for more tips on building actual discipline and fitness tips.",
     "hashtags": [
       "productivity",
@@ -209,8 +209,8 @@
   },
   {
     "id": "DeCJqltJeFQ",
-    "type": "post",
-    "url": "https://www.instagram.com/post/DeCJqltJeFQ/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeCJqltJeFQ/",
     "caption": "Comment “robotics” and I’ll send the links👇\n\nGive these three resources a go;\n1. Kevin Wood will solidify your knowledge on robotics and kinematics with practical visualisation in ROS2 and Rviz using UR robot.\n2. Do your robotics and kinematics math here and when you have a slip, it catches your errors and explains why, derive also generates 2D and 3D graphs for visualisation.\n3. Michigan Robotics dropped their entire robotics curriculum in one repo.\n\n#engineering #engineeringstudent #robotics #studytok #studytips",
     "hashtags": [
       "robotics",
@@ -232,8 +232,8 @@
   },
   {
     "id": "Dce5z6mvEfX",
-    "type": "post",
-    "url": "https://www.instagram.com/post/Dce5z6mvEfX/",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dce5z6mvEfX/",
     "caption": "especially useful if you’re starting classes soon (but everyone should be a lifelong learner 😉)\n\n#focus #concentrate",
     "hashtags": [
       "focus",

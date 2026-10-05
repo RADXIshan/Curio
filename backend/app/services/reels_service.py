@@ -43,8 +43,14 @@ def load_reels(force_reload: bool = False) -> List[Dict[str, Any]]:
             raw_items = json.load(f)
 
 
-    # Attach category, title, and flags if missing
+    # Attach category, title, flags, and normalize exact browser URLs
     for r in raw_items:
+        # Sanitize and ensure accurate browser URLs (never /post/)
+        u = r.get("url") or ""
+        shortcode = r.get("id") or ""
+        if "/post/" in u and shortcode:
+            prefix = "reel" if r.get("type") == "reel" else "p"
+            r["url"] = f"https://www.instagram.com/{prefix}/{shortcode}/"
         if not r.get("category"):
             r["category"] = classify_reel(r)
         if not r.get("title"):
