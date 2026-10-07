@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, Image, Layers, Sparkles } from 'lucide-react';
+import { Video, Image, Layers, BookmarkCheck } from 'lucide-react';
 import type { StatsResponse } from '../types';
 
 interface StatsBarProps {
@@ -16,7 +16,7 @@ export const StatsBar: React.FC<StatsBarProps> = ({ stats }) => {
         <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-indigo-500/10 rounded-full blur-xl group-hover:bg-indigo-500/20 transition-all"></div>
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
-            <Sparkles className="w-5 h-5" />
+            <BookmarkCheck className="w-5 h-5" />
           </div>
           <div>
             <p className="text-xs text-slate-400 font-medium">Total Saved</p>

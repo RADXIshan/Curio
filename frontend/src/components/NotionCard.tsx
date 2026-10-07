@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Sparkles, Copy, Check, Calendar } from 'lucide-react';
+import { ExternalLink, Brain, Copy, Check, Calendar } from 'lucide-react';
 import type { ReelItem } from '../types';
 import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
 
@@ -79,7 +79,7 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
 
             {reel.caption_generated && (
               <span className="text-[9px] font-medium px-1.5 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 flex items-center gap-1 font-mono">
-                <Sparkles className="w-2.5 h-2.5" />
+                <Brain className="w-2.5 h-2.5" />
                 AI Caption
               </span>
             )}
@@ -97,7 +97,7 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
         {reel.search_meta && (
           <div className="mb-2 px-2 py-1 rounded-md bg-sky-950/30 border border-sky-800/35 flex items-center justify-between text-[11px] text-sky-200">
             <div className="flex items-center gap-1.5 truncate">
-              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+              <Brain className="w-3 h-3 text-sky-400 shrink-0" />
               <span className="truncate">
                 {reel.search_meta.match_reasons?.[0] || 'Smart Search Match'}
               </span>
@@ -167,7 +167,7 @@ export const NotionCard: React.FC<NotionCardProps> = ({ reel, onOpen, onTagClick
       <div className="pt-2.5 border-t border-[#292929] flex items-center justify-between text-xs text-[#8c8c8c]">
         {/* Open Notion Page View */}
         <span className="text-[11px] text-[#7a7a7a] group-hover:text-sky-300 flex items-center gap-1 transition-colors">
-          <Sparkles className="w-3 h-3 text-[#7a7a7a] group-hover:text-sky-400 transition-colors" />
+          <Brain className="w-3 h-3 text-[#7a7a7a] group-hover:text-sky-400 transition-colors" />
           <span>Open page & AI summary</span>
         </span>
 

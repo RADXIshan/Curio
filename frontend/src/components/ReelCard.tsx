@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Sparkles, Copy, Check, Video, Image, Calendar, UserCheck } from 'lucide-react';
+import { ExternalLink, Brain, Copy, Check, Video, Image, Calendar, UserCheck } from 'lucide-react';
 import type { ReelItem } from '../types';
 
 interface ReelCardProps {
@@ -94,7 +94,7 @@ export const ReelCard: React.FC<ReelCardProps> = ({
         {reel.search_meta && (
           <div className="mb-3 px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/25 flex items-center justify-between text-xs text-sky-300">
             <div className="flex items-center gap-1.5 truncate">
-              <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+              <Brain className="w-3 h-3 text-sky-400 shrink-0" />
               <span className="truncate text-[11px] font-medium">
                 {reel.search_meta.match_reasons?.[0] || 'Smart Match'}
               </span>
@@ -172,7 +172,7 @@ export const ReelCard: React.FC<ReelCardProps> = ({
           onClick={() => onOpenSummary(reel)}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/20 hover:border-indigo-500/40 font-medium transition-all cursor-pointer text-[11px]"
         >
-          <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+          <Brain className="w-3.5 h-3.5 text-indigo-400" />
           <span>Gemini AI</span>
         </button>
 

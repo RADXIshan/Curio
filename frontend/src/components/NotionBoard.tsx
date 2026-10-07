@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Copy, Check, Sparkles } from 'lucide-react';
+import { ExternalLink, Copy, Check, Brain } from 'lucide-react';
 import type { CategoryCount, ReelItem } from '../types';
 import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
 
@@ -65,7 +65,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
 
             {reel.caption_generated && (
               <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-sky-500/10 text-sky-300 border border-sky-500/25 flex items-center gap-0.5 font-mono">
-                <Sparkles className="w-2.5 h-2.5" />
+                <Brain className="w-2.5 h-2.5" />
                 AI
               </span>
             )}
@@ -121,7 +121,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ reel, onOpen, onTagClick }) => {
       {/* Card Hover Footer */}
       <div className="pt-2 border-t border-[#292929] flex items-center justify-between text-[11px] text-[#737373]">
         <span className="group-hover:text-sky-300 flex items-center gap-1 transition-colors">
-          <Sparkles className="w-3 h-3 text-[#777777] group-hover:text-sky-400 transition-colors" />
+          <Brain className="w-3 h-3 text-[#777777] group-hover:text-sky-400 transition-colors" />
           <span>Inspect</span>
         </span>
 

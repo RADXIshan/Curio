@@ -6,7 +6,7 @@ import {
   AlertCircle,
   KeyRound,
   Terminal,
-  Sparkles,
+  Brain,
   ExternalLink,
 } from 'lucide-react';
 import { startSync, getSyncStatus, submitSyncOtp, cancelSync } from '../services/api';
@@ -192,7 +192,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                 ) : isRunning ? (
                   <RefreshCw className="w-5 h-5 text-sky-400 animate-spin" />
                 ) : (
-                  <Sparkles className="w-5 h-5 text-sky-400" />
+                  <Brain className="w-5 h-5 text-sky-400" />
                 )}
               </div>
 

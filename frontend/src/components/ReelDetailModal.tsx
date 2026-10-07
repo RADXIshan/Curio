@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Sparkles, ExternalLink, Copy, Check, CheckCircle2, Terminal, ArrowRight, Loader2 } from 'lucide-react';
+import { X, Brain, ExternalLink, Copy, Check, CheckCircle2, Terminal, ArrowRight, Loader2 } from 'lucide-react';
 import type { AISummary, ReelItem } from '../types';
 import { summarizeReel } from '../services/api';
 
@@ -91,7 +91,7 @@ export const ReelDetailModal: React.FC<ReelDetailModalProps> = ({ reel, onClose 
         <div className="p-5 rounded-2xl bg-gradient-to-b from-indigo-950/40 to-purple-950/30 border border-indigo-500/30 relative overflow-hidden">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2 text-xs font-semibold text-indigo-300">
-              <Sparkles className="w-4 h-4 text-indigo-400" />
+              <Brain className="w-4 h-4 text-indigo-400" />
               <span>Gemini AI Insights & Summary</span>
             </div>
             {summary?.category && (

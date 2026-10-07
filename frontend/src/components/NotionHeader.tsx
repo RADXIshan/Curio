@@ -5,7 +5,7 @@ import {
   Table as TableIcon,
   Search,
   X,
-  Sparkles,
+  Bot,
   RotateCcw,
   RefreshCw,
   Tag,
@@ -291,7 +291,7 @@ export const NotionHeader: React.FC<NotionHeaderProps> = ({
             onClick={onOpenChat}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#242424] hover:bg-[#2c2c2c] text-[#ededed] hover:text-white border border-sky-500/30 hover:border-sky-400 transition-all cursor-pointer text-xs font-medium shadow-xs group"
           >
-            <Sparkles className="w-3.5 h-3.5 text-sky-400 group-hover:text-sky-300 transition-colors" />
+            <Bot className="w-3.5 h-3.5 text-sky-400 group-hover:text-sky-300 transition-colors" />
             <span className="hidden sm:inline">Ask AI</span>
           </button>
         </div>

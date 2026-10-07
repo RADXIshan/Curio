@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, RefreshCw, BookmarkCheck } from 'lucide-react';
+import { Bot, RefreshCw, BookmarkCheck } from 'lucide-react';
 
 interface NavbarProps {
   totalCount: number;
@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 : 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:opacity-95 text-white shadow-purple-600/25'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Bot className="w-3.5 h-3.5" />
             <span>Ask Curio AI</span>
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>

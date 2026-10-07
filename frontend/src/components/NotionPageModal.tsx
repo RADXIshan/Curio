@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   X,
-  Sparkles,
+  Brain,
   ExternalLink,
   Copy,
   Check,
@@ -122,7 +122,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
             <span className="text-[11px] font-mono text-[#777777]">ID: {reel.id}</span>
             {reel.caption_generated && (
               <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30 flex items-center gap-1 font-mono">
-                <Sparkles className="w-3 h-3 text-sky-400" />
+                <Brain className="w-3 h-3 text-sky-400" />
                 AI Generated Caption
               </span>
             )}
@@ -167,7 +167,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
 
             {reel.caption_generated && (
               <div className="flex items-start gap-2.5 p-3 rounded-lg bg-sky-950/40 border border-sky-500/30 text-xs text-sky-200">
-                <Sparkles className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <Brain className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-sky-300">AI Synthesized Technical Caption</p>
                   <p className="text-[11px] text-sky-200/80 leading-relaxed mt-0.5">
@@ -252,7 +252,7 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
           <div className="p-5 rounded-lg border border-sky-900/40 bg-[#161a24] space-y-4 shadow-sm">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-semibold text-sky-200">
-                <Sparkles className="w-4 h-4 text-sky-400" />
+                <Brain className="w-4 h-4 text-sky-400" />
                 <span>Gemini AI Summary & Takeaways</span>
               </div>
               {summary?.category && (
