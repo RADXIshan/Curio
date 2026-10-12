@@ -1,5 +1,98 @@
 [
   {
+    "id": "DeYIlSDty-H",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeYIlSDty-H/",
+    "caption": "brandonbetv",
+    "hashtags": [
+      "career",
+      "coding",
+      "interview",
+      "software engineering"
+    ],
+    "owner": {
+      "name": "brandonbetv",
+      "username": "brandonbetv",
+      "url": "https://www.instagram.com/brandonbetv/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 12, 2026, 7:07 pm IST",
+    "saved_at_iso": "2026-10-12T19:07:11.175119+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Software Engineering Career and Interview Preparation",
+    "caption_generated": false
+  },
+  {
+    "id": "DeYRQA3K-98",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeYRQA3K-98/",
+    "caption": "Baidu has open-sourced Unlimited-OCR, a document-parsing model designed to process multiple pages together instead of treating every page as an isolated task. Its architecture supports a 32K context window, and its code and model weights are available under the MIT license. <Cite refs={[“turn148058search12”,“turn148058search0”]}/>\n\nThe project reports strong results on long-document parsing and is designed for multilingual document understanding. It supports deployment through tools including Transformers, vLLM and SGLang, with local inference possible on compatible hardware. However, the model weights are approximately 6.7 GB, so running it locally still requires suitable memory and compute resources. <Cite refs={[“turn148058search4”,“turn148058search3”]}/>\n\nImportant context: the headline’s 93% score, error rate beyond 40 pages and 1.9 million downloads should be treated as claims requiring their exact benchmark and download-count snapshots. “Free forever” is also not guaranteed; the project is currently released under an open-source license.\n\nCredit: Baidu — Unlimited-OCR Official Project\n\nThis is an informative media page. For content removal, corrections, or credits, please DM or email us.",
+    "hashtags": [
+      "ai",
+      "ocr",
+      "machine learning",
+      "open source",
+      "llm"
+    ],
+    "owner": {
+      "name": "gogreen_ai",
+      "username": "gogreen_ai",
+      "url": "https://www.instagram.com/gogreen_ai/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 12, 2026, 3:18 pm IST",
+    "saved_at_iso": "2026-10-12T15:18:00.535789+05:30",
+    "category": "AI & Agents",
+    "title": "Baidu Unlimited-OCR Open-Source Document Parsing Model",
+    "caption_generated": false
+  },
+  {
+    "id": "DeUNx_YSP9F",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeUNx_YSP9F/",
+    "caption": "ten.infosec",
+    "hashtags": [
+      "infosec",
+      "cybersecurity",
+      "networking",
+      "linux"
+    ],
+    "owner": {
+      "name": "ten.infosec",
+      "username": "ten.infosec",
+      "url": "https://www.instagram.com/ten.infosec/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 12, 2026, 11:28 am IST",
+    "saved_at_iso": "2026-10-12T11:28:49.896459+05:30",
+    "category": "DevOps & Cloud",
+    "title": "Information Security and Cybersecurity Best Practices",
+    "caption_generated": false
+  },
+  {
+    "id": "DeV2n53gLgf",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeV2n53gLgf/",
+    "caption": "The number one repo on GitHub this week.\n\nComment \"DECODE\" and I'll send you the link.\n\nAI that just does the thing: www.skool.com/easymachineai\n\n#ReverseEngineering #GitHub #ClaudeCode #Codex #AIAgents",
+    "hashtags": [
+      "github",
+      "ai agents",
+      "claude code",
+      "reverse engineering"
+    ],
+    "owner": {
+      "name": "theericmichaud",
+      "username": "theericmichaud",
+      "url": "https://www.instagram.com/theericmichaud/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 12, 2026, 7:39 am IST",
+    "saved_at_iso": "2026-10-12T07:39:39.257130+05:30",
+    "category": "AI & Agents",
+    "title": "Trending GitHub AI Repositories and Autonomous Agents",
+    "caption_generated": false
+  },
+  {
     "id": "DeUxCz4RnR_",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DeUxCz4RnR_/",
