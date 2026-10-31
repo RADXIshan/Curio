@@ -136,3 +136,13 @@ export async function cancelSync(): Promise<{ success: boolean; message: string 
   return res.json();
 }
 
+export async function openMessagesPermissions(): Promise<{ success: boolean; message: string }> {
+  const res = await fetch(`${API_BASE}/sync/open-permissions`, {
+    method: 'POST',
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to open permissions: ${res.statusText}`);
+  }
+  return res.json();
+}
+

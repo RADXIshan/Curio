@@ -97,6 +97,8 @@ export interface SyncStatusResponse {
   stage: string;
   awaiting_otp: boolean;
   otp_prompt?: string | null;
+  auto_otp_status?: string | null;
+  messages_access?: boolean;
   error?: string | null;
   new_count: number;
   logs: SyncLogItem[];

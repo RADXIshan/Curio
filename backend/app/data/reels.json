@@ -1,5 +1,1155 @@
 [
   {
+    "id": "DfHtksDIYtk",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfHtksDIYtk/",
+    "caption": "Stop guessing which DSA pattern to use. 👀\n\nWhat if the keywords in a LeetCode question could tell you where to start?\n\nSorted array → Two Pointers\nLongest substring → Sliding Window\nTop K → Heap\nNext Greater Element → Monotonic Stack\nShortest Path → BFS\nSubarray Sum = K → Prefix Sum + HashMap\n\nAnd that’s just Part 1.\n\nLearning DSA isn’t about memorising 500 solutions. It’s about recognising patterns and knowing when to apply them.\n\nSave this before your next LeetCode session. 🔖\n\nPart 2 coming next!\n\n#DSA #LeetCode #CodingInterviews #SoftwareEngineering #TechCareers",
+    "hashtags": [
+      "dsa",
+      "leetcode",
+      "algorithms",
+      "interview prep"
+    ],
+    "owner": {
+      "name": "kaxbuilds",
+      "username": "kaxbuilds",
+      "url": "https://www.instagram.com/kaxbuilds/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 31, 2026, 7:50 pm IST",
+    "saved_at_iso": "2026-10-31T19:50:53.278672+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Recognizing DSA Patterns for LeetCode Interview Prep",
+    "caption_generated": false
+  },
+  {
+    "id": "DfINAjyT95Y",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfINAjyT95Y/",
+    "caption": "One of the BEST System Design explanations I’ve come across in 35 mins🔥🙏 Visuals on Top 🔥\n\n#systemdesign #backend #ai #code #software\n\n[System Design, Scalability, Vertical Scaling, Horizontal Scaling, Load Balancing, Stateless Architecture, Redis, Sessions, Connection Pooling, PostgreSQL, Database Replication, Read Replicas, Caching, Cache Invalidation, Message Queues, Background Workers, Async Processing, Database Sharding, Distributed Systems, Backend Architecture, High Availability, Performance Optimization, System Design Fundamentals]",
+    "hashtags": [
+      "system design",
+      "scalability",
+      "architecture",
+      "backend"
+    ],
+    "owner": {
+      "name": "rishabhsinghtech",
+      "username": "rishabhsinghtech",
+      "url": "https://www.instagram.com/rishabhsinghtech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 31, 2026, 10:53 am IST",
+    "saved_at_iso": "2026-10-31T10:53:33.629583+05:30",
+    "category": "System Design & Backend",
+    "title": "Comprehensive Overview of System Design Fundamentals",
+    "caption_generated": false
+  },
+  {
+    "id": "DfDWwehBIeV",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfDWwehBIeV/",
+    "caption": "I’ve done research on AI @ MIT, I study CS & engineering @ Cornell, and have interviewed at places like Nintendo, Amazon, Figma and Notion\n\nThe projects that get noticed all have one thing in common: you can see them work in seconds.\n\nHere are 4 projects to get you hired -\n\n1. Search your camera roll\nType what you remember and find the exact clip in milliseconds. No tags, no scrolling.\nTech: CLIP embeddings, FAISS, Python, semantic search, React.\n\n2. Codebase galaxy\nTurn any repo into a living universe. Spot hot files and circular imports at a glance. Tech: TypeScript, Three.js, graph algorithms, static analysis, git history.\n\n3. AI traffic control\nTrain an agent to run the lights, then watch it clear the jam that fixed timers cause. Tech: Python, PyTorch, reinforcement learning, simulation, Canvas.\n\n4. Break the cloud.\nCrash a server on purpose. Watch the cluster elect a new leader and lose zero writes. Tech: Go, Raft consensus, WebSockets, fault tolerance, concurrency.\n\nSave this for your next project and follow for more!",
+    "hashtags": [
+      "portfolio",
+      "projects",
+      "react",
+      "python"
+    ],
+    "owner": {
+      "name": "nigel.tatem",
+      "username": "nigel.tatem",
+      "url": "https://www.instagram.com/nigel.tatem/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 31, 2026, 1:56 am IST",
+    "saved_at_iso": "2026-10-31T01:56:13.980493+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Portfolio Projects to Get Hired as a Software Engineer",
+    "caption_generated": false
+  },
+  {
+    "id": "DfFwSOwi9nO",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfFwSOwi9nO/",
+    "caption": "Free short video tutorials 😎\n\nThis website contains links to all kinds of short useful video tutorials. The videos range in all kinds of topics for Python data tools. You can learn to create gifs with plots, the basics of sklearn, and how to write clean pandas code!\n\nFollow for more free coding resources ✅\n\n#code #coding #tech #learntocode #python",
+    "hashtags": [
+      "python",
+      "data science",
+      "pandas",
+      "sklearn"
+    ],
+    "owner": {
+      "name": "softwarewithnick",
+      "username": "softwarewithnick",
+      "url": "https://www.instagram.com/softwarewithnick/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 30, 2026, 4:58 pm IST",
+    "saved_at_iso": "2026-10-30T16:58:54.331404+05:30",
+    "category": "Python & Data Science",
+    "title": "Free Video Tutorials for Python and Data Science Tools",
+    "caption_generated": false
+  },
+  {
+    "id": "DfEsrlDNQGt",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfEsrlDNQGt/",
+    "caption": "Want to be AI Engineer in 2027?\n\nComment project bellow and I will send you the full list",
+    "hashtags": [
+      "ai engineering",
+      "machine learning",
+      "projects",
+      "generative ai"
+    ],
+    "owner": {
+      "name": "khaliladib11",
+      "username": "khaliladib11",
+      "url": "https://www.instagram.com/khaliladib11/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 30, 2026, 8:01 am IST",
+    "saved_at_iso": "2026-10-30T08:01:34.682315+05:30",
+    "category": "AI & Agents",
+    "title": "AI Engineering Project Roadmap for Future Developers",
+    "caption_generated": false
+  },
+  {
+    "id": "DfE6oL3BLhV",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfE6oL3BLhV/",
+    "caption": "Comment “REPORT” to receive the links and setup guide!!",
+    "hashtags": [
+      "dev tools",
+      "setup guide",
+      "productivity",
+      "automation"
+    ],
+    "owner": {
+      "name": "vaibhavdecoded",
+      "username": "vaibhavdecoded",
+      "url": "https://www.instagram.com/vaibhavdecoded/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 29, 2026, 11:04 pm IST",
+    "saved_at_iso": "2026-10-29T23:04:15.033226+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Setup Guide and Resources for Developer Tools",
+    "caption_generated": false
+  },
+  {
+    "id": "DfD0sAluVc2",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfD0sAluVc2/",
+    "caption": "best outro lol.. comment “agent” for the resources :)",
+    "hashtags": [
+      "ai agents",
+      "llms",
+      "automation",
+      "python"
+    ],
+    "owner": {
+      "name": "parth_jairam.exe",
+      "username": "parth_jairam.exe",
+      "url": "https://www.instagram.com/parth_jairam.exe/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 29, 2026, 2:06 pm IST",
+    "saved_at_iso": "2026-10-29T14:06:55.384136+05:30",
+    "category": "AI & Agents",
+    "title": "Building and Using AI Agents with Open Source Resources",
+    "caption_generated": false
+  },
+  {
+    "id": "DfD6G-8OzWa",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfD6G-8OzWa/",
+    "caption": "Here’s three free resources to learn sql #coding #computerscience #student",
+    "hashtags": [
+      "sql",
+      "databases",
+      "querying",
+      "data analysis"
+    ],
+    "owner": {
+      "name": "jackk_flick",
+      "username": "jackk_flick",
+      "url": "https://www.instagram.com/jackk_flick/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 29, 2026, 5:09 am IST",
+    "saved_at_iso": "2026-10-29T05:09:35.735047+05:30",
+    "category": "System Design & Backend",
+    "title": "Top Free Resources to Learn SQL From Scratch",
+    "caption_generated": false
+  },
+  {
+    "id": "DfDFFbUzjzg",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfDFFbUzjzg/",
+    "caption": "Want to improve your logic building? 🚀💻\nStop jumping between random tutorials!\n\n✅ Follow @decode_with_palak for tech resources.\n\n💬 Comment “🙌🏻” and save this reel for your backend engineering journey!\n\nYour 2026 developer journey starts here. 👨‍💻\n\n#BackendDevelopment #api #SoftwareEngineering #webdev #CodingRoadmap\n\n[techcontent webdev codingreels techinterview techjobs interviewprep webdev devlife apisecurity webdevinterview engineeringstudents softwaredevelopment freeresources explorepage trending fypppp]",
+    "hashtags": [
+      "backend",
+      "apis",
+      "software engineering",
+      "web development"
+    ],
+    "owner": {
+      "name": "decode_with_palak",
+      "username": "decode_with_palak",
+      "url": "https://www.instagram.com/decode_with_palak/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 28, 2026, 8:12 pm IST",
+    "saved_at_iso": "2026-10-28T20:12:16.085958+05:30",
+    "category": "System Design & Backend",
+    "title": "Backend Engineering Roadmap and Logic Building Guide",
+    "caption_generated": false
+  },
+  {
+    "id": "De7iKB6Oi8b",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De7iKB6Oi8b/",
+    "caption": "This free opens our software can basically be a second you on your computer. You can use it to draft emails figure out dinner plans and do pretty much anything you can do on your computer. It’s called sentient OS and if you want to check it out, they’ll be a link in my bio. It’s 100% free.",
+    "hashtags": [
+      "ai agents",
+      "open source",
+      "automation",
+      "os"
+    ],
+    "owner": {
+      "name": "jackk_flick",
+      "username": "jackk_flick",
+      "url": "https://www.instagram.com/jackk_flick/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 28, 2026, 11:14 am IST",
+    "saved_at_iso": "2026-10-28T11:14:56.436869+05:30",
+    "category": "AI & Agents",
+    "title": "Open Source AI Operating System for Computer Automation",
+    "caption_generated": false
+  },
+  {
+    "id": "DfC39hSzoSc",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfC39hSzoSc/",
+    "caption": "5 productivity tricks for adhd in 57 seconds:\n\n1. write it down\n2. the 5/25 rule\n3. the eisenhower matrix\n4. pomodoro (25 on, 5 off)\n5. take a walk\n\ncomment REMY and i’ll send you the AI i write everything down in.",
+    "hashtags": [
+      "productivity",
+      "adhd",
+      "time management",
+      "workflow"
+    ],
+    "owner": {
+      "name": "remyadhd",
+      "username": "remyadhd",
+      "url": "https://www.instagram.com/remyadhd/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 28, 2026, 2:17 am IST",
+    "saved_at_iso": "2026-10-28T02:17:36.787779+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Productivity and Time Management Frameworks for Developers",
+    "caption_generated": false
+  },
+  {
+    "id": "DfAnJc6Tt8B",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfAnJc6Tt8B/",
+    "caption": "💯💯",
+    "hashtags": [
+      "artificial intelligence",
+      "machine learning",
+      "tech",
+      "innovation"
+    ],
+    "owner": {
+      "name": "aiwithdivyam",
+      "username": "aiwithdivyam",
+      "url": "https://www.instagram.com/aiwithdivyam/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 27, 2026, 5:20 pm IST",
+    "saved_at_iso": "2026-10-27T17:20:17.138690+05:30",
+    "category": "AI & Agents",
+    "title": "Exploring Artificial Intelligence and Machine Learning Trends",
+    "caption_generated": false
+  },
+  {
+    "id": "DfCfWdnMkU3",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfCfWdnMkU3/",
+    "caption": "3 more free courses for machine learning — none of them are Andrew Ng 👇\n1️⃣ Kaggle Learn: Intro to Machine Learning — free, ~3 hours, free certificate. Train your first model hands-on.\n\n2️⃣ Caltech: Learning From Data — Yaser Abu-Mostafa’s actual course, 18 real lectures, free with slides.\n\n3️⃣ MIT 6.036: Introduction to Machine Learning — free lecture videos and notes on OCW. No certificate, the deep end.\n\nBuild it → understand why it worked → go deep.\nSend this to whoever watched the first ML video and still hasn’t started.\n💬 Comment “MODEL” and I’ll DM you all 3 links.\n#MachineLearning #AI #DataScience #Kaggle #Caltech MIT LearnAI TechRoadmap FreeCourses ComputerScience",
+    "hashtags": [
+      "machine learning",
+      "python",
+      "data science",
+      "courses"
+    ],
+    "owner": {
+      "name": "devlearningcorner",
+      "username": "devlearningcorner",
+      "url": "https://www.instagram.com/devlearningcorner/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 27, 2026, 8:22 am IST",
+    "saved_at_iso": "2026-10-27T08:22:57.489601+05:30",
+    "category": "Python & Data Science",
+    "title": "Top Free Machine Learning Courses for Data Scientists",
+    "caption_generated": false
+  },
+  {
+    "id": "DfCgKqDNp6C",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfCgKqDNp6C/",
+    "caption": "Comment “SQL” to get all resources.\n\nIf you want to learn SQL from scratch, stop watching endless tutorials and start writing your own queries.\n\nHere’s a simple 3-step roadmap to learn SQL for data analysis, even if you’re a complete beginner.\n\nFirst, build your foundation with Alex the Analyst’s SQL course. Learn essential SQL concepts like SELECT statements, WHERE clauses, GROUP BY, and SQL joins.\n\nNext, practice what you’ve learned with Codecademy’s free Learn SQL course. Writing queries yourself is how you turn SQL syntax into practical skills.\n\nFinally, explore Kaggle Datasets and build your own SQL projects. Work with real datasets, ask meaningful questions, and use SQL to find answers.\n\nThe goal isn’t just to finish another SQL tutorial. It’s to become comfortable solving real problems with data.\n\nSave this roadmap for later and follow for more programming, data science, and software engineering resources.",
+    "hashtags": [
+      "sql",
+      "databases",
+      "data analysis",
+      "learning roadmap"
+    ],
+    "owner": {
+      "name": "pirknn",
+      "username": "pirknn",
+      "url": "https://www.instagram.com/pirknn/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 26, 2026, 11:25 pm IST",
+    "saved_at_iso": "2026-10-26T23:25:37.840511+05:30",
+    "category": "System Design & Backend",
+    "title": "Three-Step Roadmap to Master SQL for Data Analysis",
+    "caption_generated": false
+  },
+  {
+    "id": "De-rkpsB0JH",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De-rkpsB0JH/",
+    "caption": "Comment “WATCHLIST” and I’ll DM you all 7 video links.\n\nWant to understand AI without getting lost in technical jargon? Start here.\n\nThese 7 free YouTube videos cover everything from how ChatGPT works to building GPT models from scratch, with one topic to explore every day.\n\nMonday: How ChatGPT Actually Works\nTuesday: What AI Engineers Actually Do\nWednesday: Make Any LLM Perform Better\nThursday: Teach AI Your Own Data\nFriday: The Skill Every AI Builder Needs\nSaturday: Build GPT From Scratch\nSunday: How Karpathy Uses AI Every Day\n\nIn just 3 hours, you can build a stronger foundation in AI, understand how these systems work, and discover what you can create with them.\n\n#LearnInPublic #AIEngineering #BuildInPublic #AITools #ArtificialIntelligence",
+    "hashtags": [
+      "artificial intelligence",
+      "llms",
+      "chatgpt",
+      "machine learning"
+    ],
+    "owner": {
+      "name": "kevinnaughtonjr",
+      "username": "kevinnaughtonjr",
+      "url": "https://www.instagram.com/kevinnaughtonjr/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 26, 2026, 2:28 pm IST",
+    "saved_at_iso": "2026-10-26T14:28:18.191422+05:30",
+    "category": "AI & Agents",
+    "title": "Curated YouTube Video Watchlist for Understanding AI and LLMs",
+    "caption_generated": false
+  },
+  {
+    "id": "DfAnAPQgmcQ",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfAnAPQgmcQ/",
+    "caption": "Genuinely what I have been using recently #engineering #university #stem #study #success",
+    "hashtags": [
+      "engineering",
+      "study",
+      "productivity",
+      "software"
+    ],
+    "owner": {
+      "name": "ari.sbryant",
+      "username": "ari.sbryant",
+      "url": "https://www.instagram.com/ari.sbryant/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 26, 2026, 5:30 am IST",
+    "saved_at_iso": "2026-10-26T05:30:58.542333+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Productivity and Study Tools for Engineering Students",
+    "caption_generated": false
+  },
+  {
+    "id": "De_3Ja9TQ2S",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De_3Ja9TQ2S/",
+    "caption": "Follow and comment \"links\" and I'll send you 10+ top C++ videos!",
+    "hashtags": [
+      "c++",
+      "programming",
+      "backend",
+      "software engineering"
+    ],
+    "owner": {
+      "name": "thecodingjesusquant",
+      "username": "thecodingjesusquant",
+      "url": "https://www.instagram.com/thecodingjesusquant/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 25, 2026, 8:33 pm IST",
+    "saved_at_iso": "2026-10-25T20:33:38.893244+05:30",
+    "category": "System Design & Backend",
+    "title": "Top C++ Video Tutorials and Learning Resources",
+    "caption_generated": false
+  },
+  {
+    "id": "De-9EyzqLsA",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De-9EyzqLsA/",
+    "caption": "Here’s how I’d relearn machine learning if I had to start over today\n\n#tech #ai #ml",
+    "hashtags": [
+      "machine learning",
+      "ai",
+      "data science",
+      "python"
+    ],
+    "owner": {
+      "name": "chrisoh.zip",
+      "username": "chrisoh.zip",
+      "url": "https://www.instagram.com/chrisoh.zip/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 25, 2026, 11:36 am IST",
+    "saved_at_iso": "2026-10-25T11:36:19.244154+05:30",
+    "category": "Python & Data Science",
+    "title": "Modern Roadmap for Relearning Machine Learning",
+    "caption_generated": false
+  },
+  {
+    "id": "DfAGWFMlCoc",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DfAGWFMlCoc/",
+    "caption": "Comment “Project” and i’ll send you all the links.\n\nif i was serious about getting better as a developer, these are the 5 projects i’d actually sit down and build.\n\n- let’s build gpt from scratch: karpathy codes a gpt model line by line, so you finally see how self-attention and transformers work instead of just hearing about them\n- stock price prediction with pytorch: you build an lstm in python that predicts stock prices, which is a really good way to learn deep learning on real time series data\n- how senior engineers build with ai in 2026: you build a production saas app the way seniors do it, planning the architecture first and keeping your ai context clean across the whole next.js stack\n- how to build self-learning ai agents: you build agents in python that actually remember things, using mem0 with both cloud and open source memory setups\n- full-stack google drive clone with next.js: a full file storage app with auth, uploads, sharing and search, built from the first line all the way to deployment\n\nsave this and pick one to start this weekend.",
+    "hashtags": [
+      "gpt",
+      "pytorch",
+      "deep learning",
+      "software engineering"
+    ],
+    "owner": {
+      "name": "volkan.js",
+      "username": "volkan.js",
+      "url": "https://www.instagram.com/volkan.js/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 25, 2026, 2:38 am IST",
+    "saved_at_iso": "2026-10-25T02:38:59.595065+05:30",
+    "category": "AI & Agents",
+    "title": "Top Five Projects to Improve Advanced Software Engineering",
+    "caption_generated": false
+  },
+  {
+    "id": "De_7XQojU_e",
+    "type": "post",
+    "url": "https://www.instagram.com/p/De_7XQojU_e/",
+    "caption": "Comment “AI” to get all 5 AI engineering projects.\n\nWant to become an AI Engineer? Stop watching tutorials and start building real-world AI projects.\n\nThese 5 hands-on projects will teach you how to build RAG systems, fine-tune LLMs, develop AI agents, and deploy production-ready AI applications.\n\nFrom RAG Agent in Python and Fine-Tune with LoRA to End-to-End GenAI Project, Coding Agent Harness, and AI Agent Evals, you’ll practice the skills used in modern AI engineering.\n\nWhether you’re learning Python, machine learning, or generative AI, building projects is one of the best ways to improve your skills and strengthen your portfolio.\n\nSave this for your next AI project and follow for more AI engineering resources.\n\n#AIEngineering #ArtificialIntelligence #MachineLearning #Python #GenerativeAI",
+    "hashtags": [
+      "ai engineering",
+      "rag",
+      "fine-tuning",
+      "generative ai"
+    ],
+    "owner": {
+      "name": "pirknn",
+      "username": "pirknn",
+      "url": "https://www.instagram.com/pirknn/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 24, 2026, 5:41 pm IST",
+    "saved_at_iso": "2026-10-24T17:41:39.945976+05:30",
+    "category": "AI & Agents",
+    "title": "Hands-On AI Engineering Projects for RAG and Fine-Tuning",
+    "caption_generated": false
+  },
+  {
+    "id": "DdthckKJVNu",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DdthckKJVNu/",
+    "caption": "abhishekranjan714",
+    "hashtags": [
+      "coding",
+      "development",
+      "software",
+      "tech"
+    ],
+    "owner": {
+      "name": "abhishekranjan714",
+      "username": "abhishekranjan714",
+      "url": "https://www.instagram.com/abhishekranjan714/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 24, 2026, 8:44 am IST",
+    "saved_at_iso": "2026-10-24T08:44:20.296887+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Technical Developer Showcase and Coding Insights",
+    "caption_generated": false
+  },
+  {
+    "id": "De9r-XOCfph",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De9r-XOCfph/",
+    "caption": "Free template code for projects 😎\n\nThis GitHub profile has repos for various different coding languages. Each one contains example projects on all kinds of topics. Each topic even contains multiple examples, approaching the problem a slightly different way. And it’s all free!\n\nFollow for more free coding resources ✅\n\n#code #coding #tech #learntocode #data",
+    "hashtags": [
+      "github",
+      "open source",
+      "templates",
+      "projects"
+    ],
+    "owner": {
+      "name": "softwarewithnick",
+      "username": "softwarewithnick",
+      "url": "https://www.instagram.com/softwarewithnick/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 23, 2026, 11:47 pm IST",
+    "saved_at_iso": "2026-10-23T23:47:00.647797+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "GitHub Repositories With Free Project Template Code",
+    "caption_generated": false
+  },
+  {
+    "id": "De--PfNxsoE",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De--PfNxsoE/",
+    "caption": "Need a Computer Networking guide for interview preparation? 👀\n\nI’ve put together a complete Core Networking guide covering everything required for interviews.\n\n✅ Core concepts explained\n✅ Essential commands\n✅ Real-world debugging scenarios\n✅ Interview questions with answers\n\n#coding #programming #devops #softwareengineer",
+    "hashtags": [
+      "networking",
+      "devops",
+      "interview prep",
+      "linux"
+    ],
+    "owner": {
+      "name": "bharat.deploys",
+      "username": "bharat.deploys",
+      "url": "https://www.instagram.com/bharat.deploys/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 23, 2026, 2:49 pm IST",
+    "saved_at_iso": "2026-10-23T14:49:40.998708+05:30",
+    "category": "DevOps & Cloud",
+    "title": "Computer Networking and Interview Preparation Guide",
+    "caption_generated": false
+  },
+  {
+    "id": "De9QCgIEsus",
+    "type": "post",
+    "url": "https://www.instagram.com/p/De9QCgIEsus/",
+    "caption": "Most students think Redis is just a cache.\n\nIt’s also a message stream, a vector search engine and a database.\n\nWe put together 5 Redis project ideas for 2027 that go well beyond storing a few keys. One of them tackles a problem real teams face when they run AI apps in production.\n\nSwipe through, save this for later, and pick the one you’d build first.\n\nWhich one are you starting with? Tell us in the comments 👇\n\nLearn more at cipherschools\nlink in bio.\n\n#redis #backenddevelopment #projectideas #internships2027 #nodejs #codingprojects #cipherschools",
+    "hashtags": [
+      "redis",
+      "backend",
+      "vector search",
+      "databases"
+    ],
+    "owner": {
+      "name": "cipherschools",
+      "username": "cipherschools",
+      "url": "https://www.instagram.com/cipherschools/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 23, 2026, 5:52 am IST",
+    "saved_at_iso": "2026-10-23T05:52:21.349619+05:30",
+    "category": "System Design & Backend",
+    "title": "Advanced Redis Use Cases Beyond Basic Caching",
+    "caption_generated": false
+  },
+  {
+    "id": "De66Qz1KLFz",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De66Qz1KLFz/",
+    "caption": "If you want robots that see, walk, or teach themselves to stand up, you need to know how they learn. That's machine learning.\n\nHere's my exact roadmap for absolute beginners:\n\n1. Understand it first: What a model is, how it learns from data, regression vs classification. StatQuest explains the math better than any lecture I've had. No code yet.\n\n2. Get your hands dirty: Kaggle. Free courses, real datasets, runs in your browser. Do the intro courses, then train your first model on a beginner dataset like Titanic.\n\n3. Build one yourself: A neural network in plain Python, no libraries. 3Blue1Brown for the intuition, Karpathy for the code. Get it reading handwritten digits.\n\n4. Put it in a robot: Computer vision to see, reinforcement learning to learn by trial and error. That's how my robot taught itself to stand up.\n\n#robotics #engineering #machinelearning #coding #projects",
+    "hashtags": [
+      "machine learning",
+      "python",
+      "neural networks",
+      "robotics"
+    ],
+    "owner": {
+      "name": "pathofseb",
+      "username": "pathofseb",
+      "url": "https://www.instagram.com/pathofseb/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 22, 2026, 8:55 pm IST",
+    "saved_at_iso": "2026-10-22T20:55:01.700529+05:30",
+    "category": "Python & Data Science",
+    "title": "Machine Learning Roadmap for Absolute Beginners",
+    "caption_generated": false
+  },
+  {
+    "id": "DeuN_R-gHTU",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeuN_R-gHTU/",
+    "caption": "Building a basic RAG chatbot is not enough to become a serious AI engineer.\n\n1. LLM Fundamentals → tokens, transformers, context windows, and inference.\n2. Basic RAG → chunking, embeddings, vector databases, retrieval, and generation.\n3. Advanced Retrieval → hybrid search, query rewriting, metadata filtering, and reranking.\n4. Agent Fundamentals → reason, act, observe, and repeat.\n5. Agentic Design Patterns → ReAct, reflection, planning, routing, and tool use.\n6. Model Context Protocol → connecting agents to tools, APIs, and data.\n7. Multi-Agent Systems → agents that specialize, delegate, and collaborate.\n8. Evaluation Fundamentals → defining and measuring what “good” means.\n9. LLM-as-a-Judge → grading outputs against structured criteria at scale.\n10. Evaluating AI Agents → scoring trajectories, tool calls, completion, and outcomes.\n11. Guardrails → validation, moderation, PII protection, and injection defenses.\n12. Observability & Monitoring → tracing latency, cost, failures, and production behavior.\n13. LLMOps Fundamentals → managing the full lifecycle of an LLM application.\n14. CI/CD for LLM Apps → testing and shipping changes safely.\n15. Data Versioning with DVC → tracking datasets so experiments are reproducible.\n16. ML Fundamentals & Metrics → bias, variance, overfitting, precision, recall, F1, and ROC-AUC.\n17. AI Governance → human oversight, risk management, NIST AI RMF, and the EU AI Act.\n\nComment “AI” and I’ll send you the full roadmap plus a link to my AI engineering community with:\n\n⚙️ A curated AI engineering roadmap\n⚙️ Daily calls with working AI/ML engineers\n⚙️ Live guidance from recruiters and hiring managers\n⚙️ Portfolio project, interview, and job-search support\n\nComment “AI” below and I’ll send you everything.",
+    "hashtags": [
+      "ai agents",
+      "rag",
+      "llms",
+      "artificial intelligence"
+    ],
+    "owner": {
+      "name": "bashi_fuirkashi",
+      "username": "bashi_fuirkashi",
+      "url": "https://www.instagram.com/bashi_fuirkashi/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 22, 2026, 11:57 am IST",
+    "saved_at_iso": "2026-10-22T11:57:42.051440+05:30",
+    "category": "AI & Agents",
+    "title": "Advanced Roadmap From Basic RAG to Multi-Agent Systems",
+    "caption_generated": false
+  },
+  {
+    "id": "De8e4MquWaa",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De8e4MquWaa/",
+    "caption": "So in programming, if you don’t have a bunch of cracked projects on your résumé or have any idea how to do a technical interview you just don’t get the job but there’s a ton of free resources out there that teaches you everything you need to know here’s three of my favorites. #coding #computerscience #student #computerprogramming",
+    "hashtags": [
+      "coding interviews",
+      "career",
+      "computer science",
+      "resume"
+    ],
+    "owner": {
+      "name": "jackk_flick",
+      "username": "jackk_flick",
+      "url": "https://www.instagram.com/jackk_flick/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 22, 2026, 3:00 am IST",
+    "saved_at_iso": "2026-10-22T03:00:22.402351+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Free Resources for Coding Interviews and Resume Projects",
+    "caption_generated": false
+  },
+  {
+    "id": "De6yAf7t7Z8",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De6yAf7t7Z8/",
+    "caption": "Comment “Python” to get all 5 resources.\n\nIf you want to learn Python for machine learning, you don’t need to spend months watching random tutorials. You need to understand the tools you’ll actually use when building real ML projects.\n\nHere’s what I’d focus on after learning Python basics:\n\n1️⃣ Learn NumPy in 40 Minutes - Python NumPy Tutorial\nUnderstand arrays, numerical computing, and the operations behind machine learning algorithms.\n\n2️⃣ Learning Pandas for Data Analysis? Start Here.\nLearn how to work with DataFrames, manipulate datasets, and prepare data for machine learning.\n\n3️⃣ Exploratory Data Analysis with Pandas Python\nPractice exploring real datasets, finding patterns, and understanding your data before training models.\n\n4️⃣ Scikit-Learn Full Crash Course - Python Machine Learning\nLearn how to train, test, and evaluate machine learning models using Scikit-Learn.\n\nThese are the Python skills you’ll use throughout your machine learning and data science journey, whether you’re a beginner or a software engineering student getting started with AI.\n\nSave this for your Python learning journey and follow for more machine learning resources.\n\n\\#Python #MachineLearning #DataScience #ArtificialIntelligence #Coding",
+    "hashtags": [
+      "python",
+      "pandas",
+      "numpy",
+      "machine learning"
+    ],
+    "owner": {
+      "name": "pirknn",
+      "username": "pirknn",
+      "url": "https://www.instagram.com/pirknn/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 21, 2026, 6:03 pm IST",
+    "saved_at_iso": "2026-10-21T18:03:02.753262+05:30",
+    "category": "Python & Data Science",
+    "title": "Essential Python Libraries for Machine Learning and Data Science",
+    "caption_generated": false
+  },
+  {
+    "id": "De7C3IFzo-G",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De7C3IFzo-G/",
+    "caption": "Follow @abhi___builds or visit taqari.com\n\n#codergirl\n\n#buildinpublic\n\n#bettereveryday\n\n#aitools\n\n#codingmemes",
+    "hashtags": [
+      "ai tools",
+      "build in public",
+      "coding",
+      "software"
+    ],
+    "owner": {
+      "name": "abhi___builds",
+      "username": "abhi___builds",
+      "url": "https://www.instagram.com/abhi___builds/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 21, 2026, 9:05 am IST",
+    "saved_at_iso": "2026-10-21T09:05:43.104172+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Open Source AI Tools and Build-in-Public Highlights",
+    "caption_generated": false
+  },
+  {
+    "id": "De6_Ju9y7KO",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De6_Ju9y7KO/",
+    "caption": "DSA maxxing starts with the right habits, not just solving 500+ LeetCode questions. 👀\n\n• Solve one problem daily before scrolling Instagram\n• Learn from Striver, NeetCode & Abdul Bari\n• Follow Striver’s A2Z sheet\n• Understand patterns instead of memorising code\n• Read editorials after attempting problems\n• Practice mock interviews and build DSA projects\n\nConsistency beats random grinding. Save this for your DSA journey. 🚀\n\nComment “DSA” and I’ll send you the best resources to go from zero to cracking product-based companies.\n\n#dsa #dsamaxxing #tech #leetcode #coding",
+    "hashtags": [
+      "dsa",
+      "leetcode",
+      "coding interviews",
+      "algorithms"
+    ],
+    "owner": {
+      "name": "sanskartech",
+      "username": "sanskartech",
+      "url": "https://www.instagram.com/sanskartech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 21, 2026, 12:08 am IST",
+    "saved_at_iso": "2026-10-21T00:08:23.455083+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Effective Habits and Roadmap for Mastering DSA",
+    "caption_generated": false
+  },
+  {
+    "id": "De67f6OS5hk",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De67f6OS5hk/",
+    "caption": "Comment \"prep\" to get the link\n\nJava , HLD , ya LLD all covered.\n\nif you don't receive the link\nPlease check https://engineering-atlas.in\n\nBhai, I'm also learning every day as a software engineer, trying to become a better engineer. And one thing I've noticed is the amount of AI-generated slop roaming around the internet.\n\nKoi bhi system design cheat sheet tumhe tumhari dream company crack nahi karwa sakti.\n\nHear me out.\n\nAajkal tech influencers with lakhs of followers, working at big tech companies like Microsoft, AI-generated PDFs share karte hain with summaries of system design topics.\n\nAur bolte hain, Ye kar lo, woh kar lo, system design interview crack ho jayega.”, bhai usse college placement me mili job me system design pucha bhi nahi hoga , jise wo kehte I read this to crack this.\n\nBut bhai, system design ke topics ki summary padh lena aur unhe depth mein samajhna are two very different things.\n\nSystem design is not a crash course. It's a process.\n\nYe tumhare day-to-day engineering experience se build hota hai production issues solve karna, performance bottlenecks debug karna, architecture decisions samajhna, aur company engineering blogs se real-world systems ke baare mein seekhna.\n\nYou need to understand why engineers make certain decisions, what trade-offs they consider, and why they choose one approach over another.\n\nAur preparation start karne ka koi perfect timeline nahi hai. Switch karna ho ya nahi, system design tumhe ek better engineer banne mein help karta hai.\n\nThat's also why I'm building Engineering Atlas to help developers learn system design, HLD, LLD, Java, and core engineering concepts through structured lessons and practical resources.\n\nI'm learning and improving every day, too. The goal is to build real engineering depth, not just memorize answers for interviews.\n\nStop chasing shortcuts. Start becoming a better engineer.",
+    "hashtags": [
+      "system design",
+      "hld",
+      "lld",
+      "backend architecture"
+    ],
+    "owner": {
+      "name": "abhishek.tech._",
+      "username": "abhishek.tech._",
+      "url": "https://www.instagram.com/abhishek.tech._/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 20, 2026, 3:11 pm IST",
+    "saved_at_iso": "2026-10-20T15:11:03.805994+05:30",
+    "category": "System Design & Backend",
+    "title": "Evaluating System Design Resources for Software Engineers",
+    "caption_generated": false
+  },
+  {
+    "id": "DeyxnE9zggE",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeyxnE9zggE/",
+    "caption": "My plan to get better at DSA:\n1. Identify important algorithms\n2. Pick an algorithm\n3. Identify common patterns for each algorithm\n4. Solve easy/template problems\n5. Move to the next algorithm\n6. Revisit all algorithms to solve medium, hard problems 🌼\n\nI find this approach to work better than diving deep into each algorithm at the very start for two reasons:\n1. Solving easy problems helps in keeping the momentum.\n2. Revisiting the same algorithms helps with revision of concepts :)\n\nI am not an expert at DSA so let me know what you think and how you’d go about studying DSA if you had to do it right now! 🫶\n\nLet me know if you want the template I follow in the comments!\n\n#buildinpublic #softwareengineer #dsa #interview #learning",
+    "hashtags": [
+      "dsa",
+      "algorithms",
+      "interview prep",
+      "learning roadmap"
+    ],
+    "owner": {
+      "name": "priforyou._",
+      "username": "priforyou._",
+      "url": "https://www.instagram.com/priforyou._/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 20, 2026, 6:13 am IST",
+    "saved_at_iso": "2026-10-20T06:13:44.156904+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Structured Strategy for Studying Data Structures and Algorithms",
+    "caption_generated": false
+  },
+  {
+    "id": "De6Fl7LyUo1",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De6Fl7LyUo1/",
+    "caption": "These are the ones that actually got me hired\n\n#backenddeveloper #softwareengineer #placements #webdevelopment #coding\n\n{backend projects, backend engineer roadmap, projects that get you hired, software engineer jobs, placement preparation, backend development, nodejs projects, resume projects, engineering students, coding projects, developer roadmap, tech career, interview preparation, software development, backend engineer interview, student developers, project ideas, programming, web development, career growth;",
+    "hashtags": [
+      "backend",
+      "web development",
+      "projects",
+      "career"
+    ],
+    "owner": {
+      "name": "yatincreates",
+      "username": "yatincreates",
+      "url": "https://www.instagram.com/yatincreates/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 19, 2026, 9:16 pm IST",
+    "saved_at_iso": "2026-10-19T21:16:24.507815+05:30",
+    "category": "System Design & Backend",
+    "title": "Backend Portfolio Projects That Get Developers Hired",
+    "caption_generated": false
+  },
+  {
+    "id": "De33_CqgBVU",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De33_CqgBVU/",
+    "caption": "Newbie se Codeforces Candidate Master, sirf 10 mahine mein 🏆\n\nKoi paid course nahi. Sirf free resources. Aur mere paas structured roadmap bhi nahi tha, isliye time laga. Aapko nahi lagega.\nMaine sab compile kar diya hai:\n✅ Newbie → Candidate Master roadmap\n✅ Topics, rating by rating\n✅ Har rating ke problem sets\n✅ Contest + upsolve routine\n✅ Free resources jo maine use kiye\n\nChahiye? Comment “CP” 👇 aur sab seedha aapke DM mein.\n\nSave karo, aur bhejo us dost ko jo rating mein atka hua hai.\n\n#competitiveprogramming #codeforces #cp #dsa #softwareengineer",
+    "hashtags": [
+      "competitive programming",
+      "codeforces",
+      "dsa",
+      "algorithms"
+    ],
+    "owner": {
+      "name": "bigo.shubham",
+      "username": "bigo.shubham",
+      "url": "https://www.instagram.com/bigo.shubham/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 19, 2026, 12:19 pm IST",
+    "saved_at_iso": "2026-10-19T12:19:04.858726+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Competitive Programming Roadmap to Codeforces Candidate Master",
+    "caption_generated": false
+  },
+  {
+    "id": "De1L5UtAE9-",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De1L5UtAE9-/",
+    "caption": "Comment \"YouTube\" and I'll send you the free guide + resources!\n10 system design topics to ace your interview",
+    "hashtags": [
+      "system design",
+      "architecture",
+      "interview prep",
+      "scalability"
+    ],
+    "owner": {
+      "name": "itsnextwork",
+      "username": "itsnextwork",
+      "url": "https://www.instagram.com/itsnextwork/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 19, 2026, 3:21 am IST",
+    "saved_at_iso": "2026-10-19T03:21:45.209637+05:30",
+    "category": "System Design & Backend",
+    "title": "Top Ten System Design Topics for Technical Interviews",
+    "caption_generated": false
+  },
+  {
+    "id": "DejkNszmnaB",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DejkNszmnaB/",
+    "caption": "Comment “Projects” to get these AI Agent project examples in your DMs. Or find the Link in the bio.\n\nBuild AI agents that do real work.\n\n#AIAgents #ArtificialIntelligence #MachineLearning #Python #AIProjects",
+    "hashtags": [
+      "ai agents",
+      "python",
+      "artificial intelligence",
+      "machine learning"
+    ],
+    "owner": {
+      "name": "amankharwal.official",
+      "username": "amankharwal.official",
+      "url": "https://www.instagram.com/amankharwal.official/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 18, 2026, 6:24 pm IST",
+    "saved_at_iso": "2026-10-18T18:24:25.560547+05:30",
+    "category": "AI & Agents",
+    "title": "Practical AI Agent Project Examples Built With Python",
+    "caption_generated": false
+  },
+  {
+    "id": "DdrFm4fN_CB",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DdrFm4fN_CB/",
+    "caption": "comment “indexing” and i’ll send them over ⚙️\n\nquerying a large database without indexing is like flipping through a massive book page-by-page hoping you find the answer before users rage-quit. this guide breaks down database indexing simply, covering how b-trees and hash indexes work, how to read query execution plans, and how to avoid over-indexing that tanks write throughput so you can speed up slow queries and scale your system with confidence.",
+    "hashtags": [
+      "database",
+      "indexing",
+      "sql",
+      "backend performance"
+    ],
+    "owner": {
+      "name": "emrcodes",
+      "username": "emrcodes",
+      "url": "https://www.instagram.com/emrcodes/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 18, 2026, 9:27 am IST",
+    "saved_at_iso": "2026-10-18T09:27:05.911458+05:30",
+    "category": "System Design & Backend",
+    "title": "Database Indexing Guide: B-Trees and Query Optimization",
+    "caption_generated": false
+  },
+  {
+    "id": "DezCgDWFFCG",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DezCgDWFFCG/",
+    "caption": "How Zip Files Shrink Without Losing Data!🗃️\n\nA 1 GB folder zips down to 400 MB and unzips back to the full 1 GB. The method behind it is Huffman coding. In the word BANANA, A appears three times, N twice and B once, yet a computer spends 8 bits on every letter, 48 bits in total. Huffman gives the most frequent letter the shortest code: A becomes 0, B becomes 10, N becomes 11. The same word now fits in 9 bits, and every letter is still there.\n\nDid you think zip deleted something to save space? Yes or no in the comments.\n\n#HuffmanCoding #DataCompression #ZipFile #ComputerScience #Algorithms #KodeKloud #Programming #TechExplained #BinaryCode #CodingShorts #Shorts",
+    "hashtags": [
+      "algorithms",
+      "data compression",
+      "computer science",
+      "coding"
+    ],
+    "owner": {
+      "name": "kodekloud",
+      "username": "kodekloud",
+      "url": "https://www.instagram.com/kodekloud/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 18, 2026, 12:29 am IST",
+    "saved_at_iso": "2026-10-18T00:29:46.262369+05:30",
+    "category": "System Design & Backend",
+    "title": "How Huffman Coding Compression Works in Computer Science",
+    "caption_generated": false
+  },
+  {
+    "id": "De1sfxkhz0v",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De1sfxkhz0v/",
+    "caption": "Placement checklist",
+    "hashtags": [
+      "interview prep",
+      "placements",
+      "career",
+      "software engineering"
+    ],
+    "owner": {
+      "name": "frazmohammad",
+      "username": "frazmohammad",
+      "url": "https://www.instagram.com/frazmohammad/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 17, 2026, 3:32 pm IST",
+    "saved_at_iso": "2026-10-17T15:32:26.613280+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Comprehensive Campus Placement and Interview Checklist",
+    "caption_generated": false
+  },
+  {
+    "id": "Dey5GrjsVTa",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dey5GrjsVTa/",
+    "caption": "Design, simulations and absurd production quality",
+    "hashtags": [
+      "ui/ux",
+      "web design",
+      "animations",
+      "frontend"
+    ],
+    "owner": {
+      "name": "kara.alvin",
+      "username": "kara.alvin",
+      "url": "https://www.instagram.com/kara.alvin/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 17, 2026, 6:35 am IST",
+    "saved_at_iso": "2026-10-17T06:35:06.964190+05:30",
+    "category": "Web & Frontend",
+    "title": "UI Design, Simulations, and High-Quality Web Animations",
+    "caption_generated": false
+  },
+  {
+    "id": "DcydKteOLzv",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DcydKteOLzv/",
+    "caption": "To get the code, just search for the \"roboeyes\" library in github or google by FluxGarage😁\n\n#electronics #engineering #engineeringproject #engineeringstudent",
+    "hashtags": [
+      "electronics",
+      "open source",
+      "hardware",
+      "engineering"
+    ],
+    "owner": {
+      "name": "jaydonruan",
+      "username": "jaydonruan",
+      "url": "https://www.instagram.com/jaydonruan/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 16, 2026, 9:37 pm IST",
+    "saved_at_iso": "2026-10-16T21:37:47.315101+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Using the RoboEyes Open Source Library for Electronics",
+    "caption_generated": false
+  },
+  {
+    "id": "DezZcMMBkWY",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DezZcMMBkWY/",
+    "caption": "Starting resources for all three projects: models, datasets and training guides, comment “TUNE”\n\nAnyone can say they fine-tuned an LLM. These three projects help you prove you did it well 👇\n\n1️⃣ Text-to-JSON extractor\n2️⃣ Security incident report generator\n3️⃣ Tool-calling model\n\nCompare the base model, a stronger prompt and your fine-tuned model on the same unseen examples.\n\nShow what improved, what still fails and whether training was worth it.\n\nSAVE this for your next AI portfolio project.\n\n[FineTuning AIEngineering AIProjects LLM]",
+    "hashtags": [
+      "fine-tuning",
+      "llms",
+      "ai engineering",
+      "machine learning"
+    ],
+    "owner": {
+      "name": "thesherrycode.ai",
+      "username": "thesherrycode.ai",
+      "url": "https://www.instagram.com/thesherrycode.ai/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 16, 2026, 12:40 pm IST",
+    "saved_at_iso": "2026-10-16T12:40:27.666012+05:30",
+    "category": "AI & Agents",
+    "title": "Fine-Tuning LLMs: Three Portfolio Projects That Stand Out",
+    "caption_generated": false
+  },
+  {
+    "id": "DezFfhMAYZ6",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DezFfhMAYZ6/",
+    "caption": "25 topics, from LLM basics to production.\n\nTokens, prompting, context engineering, embeddings, vector databases, RAG, agents, MCP, evals, safety, observability, multimodal and scaling…\n\nall in one roadmap.\n\nLearn one topic a week. Build something in each one.\n\nComment AI and I'll send you the 10 books that cover every concept on this list.\n\nSave this before you start.",
+    "hashtags": [
+      "ai engineering",
+      "llms",
+      "rag",
+      "vector databases"
+    ],
+    "owner": {
+      "name": "meghana.ai",
+      "username": "meghana.ai",
+      "url": "https://www.instagram.com/meghana.ai/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 16, 2026, 3:43 am IST",
+    "saved_at_iso": "2026-10-16T03:43:08.016922+05:30",
+    "category": "AI & Agents",
+    "title": "Comprehensive 25-Topic AI Engineering Learning Roadmap",
+    "caption_generated": false
+  },
+  {
+    "id": "DexDNYYhHxx",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DexDNYYhHxx/",
+    "caption": "Solve these issues right now!\n.\n.\n.\nGithub issues, GitHub open-source, open-source, github repos, open source contribution, good first issues",
+    "hashtags": [
+      "open source",
+      "github",
+      "git",
+      "developer resources"
+    ],
+    "owner": {
+      "name": "athar.codes",
+      "username": "athar.codes",
+      "url": "https://www.instagram.com/athar.codes/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 15, 2026, 6:45 pm IST",
+    "saved_at_iso": "2026-10-15T18:45:48.367833+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Finding Good First Issues for Open Source Contributions",
+    "caption_generated": false
+  },
+  {
+    "id": "De0GRBZpNf5",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/De0GRBZpNf5/",
+    "caption": "Lock in and use Rork\n#fyp #vibecode #computerscience #coding #apps",
+    "hashtags": [
+      "app development",
+      "coding",
+      "computerscience",
+      "frontend"
+    ],
+    "owner": {
+      "name": "kevinbebuilding",
+      "username": "kevinbebuilding",
+      "url": "https://www.instagram.com/kevinbebuilding/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 15, 2026, 9:48 am IST",
+    "saved_at_iso": "2026-10-15T09:48:28.718744+05:30",
+    "category": "Web & Frontend",
+    "title": "Vibe Coding and App Development With Modern Tools",
+    "caption_generated": false
+  },
+  {
+    "id": "DexTDQHIw7c",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DexTDQHIw7c/",
+    "caption": "Here’s the tech stack that we used to win a hackathon with Google DeepMind! Drop questions in the chat, and comment “Tutor” to be added to the waitlist",
+    "hashtags": [
+      "hackathon",
+      "ai",
+      "deep learning",
+      "tech stack"
+    ],
+    "owner": {
+      "name": "rosacodes",
+      "username": "rosacodes",
+      "url": "https://www.instagram.com/rosacodes/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 15, 2026, 12:51 am IST",
+    "saved_at_iso": "2026-10-15T00:51:09.069655+05:30",
+    "category": "AI & Agents",
+    "title": "Hackathon Winning Tech Stack Built With Google DeepMind",
+    "caption_generated": false
+  },
+  {
+    "id": "Dey_v6-x-tW",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dey_v6-x-tW/",
+    "caption": "Want to become a better Backend Engineer?\n\nStart with these free resources.\n\n1. Advanced Backend + AI Full Course\nLearn Docker, Redis, AWS, Microservices and AI integration.\n\n2. Complete Backend Engineer Mind Map\nUnderstand the complete backend ecosystem and how different technologies fit together.\n\n3. API Design and Architecture\nLearn REST, GraphQL, gRPC, SOAP and WebSockets.\n\n4. Backend from First Principles\nUnderstand HTTP, routing, middleware, authentication, caching and databases.\n\nSave this list and start learning!\n\n#BackendDevelopment #SystemDesign #softwareengineering",
+    "hashtags": [
+      "backend",
+      "system design",
+      "microservices",
+      "docker"
+    ],
+    "owner": {
+      "name": "endless_success___",
+      "username": "endless_success___",
+      "url": "https://www.instagram.com/endless_success___/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 14, 2026, 3:53 pm IST",
+    "saved_at_iso": "2026-10-14T15:53:49.420565+05:30",
+    "category": "System Design & Backend",
+    "title": "Free Resources to Master Advanced Backend Engineering",
+    "caption_generated": false
+  },
+  {
+    "id": "DezQrxKi1Su",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DezQrxKi1Su/",
+    "caption": "Comment “REVIEW” and I’ll DM you the link to Greptile and both prompts to secure your app.\n\nMost vibe-coded apps get hacked because of small stuff, like exposed API keys or no rate limits. Those you can fix with a prompt, but catching the bugs your AI adds in every PR is harder. So I added Greptile to my repo, and it caught a bug that let free users use my AI feature without paying.\n\nYou get 50 PR reviews a month for free.\n\n#GreptileCreator #Greptile",
+    "hashtags": [
+      "ai tools",
+      "code review",
+      "security",
+      "git"
+    ],
+    "owner": {
+      "name": "volkan.js",
+      "username": "volkan.js",
+      "url": "https://www.instagram.com/volkan.js/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 14, 2026, 6:56 am IST",
+    "saved_at_iso": "2026-10-14T06:56:29.771476+05:30",
+    "category": "AI & Agents",
+    "title": "Using Greptile and AI Prompts to Secure Repositories",
+    "caption_generated": false
+  },
+  {
+    "id": "DeyUw9HS15f",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeyUw9HS15f/",
+    "caption": "It's 100% free\n\nTrenTorch.com",
+    "hashtags": [
+      "developer tools",
+      "resources",
+      "web",
+      "programming"
+    ],
+    "owner": {
+      "name": "by.maanas",
+      "username": "by.maanas",
+      "url": "https://www.instagram.com/by.maanas/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 13, 2026, 9:59 pm IST",
+    "saved_at_iso": "2026-10-13T21:59:10.122387+05:30",
+    "category": "Dev Tools & Resources",
+    "title": "Free Developer Website Resource for Technical Projects",
+    "caption_generated": false
+  },
+  {
+    "id": "DevzGRJNe62",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DevzGRJNe62/",
+    "caption": "Comment “SHEET” to get the Top 20 must-solve LeetCode questions for each DSA pattern!\n\nDSA Pattern Recognition 🔥 | Master DSA Patterns to Solve LeetCode Problems\n\nDSA pattern recognition, DSA patterns, LeetCode problems, Data Structures and Algorithms, DSA interview preparation, coding interview questions, problem solving techniques, DSA roadmap, placement preparation, LeetCode interview questions.\n\n#dsa #jobinterviews #LeetCode #CodingInterview #engineering",
+    "hashtags": [
+      "dsa",
+      "leetcode",
+      "coding interviews",
+      "algorithms"
+    ],
+    "owner": {
+      "name": "thequietprof",
+      "username": "thequietprof",
+      "url": "https://www.instagram.com/thequietprof/"
+    },
+    "brand_partner": null,
+    "saved_at": "Oct 13, 2026, 1:01 pm IST",
+    "saved_at_iso": "2026-10-13T13:01:50.473298+05:30",
+    "category": "Career & Coding Prep",
+    "title": "Top LeetCode Questions and DSA Pattern Recognition Sheet",
+    "caption_generated": false
+  },
+  {
     "id": "DeYIlSDty-H",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DeYIlSDty-H/",

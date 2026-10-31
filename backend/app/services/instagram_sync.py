@@ -1,7 +1,9 @@
 """
 Instagram Playwright Sync Service for Curio.
 Automates fetching new saved reels/posts from https://www.instagram.com/<user>/saved/,
-handles credentials and 2FA/OTP interactively, extracts new items saved after existing reels.json,
+handles credentials (both returning-account 'Continue' flows and first-time username+password flows)
+and 2FA/OTP (automatically opening macOS WhatsApp, watching WhatsApp ChatStorage.sqlite,
+Universal Clipboard, and Apple Messages), extracts new items saved after existing reels.json,
 and curates them with Gemini 3.5 Flash Lite.
 """
 
@@ -13,14 +15,26 @@ from pathlib import Path
 import re
 import threading
 import time
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 from zoneinfo import ZoneInfo
 
 from dotenv import load_dotenv
 from google import genai
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Page, sync_playwright
 
 from app.services.gemini_service import MODEL_NAME as GEMINI_MODEL_NAME, classify_reel, derive_content_title
+from app.services.messages_otp import (
+    check_messages_db_access,
+    check_whatsapp_db_access,
+    get_baseline_message_rowid,
+    get_baseline_whatsapp_pk,
+    get_clipboard_content,
+    open_whatsapp_app,
+    poll_clipboard_for_otp,
+    poll_whatsapp_ui_for_otp,
+    query_recent_messages_for_otp,
+    query_recent_whatsapp_for_otp,
+)
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -57,6 +71,8 @@ class InstagramSyncManager:
         self.stage = "Ready to sync"
         self.awaiting_otp = False
         self.otp_prompt: Optional[str] = None
+        self.auto_otp_status: Optional[str] = None
+        self.messages_access: bool = check_messages_db_access().get("accessible", False)
         self.error: Optional[str] = None
         self.new_count = 0
         self.logs: List[Dict[str, str]] = []
@@ -69,16 +85,20 @@ class InstagramSyncManager:
         logger.info(f"[Sync] {message}")
         with self._lock:
             self.logs.append({"time": now_str, "message": message})
-            if len(self.logs) > 120:
+            if len(self.logs) > 150:
                 self.logs.pop(0)
 
     def get_state(self) -> Dict[str, Any]:
+        db_access = check_messages_db_access().get("accessible", False)
         with self._lock:
+            self.messages_access = db_access
             return {
                 "status": self.status,
                 "stage": self.stage,
                 "awaiting_otp": self.awaiting_otp,
                 "otp_prompt": self.otp_prompt,
+                "auto_otp_status": self.auto_otp_status,
+                "messages_access": self.messages_access,
                 "error": self.error,
                 "new_count": self.new_count,
                 "logs": list(self.logs),
@@ -93,6 +113,7 @@ class InstagramSyncManager:
             self.stage = "Initializing Playwright browser..."
             self.awaiting_otp = False
             self.otp_prompt = None
+            self.auto_otp_status = None
             self.error = None
             self.new_count = 0
             self.logs = []
@@ -105,13 +126,13 @@ class InstagramSyncManager:
         return {"started": True, "message": "Sync started.", "state": self.get_state()}
 
     def submit_otp(self, code: str) -> Dict[str, Any]:
-        clean_code = code.strip()
+        clean_code = re.sub(r"[\s\-]", "", code.strip())
         if not clean_code:
             return {"success": False, "message": "OTP code cannot be empty."}
 
         with self._lock:
             self._pending_otp = clean_code
-        self.log(f"Received OTP code ({len(clean_code)} chars). Submitting to session...")
+        self.log(f"Received manual OTP code ({len(clean_code)} digits). Submitting to Instagram...")
         return {"success": True, "message": "OTP submitted."}
 
     def cancel_sync(self) -> Dict[str, Any]:
@@ -120,6 +141,7 @@ class InstagramSyncManager:
             self.status = "idle"
             self.stage = "Sync cancelled by user."
             self.awaiting_otp = False
+            self.auto_otp_status = None
         self.log("Sync process cancelled.")
         return {"success": True, "message": "Sync cancelled."}
 
@@ -133,7 +155,259 @@ class InstagramSyncManager:
                 self.error = str(e)
                 self.stage = f"Error: {e}"
                 self.awaiting_otp = False
+                self.auto_otp_status = None
             self.log(f"Sync failed: {e}")
+
+    def _is_on_2fa_page(self, page: Page) -> bool:
+        """Detect whether the Playwright page is currently on an Instagram 2FA/OTP verification step."""
+        curr_url = page.url.lower()
+        if any(tok in curr_url for tok in ("two_step_verification", "two_factor", "/challenge/")):
+            return True
+
+        try:
+            otp_locator = page.locator(
+                'input[name="verificationCode"], '
+                'input[autocomplete="one-time-code"], '
+                'input[aria-label*="Security Code" i], '
+                'input[aria-label*="verification code" i], '
+                'input[placeholder*="security code" i], '
+                'input[placeholder*="confirmation code" i]'
+            )
+            if otp_locator.count() > 0 and otp_locator.first.is_visible():
+                return True
+        except Exception:
+            pass
+        return False
+
+    def _is_logged_in_past_auth(self, page: Page) -> bool:
+        """Check whether the browser has navigated past login and 2FA screens."""
+        curr_url = page.url.lower()
+        if any(
+            tok in curr_url
+            for tok in ("/accounts/login", "two_step_verification", "two_factor", "/challenge/")
+        ):
+            return False
+        return "instagram.com" in curr_url
+
+    def _perform_login_flow(self, page: Page, account_id: str, account_password: str):
+        """
+        Handle both Returning Account login (clicking 'Continue' / 'Continue <user>', then entering password)
+        and First-Time Account login (entering username + password, or username -> Continue -> password).
+        """
+        user_selector = 'input[name="email"], input[name="username"], input[aria-label*="username" i], input[aria-label*="phone number" i]'
+        pass_selector = 'input[name="pass"], input[name="password"], input[type="password"]'
+
+        user_loc = page.locator(user_selector)
+        pass_loc = page.locator(pass_selector)
+
+        has_user_input = False
+        has_pass_input = False
+        try:
+            has_user_input = user_loc.count() > 0 and user_loc.first.is_visible()
+            has_pass_input = pass_loc.count() > 0 and pass_loc.first.is_visible()
+        except Exception:
+            pass
+
+        # Case 1: Returning Account screen (no username or password field visible yet; 'Continue' button shown)
+        if not has_user_input and not has_pass_input:
+            self.log(f"Returning account screen detected for @{account_id}. Clicking 'Continue'...")
+            with self._lock:
+                self.stage = f"Returning account @{account_id} — clicking Continue..."
+
+            clicked_continue = False
+            continue_selectors = [
+                f'div[role="button"][aria-label*="Continue {account_id}" i]',
+                'div[role="button"][aria-label*="Continue" i]',
+                'button:has-text("Continue")',
+                'div[role="button"]:has-text("Continue")',
+            ]
+            for sel in continue_selectors:
+                try:
+                    btn = page.locator(sel)
+                    if btn.count() > 0 and btn.first.is_visible():
+                        btn.first.click()
+                        clicked_continue = True
+                        break
+                except Exception:
+                    continue
+
+            if clicked_continue:
+                page.wait_for_timeout(2500)
+            else:
+                self.log("No 'Continue' button found; checking for login inputs...")
+
+            if self._is_logged_in_past_auth(page) or self._is_on_2fa_page(page):
+                self.log("Proceeded past returning-account Continue screen.")
+                return
+
+        # Re-check visible inputs after potential 'Continue' click
+        try:
+            has_user_input = user_loc.count() > 0 and user_loc.first.is_visible()
+            has_pass_input = pass_loc.count() > 0 and pass_loc.first.is_visible()
+        except Exception:
+            pass
+
+        # Case 2: First-Time Login (or if username input is visible alongside or before password)
+        if has_user_input:
+            self.log(f"Username field visible — entering @{account_id}...")
+            with self._lock:
+                self.stage = f"Entering username @{account_id}..."
+            user_input = user_loc.first
+            user_input.click()
+            user_input.fill(account_id)
+            page.wait_for_timeout(400)
+
+            try:
+                has_pass_input = pass_loc.count() > 0 and pass_loc.first.is_visible()
+            except Exception:
+                has_pass_input = False
+
+            if not has_pass_input:
+                self.log("Clicking Continue to advance to password step...")
+                try:
+                    cont_btn = page.locator('button:has-text("Continue"), div[role="button"]:has-text("Continue")').first
+                    if cont_btn.is_visible():
+                        cont_btn.click()
+                    else:
+                        user_input.press("Enter")
+                except Exception:
+                    user_input.press("Enter")
+                page.wait_for_timeout(2000)
+
+        # Case 3: Password field (either from Returning Account modal after clicking Continue, or standard login form)
+        try:
+            page.wait_for_selector(pass_selector, state="visible", timeout=6000)
+            has_pass_input = True
+        except Exception:
+            has_pass_input = pass_loc.count() > 0 and pass_loc.first.is_visible()
+
+        if has_pass_input:
+            self.log("Entering account password...")
+            with self._lock:
+                self.stage = "Entering password and logging in..."
+
+            pass_input = pass_loc.first
+            pass_input.click()
+            page.wait_for_timeout(150)
+            pass_input.fill(account_password)
+            page.wait_for_timeout(400)
+
+            self.log("Submitting login credentials...")
+            pass_input.press("Enter")
+            page.wait_for_timeout(800)
+
+            for login_sel in [
+                'div[role="dialog"] div[role="button"]:has-text("Log in")',
+                'button[type="submit"]',
+                'button:has-text("Log in")',
+                'div[role="button"]:has-text("Log in")',
+            ]:
+                try:
+                    lbtn = page.locator(login_sel)
+                    if lbtn.count() > 0 and lbtn.first.is_visible():
+                        lbtn.first.click()
+                        break
+                except Exception:
+                    continue
+
+    def _ensure_code_requested_if_needed(self, page: Page):
+        """
+        If Instagram lands on a 2FA challenge screen that requires clicking 'Send Security Code'
+        when no input box is present, trigger it automatically.
+        """
+        try:
+            for btn_label in ["Send Security Code", "Send security code", "Send code", "Get code"]:
+                btn = page.get_by_role("button", name=btn_label)
+                if btn.count() > 0 and btn.first.is_visible():
+                    self.log(f"Clicking '{btn_label}' on Instagram challenge screen...")
+                    btn.first.click()
+                    page.wait_for_timeout(1500)
+                    break
+        except Exception:
+            pass
+
+    def _fill_and_submit_otp(self, page: Page, code_val: str) -> bool:
+        """
+        Focus the Instagram OTP input box, clear any previous attempt, enter `code_val`,
+        and submit via the Confirm/Continue button or Enter key.
+        """
+        try:
+            page.bring_to_front()
+        except Exception:
+            pass
+
+        selectors = [
+            'input[name="verificationCode"]',
+            'input[autocomplete="one-time-code"]',
+            'input[aria-label*="Security Code" i]',
+            'input[aria-label*="verification code" i]',
+            'input[aria-label*="code" i]',
+            'input[name*="code" i]',
+            'input[placeholder*="code" i]',
+            'input[type="tel"]',
+            'input[type="number"]',
+            'input[type="text"]',
+        ]
+
+        target_input = None
+        for sel in selectors:
+            try:
+                loc = page.locator(sel)
+                if loc.count() > 0 and loc.first.is_visible():
+                    target_input = loc.first
+                    break
+            except Exception:
+                continue
+
+        if not target_input:
+            self.log("Could not locate OTP input box on page yet.")
+            return False
+
+        try:
+            target_input.click()
+            page.wait_for_timeout(150)
+            target_input.press("Meta+a")
+            target_input.press("Backspace")
+            target_input.fill("")
+            page.wait_for_timeout(150)
+
+            target_input.press_sequentially(code_val, delay=60)
+            page.wait_for_timeout(500)
+
+            clicked_submit = False
+            for btn_name in ["Confirm", "Continue", "Submit", "Next", "Verify"]:
+                try:
+                    btn = page.get_by_role("button", name=btn_name)
+                    if btn.count() > 0 and btn.first.is_visible() and btn.first.is_enabled():
+                        self.log(f"Clicking '{btn_name}' button to verify OTP...")
+                        btn.first.click()
+                        clicked_submit = True
+                        break
+                except Exception:
+                    continue
+
+            if not clicked_submit:
+                try:
+                    submit_btn = page.locator(
+                        'button[type="submit"], '
+                        'div[role="button"]:has-text("Confirm"), '
+                        'div[role="button"]:has-text("Continue"), '
+                        'div[role="button"]:has-text("Submit")'
+                    ).first
+                    if submit_btn.is_visible():
+                        submit_btn.click()
+                        clicked_submit = True
+                except Exception:
+                    pass
+
+            if not clicked_submit:
+                self.log("Pressing Enter to submit OTP...")
+                target_input.press("Enter")
+
+            return True
+        except Exception as err:
+            self.log(f"Error entering OTP into Instagram box: {err}")
+            return False
 
     def _execute_sync(self):
         load_dotenv(override=True)
@@ -145,7 +419,6 @@ class InstagramSyncManager:
 
         DATA_DIR.mkdir(parents=True, exist_ok=True)
         all_posts_url = f"https://www.instagram.com/{account_id}/saved/all-posts/"
-        saved_home_url = f"https://www.instagram.com/{account_id}/saved/"
 
         self.log(f"Account: @{account_id}")
 
@@ -165,117 +438,242 @@ class InstagramSyncManager:
             try:
                 page = context.new_page()
 
-
                 # Step 1: Navigate to saved reels
                 with self._lock:
                     self.stage = f"Connecting to saved vault for @{account_id}..."
                 self.log(f"Navigating to {all_posts_url}...")
                 page.goto(all_posts_url, timeout=60000)
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(3500)
 
                 # Check if login is needed
                 if "/accounts/login" in page.url or "login" in page.url.lower():
-                    self.log("Logging into Instagram with credentials...")
-                    with self._lock:
-                        self.stage = "Submitting credentials..."
+                    self.log("Instagram login required. Starting login flow...")
 
-                    user_input = page.locator('input[name="email"], input[name="username"]').first
-                    user_input.fill(account_id)
-                    page.wait_for_timeout(400)
+                    # Pre-warm WhatsApp in background so its SQLite DB is caught up before login
+                    open_whatsapp_app(background=True)
 
-                    pass_input = page.locator('input[name="pass"], input[name="password"]').first
-                    pass_input.fill(account_password)
-                    page.wait_for_timeout(400)
+                    # Capture baseline WhatsApp Z_PK, Messages ROWID & Clipboard BEFORE submitting login
+                    baseline_wa_pk = get_baseline_whatsapp_pk()
+                    baseline_msg_rowid = get_baseline_message_rowid()
+                    baseline_clipboard = get_clipboard_content()
+                    login_click_ts = time.time()
 
-                    self.log("Submitting login form...")
-                    pass_input.press("Enter")
+                    # Execute returning-account ('Continue' -> password) or first-time (username + password) flow
+                    self._perform_login_flow(page, account_id, account_password)
 
-                    # Wait for navigation
+                    # Wait for navigation to either 2FA or logged-in state
                     in_2fa = False
-                    for _ in range(12):
+                    for _ in range(15):
                         if self._stop_requested:
                             return
                         page.wait_for_timeout(1000)
-                        curr_url = page.url
-                        if "two_step_verification" in curr_url or "two_factor" in curr_url:
+                        if self._is_on_2fa_page(page):
                             in_2fa = True
                             break
-                        if "/accounts/onetap" in curr_url or "/saved" in curr_url or (
-                            "instagram.com" in curr_url and "/accounts/login" not in curr_url
-                        ):
+                        if self._is_logged_in_past_auth(page):
                             break
 
-                    # If 2FA triggered
-                    if in_2fa or "two_step_verification" in page.url or "two_factor" in page.url:
-                        self.log("2-Factor Authentication required.")
+                    # If 2FA triggered: open WhatsApp app, watch for Instagram OTP, auto-fill & continue
+                    if in_2fa or self._is_on_2fa_page(page):
+                        self.log("2-Factor Authentication required by Instagram.")
+                        self._ensure_code_requested_if_needed(page)
+
+                        # Open the macOS WhatsApp app so incoming WhatsApp messages sync immediately
+                        self.log("Opening macOS WhatsApp app and waiting for Instagram OTP...")
+                        open_whatsapp_app(background=False)
+
+                        wa_check = check_whatsapp_db_access()
+                        has_wa_access = wa_check.get("accessible", False)
+                        if has_wa_access:
+                            auto_msg = (
+                                f"Watching WhatsApp DB (after msg #{baseline_wa_pk}) & Universal Clipboard for Instagram OTP..."
+                            )
+                            self.log(
+                                f"WhatsApp DB connected (baseline Z_PK #{baseline_wa_pk}). Waiting for new Instagram OTP..."
+                            )
+                        else:
+                            auto_msg = (
+                                "Watching WhatsApp UI & Universal Clipboard for Instagram OTP..."
+                            )
+                            self.log("Watching WhatsApp & Universal Clipboard for Instagram OTP...")
+
                         with self._lock:
                             self.status = "awaiting_otp"
                             self.awaiting_otp = True
-                            self.stage = "Awaiting OTP code (Enter in Curio modal or browser)..."
-                            self.otp_prompt = "Enter the verification code sent to your WhatsApp/SMS/App:"
+                            self.messages_access = has_wa_access
+                            self.auto_otp_status = auto_msg
+                            self.stage = "Waiting for Instagram OTP in WhatsApp (auto-detecting)..."
+                            self.otp_prompt = (
+                                "Curio opened WhatsApp and is watching for your Instagram OTP. "
+                                "Note: If WhatsApp Mac hides the code ('check your phone'), tap 'Copy Code' in WhatsApp "
+                                "on your phone (Universal Clipboard will auto-fill it instantly), send the 6 digits to yourself on WhatsApp, or type it below:"
+                            )
 
+                        tried_codes: Set[str] = set()
+                        seen_phone_only_pks: Set[int] = set()
+                        baseline_ui_texts: Set[str] = set()
                         start_time = time.time()
-                        otp_entered = False
+                        otp_verified = False
+                        last_log_time = time.time()
+
                         while time.time() - start_time < 300:
                             if self._stop_requested:
                                 return
 
-                            if self._pending_otp:
-                                code_val = self._pending_otp
-                                self._pending_otp = None
-                                self.log("Submitting entered OTP code...")
-                                try:
-                                    inputs = page.locator('input[type="text"], input[name*="code" i]').all()
-                                    if inputs:
-                                        inputs[0].fill(code_val)
-                                        page.wait_for_timeout(400)
-                                        inputs[0].press("Enter")
-                                except Exception as err:
-                                    self.log(f"Error submitting OTP: {err}")
-
-                            page_url = page.url
-                            if (
-                                "two_step_verification" not in page_url
-                                and "two_factor" not in page_url
-                                and "/accounts/login" not in page_url
-                            ):
+                            # Check if 2FA already completed in the browser window
+                            if self._is_logged_in_past_auth(page):
                                 self.log("2FA verification passed!")
-                                otp_entered = True
+                                otp_verified = True
                                 break
 
-                            time.sleep(1)
+                            candidate_otp: Optional[str] = None
+                            candidate_source: Optional[str] = None
+
+                            # 1. Check manual OTP submitted via Curio modal
+                            if self._pending_otp:
+                                candidate_otp = self._pending_otp
+                                self._pending_otp = None
+                                candidate_source = "Curio manual input"
+
+                            # 2. Poll macOS WhatsApp SQLite database (ChatStorage.sqlite)
+                            if not candidate_otp:
+                                otp_wa, src_wa, phone_only_notice, err_wa = query_recent_whatsapp_for_otp(
+                                    baseline_pk=baseline_wa_pk,
+                                    since_unix_ts=login_click_ts,
+                                    tried_codes=tried_codes,
+                                    seen_phone_only_pks=seen_phone_only_pks,
+                                )
+                                if phone_only_notice:
+                                    self.log(phone_only_notice)
+                                    with self._lock:
+                                        self.auto_otp_status = phone_only_notice
+                                if otp_wa:
+                                    candidate_otp = otp_wa
+                                    candidate_source = src_wa
+
+                            # 3. Poll macOS Universal Clipboard (pbpaste — triggers when tapping 'Copy Code' on WhatsApp on iPhone/Mac)
+                            if not candidate_otp:
+                                otp_clip, src_clip = poll_clipboard_for_otp(
+                                    baseline_clipboard=baseline_clipboard,
+                                    tried_codes=tried_codes,
+                                )
+                                if otp_clip:
+                                    candidate_otp = otp_clip
+                                    candidate_source = src_clip
+
+                            # 4. Poll WhatsApp.app UI via AppleScript (if Accessibility enabled)
+                            if not candidate_otp:
+                                otp_ui, src_ui = poll_whatsapp_ui_for_otp(
+                                    baseline_texts=baseline_ui_texts,
+                                    tried_codes=tried_codes,
+                                )
+                                if otp_ui:
+                                    candidate_otp = otp_ui
+                                    candidate_source = src_ui
+
+                            # 5. Secondary check: Apple Messages SQLite DB (in case SMS fallback was used)
+                            if not candidate_otp:
+                                otp_msg, src_msg, _ = query_recent_messages_for_otp(
+                                    baseline_rowid=baseline_msg_rowid,
+                                    since_unix_ts=login_click_ts,
+                                    tried_codes=tried_codes,
+                                )
+                                if otp_msg:
+                                    candidate_otp = otp_msg
+                                    candidate_source = src_msg
+
+                            # If we found an OTP from any source, enter it in Instagram's OTP box and test it!
+                            if candidate_otp:
+                                tried_codes.add(candidate_otp)
+                                self.log(f"Found Instagram OTP [{candidate_otp}] via {candidate_source}! Entering into OTP box...")
+                                with self._lock:
+                                    self.stage = f"Submitting OTP {candidate_otp} (from {candidate_source})..."
+                                    self.auto_otp_status = f"Trying OTP {candidate_otp} from {candidate_source}..."
+
+                                submitted = self._fill_and_submit_otp(page, candidate_otp)
+                                if submitted:
+                                    for _ in range(16):
+                                        if self._stop_requested:
+                                            return
+                                        page.wait_for_timeout(500)
+                                        if self._is_logged_in_past_auth(page):
+                                            otp_verified = True
+                                            break
+                                    if otp_verified:
+                                        self.log(f"OTP [{candidate_otp}] accepted by Instagram! 2FA complete.")
+                                        break
+                                    else:
+                                        self.log(
+                                            f"OTP [{candidate_otp}] did not advance past 2FA yet. "
+                                            "Continuing to watch WhatsApp for a newer OTP code..."
+                                        )
+                                        with self._lock:
+                                            self.stage = "Waiting for newer Instagram OTP in WhatsApp..."
+                                            self.auto_otp_status = (
+                                                f"Tried {candidate_otp}; watching WhatsApp & Clipboard for a newer OTP..."
+                                            )
+
+                            if time.time() - last_log_time >= 20:
+                                elapsed = int(time.time() - start_time)
+                                self.log(f"Still watching WhatsApp & Clipboard for Instagram OTP ({elapsed}s elapsed)...")
+                                last_log_time = time.time()
+
+                            time.sleep(1.2)
 
                         with self._lock:
                             self.awaiting_otp = False
+                            self.auto_otp_status = None
                             self.status = "running"
 
-                        if not otp_entered:
-                            raise TimeoutError("2FA OTP verification timed out.")
+                        if not otp_verified:
+                            raise TimeoutError("Timed out waiting for Instagram 2FA OTP verification.")
 
-                # Dismiss dialogs ("Save info", "Not now", etc.)
+                # Bring browser window to front and dismiss post-login dialogs ("Save info", "Not now", etc.)
+                try:
+                    page.bring_to_front()
+                except Exception:
+                    pass
+
                 page.wait_for_timeout(2500)
                 for btn_text in ["Save info", "Save Info", "Not Now", "Not now", "Cancel"]:
                     try:
                         btn = page.get_by_role("button", name=btn_text)
-                        if btn.is_visible():
+                        if btn.count() > 0 and btn.first.is_visible():
                             self.log(f"Dismissing prompt: '{btn_text}'")
-                            btn.click()
-                            page.wait_for_timeout(1000)
+                            btn.first.click()
+                            page.wait_for_timeout(1200)
                     except Exception:
                         pass
 
+                # Persist authenticated session immediately after login/2FA succeeds
+                try:
+                    context.storage_state(path=str(SESSION_FILE))
+                except Exception:
+                    pass
+
                 # Ensure we are on all_posts_url
                 if "/saved/all-posts" not in page.url:
+                    with self._lock:
+                        self.stage = f"Opening saved posts collection for @{account_id}..."
                     self.log(f"Navigating to {all_posts_url}...")
                     page.goto(all_posts_url, timeout=60000)
                     page.wait_for_timeout(4000)
 
                 # If redirected to /saved/ instead of /saved/all-posts/, click "All posts" tile
                 if "/saved/all-posts" not in page.url:
-                    all_posts_tile = page.locator('a[href*="/saved/all-posts/"]').first
-                    if all_posts_tile.is_visible(timeout=3000):
-                        all_posts_tile.click()
-                        page.wait_for_timeout(3000)
+                    try:
+                        all_posts_tile = page.locator('a[href*="/saved/all-posts/"]').first
+                        if all_posts_tile.is_visible(timeout=4000):
+                            all_posts_tile.click()
+                            page.wait_for_timeout(3500)
+                    except Exception:
+                        pass
+
+                # Wait for saved post tiles to render in the grid
+                try:
+                    page.wait_for_selector('a[href*="/p/"], a[href*="/reel/"]', timeout=15000)
+                except Exception:
+                    pass
 
                 # Step 2: Compare against existing reels.json
                 with self._lock:
@@ -354,8 +752,6 @@ class InstagramSyncManager:
 
                     dialog = page.locator('div[role="dialog"]').first
 
-                    # Accurately detect if this item is a Reel vs Post
-                    # Check URL, video elements, audio links, and aria indicators
                     has_video = False
                     has_reel_link = False
                     has_audio = False
@@ -410,23 +806,7 @@ class InstagramSyncManager:
                     except Exception:
                         pass
 
-                    # 3. Timestamp (IST)
-                    now_dt = datetime.now(IST_TZ)
-                    try:
-                        time_elem = dialog.locator("time").first
-                        if time_elem.is_visible():
-                            dt_attr = time_elem.get_attribute("datetime")
-                            if dt_attr:
-                                parsed = datetime.fromisoformat(dt_attr.replace("Z", "+00:00"))
-                                now_dt = parsed.astimezone(IST_TZ)
-                    except Exception:
-                        pass
-
-                    time_fmt = now_dt.strftime("%-I:%M %p").lower()
-                    saved_at = now_dt.strftime(f"%b %d, %Y, {time_fmt} IST")
-                    saved_at_iso = now_dt.isoformat()
-
-                    # 4. Hashtags
+                    # 3. Hashtags
                     hashtags: List[str] = []
                     if caption:
                         tags = re.findall(r"#([a-zA-Z0-9_]+)", caption)
@@ -486,7 +866,6 @@ class InstagramSyncManager:
 
                 self.log(f"Successfully extracted {len(new_extracted)} new items with accurate IST timestamps!")
 
-
                 # Step 4: AI Curation with Gemini 3.5 Flash Lite
                 with self._lock:
                     self.status = "curating"
@@ -513,7 +892,6 @@ class InstagramSyncManager:
 
                 # Incrementally index new embeddings in background
                 try:
-                    import threading
                     from app.services.embeddings_manager import index_reels
                     threading.Thread(target=index_reels, args=(full_vault,), daemon=True).start()
                 except Exception as emb_err:
@@ -533,7 +911,6 @@ class InstagramSyncManager:
                 context.close()
                 browser.close()
                 self.log("Browser session finished.")
-
 
     def _curate_with_gemini(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Accurately classify, title, and tag new items using Gemini 3.5 Flash Lite."""

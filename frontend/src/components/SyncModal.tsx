@@ -8,19 +8,25 @@ import {
   Terminal,
   Brain,
   ExternalLink,
+  MessageSquareCode,
+  ShieldAlert,
 } from 'lucide-react';
-import { startSync, getSyncStatus, submitSyncOtp, cancelSync } from '../services/api';
+import {
+  startSync,
+  getSyncStatus,
+  submitSyncOtp,
+  cancelSync,
+  openMessagesPermissions,
+} from '../services/api';
 import type { SyncStatusResponse } from '../types';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
-
 
 interface SyncModalProps {
   isOpen: boolean;
@@ -38,6 +44,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
   const [isSubmittingOtp, setIsSubmittingOtp] = useState<boolean>(false);
   const [otpMessage, setOtpMessage] = useState<string | null>(null);
   const [isStarting, setIsStarting] = useState<boolean>(false);
+  const [permMsg, setPermMsg] = useState<string | null>(null);
 
   const logsEndRef = useRef<HTMLDivElement>(null);
   const otpInputRef = useRef<HTMLInputElement>(null);
@@ -90,9 +97,11 @@ export const SyncModal: React.FC<SyncModalProps> = ({
   const isAwaitingOtp = syncState?.awaiting_otp;
   const isCompleted = syncState?.status === 'completed';
   const isError = syncState?.status === 'error';
+  const hasMessagesAccess = syncState?.messages_access ?? false;
 
   const handleStartSync = async () => {
     setIsStarting(true);
+    setPermMsg(null);
     try {
       const res = await startSync();
       setSyncState(res.state);
@@ -117,6 +126,15 @@ export const SyncModal: React.FC<SyncModalProps> = ({
       setOtpMessage(`Error: ${err.message}`);
     } finally {
       setIsSubmittingOtp(false);
+    }
+  };
+
+  const handleOpenPermissions = async () => {
+    try {
+      const res = await openMessagesPermissions();
+      setPermMsg(res.message);
+    } catch (err: any) {
+      setPermMsg(`Could not open System Settings: ${err.message}`);
     }
   };
 
@@ -152,7 +170,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                 </span>
               </h2>
               <p className="text-[11px] text-[#7a7a7a]">
-                Automated Playwright crawl & Gemini 3.5 Flash Lite AI curation
+                Playwright crawl, macOS WhatsApp auto-OTP & Gemini 3.5 Flash Lite curation
               </p>
             </div>
           </div>
@@ -167,6 +185,50 @@ export const SyncModal: React.FC<SyncModalProps> = ({
 
         {/* Modal Body */}
         <div className="p-5 flex-1 overflow-y-auto space-y-4">
+          {/* macOS Messages Auto-OTP Status Bar */}
+          <div
+            className={`px-3.5 py-2.5 rounded-lg border flex items-center justify-between gap-3 text-xs ${
+              hasMessagesAccess
+                ? 'bg-emerald-950/15 border-emerald-500/25 text-emerald-300'
+                : 'bg-amber-950/20 border-amber-500/30 text-amber-200'
+            }`}
+          >
+            <div className="flex items-center gap-2 min-w-0">
+              {hasMessagesAccess ? (
+                <MessageSquareCode className="w-4 h-4 text-emerald-400 shrink-0" />
+              ) : (
+                <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
+              )}
+              <div className="truncate">
+                <span className="font-medium">
+                  {hasMessagesAccess
+                    ? 'macOS WhatsApp & Clipboard Auto-OTP Ready'
+                    : 'macOS WhatsApp DB Needs Full Disk Access'}
+                </span>
+                <p className="text-[11px] text-[#999] truncate">
+                  {hasMessagesAccess
+                    ? 'Curio will open WhatsApp after login and auto-fill incoming Instagram OTPs.'
+                    : 'Enable Full Disk Access for Terminal / Antigravity so Curio can read WhatsApp OTPs automatically.'}
+                </p>
+              </div>
+            </div>
+
+            {!hasMessagesAccess && (
+              <button
+                onClick={handleOpenPermissions}
+                className="px-2.5 py-1 rounded bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 text-[11px] font-medium shrink-0 transition-colors cursor-pointer"
+              >
+                Grant Access
+              </button>
+            )}
+          </div>
+
+          {permMsg && (
+            <div className="text-[11px] text-amber-300/90 font-mono px-1">
+              {permMsg}
+            </div>
+          )}
+
           {/* Main Status Hero */}
           <div
             className={`p-4 rounded-lg border transition-all ${
@@ -201,7 +263,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                   <h3 className="text-xs font-semibold tracking-wide uppercase font-mono">
                     {syncState?.status || 'Ready'}
                   </h3>
-                  {isRunning && (
+                  {(isRunning || isAwaitingOtp) && (
                     <span className="text-[10px] font-mono text-sky-400 animate-pulse">
                       Live sync active
                     </span>
@@ -215,7 +277,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                 {isCompleted && (
                   <div className="mt-2.5 pt-2 border-t border-emerald-500/20 flex items-center justify-between text-xs">
                     <span className="text-emerald-300 font-medium">
-                      🎉 Successfully synced {syncState.new_count} new reels!
+                      Successfully synced {syncState.new_count} new reels!
                     </span>
                     <button
                       onClick={handleClose}
@@ -229,16 +291,27 @@ export const SyncModal: React.FC<SyncModalProps> = ({
             </div>
           </div>
 
-          {/* Interactive OTP Input Card (Shown only when 2FA is needed) */}
+          {/* Automatic + Interactive OTP Card (Shown when 2FA is active) */}
           {isAwaitingOtp && (
             <div className="p-4 rounded-lg bg-[#1f1b14] border border-amber-500/50 shadow-lg space-y-3 animate-in fade-in">
-              <div className="flex items-center gap-2 text-amber-300 text-xs font-semibold">
-                <KeyRound className="w-4 h-4 text-amber-400" />
-                Two-Factor Security Code Required
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 text-amber-300 text-xs font-semibold">
+                  <MessageSquareCode className="w-4 h-4 text-amber-400 animate-bounce" />
+                  Watching macOS WhatsApp & Clipboard for Instagram OTP...
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-200 border border-amber-500/30">
+                  Auto-fill Active
+                </span>
               </div>
 
+              {syncState?.auto_otp_status && (
+                <div className="text-[11px] font-mono text-amber-200/90 bg-black/30 px-2.5 py-1.5 rounded border border-amber-500/20">
+                  {syncState.auto_otp_status}
+                </div>
+              )}
+
               <p className="text-xs text-[#b8a58b] leading-relaxed">
-                Instagram requested a verification code (sent to WhatsApp / SMS). Enter it below, or type it directly into the open Chromium browser window:
+                Curio opened <strong>WhatsApp</strong> on your Mac and is watching for the Instagram OTP. If WhatsApp Mac says <em>&ldquo;check your phone&rdquo;</em>, tap <strong>Copy Code</strong> in WhatsApp on your phone (Universal Clipboard will auto-fill it here), send the 6 digits to yourself on WhatsApp, or type it below:
               </p>
 
               <form onSubmit={handleOtpSubmit} className="flex items-center gap-2">
@@ -247,7 +320,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                   type="text"
                   value={otpCode}
                   onChange={(e) => setOtpCode(e.target.value)}
-                  placeholder="Enter 6-digit code"
+                  placeholder="Auto-detecting from Messages (or enter 6-digit code)"
                   className="flex-1 bg-[#141414] border border-amber-500/40 focus:border-amber-400 px-3 py-2 rounded-md text-sm font-mono tracking-widest text-amber-100 placeholder-[#666] outline-none"
                   autoFocus
                 />
@@ -287,9 +360,14 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                   <span className="text-[#555] shrink-0">{entry.time}</span>
                   <span
                     className={
-                      entry.message.includes('complete') || entry.message.includes('Successfully')
+                      entry.message.includes('complete') ||
+                      entry.message.includes('Successfully') ||
+                      entry.message.includes('accepted')
                         ? 'text-emerald-400'
-                        : entry.message.includes('NEW') || entry.message.includes('Discovered')
+                        : entry.message.includes('Found Instagram OTP') ||
+                          entry.message.includes('Messages')
+                        ? 'text-amber-300 font-medium'
+                        : entry.message.includes('Extracted') || entry.message.includes('Discovered')
                         ? 'text-sky-300 font-medium'
                         : entry.message.includes('Gemini')
                         ? 'text-purple-300'
@@ -323,7 +401,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            {isRunning && (
+            {(isRunning || isAwaitingOtp) && (
               <button
                 onClick={handleCancel}
                 className="px-3 py-1.5 rounded-md border border-[#333] hover:bg-[#222] text-[#888] hover:text-[#ccc] text-xs font-medium transition-colors cursor-pointer"
@@ -332,7 +410,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
               </button>
             )}
 
-            {!isRunning && (
+            {!isRunning && !isAwaitingOtp && (
               <button
                 onClick={handleStartSync}
                 disabled={isStarting}
