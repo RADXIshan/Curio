@@ -2,9 +2,9 @@
 Instagram Playwright Sync Service for Curio.
 Automates fetching new saved reels/posts from https://www.instagram.com/<user>/saved/,
 handles credentials (both returning-account 'Continue' flows and first-time username+password flows)
-and 2FA/OTP (automatically opening macOS WhatsApp, watching WhatsApp ChatStorage.sqlite,
-Universal Clipboard, and Apple Messages), extracts new items saved after existing reels.json,
-and curates them with Gemini 3.5 Flash Lite.
+and 2FA/OTP (automatically switching from WhatsApp to SMS via 'Try another way' if needed,
+opening macOS Messages, reading ~/Library/Messages/chat.db, and submitting the OTP),
+extracts new items saved after existing reels.json, and curates them with Gemini 3.5 Flash Lite.
 """
 
 from datetime import datetime, timedelta
@@ -25,13 +25,11 @@ from playwright.sync_api import Page, sync_playwright
 from app.services.gemini_service import MODEL_NAME as GEMINI_MODEL_NAME, classify_reel, derive_content_title
 from app.services.messages_otp import (
     check_messages_db_access,
-    check_whatsapp_db_access,
     get_baseline_message_rowid,
     get_baseline_whatsapp_pk,
     get_clipboard_content,
-    open_whatsapp_app,
+    open_messages_app,
     poll_clipboard_for_otp,
-    poll_whatsapp_ui_for_otp,
     query_recent_messages_for_otp,
     query_recent_whatsapp_for_otp,
 )
@@ -310,21 +308,140 @@ class InstagramSyncManager:
                 except Exception:
                     continue
 
-    def _ensure_code_requested_if_needed(self, page: Page):
+    def _switch_2fa_to_sms_if_needed(self, page: Page):
         """
-        If Instagram lands on a 2FA challenge screen that requires clicking 'Send Security Code'
-        when no input box is present, trigger it automatically.
+        Inspect the Instagram 2FA screen:
+        - If it already sent the OTP to SMS / Messages in the first screen, do nothing and proceed to Messages.
+        - If it says the OTP was sent to WhatsApp (or Authenticator App), automatically click
+          'Try another way' -> select 'Text message' (SMS) -> click 'Continue' so the OTP arrives in macOS Messages.
         """
+        page.wait_for_timeout(1500)
+
+        # Also handle any initial 'Send Security Code' screen if no input is shown yet
         try:
             for btn_label in ["Send Security Code", "Send security code", "Send code", "Get code"]:
                 btn = page.get_by_role("button", name=btn_label)
                 if btn.count() > 0 and btn.first.is_visible():
                     self.log(f"Clicking '{btn_label}' on Instagram challenge screen...")
                     btn.first.click()
-                    page.wait_for_timeout(1500)
+                    page.wait_for_timeout(1800)
                     break
         except Exception:
             pass
+
+        body_text = ""
+        try:
+            body_text = (page.locator("body").inner_text() or "").lower()
+        except Exception:
+            pass
+
+        is_whatsapp_or_app = "whatsapp" in body_text or "authentication app" in body_text or "authenticator" in body_text
+        if not is_whatsapp_or_app:
+            self.log("Instagram 2FA is already set to SMS / Messages! Proceeding directly to macOS Messages...")
+            return
+
+        self.log("Instagram sent OTP to WhatsApp initially. Clicking 'Try another way' to switch to SMS (Messages)...")
+        with self._lock:
+            self.stage = "Switching 2FA from WhatsApp to SMS ('Try another way')..."
+
+        clicked_try_another = False
+        try_another_selectors = [
+            'button:has-text("Try another way")',
+            'div[role="button"]:has-text("Try another way")',
+            'span:has-text("Try another way")',
+            'a:has-text("Try another way")',
+            'button:has-text("Use another method")',
+            'div[role="button"]:has-text("Use another method")',
+        ]
+        for sel in try_another_selectors:
+            try:
+                loc = page.locator(sel)
+                if loc.count() > 0 and loc.first.is_visible():
+                    loc.first.click()
+                    clicked_try_another = True
+                    break
+            except Exception:
+                continue
+
+        if not clicked_try_another:
+            try:
+                fallback_btn = page.get_by_text(re.compile(r"try another way|another way|change method", re.I)).first
+                if fallback_btn.is_visible():
+                    fallback_btn.click()
+                    clicked_try_another = True
+            except Exception:
+                pass
+
+        if not clicked_try_another:
+            self.log("Could not find 'Try another way' button on 2FA page; continuing to watch for OTP...")
+            return
+
+        self.log("Opened 'Try another way' options. Selecting 'Text message' (SMS)...")
+        page.wait_for_timeout(1800)
+
+        # Select the 'Text message' / 'SMS' option in the dialog/list
+        selected_sms = False
+        sms_selectors = [
+            'div[role="dialog"] label:has-text("Text message")',
+            'div[role="dialog"] div[role="button"]:has-text("Text message")',
+            'div[role="dialog"] div[role="radio"]:has-text("Text message")',
+            'div[role="dialog"] span:has-text("Text message")',
+            'label:has-text("Text message")',
+            'div[role="button"]:has-text("Text message")',
+            'div[role="radio"]:has-text("Text message")',
+            'span:has-text("Text message")',
+            'label:has-text("SMS")',
+            'span:has-text("SMS")',
+        ]
+        for sel in sms_selectors:
+            try:
+                loc = page.locator(sel)
+                if loc.count() > 0 and loc.first.is_visible():
+                    loc.first.click()
+                    selected_sms = True
+                    self.log("Selected 'Text message' (SMS) option.")
+                    break
+            except Exception:
+                continue
+
+        if not selected_sms:
+            try:
+                sms_text = page.get_by_text(re.compile(r"Text message|SMS", re.I)).first
+                if sms_text.is_visible():
+                    sms_text.click()
+                    selected_sms = True
+                    self.log("Selected 'Text message' (SMS) option via text match.")
+            except Exception:
+                pass
+
+        page.wait_for_timeout(700)
+
+        # Click 'Continue' / 'Send' / 'Confirm' in the modal to dispatch the SMS code
+        clicked_confirm_method = False
+        confirm_selectors = [
+            'div[role="dialog"] button:has-text("Continue")',
+            'div[role="dialog"] div[role="button"]:has-text("Continue")',
+            'div[role="dialog"] button:has-text("Send")',
+            'div[role="dialog"] div[role="button"]:has-text("Send")',
+            'div[role="dialog"] button:has-text("Confirm")',
+            'button:has-text("Continue")',
+            'div[role="button"]:has-text("Continue")',
+            'button:has-text("Send code")',
+            'div[role="button"]:has-text("Send code")',
+        ]
+        for sel in confirm_selectors:
+            try:
+                loc = page.locator(sel)
+                if loc.count() > 0 and loc.first.is_visible():
+                    loc.first.click()
+                    clicked_confirm_method = True
+                    self.log("Clicked 'Continue' — Instagram is now sending the OTP via SMS to Messages!")
+                    break
+            except Exception:
+                continue
+
+        if clicked_confirm_method:
+            page.wait_for_timeout(2500)
 
     def _fill_and_submit_otp(self, page: Page, code_val: str) -> bool:
         """
@@ -449,12 +566,9 @@ class InstagramSyncManager:
                 if "/accounts/login" in page.url or "login" in page.url.lower():
                     self.log("Instagram login required. Starting login flow...")
 
-                    # Pre-warm WhatsApp in background so its SQLite DB is caught up before login
-                    open_whatsapp_app(background=True)
-
-                    # Capture baseline WhatsApp Z_PK, Messages ROWID & Clipboard BEFORE submitting login
-                    baseline_wa_pk = get_baseline_whatsapp_pk()
+                    # Capture baseline Messages ROWID, WhatsApp Z_PK & Clipboard BEFORE submitting login
                     baseline_msg_rowid = get_baseline_message_rowid()
+                    baseline_wa_pk = get_baseline_whatsapp_pk()
                     baseline_clipboard = get_clipboard_content()
                     login_click_ts = time.time()
 
@@ -473,45 +587,45 @@ class InstagramSyncManager:
                         if self._is_logged_in_past_auth(page):
                             break
 
-                    # If 2FA triggered: open WhatsApp app, watch for Instagram OTP, auto-fill & continue
+                    # If 2FA triggered:
+                    # 1. If Instagram sent OTP to WhatsApp, click 'Try another way' -> 'Text message' -> 'Continue'
+                    #    (if already sent to Messages/SMS, keep it as is).
+                    # 2. Open macOS Messages app, wait for Instagram OTP in ~/Library/Messages/chat.db,
+                    #    enter it in the OTP box, and continue!
                     if in_2fa or self._is_on_2fa_page(page):
                         self.log("2-Factor Authentication required by Instagram.")
-                        self._ensure_code_requested_if_needed(page)
+                        self._switch_2fa_to_sms_if_needed(page)
 
-                        # Open the macOS WhatsApp app so incoming WhatsApp messages sync immediately
-                        self.log("Opening macOS WhatsApp app and waiting for Instagram OTP...")
-                        open_whatsapp_app(background=False)
+                        # Open the macOS Messages app so iCloud / iPhone SMS Forwarding syncs immediately
+                        self.log("Opening macOS Messages app and waiting for Instagram SMS OTP...")
+                        open_messages_app(background=False)
 
-                        wa_check = check_whatsapp_db_access()
-                        has_wa_access = wa_check.get("accessible", False)
-                        if has_wa_access:
+                        msg_check = check_messages_db_access()
+                        has_msg_access = msg_check.get("accessible", False)
+                        if has_msg_access:
                             auto_msg = (
-                                f"Watching WhatsApp DB (after msg #{baseline_wa_pk}) & Universal Clipboard for Instagram OTP..."
+                                f"Watching macOS Messages DB (after ROWID #{baseline_msg_rowid}) for Instagram SMS OTP..."
                             )
                             self.log(
-                                f"WhatsApp DB connected (baseline Z_PK #{baseline_wa_pk}). Waiting for new Instagram OTP..."
+                                f"macOS Messages DB connected (baseline ROWID #{baseline_msg_rowid}). Waiting for Instagram OTP..."
                             )
                         else:
-                            auto_msg = (
-                                "Watching WhatsApp UI & Universal Clipboard for Instagram OTP..."
-                            )
-                            self.log("Watching WhatsApp & Universal Clipboard for Instagram OTP...")
+                            auto_msg = "Watching macOS Messages & Universal Clipboard for Instagram OTP..."
+                            self.log("Watching macOS Messages & Universal Clipboard for Instagram OTP...")
 
                         with self._lock:
                             self.status = "awaiting_otp"
                             self.awaiting_otp = True
-                            self.messages_access = has_wa_access
+                            self.messages_access = has_msg_access
                             self.auto_otp_status = auto_msg
-                            self.stage = "Waiting for Instagram OTP in WhatsApp (auto-detecting)..."
+                            self.stage = "Waiting for Instagram OTP in macOS Messages (auto-detecting)..."
                             self.otp_prompt = (
-                                "Curio opened WhatsApp and is watching for your Instagram OTP. "
-                                "Note: If WhatsApp Mac hides the code ('check your phone'), tap 'Copy Code' in WhatsApp "
-                                "on your phone (Universal Clipboard will auto-fill it instantly), send the 6 digits to yourself on WhatsApp, or type it below:"
+                                "Curio switched 2FA to SMS (if needed), opened macOS Messages, and is watching for your "
+                                "Instagram verification code to enter it automatically:"
                             )
 
                         tried_codes: Set[str] = set()
                         seen_phone_only_pks: Set[int] = set()
-                        baseline_ui_texts: Set[str] = set()
                         start_time = time.time()
                         otp_verified = False
                         last_log_time = time.time()
@@ -535,23 +649,18 @@ class InstagramSyncManager:
                                 self._pending_otp = None
                                 candidate_source = "Curio manual input"
 
-                            # 2. Poll macOS WhatsApp SQLite database (ChatStorage.sqlite)
+                            # 2. Primary: Poll macOS Messages SQLite DB (~/Library/Messages/chat.db)
                             if not candidate_otp:
-                                otp_wa, src_wa, phone_only_notice, err_wa = query_recent_whatsapp_for_otp(
-                                    baseline_pk=baseline_wa_pk,
+                                otp_msg, src_msg, err_msg = query_recent_messages_for_otp(
+                                    baseline_rowid=baseline_msg_rowid,
                                     since_unix_ts=login_click_ts,
                                     tried_codes=tried_codes,
-                                    seen_phone_only_pks=seen_phone_only_pks,
                                 )
-                                if phone_only_notice:
-                                    self.log(phone_only_notice)
-                                    with self._lock:
-                                        self.auto_otp_status = phone_only_notice
-                                if otp_wa:
-                                    candidate_otp = otp_wa
-                                    candidate_source = src_wa
+                                if otp_msg:
+                                    candidate_otp = otp_msg
+                                    candidate_source = src_msg
 
-                            # 3. Poll macOS Universal Clipboard (pbpaste — triggers when tapping 'Copy Code' on WhatsApp on iPhone/Mac)
+                            # 3. Secondary: Poll macOS Universal Clipboard (pbpaste)
                             if not candidate_otp:
                                 otp_clip, src_clip = poll_clipboard_for_otp(
                                     baseline_clipboard=baseline_clipboard,
@@ -561,26 +670,17 @@ class InstagramSyncManager:
                                     candidate_otp = otp_clip
                                     candidate_source = src_clip
 
-                            # 4. Poll WhatsApp.app UI via AppleScript (if Accessibility enabled)
+                            # 4. Tertiary: Poll WhatsApp DB (in case readable OTP text arrived there)
                             if not candidate_otp:
-                                otp_ui, src_ui = poll_whatsapp_ui_for_otp(
-                                    baseline_texts=baseline_ui_texts,
-                                    tried_codes=tried_codes,
-                                )
-                                if otp_ui:
-                                    candidate_otp = otp_ui
-                                    candidate_source = src_ui
-
-                            # 5. Secondary check: Apple Messages SQLite DB (in case SMS fallback was used)
-                            if not candidate_otp:
-                                otp_msg, src_msg, _ = query_recent_messages_for_otp(
-                                    baseline_rowid=baseline_msg_rowid,
+                                otp_wa, src_wa, _, _ = query_recent_whatsapp_for_otp(
+                                    baseline_pk=baseline_wa_pk,
                                     since_unix_ts=login_click_ts,
                                     tried_codes=tried_codes,
+                                    seen_phone_only_pks=seen_phone_only_pks,
                                 )
-                                if otp_msg:
-                                    candidate_otp = otp_msg
-                                    candidate_source = src_msg
+                                if otp_wa:
+                                    candidate_otp = otp_wa
+                                    candidate_source = src_wa
 
                             # If we found an OTP from any source, enter it in Instagram's OTP box and test it!
                             if candidate_otp:
@@ -605,17 +705,17 @@ class InstagramSyncManager:
                                     else:
                                         self.log(
                                             f"OTP [{candidate_otp}] did not advance past 2FA yet. "
-                                            "Continuing to watch WhatsApp for a newer OTP code..."
+                                            "Continuing to watch macOS Messages for a newer OTP code..."
                                         )
                                         with self._lock:
-                                            self.stage = "Waiting for newer Instagram OTP in WhatsApp..."
+                                            self.stage = "Waiting for newer Instagram OTP in macOS Messages..."
                                             self.auto_otp_status = (
-                                                f"Tried {candidate_otp}; watching WhatsApp & Clipboard for a newer OTP..."
+                                                f"Tried {candidate_otp}; watching macOS Messages for a newer OTP..."
                                             )
 
                             if time.time() - last_log_time >= 20:
                                 elapsed = int(time.time() - start_time)
-                                self.log(f"Still watching WhatsApp & Clipboard for Instagram OTP ({elapsed}s elapsed)...")
+                                self.log(f"Still watching macOS Messages for Instagram OTP ({elapsed}s elapsed)...")
                                 last_log_time = time.time()
 
                             time.sleep(1.2)

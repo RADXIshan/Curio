@@ -170,7 +170,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
                 </span>
               </h2>
               <p className="text-[11px] text-[#7a7a7a]">
-                Playwright crawl, macOS WhatsApp auto-OTP & Gemini 3.5 Flash Lite curation
+                Playwright crawl, auto SMS switch & macOS Messages OTP + Gemini 3.5 Flash Lite curation
               </p>
             </div>
           </div>
@@ -202,13 +202,13 @@ export const SyncModal: React.FC<SyncModalProps> = ({
               <div className="truncate">
                 <span className="font-medium">
                   {hasMessagesAccess
-                    ? 'macOS WhatsApp & Clipboard Auto-OTP Ready'
-                    : 'macOS WhatsApp DB Needs Full Disk Access'}
+                    ? 'macOS Messages Auto-OTP Ready'
+                    : 'macOS Messages DB Needs Full Disk Access'}
                 </span>
                 <p className="text-[11px] text-[#999] truncate">
                   {hasMessagesAccess
-                    ? 'Curio will open WhatsApp after login and auto-fill incoming Instagram OTPs.'
-                    : 'Enable Full Disk Access for Terminal / Antigravity so Curio can read WhatsApp OTPs automatically.'}
+                    ? 'Switches WhatsApp 2FA to SMS (if needed), opens Messages & auto-fills your OTP.'
+                    : 'Enable Full Disk Access for Terminal / Antigravity so Curio can read SMS OTPs automatically.'}
                 </p>
               </div>
             </div>
@@ -297,7 +297,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 text-amber-300 text-xs font-semibold">
                   <MessageSquareCode className="w-4 h-4 text-amber-400 animate-bounce" />
-                  Watching macOS WhatsApp & Clipboard for Instagram OTP...
+                  Watching macOS Messages for Instagram OTP...
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-200 border border-amber-500/30">
                   Auto-fill Active
@@ -311,7 +311,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
               )}
 
               <p className="text-xs text-[#b8a58b] leading-relaxed">
-                Curio opened <strong>WhatsApp</strong> on your Mac and is watching for the Instagram OTP. If WhatsApp Mac says <em>&ldquo;check your phone&rdquo;</em>, tap <strong>Copy Code</strong> in WhatsApp on your phone (Universal Clipboard will auto-fill it here), send the 6 digits to yourself on WhatsApp, or type it below:
+                Curio automatically switched 2FA to SMS (if it defaulted to WhatsApp), opened your Mac&apos;s <strong>Messages</strong> app, and is watching for the Instagram SMS code to enter it automatically:
               </p>
 
               <form onSubmit={handleOtpSubmit} className="flex items-center gap-2">

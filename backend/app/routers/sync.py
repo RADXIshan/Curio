@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from app.services.instagram_sync import sync_manager
-from app.services.messages_otp import check_messages_db_access, open_full_disk_access_settings, open_whatsapp_app
+from app.services.messages_otp import check_messages_db_access, open_full_disk_access_settings, open_messages_app
 
 router = APIRouter(prefix="/api/sync", tags=["sync"])
 
@@ -71,10 +71,10 @@ def get_messages_access() -> Dict[str, Any]:
 
 @router.post("/open-permissions")
 def open_permissions() -> Dict[str, Any]:
-    """Open macOS System Settings -> Full Disk Access and WhatsApp.app."""
+    """Open macOS System Settings -> Full Disk Access and Messages.app."""
     opened_settings = open_full_disk_access_settings()
-    opened_wa = open_whatsapp_app(background=True)
+    opened_messages = open_messages_app(background=True)
     return {
-        "success": opened_settings or opened_wa,
-        "message": "Opened macOS Full Disk Access settings & WhatsApp.",
+        "success": opened_settings or opened_messages,
+        "message": "Opened macOS Full Disk Access settings & Messages.",
     }
