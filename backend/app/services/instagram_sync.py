@@ -12,6 +12,7 @@ import json
 import logging
 import os
 from pathlib import Path
+import random
 import re
 import threading
 import time
@@ -1012,30 +1013,49 @@ class InstagramSyncManager:
                 browser.close()
                 self.log("Browser session finished.")
 
-    def _curate_with_gemini(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Accurately classify, title, and tag new items using Gemini 3.5 Flash Lite."""
+    def _parse_gemini_json_array(self, raw_text: str) -> List[Dict[str, Any]]:
+        """Extract and parse a JSON array from a Gemini response."""
+        text = (raw_text or "").strip()
+        if not text:
+            raise ValueError("Empty response from Gemini")
+
+        match = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", text)
+        cleaned = match.group(1).strip() if match else text
+
         try:
-            client = genai.Client()
-        except Exception as e:
-            self.log(f"GenAI Client error: {e}. Using fallback classification.")
-            client = None
+            parsed = json.loads(cleaned)
+        except json.JSONDecodeError:
+            arr_match = re.search(r"\[[\s\S]*\]", cleaned)
+            if not arr_match:
+                raise
+            parsed = json.loads(arr_match.group(0))
 
-        curated_map: Dict[str, Dict[str, Any]] = {}
+        if not isinstance(parsed, list):
+            raise ValueError(f"Expected JSON array from Gemini, got {type(parsed).__name__}")
+        return parsed
 
-        if client and items:
-            items_input = []
-            for r in items:
-                caption = (r.get("caption") or "").strip()
-                caption_slice = caption[:600] if len(caption) > 600 else caption
-                items_input.append({
-                    "id": r["id"],
-                    "caption": caption_slice,
-                    "creator": (r.get("owner") or {}).get("username") or "",
-                    "type": r.get("type", "reel"),
-                    "existing_tags": r.get("hashtags", [])[:6],
-                })
+    def _curate_batch_with_gemini(
+        self,
+        client: Any,
+        batch: List[Dict[str, Any]],
+        batch_idx: int,
+        total_batches: int,
+        max_attempts: int = 4,
+    ) -> Dict[str, Dict[str, Any]]:
+        """Curate a single small batch of items with exponential backoff on transient errors."""
+        items_input = []
+        for r in batch:
+            caption = (r.get("caption") or "").strip()
+            caption_slice = caption[:600] if len(caption) > 600 else caption
+            items_input.append({
+                "id": r["id"],
+                "caption": caption_slice,
+                "creator": (r.get("owner") or {}).get("username") or "",
+                "type": r.get("type", "reel"),
+                "existing_tags": r.get("hashtags", [])[:6],
+            })
 
-            prompt = f"""
+        prompt = f"""
 You are an expert AI curator for developer bookmarks.
 Carefully examine what each Instagram post or reel actually teaches, discusses, or demonstrates.
 
@@ -1059,24 +1079,83 @@ Return a strict JSON array of objects with fields:
 
 Respond ONLY with the JSON array.
 """
-            for attempt in range(2):
-                try:
-                    self.log(f"Categorizing with Gemini 3.5 Flash Lite (attempt {attempt + 1})...")
-                    interaction = client.interactions.create(
-                        model=GEMINI_MODEL_NAME,
-                        input=prompt,
+
+        for attempt in range(max_attempts):
+            if self._stop_requested:
+                return {}
+            try:
+                self.log(
+                    f"Categorizing batch {batch_idx}/{total_batches} "
+                    f"({len(batch)} items) with Gemini 3.5 Flash Lite (attempt {attempt + 1}/{max_attempts})..."
+                )
+                interaction = client.interactions.create(
+                    model=GEMINI_MODEL_NAME,
+                    input=prompt,
+                )
+                parsed = self._parse_gemini_json_array(interaction.output_text)
+                batch_map = {p["id"]: p for p in parsed if isinstance(p, dict) and "id" in p}
+                self.log(
+                    f"Batch {batch_idx}/{total_batches} complete: classified {len(batch_map)}/{len(batch)} items."
+                )
+                return batch_map
+            except Exception as gemini_err:
+                self.log(f"Gemini error on batch {batch_idx}/{total_batches} (attempt {attempt + 1}): {gemini_err}")
+                if attempt < max_attempts - 1 and not self._stop_requested:
+                    # Exponential backoff with jitter so transient 503/429 spikes recover cleanly
+                    delay = min(3.0 * (2 ** attempt), 24.0) + random.uniform(0.2, 1.2)
+                    self.log(f"Waiting {delay:.1f}s before retrying batch {batch_idx}/{total_batches}...")
+                    time.sleep(delay)
+
+        # If a larger batch still failed after all retries, split in half once as a last resort
+        if len(batch) > 3 and not self._stop_requested:
+            mid = len(batch) // 2
+            self.log(
+                f"Batch {batch_idx}/{total_batches} failed after {max_attempts} attempts; "
+                f"splitting into smaller sub-batches ({mid} + {len(batch) - mid})..."
+            )
+            combined: Dict[str, Dict[str, Any]] = {}
+            combined.update(self._curate_batch_with_gemini(client, batch[:mid], batch_idx, total_batches, max_attempts=2))
+            if not self._stop_requested:
+                time.sleep(1.5)
+                combined.update(self._curate_batch_with_gemini(client, batch[mid:], batch_idx, total_batches, max_attempts=2))
+            return combined
+
+        self.log(f"Batch {batch_idx}/{total_batches} falling back to local classification.")
+        return {}
+
+    def _curate_with_gemini(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Accurately classify, title, and tag new items in paced batches using Gemini 3.5 Flash Lite."""
+        try:
+            client = genai.Client()
+        except Exception as e:
+            self.log(f"GenAI Client error: {e}. Using fallback classification.")
+            client = None
+
+        curated_map: Dict[str, Dict[str, Any]] = {}
+
+        if client and items:
+            batch_size = 10
+            batches = [items[i : i + batch_size] for i in range(0, len(items), batch_size)]
+            total_batches = len(batches)
+            self.log(f"Processing {len(items)} items in {total_batches} paced batch(es) of up to {batch_size} items...")
+
+            for batch_idx, batch in enumerate(batches, 1):
+                if self._stop_requested:
+                    break
+                with self._lock:
+                    self.stage = (
+                        f"AI categorizing & titling batch {batch_idx}/{total_batches} "
+                        f"({len(batch)} items)..."
                     )
-                    raw_text = interaction.output_text.strip()
-                    match = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", raw_text)
-                    cleaned = match.group(1).strip() if match else raw_text
-                    parsed = json.loads(cleaned)
-                    if isinstance(parsed, list):
-                        curated_map = {p["id"]: p for p in parsed if "id" in p}
-                        self.log(f"Gemini 3.5 Flash Lite successfully classified and titled {len(curated_map)} items!")
-                        break
-                except Exception as gemini_err:
-                    self.log(f"Gemini error attempt {attempt + 1}: {gemini_err}")
-                    time.sleep(2)
+                batch_map = self._curate_batch_with_gemini(client, batch, batch_idx, total_batches)
+                curated_map.update(batch_map)
+
+                if batch_idx < total_batches and not self._stop_requested:
+                    time.sleep(1.5)
+
+            self.log(
+                f"Gemini 3.5 Flash Lite finished curating {len(curated_map)}/{len(items)} items!"
+            )
 
         for r in items:
             cid = r["id"]

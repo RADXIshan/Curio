@@ -232,13 +232,16 @@ def index_reels(
 
         total_batches = (len(items_to_embed) + batch_size - 1) // batch_size
         batch_idx = 0
+        batch_retries = 0
+        max_batch_retries = 4
         i = 0
 
         while i < len(items_to_embed):
             chunk = items_to_embed[i : i + batch_size]
             texts = [prepare_reel_text(r) for r in chunk]
             chunk_ids = [r.get("id") for r in chunk]
-            batch_idx += 1
+            if batch_retries == 0:
+                batch_idx += 1
 
             try:
                 res = client.models.embed_content(
@@ -259,16 +262,27 @@ def index_reels(
                 save_embeddings_cache(current_ids, current_vecs)
 
                 logger.info(f"Embedded & saved batch {batch_idx}/{total_batches} ({len(id_to_vec)}/{len(all_reels)} total)")
+                batch_retries = 0
                 i += batch_size
                 time.sleep(inter_batch_sleep)
             except Exception as e:
                 err_str = str(e)
-                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    logger.warning(f"Rate limit reached on batch {batch_idx}. Waiting 35 seconds before retry...")
-                    time.sleep(35.0)
+                is_transient = any(
+                    token in err_str
+                    for token in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "service_unavailable")
+                )
+                if is_transient and batch_retries < max_batch_retries:
+                    batch_retries += 1
+                    delay = 35.0 if ("429" in err_str or "RESOURCE_EXHAUSTED" in err_str) else min(5.0 * (2 ** (batch_retries - 1)), 30.0)
+                    logger.warning(
+                        f"Transient error on embedding batch {batch_idx} (retry {batch_retries}/{max_batch_retries}): {e}. "
+                        f"Waiting {delay:.0f}s before retry..."
+                    )
+                    time.sleep(delay)
                     # Retry this same batch without advancing i
                 else:
                     logger.error(f"Error embedding batch {batch_idx}: {e}")
+                    batch_retries = 0
                     i += batch_size
                     time.sleep(2.0)
 
