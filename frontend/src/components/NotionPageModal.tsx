@@ -19,6 +19,7 @@ import type { AISummary, ReelItem } from '../types';
 import { summarizeReel } from '../services/api';
 import { getReelTitle } from '../utils/titleUtils';
 import { toNormalText } from '../utils/textUtils';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 
 interface NotionPageModalProps {
   reel: ReelItem | null;
@@ -62,6 +63,9 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
   const [summary, setSummary] = useState<AISummary | null>(null);
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  // Lock background scrolling while modal is open, allowing scroll strictly inside popup
+  useBodyScrollLock(Boolean(reel));
 
   useEffect(() => {
     if (!reel) {
@@ -110,11 +114,11 @@ export const NotionPageModal: React.FC<NotionPageModalProps> = ({ reel, onClose 
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-xs animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/70 backdrop-blur-xs animate-in fade-in duration-150 overscroll-contain"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-3xl max-h-[92vh] overflow-y-auto bg-[#1f1f1f] text-[#dedede] border border-[#2d2d2d] rounded-xl shadow-2xl flex flex-col animate-in zoom-in-95 duration-150"
+        className="w-full max-w-3xl max-h-[92vh] overflow-y-auto overscroll-contain bg-[#1f1f1f] text-[#dedede] border border-[#2d2d2d] rounded-xl shadow-2xl flex flex-col animate-in zoom-in-95 duration-150"
       >
         {/* Notion Top Action Bar */}
         <div className="sticky top-0 z-10 px-6 py-2.5 bg-[#1f1f1f]/95 backdrop-blur-md border-b border-[#2b2b2b] flex items-center justify-between text-xs text-[#8c8c8c]">

@@ -24,6 +24,13 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+
+  /* Prevent background scrolling when any modal or popup is open */
+  body.modal-open,
+  html.modal-open {
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+  }
 }
 
 /* Custom sleek Notion scrollbars */

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { X, Brain, ExternalLink, Copy, Check, CheckCircle2, Terminal, ArrowRight, Loader2 } from 'lucide-react';
 import type { AISummary, ReelItem } from '../types';
 import { summarizeReel } from '../services/api';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 
 interface ReelDetailModalProps {
   reel: ReelItem | null;
@@ -9,6 +10,9 @@ interface ReelDetailModalProps {
 }
 
 export const ReelDetailModal: React.FC<ReelDetailModalProps> = ({ reel, onClose }) => {
+  // Lock background scrolling while modal is open, allowing scroll strictly inside popup
+  useBodyScrollLock(Boolean(reel));
+
   const [summary, setSummary] = useState<AISummary | null>(null);
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -56,9 +60,9 @@ export const ReelDetailModal: React.FC<ReelDetailModalProps> = ({ reel, onClose 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-md animate-in fade-in duration-200 overscroll-contain">
       <div
-        className="glass-panel w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-slate-700/80 shadow-2xl p-6 sm:p-8 relative space-y-6"
+        className="glass-panel w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain rounded-3xl border border-slate-700/80 shadow-2xl p-6 sm:p-8 relative space-y-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}

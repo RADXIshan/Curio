@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, Bot, User, Loader2, Video, Trash2, ArrowUpRight } from 'lucide-react';
 import type { ChatMessage, ReelItem } from '../types';
 import { sendChatMessage } from '../services/api';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 
 interface ChatBotDrawerProps {
   isOpen: boolean;
@@ -21,6 +22,9 @@ export const ChatBotDrawer: React.FC<ChatBotDrawerProps> = ({
   onClose,
   onSelectReel,
 }) => {
+  // Lock background scrolling while drawer is open, allowing scroll strictly inside drawer
+  useBodyScrollLock(isOpen);
+
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'welcome',
@@ -104,9 +108,9 @@ export const ChatBotDrawer: React.FC<ChatBotDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm animate-in fade-in duration-200 overscroll-contain">
       <div
-        className="w-full max-w-lg h-full glass-panel border-l border-slate-700/80 bg-slate-950/95 flex flex-col shadow-2xl animate-in slide-in-from-right duration-300"
+        className="w-full max-w-lg h-full glass-panel border-l border-slate-700/80 bg-slate-950/95 flex flex-col shadow-2xl animate-in slide-in-from-right duration-300 overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Drawer Header */}
@@ -145,7 +149,7 @@ export const ChatBotDrawer: React.FC<ChatBotDrawerProps> = ({
         </div>
 
         {/* Message Stream */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 overscroll-contain">
           {messages.map((msg) => {
             const isUser = msg.role === 'user';
             return (

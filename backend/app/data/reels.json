@@ -1,5 +1,1107 @@
 [
   {
+    "id": "DeDULdGNX_M",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DeDULdGNX_M/",
+    "caption": "follow + comment “cs” for everything I mentioned in this video!",
+    "hashtags": [],
+    "owner": {
+      "name": "ethandojo",
+      "username": "ethandojo",
+      "url": "https://www.instagram.com/ethandojo/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 16, 2026, 2:46 pm IST",
+    "saved_at_iso": "2026-11-16T14:46:30.378457+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "ethandojo: Dev Tools & Repos",
+    "caption_generated": false
+  },
+  {
+    "id": "DfxKrh7t3_b",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfxKrh7t3_b/",
+    "caption": "↓ 3 medical ML projects that use real CT scans, heart videos and X-rays\n\n→ Brain Bleed Detection on CT\nGive it a head CT scan and it finds bleeding inside the skull, then tells you which of 5 types it is. In an emergency, that decides how fast a patient needs surgery. Trained on 25,000+ real CT exams labeled by radiologists.\n\n→ Heart Pumping Strength From Ultrasound Video\nIt watches an ultrasound video of a beating heart and measures how much blood it pumps out with each beat, one of the main numbers doctors use to diagnose heart failure.\n\n→ Bone Age From Hand X-Rays\nShow it a kid’s hand X-ray and it predicts their bone age, which doctors compare with the real age to spot growth problems. Trained on 12,611 X-rays from the RSNA challenge.\n\nComment “MED” and I’ll send you the step-by-step build guides for all three, with the free datasets 📄\n\n#machinelearning #datascience #ml #med #student",
+    "hashtags": [
+      "machinelearning",
+      "datascience",
+      "ml",
+      "med",
+      "student"
+    ],
+    "owner": {
+      "name": "byswergiu",
+      "username": "byswergiu",
+      "url": "https://www.instagram.com/byswergiu/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 16, 2026, 7:20 am IST",
+    "saved_at_iso": "2026-11-16T07:20:58.985081+05:30",
+    "category": "Python & Data Science",
+    "title": "↓ 3 medical ML projects that use real CT scans, heart videos and X-rays",
+    "caption_generated": false
+  },
+  {
+    "id": "DfxNvIjR4N4",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfxNvIjR4N4/",
+    "caption": "Comment \"GENAI\" before you forget - 35 Videos = Full GenAI.\n\n1 playlist. Basic to Advance.\nPython + LangChain + RAG + Agents.\n10+ Projects. Hands-on learning.\n\nFresher ho ya Mid-Level - Ye playlist enough hai.\n\nSAVE this. SHARE to a friend learning AI.\n\nFollow @lowkey.unhandled for Backend, System Design, DSA & Agentic AI.\n\n#genai #agenticai #langchain #rag #python aiagents backenddeveloper systemdesign aidevelopment llm lowkeyunhandled",
+    "hashtags": [
+      "genai",
+      "agenticai",
+      "langchain",
+      "rag",
+      "python"
+    ],
+    "owner": {
+      "name": "lowkey.unhandled",
+      "username": "lowkey.unhandled",
+      "url": "https://www.instagram.com/lowkey.unhandled/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 15, 2026, 11:55 pm IST",
+    "saved_at_iso": "2026-11-15T23:55:27.591705+05:30",
+    "category": "AI & Agents",
+    "title": "playlist. Basic to Advance.",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfb-LRiBB85",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfb-LRiBB85/",
+    "caption": "Comment for link! 👇🏻\n\n#backendengineering #resources #study #developer",
+    "hashtags": [
+      "backendengineering",
+      "resources",
+      "study",
+      "developer"
+    ],
+    "owner": {
+      "name": "kohina.pandey",
+      "username": "kohina.pandey",
+      "url": "https://www.instagram.com/kohina.pandey/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 15, 2026, 4:29 pm IST",
+    "saved_at_iso": "2026-11-15T16:29:56.198329+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "kohina.pandey: Dev Tools & Repos",
+    "caption_generated": false
+  },
+  {
+    "id": "DfxRWcUR4Y6",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfxRWcUR4Y6/",
+    "caption": "Comment “swe”, and I will send you the doc woth the breakdown of these problems + roadmap I used + short notes for before your interview!\n\n#student #tech #series #internship #interviews",
+    "hashtags": [
+      "student",
+      "tech",
+      "series",
+      "internship",
+      "interviews"
+    ],
+    "owner": {
+      "name": "parth_jairam.exe",
+      "username": "parth_jairam.exe",
+      "url": "https://www.instagram.com/parth_jairam.exe/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 15, 2026, 9:04 am IST",
+    "saved_at_iso": "2026-11-15T09:04:24.804953+05:30",
+    "category": "Career & Internships",
+    "title": "parth_jairam.exe: Career & Internships",
+    "caption_generated": false
+  },
+  {
+    "id": "DfrpzXOP8Xw",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfrpzXOP8Xw/",
+    "caption": "AI built your project. But can YOU explain how it works? 👀\n\nImagine getting into a technical interview, opening your GitHub project and struggling to explain the architecture behind your own application.\n\nThat's exactly the problem Rederive aims to solve.\n\nIt's an open-source tool that examines your codebase and challenges you with engineering problems based on your project's actual design decisions.\n\n🔥 Understand your architecture.\n🔥 Discover gaps in your technical knowledge.\n🔥 Practise explaining your engineering decisions.\n\nInstead of blindly accepting AI-generated code, learn the reasoning behind it.\n\nPerfect for developers building projects with Claude Code, Cursor and other AI coding tools.\n\n⚠️ It won't replace interview preparation, but it can help you identify what you don't understand.\n\nWould you be confident explaining your latest AI-built project in a technical interview?\n\n#Rederive #ClaudeCode #GitHub #Coding #SoftwareEngineering",
+    "hashtags": [
+      "rederive",
+      "claudecode",
+      "github",
+      "coding",
+      "softwareengineering"
+    ],
+    "owner": {
+      "name": "prasadexplains",
+      "username": "prasadexplains",
+      "url": "https://www.instagram.com/prasadexplains/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 15, 2026, 1:38 am IST",
+    "saved_at_iso": "2026-11-15T01:38:53.411577+05:30",
+    "category": "AI & Agents",
+    "title": "AI built your project. But can YOU explain how it works? 👀",
+    "caption_generated": false
+  },
+  {
+    "id": "DfxAtsATYFq",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfxAtsATYFq/",
+    "caption": "Comment “Backend” for all resources!\n\n→ Backend Developer Roadmap\n→ Docker Tutorial for Beginners\n→ 7 Essential Design Patterns\n→ Harvard CS50’s Introduction to Databases with SQL\n\nBookmark this post and use these resources as you build your backend development skills.\n\nFollow @arscodes if you're learning programming and want practical resources, tutorials and tech insights.",
+    "hashtags": [],
+    "owner": {
+      "name": "arscodes",
+      "username": "arscodes",
+      "url": "https://www.instagram.com/arscodes/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 14, 2026, 6:13 pm IST",
+    "saved_at_iso": "2026-11-14T18:13:22.018202+05:30",
+    "category": "System Design & Backend",
+    "title": "→ Backend Developer Roa",
+    "caption_generated": false
+  },
+  {
+    "id": "DfUImSXMvlR",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfUImSXMvlR/",
+    "caption": "MIT researchers solved AI?",
+    "hashtags": [],
+    "owner": {
+      "name": "techie007.dev",
+      "username": "techie007.dev",
+      "url": "https://www.instagram.com/techie007.dev/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 14, 2026, 10:47 am IST",
+    "saved_at_iso": "2026-11-14T10:47:50.624826+05:30",
+    "category": "AI & Agents",
+    "title": "MIT researchers solved AI?",
+    "caption_generated": false
+  },
+  {
+    "id": "Dft186bMsHP",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dft186bMsHP/",
+    "caption": "6 important research papers",
+    "hashtags": [],
+    "owner": {
+      "name": "techie007.dev",
+      "username": "techie007.dev",
+      "url": "https://www.instagram.com/techie007.dev/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 14, 2026, 3:22 am IST",
+    "saved_at_iso": "2026-11-14T03:22:19.231450+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "important research papers",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfw7YT8z1ux",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfw7YT8z1ux/",
+    "caption": "🚀 Stop chasing only FAANG. Start exploring these 25 Indian startups for ₹20 LPA+ opportunities!\n\nSome experienced engineers at these companies earn significantly more, and several offer competitive packages even at early career levels.\n\n**25 INDIAN STARTUPS TO BOOKMARK 👇**\n\n1. Razorpay – ₹20–40+ LPA\n2. PhonePe – ₹20–45+ LPA\n3. CRED – ₹20–45+ LPA\n4. Zepto – ₹20–40+ LPA\n5. Meesho – ₹20–40+ LPA\n6. Groww – ₹20–40+ LPA\n7. Swiggy – ₹20–45+ LPA\n8. Zomato / Eternal – ₹20–40+ LPA\n9. Dream11 – ₹20–40+ LPA\n10. ShareChat – ₹20–40+ LPA\n11. InMobi – ₹20–40+ LPA\n12. BrowserStack – ₹20–40+ LPA\n13. Postman – ₹20–45+ LPA\n14. Freshworks – ₹20–40+ LPA\n15. Druva – ₹20–35+ LPA\n16. Juspay – ₹20–40+ LPA\n17. Navi – ₹20–40+ LPA\n18. Pine Labs – ₹20–35+ LPA\n19. Urban Company – ₹20–35+ LPA\n20. Ather Energy – ₹20–35+ LPA\n21. OfBusiness – ₹20–35+ LPA\n22. Policybazaar – ₹20–35+ LPA\n23. Whatfix – ₹20–35+ LPA\n24. MoEngage – ₹20–40+ LPA\n25. Supernova – Check role-specific compensation\n\n🎯 Suitable for freshers with strong skills and experienced engineers with 1–6 years of experience.\n\n📌 Bookmark these companies and check their career pages every week.\n\n⚠️ Salary figures are indicative target ranges, NOT verified current offers from every company. Actual compensation varies by experience, role, location and stock/bonus components. Don't assume every fresher will get ₹20 LPA.\n\n💬 Comment **STARTUP** if you want the direct career-page links for all 25 companies.\n\nStop limiting your job search to a handful of big tech companies. Explore the Indian startup ecosystem too!\n#instagood #viral #instagram #reels #microsoft",
+    "hashtags": [
+      "instagood",
+      "viral",
+      "instagram",
+      "reels",
+      "microsoft"
+    ],
+    "owner": {
+      "name": "muscletech19",
+      "username": "muscletech19",
+      "url": "https://www.instagram.com/muscletech19/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 13, 2026, 7:56 pm IST",
+    "saved_at_iso": "2026-11-13T19:56:47.838074+05:30",
+    "category": "Career & Internships",
+    "title": "Stop chasing only FAANG. Start exploring these 25 Indian startups for...",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfv48YTx14a",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfv48YTx14a/",
+    "caption": "Comment “LIST” and I’ll send you my full list that got ME hired at Amazon.",
+    "hashtags": [],
+    "owner": {
+      "name": "abdalaaljewarane",
+      "username": "abdalaaljewarane",
+      "url": "https://www.instagram.com/abdalaaljewarane/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 13, 2026, 12:31 pm IST",
+    "saved_at_iso": "2026-11-13T12:31:16.444698+05:30",
+    "category": "Career & Internships",
+    "title": "abdalaaljewarane: Career & Internships",
+    "caption_generated": false
+  },
+  {
+    "id": "DfvLYbgqpb2",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfvLYbgqpb2/",
+    "caption": "Raea is an actual AI video editing and rendering engine—not just a Claude Code skill, an AI workflow, or another text-to-video wrapper. But is it even good?\n\nThat’s the question I want you to answer after watching this.\nI’ve spent the last two years building Raea, with Kelly supporting me through all of it. The technical part matters to me: the engine, the compiler, the game-engine architecture, and local GPU rendering. But for creators, the point is simpler: less waiting between having an idea, seeing what your AI agent made, and making it better.\n\nYou can use Raea for AI video editing, programmatic video, motion graphics, 3D animation, video production, and game creation with the AI agent you already use. Review the output, leave frame-specific feedback, revise the edit, and render again on your own computer. Faster renders mean more creative iterations—not an excuse to ship the first draft.\nIf you’re exploring AI video editors, text-based video editing, programmatic video with React and TypeScript, automated captions, AI sound design, branded explainers, product launch videos, social media videos, kinetic typography, animated ads, or a Remotion or HyperFrames-style workflow, Raea was built for that kind of creative production.\n\nIt isn’t a text-to-video model that hands you one random clip. It’s an editable, code-driven creative engine. You bring the idea and creative direction; your AI agent helps execute it.\n\nRaea Desktop is now live at raea.io. The app and local GPU renders are free, with no per-render fees. Bring your own AI agent; model or API costs are separate.\n\nWatch the launch video, try it, and tag me in what you make. I’d genuinely love to see it. 🐈‍⬛✨\n\n#AIVideoEditing #RenderAnythingEngine #Raea #ProgrammaticVideo #ClaudeCode",
+    "hashtags": [
+      "aivideoediting",
+      "renderanythingengine",
+      "raea",
+      "programmaticvideo",
+      "claudecode"
+    ],
+    "owner": {
+      "name": "shane.shinyobjectz",
+      "username": "shane.shinyobjectz",
+      "url": "https://www.instagram.com/shane.shinyobjectz/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 13, 2026, 5:05 am IST",
+    "saved_at_iso": "2026-11-13T05:05:45.051322+05:30",
+    "category": "AI & Agents",
+    "title": "Raea is an actual AI video editing and rendering engine—not just a...",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfu150nT95z",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfu150nT95z/",
+    "caption": "Comment down for link and more videos like this\n\n#youtube #artificialintelligence #education #interview #placement",
+    "hashtags": [
+      "youtube",
+      "artificialintelligence",
+      "education",
+      "interview",
+      "placement"
+    ],
+    "owner": {
+      "name": "somebasictech",
+      "username": "somebasictech",
+      "url": "https://www.instagram.com/somebasictech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 12, 2026, 9:40 pm IST",
+    "saved_at_iso": "2026-11-12T21:40:13.657946+05:30",
+    "category": "Career & Internships",
+    "title": "somebasictech: Career & Internships",
+    "caption_generated": false
+  },
+  {
+    "id": "DfvXYYitru1",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfvXYYitru1/",
+    "caption": "2 websites I use as a Senior Software Engineer!\nI find these super useful when coding!\n\n- The first one is Component Gallery which is helpful when building out a UI and you need inspiration.\n\n- The second is Bundlephobia which is my favorite! It’s helpful when understanding who big the npm package would be and suggests similar packages that could cost you less.\n\nHope you find these helpful and Follow me for more resources I use as a Senior Software Engineer!\nLet me know if this helped!\n\n#frontenddeveloper #cs #python #learntocode #csstudents",
+    "hashtags": [
+      "frontenddeveloper",
+      "cs",
+      "python",
+      "learntocode",
+      "csstudents"
+    ],
+    "owner": {
+      "name": "craftedincode",
+      "username": "craftedincode",
+      "url": "https://www.instagram.com/craftedincode/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 12, 2026, 2:14 pm IST",
+    "saved_at_iso": "2026-11-12T14:14:42.264570+05:30",
+    "category": "Python & Data Science",
+    "title": "websites I use as a Senior Software Engineer!",
+    "caption_generated": false
+  },
+  {
+    "id": "DfSG3FtzW0p",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfSG3FtzW0p/",
+    "caption": "Backend dev in 2026? Time to lock in ✅\n\nI got the complete roadmap you actually need.\nWant the full playlist?\n\nFollow + comment BACKEND and I got you in your DMs 💬\n\n#coding #programming #developer #tech #software",
+    "hashtags": [
+      "coding",
+      "programming",
+      "developer",
+      "tech",
+      "software"
+    ],
+    "owner": {
+      "name": "geekydev.in",
+      "username": "geekydev.in",
+      "url": "https://www.instagram.com/geekydev.in/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 12, 2026, 6:49 am IST",
+    "saved_at_iso": "2026-11-12T06:49:10.871194+05:30",
+    "category": "System Design & Backend",
+    "title": "Backend dev in 2026? Time to lock in",
+    "caption_generated": false
+  },
+  {
+    "id": "DfkglDQzEAw",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfkglDQzEAw/",
+    "caption": "Comment ‘Ai’ if you want all these concepts explained in detail.\n\n#aiengineering #learnai #aiconcepts #jobsinindia #fresherjobs",
+    "hashtags": [
+      "aiengineering",
+      "learnai",
+      "aiconcepts",
+      "jobsinindia",
+      "fresherjobs"
+    ],
+    "owner": {
+      "name": "gurudas.ai",
+      "username": "gurudas.ai",
+      "url": "https://www.instagram.com/gurudas.ai/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 11, 2026, 11:23 pm IST",
+    "saved_at_iso": "2026-11-11T23:23:39.477818+05:30",
+    "category": "AI & Agents",
+    "title": "gurudas.ai: AI & Agents",
+    "caption_generated": false
+  },
+  {
+    "id": "DfoGGDPNy5-",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfoGGDPNy5-/",
+    "caption": "Comment anything for the playlists.\n\n#ai #llm #aiengineering #aiengineer #ml",
+    "hashtags": [
+      "ai",
+      "llm",
+      "aiengineering",
+      "aiengineer",
+      "ml"
+    ],
+    "owner": {
+      "name": "satyaexplains",
+      "username": "satyaexplains",
+      "url": "https://www.instagram.com/satyaexplains/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 11, 2026, 3:58 pm IST",
+    "saved_at_iso": "2026-11-11T15:58:08.084443+05:30",
+    "category": "AI & Agents",
+    "title": "satyaexplains: AI & Agents",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfq_dfRSELa",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfq_dfRSELa/",
+    "caption": "PointDiT: One Photo, Full 3D Shape\n\nhttps://github.com/google-research/pointdit\n\nPointDiT is the visual tool that turns a single photo into a full 3D map. Most depth scanners need multiple angles or special hardware, but this open-source model works with just one image. It uses a clever diffusion transformer to guess the distance of every pixel, creating a detailed 3D shape without needing a specialized camera. The project is remarkably simple, skipping complex intermediate steps to predict geometry directly from the picture. It handles everything from indoor rooms to outdoor driving scenes with impressive accuracy. If you are building robots or VR apps, this gives you rich 3D data from standard cameras.\n\n#PointDiT #One #Photo #Full #3D #Shape #PointDiTOnePhotoFull3DShape #AI #Diffusion #ImageAI #Data",
+    "hashtags": [
+      "pointdit",
+      "one",
+      "photo",
+      "full",
+      "3d",
+      "shape",
+      "pointditonephotofull3dshape",
+      "ai",
+      "diffusion",
+      "imageai",
+      "data"
+    ],
+    "owner": {
+      "name": "github_dev",
+      "username": "github_dev",
+      "url": "https://www.instagram.com/github_dev/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 11, 2026, 8:32 am IST",
+    "saved_at_iso": "2026-11-11T08:32:36.691067+05:30",
+    "category": "AI & Agents",
+    "title": "PointDiT: One Photo, Full 3D Shape",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfo1gSsSAKp",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfo1gSsSAKp/",
+    "caption": "The Project Explanation Formula every tech student needs 🎯\n\n“Tell me about your project” isn’t a test of what you built. Interviewers want to see how you think, decide and solve problems.\n\nUse these 5 frameworks 👇\n\nSTAR: tell your project story (Situation, Task, Action, Result)\nPREP: explain why you used X (Point, Reason, Evidence, Point)\nProblem → Approach → Trade-off: for architecture and tech choices\nArchitecture → Flow → Failure: when they go deeper technically\nOwnership: know exactly what YOU built in a team project\n\nFor every key decision, ask yourself:\nWhat? → Why? → Alternatives? → Trade-off? → What would I change now?\n\nA strong answer isn’t a memorized speech. It’s explaining what you built, why, and how you solved the problem along the way.\n\nSave this before your next interview\nComment FRAMEWORK and I’ll send you the full PDF 📩\n\nFollow @akshat.env\n\n[interview, cse, coding, preparation, fresher, career, tips, project, explanation, formula, framework, faang, maang]\n\n#interviewprep #techinterview #freshers #project #formula",
+    "hashtags": [
+      "interviewprep",
+      "techinterview",
+      "freshers",
+      "project",
+      "formula"
+    ],
+    "owner": {
+      "name": "akshat.env",
+      "username": "akshat.env",
+      "url": "https://www.instagram.com/akshat.env/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 11, 2026, 1:07 am IST",
+    "saved_at_iso": "2026-11-11T01:07:05.297691+05:30",
+    "category": "System Design & Backend",
+    "title": "The Project Explanation Formula every tech student needs 🎯",
+    "caption_generated": false
+  },
+  {
+    "id": "DfnQLJgoL1L",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfnQLJgoL1L/",
+    "caption": "Math isn't so scary if you understand how to read it. 🙌 (and see it working 😉)\n\n\"For the things we have to learn before we can do them, we learn by doing them.\"\n— Aristotle\n\nWhen I was younger, I used to be afraid of math. Not because it was actually scary, but because it looked sooo complicated. I never really understood why we had to learn it or how it all connected.\n\nThat changed when I started making video games. Just seeing how it works, math started making sense. And less punishing.\n\nAnd I know code might look even scarier to some people, and that's completely fine. Math can be understood in different ways, and we all have our own preferences when it comes to learning. 🙌\n\nBut I think we can agree on one thing: learning math by actually doing it makes a huge difference. 😉\n\nThat's what coding did for me. And as these examples show it's much simpler and values can have more context. This way I could finally see where values came from, how they changed, and what effect they had. Even mistakes became easier to understand because I could see exactly where things went wrong.\n\nAnd that's why I'll keep making this kind of content: to show that math can be understood, explored, and even admired in different ways.\n\nBecause finding a way to learn that works for you can change everything. It certainly did for me! 🙌\n\nHappy coding everyone! 👨‍💻\n\n~ Follow for game development and programming content! 🤩👨‍💻🎮\n\n@justinbieshaar\n.\n.\n🏷️ #gamedev #math #mathematics #programming #gamedevelopment",
+    "hashtags": [
+      "gamedev",
+      "math",
+      "mathematics",
+      "programming",
+      "gamedevelopment"
+    ],
+    "owner": {
+      "name": "justinbieshaar",
+      "username": "justinbieshaar",
+      "url": "https://www.instagram.com/justinbieshaar/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 10, 2026, 5:41 pm IST",
+    "saved_at_iso": "2026-11-10T17:41:33.904315+05:30",
+    "category": "Productivity & Learning",
+    "title": "Math isn't so scary if you understand how to read it. 🙌 (and see it...",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfoan3hjI6t",
+    "type": "post",
+    "url": "https://www.instagram.com/p/Dfoan3hjI6t/",
+    "caption": "10 RAG eval metrics that catch real failures 🚀\n\nHere's a framework that covers the metrics that matter, split across two layers:\n\n🔍 Layer 1: Retrieval (5 metrics)\nDid we fetch the right context?\n\n- Context Precision - Are chunks relevant and ranked properly?\n- Context Recall - Did we get everything we needed?\n- Context Relevance - How tight to the query?\n- Noise Sensitivity - Does irrelevant content break the system?\n- MRR/NDCG - How well-ranked are the results?\n\n✅ Layer 2: Generation (5 metrics)\nDid we use it correctly?\n\n- Faithfulness - Is the answer grounded in retrieved context?\n- Answer Relevance - Does it actually answer the question?\n- Answer Correctness - Does it match ground truth?\n- Citation Accuracy - Do citations support the claims?\n- Semantic Similarity - How close to reference answers?\n\nThe key insight: combine metrics to find root causes. High precision + low recall means chunks are relevant but incomplete. Low faithfulness + high recall means the context is there but the model is hallucinating.\n\nPopular frameworks for this: RAGAS (best for exploration), DeepEval (CI/CD integration), and Patronus (production monitoring).\n\nProduction targets: aim for ≥0.80 on faithfulness, answer relevance, and recall. Context precision should hit ≥0.75. These vary by domain but give you a baseline.\n\nSwipe through for the complete breakdown and diagnostic patterns.\n\n👉 Over to you: Which RAG evaluation metrics do you find most useful in production?\n\n#ragmetrics #production #llminterview",
+    "hashtags": [
+      "ragmetrics",
+      "production",
+      "llminterview"
+    ],
+    "owner": {
+      "name": "dailydoseofds_",
+      "username": "dailydoseofds_",
+      "url": "https://www.instagram.com/dailydoseofds_/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 10, 2026, 10:16 am IST",
+    "saved_at_iso": "2026-11-10T10:16:02.510939+05:30",
+    "category": "AI & Agents",
+    "title": "RAG eval metrics that catch real failures",
+    "caption_generated": false
+  },
+  {
+    "id": "Dfm9YdVhEDH",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/Dfm9YdVhEDH/",
+    "caption": "Only 1 in 50 jobs now hire people with zero experience 😳 (Forbes)\n\nThat's why an internship is the move. And these 7 free GitHub repos track them for you:\n\n✅ Internships + new grad roles, updated daily\n✅ AI, ML, cloud, data science, QA\n✅ Research internships for undergrads\n✅ Fresher jobs in India\n\nAll free. All open source.\n\nHit follow and comment JOB, and I'll DM you all 7 links.\n\nSend this to a friend who's job hunting 🙏\n\n#internships #jobsearch #github #newgrad #freshers",
+    "hashtags": [
+      "internships",
+      "jobsearch",
+      "github",
+      "newgrad",
+      "freshers"
+    ],
+    "owner": {
+      "name": "thenadcoder",
+      "username": "thenadcoder",
+      "url": "https://www.instagram.com/thenadcoder/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 10, 2026, 2:50 am IST",
+    "saved_at_iso": "2026-11-10T02:50:31.117563+05:30",
+    "category": "AI & Agents",
+    "title": "Only 1 in 50 jobs now hire people with zero experience 😳 (Forbes)",
+    "caption_generated": false
+  },
+  {
+    "id": "DfcQ35AttL8",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfcQ35AttL8/",
+    "caption": "might be the coolest thing I've ever built.",
+    "hashtags": [],
+    "owner": {
+      "name": "fez.infocus",
+      "username": "fez.infocus",
+      "url": "https://www.instagram.com/fez.infocus/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 09, 2026, 7:24 pm IST",
+    "saved_at_iso": "2026-11-09T19:24:59.724187+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "might be the coolest thing I've ever built.",
+    "caption_generated": false
+  },
+  {
+    "id": "DfiO8mIxecq",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfiO8mIxecq/",
+    "caption": "Follow and comment “GUIDE” for the resources and step-by-step roadmap. #Quant #SWE #computerscience #cpp #softwareengineering",
+    "hashtags": [
+      "quant",
+      "swe",
+      "computerscience",
+      "cpp",
+      "softwareengineering"
+    ],
+    "owner": {
+      "name": "thecodingjesusquant",
+      "username": "thecodingjesusquant",
+      "url": "https://www.instagram.com/thecodingjesusquant/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 09, 2026, 11:59 am IST",
+    "saved_at_iso": "2026-11-09T11:59:28.330811+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "thecodingjesusquant: Dev Tools & Repos",
+    "caption_generated": false
+  },
+  {
+    "id": "DfkvM8ZK1r0",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfkvM8ZK1r0/",
+    "caption": "Creating a banger intern presentation with @meetgamma has never been this easy 🧑🏻‍💻 Comment “slides” and I’ll send you the link!\n\n#GammaPartner #internship",
+    "hashtags": [
+      "gammapartner",
+      "internship"
+    ],
+    "owner": {
+      "name": "allenvert",
+      "username": "allenvert",
+      "url": "https://www.instagram.com/allenvert/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 09, 2026, 4:33 am IST",
+    "saved_at_iso": "2026-11-09T04:33:56.937435+05:30",
+    "category": "Career & Internships",
+    "title": "Creating a banger intern presentation with @meetgamma has never been...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfSPrkdxygK",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfSPrkdxygK/",
+    "caption": "Follow and like if you enjoyed the content",
+    "hashtags": [],
+    "owner": {
+      "name": "ayoships",
+      "username": "ayoships",
+      "url": "https://www.instagram.com/ayoships/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 08, 2026, 9:08 pm IST",
+    "saved_at_iso": "2026-11-08T21:08:25.544059+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "ayoships: Dev Tools & Repos",
+    "caption_generated": false
+  },
+  {
+    "id": "DfYqw58Oor6",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfYqw58Oor6/",
+    "caption": "my forever <3\n\n#husbandwife #bestfriends #fyp #marriage #couplegoals",
+    "hashtags": [
+      "husbandwife",
+      "bestfriends",
+      "fyp",
+      "marriage",
+      "couplegoals"
+    ],
+    "owner": {
+      "name": "taylordowns.24",
+      "username": "taylordowns.24",
+      "url": "https://www.instagram.com/taylordowns.24/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 08, 2026, 1:42 pm IST",
+    "saved_at_iso": "2026-11-08T13:42:54.150684+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "my forever <3",
+    "caption_generated": false
+  },
+  {
+    "id": "DfgtV5iswDt",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfgtV5iswDt/",
+    "caption": "comment “FLOW” if you want the strategy doc on how to use each one (+ the slides shown on screen) ✌🏻\n\nfollow @dhruv_wan :)",
+    "hashtags": [],
+    "owner": {
+      "name": "dhruv_wan",
+      "username": "dhruv_wan",
+      "url": "https://www.instagram.com/dhruv_wan/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 08, 2026, 6:17 am IST",
+    "saved_at_iso": "2026-11-08T06:17:22.757308+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "dhruv_wan: Dev Tools & Repos",
+    "caption_generated": false
+  },
+  {
+    "id": "DfkK3z3MMtV",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfkK3z3MMtV/",
+    "caption": "Comment “Build” and i’ll send you a guide for all 3 projects.\n\nTutorials are fine, but the projects that make you better are the ones where you rebuild something you use every day.\n\nThe first one is rebuilding instagram’s algorithm. mMeta wrote up how their explore page works, and you can build a small version of it on a real short video dataset.\n\nThe second one is building your own Claude Code. Under the hood it’s a model, a few tools and a loop, and you can get a working one in a few hundred lines.\n\nThe last one is my favorite: Running pong inside a Neural Network. There’s no game code, the model learns what the next frame should look like. Same idea Google used to run Doom.\n\nIf you’re serious about getting better, pick one and start this week.",
+    "hashtags": [],
+    "owner": {
+      "name": "volkan.js",
+      "username": "volkan.js",
+      "url": "https://www.instagram.com/volkan.js/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 07, 2026, 10:51 pm IST",
+    "saved_at_iso": "2026-11-07T22:51:51.363932+05:30",
+    "category": "AI & Agents",
+    "title": "Tutorials are fine, but the projects that make you better are the ones...",
+    "caption_generated": false
+  },
+  {
+    "id": "Dey_szpjcK7",
+    "type": "post",
+    "url": "https://www.instagram.com/p/Dey_szpjcK7/",
+    "caption": "3 Month Forward Deployed Engineer(FDE) Roadmap\n\n#fde #forwarddeployedengineer #python #machinelearning #airoadmap",
+    "hashtags": [
+      "fde",
+      "forwarddeployedengineer",
+      "python",
+      "machinelearning",
+      "airoadmap"
+    ],
+    "owner": {
+      "name": "rohak_arya",
+      "username": "rohak_arya",
+      "url": "https://www.instagram.com/rohak_arya/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 07, 2026, 3:26 pm IST",
+    "saved_at_iso": "2026-11-07T15:26:19.970556+05:30",
+    "category": "Python & Data Science",
+    "title": "Month Forward Deployed Engineer(FDE) Roa",
+    "caption_generated": false
+  },
+  {
+    "id": "DfdVPATv6K_",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfdVPATv6K_/",
+    "caption": "If I wanted to learn MATHEMATICS FOR MACHINE LEARNING, here are 4 resources I’d actually use:\n\n1. Essence of Linear Algebra Playlist (3Blue1Brown)\n\nThis is the playlist to start with if linear algebra feels like formulas you memorize but do not understand. It shows vectors, matrices, and linear transformations as things that move and stretch space, then builds to matrix multiplication, determinants, and eigenvectors and eigenvalues. Watch this first, because almost everything in machine learning is written in this language.\n\n2. SVD Visualized (Visual Kernel)\n\nThis video shows singular value decomposition as a picture instead of an equation. It breaks any matrix down into three simpler matrices and shows the transformation as a rotation, a stretch, and another rotation, turning a sphere into an ellipsoid step by step. Use it after the first playlist when you want to understand SVD, which is also what sits behind PCA and compressing data down to the parts that matter most.\n\n3. Calculus for Machine Learning Playlist (Jon Krohn)\n\nThis is the calculus playlist made specifically for machine learning, not for a general calculus class. It is split into Calculus I, on limits and derivatives, and Calculus II, on partial derivatives and integrals, and it connects them to gradient descent and backpropagation, which is how models actually learn. Use it when derivatives from class feel separate from machine learning and you want to see where they are used.\n\n4. The spelled-out intro to neural networks and backpropagation: building micrograd (Andrej Karpathy)\n\nThis is the most advanced video in this list, so watch it last. Karpathy builds a tiny autograd engine called micrograd from scratch in Python, so you can see derivatives, the chain rule, and backpropagation actually run in code instead of only on paper. It only assumes basic Python and a vague memory of high school calculus, and after this, backpropagation in a real library is much less of a black box.\n\nMake sure to save this and follow me for more machine learning resources!\n\n#student #machinelearning #mathematics #tech #university",
+    "hashtags": [
+      "student",
+      "machinelearning",
+      "mathematics",
+      "tech",
+      "university"
+    ],
+    "owner": {
+      "name": "karlestampador",
+      "username": "karlestampador",
+      "url": "https://www.instagram.com/karlestampador/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 07, 2026, 8:00 am IST",
+    "saved_at_iso": "2026-11-07T08:00:48.577180+05:30",
+    "category": "AI & Agents",
+    "title": "If I wanted to learn MATHEMATICS FOR MACHINE LEARNING, here are 4...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfdIaDyTXey",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfdIaDyTXey/",
+    "caption": "How to actually solve LeetCode Hards (even if you aren’t a math genius). 👇\n\nIf you stare at a LeetCode Hard and your brain completely freezes, you are suffering from “Optimization Paralysis.”\n\nYou are trying to magically invent the perfect O(N) time-complexity algorithm from scratch in your head. That is not how expert coders do it.\n\nThe engineers who clear FAANG interviews use the Brute-to-Optimal Pipeline:\n\n1️⃣ Brain Seeding: Give yourself permission to write garbage code. If an O(N^3) nested loop solves the problem, write it. You are “seeding” the logic so your brain has something physical to look at. 2️⃣ Break the Bar: Identify the exact segment of your code that is making it slow. (Usually, it’s a specific loop or how you are searching for data). 3️⃣ Segment Optimization: You don’t need a new algorithm, you just need a better data structure for that one specific segment. Need faster lookups? Swap the array for a Hash Map. Need sorted data? Use a Priority Queue/Heap.\n\nYou slowly upgrade the brute-force code block-by-block until it becomes the optimal solution.\n\nWhich topic gives you the most “Optimization Paralysis”? 🤔 👇 Drop a “1” for Dynamic Programming 👇 Drop a “2” for Graphs & Trees 👇 Drop a “3” for Backtracking\n\n🚀 Share this with a friend who always gets stuck on LeetCode Hards! 💾 Save this workflow for your next coding session.\n\n#codinginterview #softwareengineer #leetcode #techcareer #computerscience faang",
+    "hashtags": [
+      "codinginterview",
+      "softwareengineer",
+      "leetcode",
+      "techcareer",
+      "computerscience"
+    ],
+    "owner": {
+      "name": "after_hour.notes",
+      "username": "after_hour.notes",
+      "url": "https://www.instagram.com/after_hour.notes/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 07, 2026, 12:35 am IST",
+    "saved_at_iso": "2026-11-07T00:35:17.183804+05:30",
+    "category": "DSA & Problem Solving",
+    "title": "How to actually solve LeetCode Hards (even if you aren’t a math genius).",
+    "caption_generated": false
+  },
+  {
+    "id": "DfZoGD-zmR3",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfZoGD-zmR3/",
+    "caption": "🏅Absolute Gold Content on Working of Autonomous AI Agents, loved every bit of it. Do watch it. 🔥\n\nSearch Always-on Agents Stanford CS146S\n\n#ai #code #software #claude #openai\n\n[AI Agents, Autonomous Agents, Agent Architecture, Agent Loop, Tool Calling, Tool Discovery, LLM Orchestration, Sub-Agents, Multi-Agent Systems, Cloud VM, Persistent Memory, Context Engineering, Context Compaction, Durable Workflows, Temporal, Event-Driven Triggers, Computer Use, Sandboxing, Prompt Injection, AI Security, Guardrails, Evals, Observability, Long-Running Agents]",
+    "hashtags": [
+      "ai",
+      "code",
+      "software",
+      "claude",
+      "openai"
+    ],
+    "owner": {
+      "name": "rishabhsinghtech",
+      "username": "rishabhsinghtech",
+      "url": "https://www.instagram.com/rishabhsinghtech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 06, 2026, 5:09 pm IST",
+    "saved_at_iso": "2026-11-06T17:09:45.790428+05:30",
+    "category": "AI & Agents",
+    "title": "🏅Absolute Gold Content on Working of Autonomous AI Agents, loved every...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfbwmLmv8_z",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfbwmLmv8_z/",
+    "caption": "Comment \"GOOGLE\" to get this Free Google AI Plugins that fixes your Code.\n\nGoogle just open sourced a free plugin that stops your AI from writing buggy, sloppy code.\n\nAnd thousands of Google engineers are already using it every day.\n\nIt's called the Elephant Goldfish Model, and it works on a simple two agent setup.\n\nYou give it a task.\n\nThen an elephant agent, who knows everything about your project, writes a full plan for it.\n\nAfter that, a bunch of goldfish agents with zero context of that chat stress test the plan.\n\nThey tear it apart and find every gap and blind spot it missed.\n\nAnd that's the whole point, because it's almost impossible to spot your own mistakes.\n\nBut a fresh pair of eyes catches them right away.\n\nIt's like getting a second opinion before the surgery starts.\n\nOnly once you approve the final plan does Claude start building.\n\nSo the plan gets tested before a single line of code is written.\n\nThat saves hours of wasted time and tokens.\n\nThat's the whole idea behind it.\n\nIt catches problems while they're easy to fix.\n\n#googleai #githubrepo #vibecoding #aicoding #aiplugin",
+    "hashtags": [
+      "googleai",
+      "githubrepo",
+      "vibecoding",
+      "aicoding",
+      "aiplugin"
+    ],
+    "owner": {
+      "name": "nick_saraev",
+      "username": "nick_saraev",
+      "url": "https://www.instagram.com/nick_saraev/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 06, 2026, 9:44 am IST",
+    "saved_at_iso": "2026-11-06T09:44:14.397052+05:30",
+    "category": "AI & Agents",
+    "title": "Google just open sourced a free plugin that stops your AI from writing...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfFB3QfEdMS",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DfFB3QfEdMS/",
+    "caption": "How many of these python projects are already in your resume? If I did an interview right now, will you be able to answer all the questions about these projects you built for AI engineering role?",
+    "hashtags": [],
+    "owner": {
+      "name": "sreemantideytech",
+      "username": "sreemantideytech",
+      "url": "https://www.instagram.com/sreemantideytech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 06, 2026, 2:18 am IST",
+    "saved_at_iso": "2026-11-06T02:18:43.003676+05:30",
+    "category": "AI & Agents",
+    "title": "How many of these python projects are already in your resume? If I did...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfXC1YbR0hs",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfXC1YbR0hs/",
+    "caption": "Want to become Good Developers 🐭\n\n#softwareengineer #softwaredevelopment #foryou #instagram #engineer",
+    "hashtags": [
+      "softwareengineer",
+      "softwaredevelopment",
+      "foryou",
+      "instagram",
+      "engineer"
+    ],
+    "owner": {
+      "name": "endless_success___",
+      "username": "endless_success___",
+      "url": "https://www.instagram.com/endless_success___/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 05, 2026, 6:53 pm IST",
+    "saved_at_iso": "2026-11-05T18:53:11.610300+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "Want to become Good Developers 🐭",
+    "caption_generated": false
+  },
+  {
+    "id": "DfXHpWXtgFE",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfXHpWXtgFE/",
+    "caption": "Comment ROADMAP and I’ll send you a 12-week machine learning roadmap: what to learn, in what order, and where to learn it 🫡\n\n“The first step to training a neural net is to not touch any neural net code at all and instead begin by thoroughly inspecting your data.” – Andrej Karpathy 🐐\n\nThat’s the real gap between a wannabe ML engineer and a real one. When accuracy drops, wannabes grab a bigger model. Real ML engineers open the mistakes, question the data, and get suspicious when the validation score looks too good 🤨\n\nTutorials teach you how to train a model. Nobody teaches you what to do when it doesn’t work, and that’s most of the job.\n\nIf you’re trying to become an ML engineer as a student or self-taught developer, the order you learn machine learning in matters more than how many courses you finish.\n\nThe roadmap launches Nov 22 and the waitlist gets in early.\n\n#MachineLearning #AI #DataScience #Python #coding",
+    "hashtags": [
+      "machinelearning",
+      "ai",
+      "datascience",
+      "python",
+      "coding"
+    ],
+    "owner": {
+      "name": "pirknn",
+      "username": "pirknn",
+      "url": "https://www.instagram.com/pirknn/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 05, 2026, 11:27 am IST",
+    "saved_at_iso": "2026-11-05T11:27:40.216925+05:30",
+    "category": "AI & Agents",
+    "title": "“The first step to training a neural net is to not touch any neural net...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfWOoTZhv75",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfWOoTZhv75/",
+    "caption": "this site shows you how the internet actually works, all the way down to a single byte 🌐\n\nYou type a URL, hit enter, and a page loads. Protocol Explorer animates everything that happens in between: the DNS lookup, the TCP handshake, HTTPS, the request itself. Every packet decoded byte by byte, in 16 languages.\n\nIf you’re prepping for a software engineering interview, this is the best way I’ve found to nail the “what happens when you load a website” question. And if you’ve been shipping apps with AI without knowing any of this, it’s a fun way to finally see what your app is doing.\n\n💬 Comment “INTERNET” and I’ll send you the link\n📬 Want more tools like this? I send them out every Friday\n\n#aitools #vibecoding #artificialintelligence #techthings #softwareengineering codinginterview buildinpublic nocode techcreator",
+    "hashtags": [
+      "aitools",
+      "vibecoding",
+      "artificialintelligence",
+      "techthings",
+      "softwareengineering"
+    ],
+    "owner": {
+      "name": "creativelyange",
+      "username": "creativelyange",
+      "url": "https://www.instagram.com/creativelyange/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 05, 2026, 4:02 am IST",
+    "saved_at_iso": "2026-11-05T04:02:08.823549+05:30",
+    "category": "AI & Agents",
+    "title": "this site shows you how the internet actually works, all the way down...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfUyS81jDjo",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DfUyS81jDjo/",
+    "caption": "Comment “Guide” and i’ll send you the full guide with all the resources.\n\nif i was actually serious about getting better as a developer, these are the 5 things i’d go all in on.\n\n- dominate python: not for loops. learn the whole ecosystem, so you know which library fits the job and how to wire it into your project\n- master ai: don’t stop at claude code or codex. use agents like grok bot and dots to take whole tasks off your plate, and keep finding the next thing to automate\n- be production-ready: shipping is easy now, shipping well is the hard part. tests, backwards compatible releases and a pipeline that checks everything before it goes live\n- act on your data: set up posthog and sentry on day one, find where people drop off, and run experiments on everything\n- lock it down: ai writes code that works, not code that’s safe. most apps get hacked through boring mistakes like an open database or a leaked key\n\nsave this and pick one to start this week.",
+    "hashtags": [],
+    "owner": {
+      "name": "volkan.js",
+      "username": "volkan.js",
+      "url": "https://www.instagram.com/volkan.js/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 04, 2026, 8:36 pm IST",
+    "saved_at_iso": "2026-11-04T20:36:37.430173+05:30",
+    "category": "AI & Agents",
+    "title": "if i was actually serious about getting better as a developer, these...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfUoWXPDTQE",
+    "type": "post",
+    "url": "https://www.instagram.com/p/DfUoWXPDTQE/",
+    "caption": "#advertisement Comment “REVIEW” and I’ll send you Greptile! Your first 50 code reviews are free.\n\nAI coding tools like Cursor and Claude Code are making software development faster than ever. But just because AI-generated code works doesn’t mean it’s ready for production.\n\nPassing tests doesn’t guarantee your code is free from security vulnerabilities, hidden bugs, or logic errors.\n\nThat’s why code reviews matter more than ever.\n\nGreptile is an AI code review tool that analyzes your pull requests, understands your codebase, and helps catch bugs, security risks, and regressions before you merge.\n\nWhether you’re building your first app or working on a large software engineering project, reviewing your code before shipping is one habit worth keeping.\n\nSave this checklist for your next pull request!\n\n#Coding #Greptile #GreptileCreator",
+    "hashtags": [
+      "advertisement",
+      "coding",
+      "greptile",
+      "greptilecreator"
+    ],
+    "owner": {
+      "name": "pirknn",
+      "username": "pirknn",
+      "url": "https://www.instagram.com/pirknn/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 04, 2026, 1:11 pm IST",
+    "saved_at_iso": "2026-11-04T13:11:06.036797+05:30",
+    "category": "AI & Agents",
+    "title": "AI coding tools like Cursor and Claude Code are making software...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfTg36ktnUP",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfTg36ktnUP/",
+    "caption": "Automating with NFC tags.\n\n#vibecoding",
+    "hashtags": [
+      "vibecoding"
+    ],
+    "owner": {
+      "name": "byjackprice",
+      "username": "byjackprice",
+      "url": "https://www.instagram.com/byjackprice/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 04, 2026, 5:45 am IST",
+    "saved_at_iso": "2026-11-04T05:45:34.643421+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "Automating with NFC tags.",
+    "caption_generated": false
+  },
+  {
+    "id": "DfQ3rl6v9sv",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfQ3rl6v9sv/",
+    "caption": "Leetcode trick 😉\n.\n.\n#leetcode #coding #btech #engineering #dsa",
+    "hashtags": [
+      "leetcode",
+      "coding",
+      "btech",
+      "engineering",
+      "dsa"
+    ],
+    "owner": {
+      "name": "techbytb",
+      "username": "techbytb",
+      "url": "https://www.instagram.com/techbytb/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 03, 2026, 10:20 pm IST",
+    "saved_at_iso": "2026-11-03T22:20:03.250045+05:30",
+    "category": "DSA & Problem Solving",
+    "title": "Leetcode trick 😉",
+    "caption_generated": false
+  },
+  {
+    "id": "DfUcGskPPNH",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfUcGskPPNH/",
+    "caption": "How to build LLM’s from scratch !!",
+    "hashtags": [],
+    "owner": {
+      "name": "hackonomics.ai",
+      "username": "hackonomics.ai",
+      "url": "https://www.instagram.com/hackonomics.ai/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 03, 2026, 2:54 pm IST",
+    "saved_at_iso": "2026-11-03T14:54:31.856669+05:30",
+    "category": "AI & Agents",
+    "title": "How to build LLM’s from scratch !!",
+    "caption_generated": false
+  },
+  {
+    "id": "DfSeOgsvdiL",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfSeOgsvdiL/",
+    "caption": "Learning Coding Agents in ONE DAY 🦾🦾\n\nComment “Agent” and I’ll send you all the sources I mentioned.\n\nAnd follow for part 2 where I’ll go over how to actually build an agent!\n\n#tech #ai #programming #coding",
+    "hashtags": [
+      "tech",
+      "ai",
+      "programming",
+      "coding"
+    ],
+    "owner": {
+      "name": "sammymans_",
+      "username": "sammymans_",
+      "url": "https://www.instagram.com/sammymans_/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 03, 2026, 7:29 am IST",
+    "saved_at_iso": "2026-11-03T07:29:00.463293+05:30",
+    "category": "AI & Agents",
+    "title": "Learning Coding Agents in ONE DAY 🦾🦾",
+    "caption_generated": false
+  },
+  {
+    "id": "DfSXqLxz6T9",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfSXqLxz6T9/",
+    "caption": "AI era = Time to learn Rust?\nRust made ridiculously easy by this Guy love it - 🔥🙏\n\n#ai #code #rustprogramming #software #backend\n\n[AI Infrastructure, Rust, Golang, Python, LLMs, AI Agents, Agentic AI, Systems Programming, High Performance Computing, Memory Safety, Concurrency, Async Runtime, Tokio, Distributed Systems, Inference Engines, Model Serving, GPU Computing, CUDA, Vector Databases, Tokenization, RAG, Embeddings, Semantic Search, Model Optimization, Low Latency, Microservices, Cloud Native, Kubernetes, Docker, WebAssembly, WASM, Networking, Systems Design, Backend Engineering, Compiler Design, Ownership, Borrow Checker]",
+    "hashtags": [
+      "ai",
+      "code",
+      "rustprogramming",
+      "software",
+      "backend"
+    ],
+    "owner": {
+      "name": "rishabhsinghtech",
+      "username": "rishabhsinghtech",
+      "url": "https://www.instagram.com/rishabhsinghtech/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 03, 2026, 12:03 am IST",
+    "saved_at_iso": "2026-11-03T00:03:29.069917+05:30",
+    "category": "AI & Agents",
+    "title": "AI era = Time to learn Rust?",
+    "caption_generated": false
+  },
+  {
+    "id": "DfR_c_cqzCw",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfR_c_cqzCw/",
+    "caption": "Your resume/CV is scanned in just a matter of 10 seconds. Don't bombard it with information, be specific!\n\n#lovebabbar #collegeplacement #codehelp",
+    "hashtags": [
+      "lovebabbar",
+      "collegeplacement",
+      "codehelp"
+    ],
+    "owner": {
+      "name": "lovebabbar1",
+      "username": "lovebabbar1",
+      "url": "https://www.instagram.com/lovebabbar1/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 02, 2026, 4:37 pm IST",
+    "saved_at_iso": "2026-11-02T16:37:57.676541+05:30",
+    "category": "Career & Internships",
+    "title": "Your resume/CV is scanned in just a matter of 10 seconds. Don't bombard...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfPA3VZJZgh",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfPA3VZJZgh/",
+    "caption": "Five coding projects recruiters actually want to see, each with a free YouTube video: build RAG from scratch, a real-time stock market app, self-driving cars in JavaScript, a Python backend with FastAPI, and a GPT tokenizer with Andrej Karpathy. Pick one and finish it.\n\nComment projects and I'll send it.",
+    "hashtags": [],
+    "owner": {
+      "name": "abhishek.garg.official",
+      "username": "abhishek.garg.official",
+      "url": "https://www.instagram.com/abhishek.garg.official/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 02, 2026, 9:12 am IST",
+    "saved_at_iso": "2026-11-02T09:12:26.283166+05:30",
+    "category": "AI & Agents",
+    "title": "Five coding projects recruiters actually want to see, each with a free...",
+    "caption_generated": false
+  },
+  {
+    "id": "DfPuzNnIp5d",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfPuzNnIp5d/",
+    "caption": "Comment “🙌” For All Links\n\nI’m always looking for GitHub repositories that go beyond basic tutorials and help engineers understand how things work in the real world.\n\nThese are 7 repositories I’d recommend exploring if you’re learning System Design, AI Engineering, Cloud, or DevOps.\n\nFrom real-world architecture lessons from companies like Netflix, Uber, and Airbnb to AI engineering roadmaps, LLM libraries, Kubernetes projects, Azure infrastructure templates, and Claude skills, there’s something here for different stages of your engineering journey.\n\nThe best part? You can use these resources to learn, experiment, build projects, and understand how production systems work.\n\nSave this for your next learning session!\n\n.\n.\n\n[github, github repos, github repositories, best github repos, github projects, system design, devops project, free projects, interview prep, interview questions and answers, free resources, devops engineer, cloud engineer, ai engineer, ai engineering, software engineer, learn to code, cloud computing]",
+    "hashtags": [],
+    "owner": {
+      "name": "vishakha.sadhwani",
+      "username": "vishakha.sadhwani",
+      "url": "https://www.instagram.com/vishakha.sadhwani/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 02, 2026, 1:46 am IST",
+    "saved_at_iso": "2026-11-02T01:46:54.889790+05:30",
+    "category": "AI & Agents",
+    "title": "I’m always looking for GitHub repositories that go beyond basic...",
+    "caption_generated": false
+  },
+  {
+    "id": "DaPIj6lxGWM",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DaPIj6lxGWM/",
+    "caption": "Stanford’s Brutally Honest Report on why your application is auto denied!!\n\nComment Stanford or go to singhinusa.link/blog for full cover",
+    "hashtags": [],
+    "owner": {
+      "name": "iharnoor",
+      "username": "iharnoor",
+      "url": "https://www.instagram.com/iharnoor/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 01, 2026, 6:21 pm IST",
+    "saved_at_iso": "2026-11-01T18:21:23.496414+05:30",
+    "category": "Dev Tools & Repos",
+    "title": "Stanford’s Brutally Honest Report on why your application is auto denied!!",
+    "caption_generated": false
+  },
+  {
+    "id": "DfNYWxER4L1",
+    "type": "reel",
+    "url": "https://www.instagram.com/reel/DfNYWxER4L1/",
+    "caption": "TechMaxxing Episode 3: Context systems. A folder of notes about you that your AI reads before every answer, so you never have to explain yourself again. Comment CONTEXT and I’ll send you the simple setup prompt plus all the links. Follow along for Episode 4!\n\n#ai #tech #productivity #student #coding",
+    "hashtags": [
+      "ai",
+      "tech",
+      "productivity",
+      "student",
+      "coding"
+    ],
+    "owner": {
+      "name": "chrispathway",
+      "username": "chrispathway",
+      "url": "https://www.instagram.com/chrispathway/"
+    },
+    "brand_partner": null,
+    "saved_at": "Nov 01, 2026, 10:55 am IST",
+    "saved_at_iso": "2026-11-01T10:55:52.103038+05:30",
+    "category": "AI & Agents",
+    "title": "TechMaxxing Episode 3: Context systems. A folder of notes about you...",
+    "caption_generated": false
+  },
+  {
     "id": "DfFHlt2hK4c",
     "type": "reel",
     "url": "https://www.instagram.com/reel/DfFHlt2hK4c/",

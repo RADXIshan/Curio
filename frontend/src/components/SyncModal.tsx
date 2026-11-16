@@ -19,6 +19,7 @@ import {
   openMessagesPermissions,
 } from '../services/api';
 import type { SyncStatusResponse } from '../types';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -39,6 +40,9 @@ export const SyncModal: React.FC<SyncModalProps> = ({
   onClose,
   onSyncComplete,
 }) => {
+  // Lock background scrolling while modal is open, allowing scroll strictly inside popup
+  useBodyScrollLock(isOpen);
+
   const [syncState, setSyncState] = useState<SyncStatusResponse | null>(null);
   const [otpCode, setOtpCode] = useState<string>('');
   const [isSubmittingOtp, setIsSubmittingOtp] = useState<boolean>(false);
@@ -154,8 +158,8 @@ export const SyncModal: React.FC<SyncModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs select-none">
-      <div className="w-full max-w-xl bg-[#161616] border border-[#2a2a2a] rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs select-none overscroll-contain">
+      <div className="w-full max-w-xl bg-[#161616] border border-[#2a2a2a] rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] overscroll-contain">
         {/* Header */}
         <div className="px-5 py-4 border-b border-[#242424] flex items-center justify-between bg-[#191919]">
           <div className="flex items-center gap-2.5">
@@ -184,7 +188,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
         </div>
 
         {/* Modal Body */}
-        <div className="p-5 flex-1 overflow-y-auto space-y-4">
+        <div className="p-5 flex-1 overflow-y-auto space-y-4 overscroll-contain select-text">
           {/* macOS Messages Auto-OTP Status Bar */}
           <div
             className={`px-3.5 py-2.5 rounded-lg border flex items-center justify-between gap-3 text-xs ${

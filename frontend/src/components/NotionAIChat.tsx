@@ -4,6 +4,7 @@ import type { ChatMessage, ReelItem } from '../types';
 import { sendChatMessage } from '../services/api';
 import { getReelTitle, getCleanCaptionSnippet } from '../utils/titleUtils';
 import { toNormalText } from '../utils/textUtils';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 
 interface NotionAIChatProps {
   isOpen: boolean;
@@ -45,6 +46,8 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [shouldRender, setShouldRender] = useState(isOpen);
+  // Lock background scrolling while drawer is open or animating, allowing scroll strictly inside drawer
+  useBodyScrollLock(isOpen || shouldRender);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -143,12 +146,12 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
   return (
     <div
       onClick={handleSmoothClose}
-      className={`fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-md ${
+      className={`fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-md overscroll-contain ${
         isClosing ? 'animate-curio-backdrop-out' : 'animate-curio-backdrop'
       }`}
     >
       <div
-        className={`w-full max-w-md h-full bg-[#181818]/95 border-l border-sky-500/20 flex flex-col shadow-2xl relative overflow-hidden backdrop-blur-xl ${
+        className={`w-full max-w-md h-full bg-[#181818]/95 border-l border-sky-500/20 flex flex-col shadow-2xl relative overflow-hidden backdrop-blur-xl overscroll-contain ${
           isClosing ? 'animate-curio-drawer-out' : 'animate-curio-drawer curio-glow-border'
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -191,7 +194,7 @@ export const NotionAIChat: React.FC<NotionAIChatProps> = ({
         </div>
 
         {/* Message Stream */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs relative z-10">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs relative z-10 overscroll-contain">
           {messages.map((msg) => {
             const isUser = msg.role === 'user';
             return (
